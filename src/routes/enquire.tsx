@@ -59,11 +59,21 @@ const schema = z
   });
 
 type FormValues = z.input<typeof schema>;
-type SearchParams = { trip?: string };
+type SearchParams = {
+  trip?: string;
+  duration?: string;
+  budget?: string;
+  details?: string;
+  image?: string;
+};
 
 export const Route = createFileRoute("/enquire")({
   validateSearch: (s: Record<string, unknown>): SearchParams => ({
     trip: typeof s.trip === "string" ? s.trip : undefined,
+    duration: typeof s.duration === "string" ? s.duration : undefined,
+    budget: typeof s.budget === "string" ? s.budget : undefined,
+    details: typeof s.details === "string" ? s.details : undefined,
+    image: typeof s.image === "string" ? s.image : undefined,
   }),
   head: () => ({
     meta: [
@@ -84,7 +94,7 @@ export const Route = createFileRoute("/enquire")({
 });
 
 function EnquirePage() {
-  const { trip } = useSearch({ from: "/enquire" });
+  const { trip, duration, budget, details, image } = useSearch({ from: "/enquire" });
   const [done, setDone] = useState(false);
 
   const form = useForm<FormValues>({
@@ -92,11 +102,11 @@ function EnquirePage() {
     defaultValues: {
       destination: trip ?? "",
       travelDate: "",
-      duration: "",
+      duration: duration ?? "",
       budgetCurrency: "INR",
-      budgetAmount: "",
+      budgetAmount: budget ?? "",
       travelers: "",
-      specific: "",
+      specific: details ?? "",
       firstName: "",
       lastName: "",
       email: "",
@@ -107,10 +117,13 @@ function EnquirePage() {
     },
   });
 
-  // CTA links provide the trip name as /enquire?trip=..., including client-side navigation.
+  // Trip CTAs provide editable itinerary details through the URL.
   useEffect(() => {
     if (trip) form.setValue("destination", trip);
-  }, [form, trip]);
+    if (duration) form.setValue("duration", duration);
+    if (budget) form.setValue("budgetAmount", budget);
+    if (details) form.setValue("specific", details);
+  }, [budget, details, duration, form, trip]);
 
   async function onSubmit(values: FormValues) {
     try {
@@ -191,9 +204,13 @@ function EnquirePage() {
           </div>
         </section>
       ) : (
-        <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto max-w-6xl px-4 pb-24 md:px-8">
-          {/* Trip questions card */}
-          <div className="rounded-md bg-card p-6 md:p-10">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className={`mx-auto px-4 pb-24 md:px-6 ${image ? "max-w-[1584px] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.38fr)] lg:items-stretch lg:gap-5" : "max-w-6xl md:px-8"}`}
+        >
+          <div>
+            {/* Trip questions card */}
+            <div className="rounded-md bg-card p-6 md:p-10">
             <p className="mb-8 text-[11px] uppercase tracking-[0.3em] text-primary/80">
               Answer these few quick questions and we&apos;ll design a trip that fits you
             </p>
@@ -206,6 +223,7 @@ function EnquirePage() {
                   defaultValue={trip ?? ""}
                 >
                   <option value="">Select destination</option>
+                  {trip && !DESTINATIONS.includes(trip) && <option value={trip}>{trip}</option>}
                   {DESTINATIONS.map((d) => (
                     <option key={d} value={d}>
                       {d}
@@ -264,10 +282,10 @@ function EnquirePage() {
                 />
               </Field>
             </div>
-          </div>
+            </div>
 
-          {/* Details card */}
-          <div className="mt-8 rounded-md bg-card p-6 md:p-10">
+            {/* Details card */}
+            <div className="mt-8 rounded-md bg-card p-6 md:p-10">
             <p className="mb-8 text-[11px] uppercase tracking-[0.3em] text-primary/80">Details</p>
 
             <div className="grid gap-5 md:grid-cols-2">
@@ -336,7 +354,16 @@ function EnquirePage() {
                 )}
               </Button>
             </div>
+            </div>
           </div>
+
+          {image && (
+            <aside className="relative hidden min-h-full overflow-hidden rounded-md bg-primary lg:block">
+              <img src={image} alt={trip ? `${trip} travel destination` : "Travel destination"} className="absolute inset-0 h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/15 to-transparent" />
+              {trip && <p className="absolute inset-x-0 bottom-0 p-7 font-serif text-3xl leading-tight text-primary-foreground">{trip}</p>}
+            </aside>
+          )}
         </form>
       )}
       <SiteFooter />

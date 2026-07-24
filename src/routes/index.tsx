@@ -5,10 +5,10 @@ import {
   Menu,
   X,
   ArrowUpRight,
-  Compass,
-  Sparkles,
-  ShieldCheck,
-  Heart,
+  CalendarCheck,
+  Star,
+  Headphones,
+  Ticket,
   Quote,
   ChevronLeft,
   ChevronRight,
@@ -69,24 +69,24 @@ const DESTINATIONS = [
 
 const PILLARS = [
   {
-    icon: Compass,
-    title: "Designed Around You",
-    body: "Every itinerary is composed in conversation — your pace, your people, your obsessions.",
+    icon: CalendarCheck,
+    title: "Seamless Planning",
+    body: "Seamless end-to-end planning experience.",
   },
   {
-    icon: Sparkles,
-    title: "Hidden Access",
-    body: "Doors most travelers never see — private estates, family-run ateliers, untouched coastlines.",
+    icon: Star,
+    title: "Handpicked Details",
+    body: "Handpicked stays & experiences.",
   },
   {
-    icon: ShieldCheck,
-    title: "Quietly Looked After",
-    body: "A dedicated concierge on the ground, available the moment you need them. Never before.",
+    icon: Headphones,
+    title: "Always Supported",
+    body: "24/7 on-trip support.",
   },
   {
-    icon: Heart,
-    title: "Built On Trust",
-    body: "Decades of relationships with the world's best guides, hoteliers, and storytellers.",
+    icon: Ticket,
+    title: "Made for You",
+    body: "Personalized itineraries.",
   },
 ];
 
@@ -144,7 +144,6 @@ function Home() {
       {/* Temporarily hidden */}
       {/* <Testimonials /> */}
       {/* <Newsletter /> */}
-      <TermsAndConditions />
       <Faq />
       <SiteFooter />
     </div>
@@ -488,9 +487,10 @@ function WhyQarwaan() {
               Why <em className="not-italic text-accent">Qarwaan</em>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-background/75 sm:text-lg">
-              We are a small studio of travel designers, fixers, and storytellers
-              — building journeys for people who have done it all, and a few who
-              are just beginning.
+              Travel shouldn&apos;t feel like bookings, checklists, and endless planning. It should feel like a story, one that unfolds beautifully, one moment at a time.
+            </p>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-background/75 sm:text-lg">
+              At Qarwaan, we take care of everything behind the scenes, so you can simply experience the journey.
             </p>
             <Link
               to="/enquire"

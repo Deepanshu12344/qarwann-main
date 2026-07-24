@@ -10,7 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeekendGetawaysRouteImport } from './routes/weekend-getaways'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as EnquireRouteImport } from './routes/enquire'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as CancellationRouteImport } from './routes/cancellation'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,9 +36,29 @@ const WeekendGetawaysRoute = WeekendGetawaysRouteImport.update({
   path: '/weekend-getaways',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EnquireRoute = EnquireRouteImport.update({
   id: '/enquire',
   path: '/enquire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CancellationRoute = CancellationRouteImport.update({
+  id: '/cancellation',
+  path: '/cancellation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -117,7 +141,11 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/admin': typeof AdminRouteWithChildren
+  '/cancellation': typeof CancellationRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/weekend-getaways': typeof WeekendGetawaysRoute
   '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/login': typeof AdminLoginRoute
@@ -135,7 +163,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/cancellation': typeof CancellationRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/weekend-getaways': typeof WeekendGetawaysRoute
   '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/login': typeof AdminLoginRoute
@@ -154,7 +186,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/admin': typeof AdminRouteWithChildren
+  '/cancellation': typeof CancellationRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/weekend-getaways': typeof WeekendGetawaysRoute
   '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/login': typeof AdminLoginRoute
@@ -175,7 +211,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/admin'
+    | '/cancellation'
+    | '/disclaimer'
     | '/enquire'
+    | '/privacy'
+    | '/terms-and-conditions'
     | '/weekend-getaways'
     | '/admin/enquiries'
     | '/admin/login'
@@ -193,7 +233,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about-us'
+    | '/cancellation'
+    | '/disclaimer'
     | '/enquire'
+    | '/privacy'
+    | '/terms-and-conditions'
     | '/weekend-getaways'
     | '/admin/enquiries'
     | '/admin/login'
@@ -211,7 +255,11 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/admin'
+    | '/cancellation'
+    | '/disclaimer'
     | '/enquire'
+    | '/privacy'
+    | '/terms-and-conditions'
     | '/weekend-getaways'
     | '/admin/enquiries'
     | '/admin/login'
@@ -231,7 +279,11 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
   AdminRoute: typeof AdminRouteWithChildren
+  CancellationRoute: typeof CancellationRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   EnquireRoute: typeof EnquireRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   WeekendGetawaysRoute: typeof WeekendGetawaysRoute
   TripsSlugRoute: typeof TripsSlugRoute
   TripsIndexRoute: typeof TripsIndexRoute
@@ -247,11 +299,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeekendGetawaysRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/enquire': {
       id: '/enquire'
       path: '/enquire'
       fullPath: '/enquire'
       preLoaderRoute: typeof EnquireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cancellation': {
+      id: '/cancellation'
+      path: '/cancellation'
+      fullPath: '/cancellation'
+      preLoaderRoute: typeof CancellationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -412,7 +492,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
   AdminRoute: AdminRouteWithChildren,
+  CancellationRoute: CancellationRoute,
+  DisclaimerRoute: DisclaimerRoute,
   EnquireRoute: EnquireRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
   WeekendGetawaysRoute: WeekendGetawaysRoute,
   TripsSlugRoute: TripsSlugRoute,
   TripsIndexRoute: TripsIndexRoute,

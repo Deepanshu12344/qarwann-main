@@ -4,7 +4,7 @@ import lightLogo from "../../qarwaan-light-logo.png";
 
 type FooterLink = {
   label: string;
-  to?: "/trips" | "/weekend-getaways" | "/about-us" | "/enquire";
+  to?: "/trips" | "/weekend-getaways" | "/about-us" | "/enquire" | "/disclaimer" | "/terms-and-conditions" | "/privacy" | "/cancellation";
   href?: string;
 };
 
@@ -14,13 +14,15 @@ const footerLinks = {
     { label: "Weekend Getaways", to: "/weekend-getaways" },
   ],
   company: [
-    { label: "About Us", to: "/about-us" },
     { label: "Contact Us", to: "/enquire" },
+    { label: "About Us", to: "/about-us" },
+    { label: "Feedback Form", href: "https://forms.gle/aNJsK63rWuF4Vgpr9" },
   ],
-  information: [
-    { label: "FAQs", href: "/#faq" },
-    { label: "Terms & Conditions", href: "/#terms-and-conditions" },
-    { label: "team@qarwaan.com", href: "mailto:team@qarwaan.com" },
+  terms: [
+    { label: "Disclaimer", to: "/disclaimer" },
+    { label: "Terms & Conditions", to: "/terms-and-conditions" },
+    { label: "Privacy", to: "/privacy" },
+    { label: "Cancellation", to: "/cancellation" },
   ],
 } satisfies Record<string, readonly FooterLink[]>;
 
@@ -35,7 +37,7 @@ export function SiteFooter() {
               A travel studio crafting effortless, personal journeys to the world's most iconic and hidden corners.
             </p>
             <div className="mt-6 flex items-center gap-4">
-              <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
+              <a href="https://www.instagram.com/qarwaantravels/" target="_blank" rel="noreferrer" aria-label="Qarwaan Travels on Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
                 <Instagram className="h-4 w-4" strokeWidth={1.5} />
               </a>
               <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
@@ -48,8 +50,8 @@ export function SiteFooter() {
           </div>
 
           <FooterCol title="Explore" links={footerLinks.explore} />
-          <FooterCol title="Company" links={footerLinks.company} />
-          <FooterCol title="Information" links={footerLinks.information} />
+          <FooterCol title="Support" links={footerLinks.company} />
+          <FooterCol title="Terms & Info" links={footerLinks.terms} />
         </div>
 
         <div className="mt-16 hairline" />

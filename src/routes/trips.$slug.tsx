@@ -101,6 +101,27 @@ const ITINERARY_FALLBACK_IMAGES = [
   "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=85",
 ];
 
+function enquirySearch(trip: TripDetail) {
+  const details = [
+    trip.country && `Country: ${trip.country}`,
+    trip.citiesCovered?.length && `Cities covered: ${trip.citiesCovered.join(", ")}`,
+    (trip.startPoint || trip.endPoint) && `Route: ${[trip.startPoint, trip.endPoint].filter(Boolean).join(" → ")}`,
+    trip.bestSeason?.length && `Best season: ${trip.bestSeason.join(", ")}`,
+    trip.tripType && `Trip type: ${trip.tripType}`,
+    trip.idealFor?.length && `Ideal for: ${trip.idealFor.join(", ")}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return {
+    trip: trip.packageName,
+    duration: trip.duration,
+    budget: trip.budgetFrom?.toString(),
+    details: details || undefined,
+    image: trip.coverImage,
+  };
+}
+
 export const Route = createFileRoute("/trips/$slug")({
   head: ({ params }) => ({
     meta: [
@@ -278,7 +299,7 @@ function Hero({ trip }: { trip: TripDetail }) {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               to="/enquire"
-              search={{ trip: trip.packageName }}
+              search={enquirySearch(trip)}
               className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3 text-sm font-medium hover:bg-accent/90 transition"
             >
               Enquire Now <ArrowUpRight className="h-4 w-4" />
@@ -861,7 +882,7 @@ function CtaBand({ trip }: { trip: TripDetail }) {
         <div className="md:justify-self-end flex flex-col items-start gap-3">
           <Link
             to="/enquire"
-            search={{ trip: trip.packageName }}
+            search={enquirySearch(trip)}
             className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-7 py-3.5 text-sm font-medium hover:bg-accent/90 transition"
           >
             Enquire Now <ArrowUpRight className="h-4 w-4" />
@@ -878,7 +899,7 @@ function StickyEnquire({ trip }: { trip: TripDetail }) {
     <div className="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-border bg-background/95 backdrop-blur p-3">
       <Link
         to="/enquire"
-        search={{ trip: trip.packageName }}
+        search={enquirySearch(trip)}
         className="flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground py-3 text-sm font-medium"
       >
         Enquire About This Trip <ArrowUpRight className="h-4 w-4" />
