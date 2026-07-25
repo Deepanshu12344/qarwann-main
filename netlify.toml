@@ -1,5 +1,5 @@
 [build]
-  command = "bun run build"
+  command = "npm run build"
   publish = ".output/public"
 
 # TanStack Start builds through Nitro. Its browser assets are emitted to
