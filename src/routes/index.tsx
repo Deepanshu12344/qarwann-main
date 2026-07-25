@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -12,7 +12,6 @@ import {
   Quote,
   ChevronLeft,
   ChevronRight,
-  Search,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -283,15 +282,6 @@ function Navbar() {
 /* ---------- Hero ---------- */
 
 function Hero() {
-  const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const q = searchTerm.trim();
-    navigate({ to: "/trips", search: q ? { q } : {} });
-  };
-
   return (
     <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
       <img
@@ -325,32 +315,6 @@ function Hero() {
         >
           Curated group trips, weekend getaways, <br></br>and unforgettable experiences across India.
         </motion.p>
-
-        <motion.form
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45 }}
-          onSubmit={handleSearch}
-          className="mt-8 flex w-full max-w-xl items-center rounded-full border border-background/45 bg-background/95 p-1.5 shadow-xl backdrop-blur-sm"
-        >
-          <Search className="ml-3 h-5 w-5 shrink-0 text-primary/60" aria-hidden="true" />
-          <label htmlFor="home-search" className="sr-only">
-            Search trips
-          </label>
-          <input
-            id="home-search"
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-            placeholder="Search destinations, cities, or trips"
-            className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-sm text-primary outline-none placeholder:text-primary/55"
-          />
-          <button
-            type="submit"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-          >
-            Search
-          </button>
-        </motion.form>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -586,7 +550,7 @@ function Experiences() {
 
         <div className="mt-24">
           <SectionHeader
-            eyebrow="Short Escapes kqwediei"
+            eyebrow="Short Escapes"
             title={
               <>
                 Weekend <em className="not-italic text-accent">Getaways.</em>
