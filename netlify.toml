@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".output/public"
+  publish = "dist"
 
-# TanStack Start builds through Nitro. Its browser assets are emitted to
-# .output/public, not Vite's usual dist/client directory.
+# Nitro's Netlify preset emits browser assets to dist and SSR/API functions to
+# .netlify/functions-internal.
