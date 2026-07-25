@@ -14,6 +14,7 @@ import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-condi
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as EnquireRouteImport } from './routes/enquire'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CancellationRouteImport } from './routes/cancellation'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutUsRouteImport } from './routes/about-us'
@@ -54,6 +55,11 @@ const EnquireRoute = EnquireRouteImport.update({
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CancellationRoute = CancellationRouteImport.update({
@@ -142,6 +148,7 @@ export interface FileRoutesByFullPath {
   '/about-us': typeof AboutUsRoute
   '/admin': typeof AdminRouteWithChildren
   '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
   '/privacy': typeof PrivacyRoute
@@ -164,6 +171,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
   '/privacy': typeof PrivacyRoute
@@ -187,6 +195,7 @@ export interface FileRoutesById {
   '/about-us': typeof AboutUsRoute
   '/admin': typeof AdminRouteWithChildren
   '/cancellation': typeof CancellationRoute
+  '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/enquire': typeof EnquireRoute
   '/privacy': typeof PrivacyRoute
@@ -212,6 +221,7 @@ export interface FileRouteTypes {
     | '/about-us'
     | '/admin'
     | '/cancellation'
+    | '/contact'
     | '/disclaimer'
     | '/enquire'
     | '/privacy'
@@ -234,6 +244,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/cancellation'
+    | '/contact'
     | '/disclaimer'
     | '/enquire'
     | '/privacy'
@@ -256,6 +267,7 @@ export interface FileRouteTypes {
     | '/about-us'
     | '/admin'
     | '/cancellation'
+    | '/contact'
     | '/disclaimer'
     | '/enquire'
     | '/privacy'
@@ -280,6 +292,7 @@ export interface RootRouteChildren {
   AboutUsRoute: typeof AboutUsRoute
   AdminRoute: typeof AdminRouteWithChildren
   CancellationRoute: typeof CancellationRoute
+  ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   EnquireRoute: typeof EnquireRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -325,6 +338,13 @@ declare module '@tanstack/react-router' {
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cancellation': {
@@ -493,6 +513,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutUsRoute: AboutUsRoute,
   AdminRoute: AdminRouteWithChildren,
   CancellationRoute: CancellationRoute,
+  ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   EnquireRoute: EnquireRoute,
   PrivacyRoute: PrivacyRoute,

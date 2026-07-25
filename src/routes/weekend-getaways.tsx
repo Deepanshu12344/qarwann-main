@@ -32,7 +32,7 @@ function WeekendGetawaysPage() {
 
       <section className="border-b border-border/60 px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-[11px] uppercase tracking-[0.32em] text-accent">Short Escapes</p>
+          {/* <p className="text-[11px] uppercase tracking-[0.32em] text-accent">Short Escapes</p> */}
           <h1 className="mt-5 font-serif text-5xl leading-[0.98] text-primary sm:text-6xl md:text-7xl">
             Go somewhere <em className="not-italic text-accent">this weekend.</em>
           </h1>
@@ -45,7 +45,7 @@ function WeekendGetawaysPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
         <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.28em] text-primary/70">Weekend Collection</p>
+            {/* <p className="text-[11px] uppercase tracking-[0.28em] text-primary/70">Weekend Collection</p> */}
             <h2 className="mt-3 font-serif text-4xl text-primary sm:text-5xl">Small trips. Big stories.</h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">Choose a starting point, then make it completely your own.</p>

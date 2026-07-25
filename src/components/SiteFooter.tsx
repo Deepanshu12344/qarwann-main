@@ -4,7 +4,7 @@ import lightLogo from "../../qarwaan-light-logo.png";
 
 type FooterLink = {
   label: string;
-  to?: "/trips" | "/weekend-getaways" | "/about-us" | "/enquire" | "/disclaimer" | "/terms-and-conditions" | "/privacy" | "/cancellation";
+  to?: "/trips" | "/weekend-getaways" | "/about-us" | "/enquire" | "/contact" | "/disclaimer" | "/terms-and-conditions" | "/privacy" | "/cancellation";
   href?: string;
 };
 
@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "Weekend Getaways", to: "/weekend-getaways" },
   ],
   company: [
-    { label: "Contact Us", to: "/enquire" },
+    { label: "Contact Us", to: "/contact" },
     { label: "About Us", to: "/about-us" },
     { label: "Feedback Form", href: "https://forms.gle/aNJsK63rWuF4Vgpr9" },
   ],
@@ -34,7 +34,7 @@ export function SiteFooter() {
           <div>
             <img src={lightLogo} alt="Qarwaan" className="h-16 w-auto object-contain" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-background/70">
-              A travel studio crafting effortless, personal journeys to the world's most iconic and hidden corners.
+              Curating unforgettable journeys to the world's most iconic and hidden destinations.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <a href="https://www.instagram.com/qarwaantravels/" target="_blank" rel="noreferrer" aria-label="Qarwaan Travels on Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
@@ -56,7 +56,7 @@ export function SiteFooter() {
 
         <div className="mt-16 hairline" />
         <div className="mt-8 text-xs tracking-wide text-background/60">
-          <span>© {new Date().getFullYear()} QARWAAN Travel Studio. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} QARWAAN Travel. All rights reserved.</span>
         </div>
       </div>
     </footer>

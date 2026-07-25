@@ -14,6 +14,12 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 type Trip = {
   id: string;
@@ -46,6 +52,7 @@ type TripsResponse = {
 export const Route = createFileRoute("/trips/")({
   validateSearch: (s: Record<string, unknown>) => ({
     destination: typeof s.destination === "string" ? s.destination : undefined,
+    q: typeof s.q === "string" ? s.q : undefined,
   }),
   head: () => ({
     meta: [
@@ -85,9 +92,9 @@ const BUDGET_BANDS = [
 ];
 
 function TripsPage() {
-  const { destination } = Route.useSearch();
-  const [q, setQ] = useState("");
-  const [qDebounced, setQDebounced] = useState("");
+  const { destination, q: initialQuery } = Route.useSearch();
+  const [q, setQ] = useState(initialQuery ?? "");
+  const [qDebounced, setQDebounced] = useState(initialQuery ?? "");
   const [country, setCountry] = useState(destination ?? "");
   const [tripType, setTripType] = useState("");
   const [duration, setDuration] = useState("");
@@ -143,6 +150,7 @@ function TripsPage() {
   const totalPages = data ? Math.max(1, Math.ceil(data.total / PAGE_SIZE)) : 1;
 
   const activeFilters = [
+    q && { label: `Search: “${q}”`, clear: () => setQ("") },
     country && { label: country, clear: () => setCountry("") },
     tripType && { label: tripType, clear: () => setTripType("") },
     duration && {
@@ -171,165 +179,83 @@ function TripsPage() {
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader page="destinations" />
 
-      {/* Hero / search */}
-      <section className="border-b border-border/50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* <p className="eyebrow text-accent">Curated Journeys</p> */}
-            <h1 className="mt-3 font-serif text-4xl sm:text-5xl text-primary">
-              Find your next journey
-            </h1>
-            <p className="mt-3 max-w-2xl text-foreground/70">
-              Search and refine across our handcrafted trips—iconic capitals,
-              hidden corners, and everything between.
-            </p>
-          </motion.div>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <div className="relative flex-1">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-foreground/50" />
-              <input
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder="Search destinations, cities, countries..."
-                className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm outline-none focus:border-accent transition"
-              />
-            </div>
-            <button
-              onClick={() => setFiltersOpen(true)}
-              className="lg:hidden inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm"
-            >
-              <SlidersHorizontal className="h-4 w-4" /> Filters
-            </button>
-            <div className="relative">
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 sm:py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+        >
+          <div className="flex items-center justify-end gap-3">
+            <label className="relative">
+              <span className="sr-only">Sort trips</span>
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
-                className="appearance-none rounded-full border border-border bg-card pl-5 pr-10 py-3 text-sm outline-none focus:border-accent transition"
+                className="appearance-none rounded-full border border-border bg-card px-5 py-2.5 pr-10 text-sm outline-none transition focus:border-accent"
               >
-                {SORT_OPTIONS.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    Sort: {o.label}
+                {SORT_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    Sort: {option.label}
                   </option>
                 ))}
               </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10">
-        {/* Sidebar */}
-        <aside
-          className={`${
-            filtersOpen
-              ? "fixed inset-0 z-50 bg-background overflow-y-auto p-6 block"
-              : "hidden"
-          } lg:static lg:block lg:p-0`}
-        >
-          <div className="flex items-center justify-between lg:hidden mb-6">
-            <span className="font-serif text-xl text-primary">Filters</span>
-            <button onClick={() => setFiltersOpen(false)} aria-label="Close filters">
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-
-          <FilterGroup label="Country">
-            <Select value={country} onChange={setCountry} options={facets?.countries ?? []} placeholder="All countries" />
-          </FilterGroup>
-
-          {/* <FilterGroup label="Trip Type">
-            <Select value={tripType} onChange={setTripType} options={facets?.tripTypes ?? []} placeholder="All types" />
-          </FilterGroup> */}
-
-          <FilterGroup label="Duration">
-            <div className="space-y-2">
-              {DURATION_OPTIONS.map((opt) => (
-                <Radio
-                  key={opt.value}
-                  name="duration"
-                  checked={duration === opt.value}
-                  onChange={() => setDuration(opt.value)}
-                  label={opt.label}
-                />
-              ))}
-            </div>
-          </FilterGroup>
-
-          <FilterGroup label="Best Season">
-            <div className="grid grid-cols-2 gap-2">
-              {(facets?.seasons ?? []).map((s) => (
-                <Chip
-                  key={s}
-                  active={bestSeason === s}
-                  onClick={() => setBestSeason(bestSeason === s ? "" : s)}
-                >
-                  {s}
-                </Chip>
-              ))}
-            </div>
-          </FilterGroup>
-
-          <FilterGroup label="Budget">
-            <div className="space-y-2">
-              {BUDGET_BANDS.map((b) => (
-                <Radio
-                  key={b.value}
-                  name="budget"
-                  checked={budgetBand === b.value}
-                  onChange={() => setBudgetBand(b.value)}
-                  label={b.label}
-                />
-              ))}
-            </div>
-          </FilterGroup>
-
-          {/* <FilterGroup label="Ideal For">
-            <Select value={idealFor} onChange={setIdealFor} options={facets?.idealFor ?? []} placeholder="Anyone" />
-          </FilterGroup> */}
-
-          <button
-            onClick={clearAll}
-            className="mt-2 text-sm text-foreground/60 hover:text-foreground underline underline-offset-4"
-          >
-            Clear all filters
-          </button>
-
-          {filtersOpen && (
+            </label>
             <button
-              onClick={() => setFiltersOpen(false)}
-              className="lg:hidden mt-8 w-full rounded-full bg-primary text-primary-foreground py-3 text-sm"
+              onClick={() => setFiltersOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm transition hover:border-primary"
             >
-              Show {data?.total ?? 0} results
+              <SlidersHorizontal className="h-4 w-4" />
+              Filters
+              {activeFilters.length > 0 && (
+                <span className="-mr-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-xs text-primary-foreground">
+                  {activeFilters.length}
+                </span>
+              )}
             </button>
+          </div>
+
+          <div className="relative mt-8">
+            <Search className="absolute left-6 top-1/2 h-5 w-5 -translate-y-1/2 text-foreground/45" />
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search destinations, cities, countries..."
+              className="w-full rounded-full border border-border bg-card py-5 pl-14 pr-32 text-base outline-none transition focus:border-accent"
+            />
+            <button
+              type="button"
+              onClick={() => setQDebounced(q.trim())}
+              className="absolute right-2 top-2 bottom-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
+            >
+              Search
+            </button>
+          </div>
+
+          {activeFilters.length > 0 && (
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              {activeFilters.map((filter, index) => (
+                <button
+                  key={`${filter.label}-${index}`}
+                  onClick={filter.clear}
+                  className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                >
+                  {filter.label} <X className="h-3 w-3" />
+                </button>
+              ))}
+              <button onClick={clearAll} className="ml-1 text-sm text-accent underline underline-offset-4">
+                Clear all filters
+              </button>
+            </div>
           )}
-        </aside>
+        </motion.div>
 
         {/* Results */}
-        <section>
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-            <p className="text-sm text-foreground/60">
+          <div className="mt-12 flex flex-wrap items-center justify-between gap-3 mb-8">
+            <p className="font-serif text-3xl text-primary">
               {isLoading ? "Loading..." : `${data?.total ?? 0} journeys found`}
               {isFetching && !isLoading && " · updating"}
             </p>
-            {activeFilters.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {activeFilters.map((f, i) => (
-                  <button
-                    key={i}
-                    onClick={f.clear}
-                    className="inline-flex items-center gap-1 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs"
-                  >
-                    {f.label}
-                    <X className="h-3 w-3" />
-                  </button>
-                ))}
-              </div>
-            )}
+            {!isLoading && <p className="text-sm text-foreground/60">Showing {data?.items.length ?? 0} of {data?.total ?? 0} journeys</p>}
           </div>
 
           {isError && (
@@ -339,7 +265,7 @@ function TripsPage() {
           )}
 
           {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div key={i} className="rounded-2xl bg-card border border-border h-[420px] animate-pulse" />
               ))}
@@ -356,7 +282,7 @@ function TripsPage() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {data?.items.map((trip, i) => (
                 <TripCard key={trip.id} trip={trip} index={i} />
               ))}
@@ -398,8 +324,52 @@ function TripsPage() {
               </button>
             </div>
           )}
-        </section>
-      </div>
+        <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
+          <DialogContent className="max-h-[85svh] max-w-2xl overflow-y-auto p-6 sm:p-8">
+            <DialogHeader>
+              <DialogTitle className="font-serif text-3xl text-primary">Filters</DialogTitle>
+            </DialogHeader>
+
+            <div className="grid gap-x-8 sm:grid-cols-2">
+              <FilterGroup label="Country">
+                <Select value={country} onChange={setCountry} options={facets?.countries ?? []} placeholder="All countries" />
+              </FilterGroup>
+              <FilterGroup label="Duration">
+                <div className="space-y-2">
+                  {DURATION_OPTIONS.map((option) => (
+                    <Radio key={option.value} name="duration" checked={duration === option.value} onChange={() => setDuration(option.value)} label={option.label} />
+                  ))}
+                </div>
+              </FilterGroup>
+              <FilterGroup label="Best Season">
+                <div className="grid grid-cols-2 gap-2">
+                  {(facets?.seasons ?? []).map((season) => (
+                    <Chip key={season} active={bestSeason === season} onClick={() => setBestSeason(bestSeason === season ? "" : season)}>
+                      {season}
+                    </Chip>
+                  ))}
+                </div>
+              </FilterGroup>
+              <FilterGroup label="Budget">
+                <div className="space-y-2">
+                  {BUDGET_BANDS.map((band) => (
+                    <Radio key={band.value} name="budget" checked={budgetBand === band.value} onChange={() => setBudgetBand(band.value)} label={band.label} />
+                  ))}
+                </div>
+              </FilterGroup>
+            </div>
+
+            <div className="mt-4 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+              <button onClick={clearAll} className="rounded-full border border-border px-5 py-3 text-sm transition hover:bg-card">
+                Clear filters
+              </button>
+              <button onClick={() => setFiltersOpen(false)} className="rounded-full bg-primary px-5 py-3 text-sm text-primary-foreground transition hover:bg-primary/90">
+                Show {data?.total ?? 0} journeys
+              </button>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </section>
     </main>
   );
 }

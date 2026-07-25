@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import darkLogo from "../../qarwaan-dark-logo.png";
 import lightLogo from "../../qarwaan-light-logo.png";
 
-type Page = "home" | "destinations" | "weekends" | "about" | "enquire" | "legal";
+type Page = "home" | "destinations" | "weekends" | "about" | "enquire" | "contact" | "legal";
 
 const NAV_ITEMS = {
   home: ["Destinations", "Weekend Getaways", "About Us"],
@@ -12,6 +12,7 @@ const NAV_ITEMS = {
   weekends: ["Home", "Destinations", "About Us"],
   about: ["Home", "Destinations", "Weekend Getaways"],
   enquire: ["Home", "Destinations", "Weekend Getaways", "About Us"],
+  contact: ["Home", "Destinations", "Weekend Getaways", "About Us"],
   legal: ["Home", "Destinations", "Weekend Getaways", "About Us"],
 } as const;
 

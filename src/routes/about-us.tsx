@@ -90,27 +90,8 @@ function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-primary px-4 py-20 text-primary-foreground sm:px-6 md:py-28 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          {/* <p className="text-[11px] uppercase tracking-[0.3em] text-accent">Meet the Founders</p> */}
-          <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">The people behind the journeys.</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {FOUNDERS.map((founder) => (
-              <article key={founder.name}>
-                <div className="flex aspect-[4/5] items-center justify-center border border-background/20 bg-background/5">
-                  <span className="text-[10px] uppercase tracking-[0.28em] text-background/50">Founder photo</span>
-                </div>
-                <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-accent">{founder.role}</p>
-                <h3 className="mt-2 font-serif text-3xl">{founder.name}</h3>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-background/70">{founder.intro}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 md:py-28 lg:px-8">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-accent">Join the Qarwaan Community</p>
+        {/* <p className="text-[11px] uppercase tracking-[0.3em] text-accent">Join the Qarwaan Community</p> */}
         <h2 className="mt-4 font-serif text-4xl leading-tight text-primary sm:text-5xl">Your next adventure starts here.</h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           Whether you&apos;re travelling solo or with friends, Qarwaan is here to help you explore more than just destinations. We&apos;re here to create stories you&apos;ll remember long after the journey ends.
@@ -134,3 +115,26 @@ function Belief({ icon: Icon, title, text }: { icon: typeof Compass; title: stri
     </div>
   );
 }
+
+
+
+
+
+// <section className="bg-primary px-4 py-20 text-primary-foreground sm:px-6 md:py-28 lg:px-8">
+//         <div className="mx-auto max-w-7xl">
+//           {/* <p className="text-[11px] uppercase tracking-[0.3em] text-accent">Meet the Founders</p> */}
+//           <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">The people behind the journeys.</h2>
+//           <div className="mt-12 grid gap-8 md:grid-cols-3">
+//             {FOUNDERS.map((founder) => (
+//               <article key={founder.name}>
+//                 <div className="flex aspect-[4/5] items-center justify-center border border-background/20 bg-background/5">
+//                   <span className="text-[10px] uppercase tracking-[0.28em] text-background/50">Founder photo</span>
+//                 </div>
+//                 <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-accent">{founder.role}</p>
+//                 <h3 className="mt-2 font-serif text-3xl">{founder.name}</h3>
+//                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-background/70">{founder.intro}</p>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
