@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -12,6 +12,7 @@ import {
   Quote,
   ChevronLeft,
   ChevronRight,
+  Search,
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -22,12 +23,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import maldives from "@/assets/dest-maldives.jpg";
-import morocco from "@/assets/dest-morocco.jpg";
 import patagonia from "@/assets/dest-patagonia.jpg";
-import kyoto from "@/assets/dest-kyoto.jpg";
-import santorini from "@/assets/dest-santorini.jpg";
-import serengeti from "@/assets/dest-serengeti.jpg";
 import heroImage from "../../hero-image.png";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
@@ -59,12 +55,20 @@ const NAV: { label: string; to: string }[] = [
   { label: "About Us", to: "/about-us" },
 ];
 
+const TRIP_IMAGES = {
+  goa: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+  kerala: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+  ladakh: "/images/ladakh-cover.png",
+  rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+  spiti: "/images/spiti-cover.png",
+};
+
 const DESTINATIONS = [
-  { name: "Kyoto", country: "Japan", region: "Japan", img: kyoto, tag: "Quiet Wonder", slug: "t2" },
-  { name: "Reykjavík", country: "Iceland", region: "Iceland", img: patagonia, tag: "Aurora Nights", slug: "t7" },
-  { name: "Tuscany", country: "Italy", region: "Italy", img: santorini, tag: "Renaissance & Wine", slug: "t9" },
-  { name: "Swiss Alps", country: "Switzerland", region: "Switzerland", img: maldives, tag: "Grand Train", slug: "t12" },
-  { name: "Masai Mara", country: "Kenya", region: "Kenya", img: serengeti, tag: "Great Migration", slug: "t19" },
+  { name: "Goa", country: "India", region: "Goa", img: TRIP_IMAGES.goa, tag: "Coast & Culture", slug: "goa-coastal-charm-cultural-escape" },
+  { name: "Kerala", country: "India", region: "Kerala", img: TRIP_IMAGES.kerala, tag: "Serenity Escape", slug: "kerala-serenity-escape" },
+  { name: "Ladakh", country: "India", region: "Ladakh", img: TRIP_IMAGES.ladakh, tag: "Himalayan Roads", slug: "ladakh-himalayan-expedition" },
+  { name: "Rajasthan", country: "India", region: "Rajasthan", img: TRIP_IMAGES.rajasthan, tag: "Royal Heritage", slug: "rajasthan-royal-heritage-desert-odyssey" },
+  { name: "Spiti Valley", country: "India", region: "Himachal Pradesh", img: TRIP_IMAGES.spiti, tag: "High-Altitude Escape", slug: "spiti-valley-expedition" },
 ];
 
 const PILLARS = [
@@ -91,21 +95,19 @@ const PILLARS = [
 ];
 
 const EXPERIENCES: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
-  { title: "Cherry Blossoms & Zen Gardens", place: "Kyoto", country: "Japan", duration: "10 nights", img: kyoto, slug: "t2" },
-  { title: "Sahara Nights & Souks", place: "Marrakech", country: "Morocco", duration: "8 nights", img: morocco, slug: "t4" },
-  { title: "Fjords, Glaciers & Aurora", place: "Reykjavík", country: "Iceland", duration: "7 nights", img: patagonia, slug: "t7" },
-  { title: "Vineyards of the Val d'Orcia", place: "Tuscany", country: "Italy", duration: "9 nights", img: santorini, slug: "t9" },
-  { title: "The Grand Alpine Train", place: "Swiss Alps", country: "Switzerland", duration: "8 nights", img: maldives, slug: "t12" },
-  { title: "The Great Migration Safari", place: "Masai Mara", country: "Kenya", duration: "10 nights", img: serengeti, slug: "t19" },
+  { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
+  { title: "Kerala Serenity Escape", place: "Kerala", country: "India", duration: "6 nights", img: TRIP_IMAGES.kerala, slug: "kerala-serenity-escape" },
+  { title: "Ultimate Ladakh Road Journey", place: "Ladakh", country: "India", duration: "6 nights", img: TRIP_IMAGES.ladakh, slug: "ladakh-himalayan-expedition" },
+  { title: "Royal Heritage & Desert Odyssey", place: "Rajasthan", country: "India", duration: "10 nights", img: TRIP_IMAGES.rajasthan, slug: "rajasthan-royal-heritage-desert-odyssey" },
+  { title: "Spiti Valley – The Himalayan Odyssey", place: "Spiti Valley", country: "India", duration: "6 nights", img: TRIP_IMAGES.spiti, slug: "spiti-valley-expedition" },
 ];
 
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
-  { title: "Backwaters of Alleppey", place: "Kerala", country: "India", duration: "3 nights", img: santorini, slug: "t10" },
-  { title: "Leh Heritage Trail", place: "Ladakh", country: "India", duration: "3 nights", img: patagonia, slug: "t3" },
-  { title: "Jaipur City Palaces", place: "Rajasthan", country: "India", duration: "2 nights", img: morocco, slug: "t4" },
-  { title: "Munnar Tea Country", place: "Kerala", country: "India", duration: "3 nights", img: kyoto, slug: "t11" },
-  { title: "Thar Desert Nights", place: "Rajasthan", country: "India", duration: "3 nights", img: serengeti, slug: "t13" },
-  { title: "Kochi Spice Weekend", place: "Kerala", country: "India", duration: "2 nights", img: maldives, slug: "t8" },
+  { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
+  { title: "Kerala Serenity Escape", place: "Kerala", country: "India", duration: "6 nights", img: TRIP_IMAGES.kerala, slug: "kerala-serenity-escape" },
+  { title: "Ultimate Ladakh Road Journey", place: "Ladakh", country: "India", duration: "6 nights", img: TRIP_IMAGES.ladakh, slug: "ladakh-himalayan-expedition" },
+  { title: "Royal Heritage & Desert Odyssey", place: "Rajasthan", country: "India", duration: "10 nights", img: TRIP_IMAGES.rajasthan, slug: "rajasthan-royal-heritage-desert-odyssey" },
+  { title: "Spiti Valley – The Himalayan Odyssey", place: "Spiti Valley", country: "India", duration: "6 nights", img: TRIP_IMAGES.spiti, slug: "spiti-valley-expedition" },
 ];
 
 
@@ -282,6 +284,15 @@ function Navbar() {
 /* ---------- Hero ---------- */
 
 function Hero() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const searchTrips = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const q = query.trim();
+    navigate({ to: "/trips", search: q ? { q } : {} });
+  };
+
   return (
     <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
       <img
@@ -316,11 +327,35 @@ function Hero() {
           Curated group trips, weekend getaways, <br></br>and unforgettable experiences across India.
         </motion.p>
 
+        <motion.form
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.45 }}
+          onSubmit={searchTrips}
+          className="relative mt-8 h-14 w-full max-w-xl rounded-full border border-background/35 bg-background/95 shadow-xl shadow-black/20"
+        >
+          <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-primary/60" aria-hidden="true" />
+          <label className="sr-only" htmlFor="home-trip-search">Search trips</label>
+          <input
+            id="home-trip-search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Where do you want to go?"
+            className="h-full w-full rounded-full bg-transparent pl-12 pr-28 text-sm text-primary outline-none placeholder:text-primary/55 sm:pr-32 sm:text-base"
+          />
+          <button
+            type="submit"
+            className="absolute bottom-1.5 right-1.5 top-1.5 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
+          >
+            Search
+          </button>
+        </motion.form>
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.5 }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
+          transition={{ duration: 0.9, delay: 0.55 }}
+          className="mt-7 flex flex-col items-center gap-4 sm:flex-row"
         >
           <Link
             to="/trips"
@@ -548,6 +583,7 @@ function Experiences() {
           <ExperienceCarousel items={EXPERIENCES} idPrefix="signature" />
         </div>
 
+        {/*
         <div className="mt-24">
           <SectionHeader
             eyebrow="Short Escapes"
@@ -562,6 +598,7 @@ function Experiences() {
             <ExperienceCarousel items={WEEKEND_GETAWAYS} idPrefix="weekend" />
           </div>
         </div>
+        */}
       </div>
     </section>
   );

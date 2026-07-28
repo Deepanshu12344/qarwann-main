@@ -101,8 +101,8 @@ function ContactPage() {
               </a>
               <a href="mailto:team@qarwaan.com" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><Mail className="h-4 w-4 text-accent" /> team@qarwaan.com</a>
               <a href="https://www.instagram.com/qarwaantravels/" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><Instagram className="h-4 w-4 text-accent" /> Instagram DM</a>
-              <a href="tel:+919266238287" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><Phone className="h-4 w-4 text-accent" /> +91 92662 38287</a>
-              <a href="https://wa.me/919266238287" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><MessageCircle className="h-4 w-4 text-accent" /> Message on WhatsApp</a>
+              <a href="tel:+918796162117" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><Phone className="h-4 w-4 text-accent" /> +91 87961 62117</a>
+              <a href="https://wa.me/918796162117" target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-md bg-primary/5 p-3 text-sm text-primary transition hover:bg-primary/10"><MessageCircle className="h-4 w-4 text-accent" /> Message on WhatsApp</a>
             </div>
             <iframe
               title="Qarwaan office location"

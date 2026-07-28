@@ -393,7 +393,7 @@ function TripCard({ trip, index }: { trip: Trip; index: number }) {
           <MapPin className="h-3 w-3" /> {trip.country}
         </div>
         <div className="absolute top-3 right-3 rounded-full bg-accent text-accent-foreground px-3 py-1 text-xs font-medium">
-          ₹{trip.budget.toLocaleString("en-IN")}
+          {trip.budget > 0 ? `₹${trip.budget.toLocaleString("en-IN")}` : "Price on request"}
         </div>
       </div>
       <div className="p-5 flex flex-col flex-1">

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { DEMO_TRIP_CARDS } from "@/data/demo-itineraries";
+import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 
 
 type Trip = {
@@ -17,7 +17,8 @@ type Trip = {
   popularity: number;
 };
 
-export const TRIPS: Trip[] = [
+/** Retained only as historical fixture data; it is not exposed by the public API. */
+export const LEGACY_TRIPS: Trip[] = [
   {
     id: "t1",
     name: "Maldives Overwater Escape",
@@ -243,6 +244,22 @@ export const TRIPS: Trip[] = [
     popularity: 85,
   },
 ];
+
+/** The four journeys supplied in the Qarwaan workbooks. */
+export const TRIPS: Trip[] = QARWAAN_ITINERARIES.map((trip, index) => ({
+  id: trip.id,
+  name: trip.packageName,
+  country: trip.country,
+  cover: trip.coverImage,
+  durationDays: trip.durationDays,
+  cities: [...trip.citiesCovered],
+  bestSeason: trip.bestSeason[0] ?? "All year",
+  startingPoint: trip.startPoint,
+  tripType: trip.tripType,
+  budget: trip.budgetFrom,
+  idealFor: trip.idealFor[0] ?? "Travellers",
+  popularity: 100 - index,
+}));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
