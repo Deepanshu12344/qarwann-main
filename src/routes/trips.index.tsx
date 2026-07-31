@@ -179,7 +179,7 @@ function TripsPage() {
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader page="destinations" />
 
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 sm:py-14">
+      <section className="px-7 py-10 md:px-16 md:py-14 lg:px-20 xl:px-28">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

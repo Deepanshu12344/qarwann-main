@@ -400,35 +400,46 @@ function KeyExperiences({ items }: { items: string[] }) {
   return (
     <section className="bg-card/40 border-y border-border">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        {/* <SectionLabel>Signature Moments</SectionLabel> */}
-        <h2 className="mt-3 font-serif text-3xl md:text-4xl text-primary">
-          Key Experiences
-        </h2>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="font-serif text-3xl md:text-4xl text-primary">
+            Key Experiences
+          </h2>
+          <p className="text-sm text-foreground/55">{items.length} highlights</p>
+        </div>
+        <Carousel opts={{ align: "start", loop: false }} className="mt-8 px-12">
+          <CarouselContent className="-ml-5">
           {items.map((exp, i) => {
             const Icon = icons[i % icons.length];
             return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative rounded-2xl bg-background border border-border p-6 md:p-7 hover:border-accent/60 transition"
-              >
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <p className="mt-5 text-foreground leading-relaxed text-[15px]">
-                  {exp}
-                </p>
-                <div className="mt-6 text-xs tracking-[0.25em] uppercase text-foreground/40">
-                  Experience · 0{i + 1}
-                </div>
-              </motion.div>
+              <CarouselItem key={i} className="basis-[88%] pl-5 sm:basis-1/2 lg:basis-1/3">
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: Math.min(i, 3) * 0.05 }}
+                  className="group flex h-[210px] flex-col rounded-2xl border border-border bg-background p-5 transition hover:border-accent/60 md:p-6"
+                >
+                  <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <p className="mt-5 overflow-y-auto pr-2 text-[17px] leading-relaxed text-foreground">
+                    {exp}
+                  </p>
+                  <div className="mt-4 shrink-0 text-xs uppercase tracking-[0.25em] text-foreground/40">
+                    Experience · {String(i + 1).padStart(2, "0")}
+                  </div>
+                </motion.div>
+              </CarouselItem>
             );
           })}
-        </div>
+          </CarouselContent>
+          {items.length > 1 && (
+            <>
+              <CarouselPrevious className="left-0 border-border bg-background text-primary hover:bg-background" />
+              <CarouselNext className="right-0 border-border bg-background text-primary hover:bg-background" />
+            </>
+          )}
+        </Carousel>
       </div>
     </section>
   );
@@ -436,16 +447,13 @@ function KeyExperiences({ items }: { items: string[] }) {
 
 /* ---------------- Collage ---------------- */
 function Collage({ trip }: { trip: TripDetail }) {
-  const tripImages = Array.from(
-    new Set([
-      trip.coverImage,
-      ...trip.journeyDays.flatMap((day) => day.images ?? []),
-    ].filter(Boolean))
-  ) as string[];
-  const images = Array.from(
-    { length: 4 },
-    (_, index) => tripImages[index % tripImages.length] ?? ITINERARY_FALLBACK_IMAGES[index]
-  );
+  const days = trip.journeyDays.filter((day) => day.images?.length);
+  const images = Array.from({ length: 4 }, (_, index) => {
+    const day = days[Math.min(days.length - 1, Math.floor((index * days.length) / 4))];
+    return day?.images?.[index % day.images.length]
+      ?? trip.coverImage
+      ?? ITINERARY_FALLBACK_IMAGES[index];
+  });
 
   return (
     <section
@@ -551,9 +559,10 @@ function Itinerary({
 
 function galleryImages(images: string[], coverImage?: string, offset = 0) {
   const supplied = Array.from(new Set(images.filter(Boolean)));
+  if (supplied.length) return supplied;
   const fallback = coverImage ? [coverImage, ...ITINERARY_FALLBACK_IMAGES] : ITINERARY_FALLBACK_IMAGES;
   const rotatedFallback = fallback.map((_, i) => fallback[(i + offset) % fallback.length]);
-  return Array.from(new Set([...supplied, ...rotatedFallback])).slice(0, 4);
+  return Array.from(new Set(rotatedFallback)).slice(0, 4);
 }
 
 function DayCard({ d, images }: { d: JourneyDay; images: string[] }) {
@@ -654,7 +663,14 @@ function DayCard({ d, images }: { d: JourneyDay; images: string[] }) {
 
 function DayGallery({ day, location, images }: { day: number; location: string; images: string[] }) {
   return (
-    <Carousel opts={{ align: "start", loop: true }} className="mt-7 px-0">
+    <div className="mt-7">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/55">
+          Day gallery
+        </p>
+        <p className="text-xs text-foreground/45">{images.length} activity moments</p>
+      </div>
+    <Carousel opts={{ align: "start", loop: true }} className="px-0">
       <CarouselContent className="-ml-0">
         {images.map((src, i) => (
           <CarouselItem key={`${src}-${i}`} className="basis-full pl-0">
@@ -672,6 +688,7 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
       <CarouselPrevious className="left-4 border-border bg-background/90 text-primary hover:bg-background" />
       <CarouselNext className="right-4 border-border bg-background/90 text-primary hover:bg-background" />
     </Carousel>
+    </div>
   );
 }
 

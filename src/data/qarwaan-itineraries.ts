@@ -101,7 +101,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Boutique Hotel / Heritage Hotel / 4★–5★ Hotel",
         "accessibility": "Flight arrival via Dabolim or Manohar International Airport followed by private road transfer to Panaji",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 2,
@@ -159,7 +164,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Boutique Hotel / Heritage Hotel / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Panaji to Old Goa, followed by local ferry access to Divar Island and return to Panaji",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 3,
@@ -217,7 +227,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Beach Resort / Boutique Hotel / 4★–5★ Hotel",
         "accessibility": "Local road journey with private vehicle covering Fort Aguada, major North Goa beaches, Chapora and Vagator",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 4,
@@ -277,7 +292,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Beach Resort / Boutique Coastal Resort / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle covering South Goa beaches, Cavelossim and Cabo de Rama",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 5,
@@ -332,7 +352,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Boutique Hotel / Nature Resort / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle through Ponda and interior Goa to the Tambdi Surla region",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 6,
@@ -390,7 +415,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Beach Resort / Boutique Coastal Resort / 4★–5★ Hotel",
         "accessibility": "Local road journey with private vehicle through Canacona, with optional boat access to Butterfly Beach",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 7,
@@ -443,7 +473,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Departure",
         "accessibility": "Private road transfer to Dabolim Airport or Manohar International Airport for departure flight",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        ]
       }
     ]
   },
@@ -549,7 +584,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / 4★–5★ Hotel",
         "accessibility": "Flight (Kochi International Airport with short transfer to hotel)",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 2,
@@ -600,7 +640,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Hill Resort / 4★–5★ Hotel",
         "accessibility": "Road journey via NH 85 with private vehicle through scenic Western Ghats to Munnar",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 3,
@@ -655,7 +700,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Hill Resort / 4★–5★ Hotel",
         "accessibility": "Local road travel with private vehicle for sightseeing across Munnar and nearby attractions",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 4,
@@ -708,7 +758,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Jungle Resort / Nature Resort / 4★–5★ Hotel",
         "accessibility": "Road journey via NH 183 through tea estates and spice plantations to Thekkady",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 5,
@@ -760,7 +815,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Deluxe Houseboat",
         "accessibility": "Road journey to Alleppey followed by houseboat boarding for backwater cruise",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 6,
@@ -814,7 +874,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Beach Resort / 4★–5★ Resort",
         "accessibility": "Road journey via NH 66 with private vehicle to Kovalam Beach",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 7,
@@ -866,7 +931,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Departure",
         "accessibility": "Short road transfer to Thiruvananthapuram International Airport for departure flight",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1800&q=85"
+        ]
       }
     ]
   },
@@ -947,7 +1017,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Hotel",
         "accessibility": "Flight (Leh Airport with short transfer to hotel)",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 2,
@@ -992,7 +1067,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Hotel",
         "accessibility": "Road travel with private vehicle for local sightseeing across Leh and nearby monasteries",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 3,
@@ -1037,7 +1117,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Camp",
         "accessibility": "Road journey via Khardung La Pass requiring experienced driving and acclimatized travelers",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 4,
@@ -1084,7 +1169,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Camp",
         "accessibility": "Local road travel within Nubra Valley with short distances between villages and attractions",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 5,
@@ -1130,7 +1220,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Camp",
         "accessibility": "Road journey through remote mountainous terrain requiring careful driving and experienced driver",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 6,
@@ -1173,7 +1268,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Hotel",
         "accessibility": "Road travel via Chang La Pass with well-connected route back to Leh",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 7,
@@ -1209,7 +1309,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "N/A",
         "accessibility": "Flight (Leh Airport transfer for departure)",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85"
+        ]
       }
     ]
   },
@@ -1323,7 +1428,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Palace Hotel / 4★–5★ Hotel",
         "accessibility": "Flight or train arrival in Jaipur followed by private road transfer for local sightseeing",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 2,
@@ -1382,7 +1492,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Palace Hotel / 4★–5★ Hotel",
         "accessibility": "Local road journey with private vehicle covering Amber, Jaigarh, Nahargarh and nearby Jaipur attractions",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 3,
@@ -1442,7 +1557,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Boutique Resort / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Jaipur via Ajmer to Pushkar",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 4,
@@ -1498,7 +1618,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Haveli / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Pushkar to Jodhpur, followed by local city sightseeing",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 5,
@@ -1555,7 +1680,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Haveli / Palace Hotel / 4★–5★ Hotel",
         "accessibility": "Local road journey with private vehicle covering Mehrangarh Fort, Jaswant Thada, Umaid Bhawan Palace and nearby Jodhpur attractions",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 6,
@@ -1611,7 +1741,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Haveli / Boutique Hotel / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Jodhpur via Osian and Pokhran to Jaisalmer",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 7,
@@ -1669,7 +1804,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Desert Camp / Luxury Swiss Tent",
         "accessibility": "Local road journey with private vehicle from Jaisalmer through Kuldhara to Sam Sand Dunes",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 8,
@@ -1720,7 +1860,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Haveli / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Sam/Jaisalmer via Pokhran to Jodhpur",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 9,
@@ -1774,7 +1919,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Lake-View Hotel / Palace Hotel / 4★–5★ Hotel",
         "accessibility": "Road journey with private vehicle from Jodhpur via Ranakpur to Udaipur",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 10,
@@ -1835,7 +1985,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Premium Heritage Hotel / Lake-View Hotel / Palace Hotel / 4★–5★ Hotel",
         "accessibility": "Local sightseeing by private vehicle within Udaipur, with boat access for the Lake Pichola experience",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 11,
@@ -1891,7 +2046,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Departure",
         "accessibility": "Local sightseeing by private vehicle followed by road transfer to Maharana Pratap Airport for departure flight",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85"
+        ]
       }
     ]
   },
@@ -2002,7 +2162,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Mountain Hotel / Boutique Homestay",
         "accessibility": "Road journey via NH 5 with private vehicle through Narkanda, Rampur and Reckong Peo to Kalpa",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 2,
@@ -2057,7 +2222,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Mountain Guesthouse / Boutique Homestay",
         "accessibility": "Road journey via NH 5 and NH 505 with private vehicle through Khab, Nako and Sumdo to Tabo",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 3,
@@ -2114,7 +2284,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Boutique Homestay / Mountain Hotel",
         "accessibility": "Road journey via NH 505 with private vehicle through Dhankar and Sichling to Kaza",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 4,
@@ -2170,7 +2345,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Boutique Homestay / Mountain Hotel",
         "accessibility": "Local mountain-road journey with private vehicle from Kaza to Key, Kibber and Chicham, returning to Kaza",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 5,
@@ -2229,7 +2409,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Boutique Homestay / Mountain Hotel",
         "accessibility": "Local high-altitude road journey with private vehicle from Kaza to Langza, Hikkim and Komic, returning to Kaza",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 6,
@@ -2284,7 +2469,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Swiss Camp / Premium Seasonal Camp",
         "accessibility": "High-altitude road journey via Losar, Kunzum Pass and Batal with private vehicle, followed by road access towards Chandratal",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85"
+        ]
       },
       {
         "day": 7,
@@ -2339,7 +2529,12 @@ export const QARWAAN_ITINERARIES = [
         ],
         "stayType": "Departure / Optional Hotel Stay in Manali",
         "accessibility": "High-altitude road journey via Batal, Chhatru, Gramphu and Atal Tunnel with private vehicle to Manali",
-        "images": []
+        "images": [
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85"
+        ]
       }
     ]
   }

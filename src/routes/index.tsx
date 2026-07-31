@@ -355,7 +355,7 @@ function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.55 }}
-          className="mt-7 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-7 flex w-full max-w-xl flex-col items-center gap-4 sm:flex-row sm:justify-between"
         >
           <Link
             to="/trips"
