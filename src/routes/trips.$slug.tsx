@@ -101,6 +101,39 @@ const ITINERARY_FALLBACK_IMAGES = [
   "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=85",
 ];
 
+const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
+  "goa-coastal-charm-cultural-escape": [
+    "/images/goa/collage/alexey-turenkov-bWJiSZjIgTM-unsplash.jpg",
+    "/images/goa/collage/raja-sen-FYos6AbcDsY-unsplash.jpg",
+    "/images/goa/collage/raja-sen-MzmI2I1GCnU-unsplash.jpg",
+    "/images/goa/collage/sarang-pande-IijeyJbmrec-unsplash.jpg",
+  ],
+  "kerala-serenity-escape": [
+    "/images/kerala/collage/abhishek-prasad-ayFW56Rz5Cs-unsplash.jpg",
+    "/images/kerala/collage/ajin-k-s-0tuzOfs-T3s-unsplash.jpg",
+    "/images/kerala/collage/anantha-krishnan-hx9jfP3Yrs0-unsplash.jpg",
+    "/images/kerala/collage/deepak-h-nath-P0Z_8CyiRxg-unsplash.jpg",
+  ],
+  "ladakh-himalayan-expedition": [
+    "/images/ladakh/collage/rish-agarwal-f8tGje5BkpQ-unsplash.jpg",
+    "/images/ladakh/collage/rohit-kumar-idzQ-cyYFb4-unsplash.jpg",
+    "/images/ladakh/collage/sankalp-sharma-uZypmEKbxRw-unsplash.jpg",
+    "/images/ladakh/collage/vivek-1-3nvYCuLwU-unsplash.jpg",
+  ],
+  "rajasthan-royal-heritage-desert-odyssey": [
+    "/images/rajasthan/collage/aditya-siva-6rDbvXzIVpQ-unsplash.jpg",
+    "/images/rajasthan/collage/maninder-sidhu-4Q0GId_0Fko-unsplash.jpg",
+    "/images/rajasthan/collage/meric-dagli-ZgbzOZW9U3o-unsplash.jpg",
+    "/images/rajasthan/collage/shravan-k-acharya-vFvfgCnrW4A-unsplash.jpg",
+  ],
+  "spiti-valley-expedition": [
+    "/images/spiti/collage/anmol-arora-fSs7jp_rx0w-unsplash.jpg",
+    "/images/spiti/collage/naman-sood-PgxNcCK7tVk-unsplash.jpg",
+    "/images/spiti/collage/smiti-murarka-f0sCVnoYeqg-unsplash.jpg",
+    "/images/spiti/collage/varun-singh-RmWkrjjz2J4-unsplash.jpg",
+  ],
+};
+
 function enquirySearch(trip: TripDetail) {
   const details = [
     trip.country && `Country: ${trip.country}`,
@@ -192,12 +225,13 @@ function TripDetailsPage() {
     );
   }
 
-  // Group days by Location, preserving order of first appearance.
+  // Group only consecutive days by location so return visits do not move later
+  // days ahead of the journey sequence (for example, Leh on days 6–7).
   const grouped: { location: string; days: JourneyDay[] }[] = [];
   for (const d of data.journeyDays ?? []) {
     if (!d.location) continue;
-    const existing = grouped.find((g) => g.location === d.location);
-    if (existing) existing.days.push(d);
+    const currentGroup = grouped.at(-1);
+    if (currentGroup?.location === d.location) currentGroup.days.push(d);
     else grouped.push({ location: d.location, days: [d] });
   }
 
@@ -447,6 +481,11 @@ function KeyExperiences({ items }: { items: string[] }) {
 
 /* ---------------- Collage ---------------- */
 function Collage({ trip }: { trip: TripDetail }) {
+  const tripCollage = TRIP_COLLAGE_IMAGES[trip.slug] ?? TRIP_COLLAGE_IMAGES[trip.id];
+  if (tripCollage) {
+    return <CollageGrid trip={trip} images={tripCollage} />;
+  }
+
   const days = trip.journeyDays.filter((day) => day.images?.length);
   const images = Array.from({ length: 4 }, (_, index) => {
     const day = days[Math.min(days.length - 1, Math.floor((index * days.length) / 4))];
@@ -455,6 +494,10 @@ function Collage({ trip }: { trip: TripDetail }) {
       ?? ITINERARY_FALLBACK_IMAGES[index];
   });
 
+  return <CollageGrid trip={trip} images={images} />;
+}
+
+function CollageGrid({ trip, images }: { trip: TripDetail; images: string[] }) {
   return (
     <section
       className="h-[70svh] min-h-[420px] w-full overflow-hidden bg-background"

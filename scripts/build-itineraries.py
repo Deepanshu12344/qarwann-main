@@ -123,6 +123,60 @@ DAY_IMAGE_THEMES = {
     "spiti-valley-expedition": ["spiti-mountains", "spiti-mountains", "spiti-monastery", "spiti-monastery", "spiti-monastery", "spiti-mountains", "spiti-mountains"],
 }
 
+# Local day galleries use the supplied photography. Each list is the carousel
+# sequence: e.g. day 1 starts with day1-1.jpeg.
+LOCAL_DAY_IMAGES = {
+    "goa-coastal-charm-cultural-escape": {
+        1: ["/images/goa/daywise/day1-1.jpeg", "/images/goa/daywise/day1-2.jpeg", "/images/goa/daywise/day1-3.jpeg", "/images/goa/daywise/day1-4.jpeg"],
+        2: ["/images/goa/daywise/day2-1.jpeg", "/images/goa/daywise/day2-2.jpeg", "/images/goa/daywise/day2-3.jpeg"],
+        3: ["/images/goa/daywise/day3-1.jpeg", "/images/goa/daywise/day3-2.jpeg"],
+        4: ["/images/goa/daywise/day4-1.jpeg", "/images/goa/daywise/day4-2.jpeg"],
+        5: ["/images/goa/daywise/day5-1.jpeg", "/images/goa/daywise/day5-2.jpeg", "/images/goa/daywise/day5-3.jpeg"],
+        6: ["/images/goa/daywise/day6-1.jpeg", "/images/goa/daywise/day6-2.jpeg"],
+        7: ["/images/goa/daywise/day7-1.jpeg", "/images/goa/daywise/day7-2.jpeg"],
+    },
+    "kerala-serenity-escape": {
+        1: ["/images/kerala/daywise/day1-1.jpeg", "/images/kerala/daywise/day1-2.jpeg", "/images/kerala/daywise/day1-3.jpeg"],
+        2: ["/images/kerala/daywise/day2-1.jpeg", "/images/kerala/daywise/day2-2.jpeg"],
+        3: ["/images/kerala/daywise/day3-1.jpeg", "/images/kerala/daywise/day3-2.jpeg"],
+        4: ["/images/kerala/daywise/day4-1.jpeg", "/images/kerala/daywise/day4-2.jpeg"],
+        5: ["/images/kerala/daywise/day5-1.jpeg", "/images/kerala/daywise/day5-2.jpeg"],
+        6: ["/images/kerala/daywise/day6-1.jpeg", "/images/kerala/daywise/day6-2.jpeg", "/images/kerala/daywise/day6-3.jpeg"],
+        7: ["/images/kerala/daywise/day7-1.jpeg", "/images/kerala/daywise/day7-2.jpeg"],
+    },
+    "ladakh-himalayan-expedition": {
+        1: ["/images/ladakh/daywise/day1-1.jpeg", "/images/ladakh/daywise/day1-2.jpeg"],
+        2: ["/images/ladakh/daywise/day2-1.jpeg", "/images/ladakh/daywise/day2-2.jpeg", "/images/ladakh/daywise/day2-3.jpeg"],
+        3: ["/images/ladakh/daywise/day3-1.jpeg", "/images/ladakh/daywise/day3-2.jpeg"],
+        4: ["/images/ladakh/daywise/day4-1.jpeg", "/images/ladakh/daywise/day4-2.jpeg"],
+        5: ["/images/ladakh/daywise/day5-1.jpeg", "/images/ladakh/daywise/day5-2.jpeg"],
+        6: ["/images/ladakh/daywise/day6-1.jpeg", "/images/ladakh/daywise/day6-2.jpeg"],
+        7: ["/images/ladakh/daywise/day7-1.jpeg", "/images/ladakh/daywise/day7-2.jpeg", "/images/ladakh/daywise/day7-3.jpeg"],
+    },
+    "rajasthan-royal-heritage-desert-odyssey": {
+        1: ["/images/rajasthan/daywise/day1-1.jpeg", "/images/rajasthan/daywise/day1-2.jpeg"],
+        2: ["/images/rajasthan/daywise/day2-1.jpeg", "/images/rajasthan/daywise/day2-2.jpeg", "/images/rajasthan/daywise/day2-3.jpeg"],
+        3: ["/images/rajasthan/daywise/day3-1.jpeg", "/images/rajasthan/daywise/day3-2.jpeg"],
+        4: ["/images/rajasthan/daywise/day4-1.jpeg", "/images/rajasthan/daywise/day4-2.jpeg"],
+        5: ["/images/rajasthan/daywise/day5-1.jpeg", "/images/rajasthan/daywise/day5-2.jpeg"],
+        6: ["/images/rajasthan/daywise/day6-1.jpeg", "/images/rajasthan/daywise/day6-2.jpeg"],
+        7: ["/images/rajasthan/daywise/day7-1.jpeg", "/images/rajasthan/daywise/day7-2.jpeg"],
+        8: ["/images/rajasthan/daywise/day8-1.jpeg", "/images/rajasthan/daywise/day8-2.jpeg"],
+        9: ["/images/rajasthan/daywise/day9-1.jpeg", "/images/rajasthan/daywise/day9-2.jpeg", "/images/rajasthan/daywise/day9-3.jpeg"],
+        10: ["/images/rajasthan/daywise/day10-1.jpeg", "/images/rajasthan/daywise/day10-2.jpeg", "/images/rajasthan/daywise/day10-3.jpeg"],
+        11: ["/images/rajasthan/daywise/day11-1.jpeg", "/images/rajasthan/daywise/day11-2.jpeg"],
+    },
+    "spiti-valley-expedition": {
+        1: ["/images/spiti/daywise/day1-1.jpeg", "/images/spiti/daywise/day1-2.jpeg", "/images/spiti/daywise/day1-3.jpeg"],
+        2: ["/images/spiti/daywise/day2-1.jpeg", "/images/spiti/daywise/day2-2.jpeg"],
+        3: ["/images/spiti/daywise/day3-1.jpeg", "/images/spiti/daywise/day3-2.jpeg"],
+        4: ["/images/spiti/daywise/day4-1.jpeg", "/images/spiti/daywise/day4-2.jpeg"],
+        5: ["/images/spiti/daywise/day5-1.jpeg", "/images/spiti/daywise/day5-2.jpeg"],
+        6: ["/images/spiti/daywise/day6-1.jpeg", "/images/spiti/daywise/day6-2.jpeg", "/images/spiti/daywise/day6-3.jpeg"],
+        7: ["/images/spiti/daywise/day7-1.jpeg", "/images/spiti/daywise/day7-2.jpeg", "/images/spiti/daywise/day7-3.jpeg"],
+    },
+}
+
 
 def column(reference: str) -> int:
     result = 0
@@ -176,6 +230,7 @@ def main() -> None:
             if not day_number:
                 continue
             theme = DAY_IMAGE_THEMES[slug][len(days)]
+            images = LOCAL_DAY_IMAGES.get(slug, {}).get(day_number, IMAGE_LIBRARY[theme])
             days.append({
                 "day": day_number, "route": row["Route"], "location": row["Location"], "phase": row["Phase"],
                 "nature": as_bool(row["Nature"]), "adventure": as_bool(row["Adventure"]),
@@ -185,7 +240,7 @@ def main() -> None:
                 "hiddenGems": as_list(row["Hidden Gems"]), "activities": as_list(row["Activities"]),
                 "localFood": as_list(row["Local Food"]), "localExperience": row["Local Experience (Shopping / Interaction)"],
                 "festivals": as_list(row["Festivals (if any)"]), "stayType": row["Stay Type"],
-                "accessibility": row["Accessibility (Road/Flight)"], "images": IMAGE_LIBRARY[theme],
+                "accessibility": row["Accessibility (Road/Flight)"], "images": images,
             })
         duration = about["Duration"]
         days_match = re.search(r"(\d+)\s*Days?", duration, re.I)
