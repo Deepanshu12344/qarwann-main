@@ -1278,8 +1278,7 @@ export const QARWAAN_ITINERARIES = [
         "accessibility": "Flight (Leh Airport transfer for departure)",
         "images": [
           "/images/ladakh/daywise/day7-1.jpeg",
-          "/images/ladakh/daywise/day7-2.jpeg",
-          "/images/ladakh/daywise/day7-3.jpeg"
+          "/images/ladakh/daywise/day7-2.jpeg"
         ]
       }
     ]

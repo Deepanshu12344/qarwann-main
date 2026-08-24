@@ -40,7 +40,7 @@ export function SiteHeader({ page, transparentAtTop = false }: { page: Page; tra
   }, [transparentAtTop]);
 
   return (
-    <header className={`sticky inset-x-0 top-0 z-50 transition-all duration-500 ${transparentAtTop ? "md:fixed" : "border-b border-border/50 bg-background/90 backdrop-blur"} ${scrolled && transparentAtTop ? "border-b border-border bg-background/85 backdrop-blur-md" : ""}`}>
+    <header className={`sticky inset-x-0 top-0 z-50 transition-all duration-500 ${transparentAtTop ? "max-md:fixed md:fixed" : "border-b border-border/50 bg-background/90 backdrop-blur"} ${scrolled && transparentAtTop ? "border-b border-border bg-background/85 backdrop-blur-md" : ""}`}>
       <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:px-8 md:h-20">
         <Link to="/" className="justify-self-start">
           <img src={logo} alt="Qarwaan" className="h-10 w-auto object-contain md:h-12" />
@@ -51,14 +51,14 @@ export function SiteHeader({ page, transparentAtTop = false }: { page: Page; tra
         <div className="hidden justify-self-end lg:block">
           {page !== "enquire" && <Link to="/enquire" className={`group inline-flex items-center gap-1.5 text-sm tracking-wide transition-colors ${textColor}`}>Plan Your Journey <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>}
         </div>
-        <button aria-label="Open menu" className={`justify-self-end lg:hidden ${textColor}`} onClick={() => setOpen(true)}><Menu className="h-6 w-6" /></button>
+        <button aria-label="Open menu" className={`col-start-3 justify-self-end lg:hidden ${textColor}`} onClick={() => setOpen(true)}><Menu className="h-6 w-6" /></button>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[60] bg-primary px-8 py-5 text-primary-foreground">
+        <div className="fixed inset-0 z-[60] bg-[#004643] px-8 py-5 text-[#F0EDE5] lg:hidden">
           <div className="flex items-center justify-between"><img src={lightLogo} alt="Qarwaan" className="h-10 w-auto object-contain" /><button aria-label="Close menu" onClick={() => setOpen(false)}><X className="h-6 w-6" /></button></div>
           <nav className="mt-16 flex flex-col gap-6">
-            {links.map((label) => <NavLink key={label} label={label} onClick={() => setOpen(false)} className="font-serif text-4xl" />)}
+            {links.map((label) => <NavLink key={label} label={label} onClick={() => setOpen(false)} className="font-serif text-4xl text-[#F0EDE5]" />)}
             {page !== "enquire" && <Link to="/enquire" onClick={() => setOpen(false)} className="mt-4 inline-flex items-center gap-2 text-lg text-accent">Plan Your Journey <ArrowUpRight className="h-5 w-5" /></Link>}
           </nav>
         </div>

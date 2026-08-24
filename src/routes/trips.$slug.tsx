@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -35,6 +36,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 type JourneyDay = {
@@ -705,6 +707,15 @@ function DayCard({ d, images }: { d: JourneyDay; images: string[] }) {
 }
 
 function DayGallery({ day, location, images }: { day: number; location: string; images: string[] }) {
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api || images.length < 2) return;
+
+    const timer = window.setInterval(() => api.scrollNext(), 5000);
+    return () => window.clearInterval(timer);
+  }, [api, images.length]);
+
   return (
     <div className="mt-7">
       <div className="mb-3 flex items-center justify-between gap-3">
@@ -713,7 +724,7 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
         </p>
         <p className="text-xs text-foreground/45">{images.length} activity moments</p>
       </div>
-    <Carousel opts={{ align: "start", loop: true }} className="px-0">
+    <Carousel setApi={setApi} opts={{ align: "start", loop: true }} className="px-0">
       <CarouselContent className="-ml-0">
         {images.map((src, i) => (
           <CarouselItem key={`${src}-${i}`} className="basis-full pl-0">
@@ -728,8 +739,12 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-4 border-border bg-background/90 text-primary hover:bg-background" />
-      <CarouselNext className="right-4 border-border bg-background/90 text-primary hover:bg-background" />
+      {images.length > 1 && (
+        <>
+          <CarouselPrevious className="left-4 border-border bg-background/90 text-primary hover:bg-background" />
+          <CarouselNext className="right-4 border-border bg-background/90 text-primary hover:bg-background" />
+        </>
+      )}
     </Carousel>
     </div>
   );
