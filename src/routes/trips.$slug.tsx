@@ -739,7 +739,13 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
                 src={src}
                 alt={`Day ${day} in ${location}, scene ${i + 1}`}
                 loading="lazy"
-                className="h-full w-full object-cover"
+                className={`h-full w-full object-cover ${
+                  src === "/images/bali/daywise/day5-1.jpg"
+                    ? "object-[50%_55%]"
+                    : src === "/images/bali/daywise/day6-2.jpg"
+                      ? "object-[50%_20%]"
+                      : ""
+                }`}
               />
             </div>
           </CarouselItem>
