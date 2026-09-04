@@ -40,7 +40,7 @@ export function SiteFooter() {
               <a href="https://www.instagram.com/qarwaantravels/" target="_blank" rel="noreferrer" aria-label="Qarwaan Travels on Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
                 <Instagram className="h-4 w-4" strokeWidth={1.5} />
               </a>
-              <a href="#" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
+              <a href="https://www.facebook.com/profile.php?id=61592869778423" target="_blank" rel="noreferrer" aria-label="Facebook" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
                 <Facebook className="h-4 w-4" strokeWidth={1.5} />
               </a>
               <a href="mailto:team@qarwaan.com" aria-label="Email Qarwaan" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 text-background/80 transition-colors hover:border-accent hover:text-accent">
