@@ -12,17 +12,24 @@ from pathlib import Path
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 ROOT = Path(__file__).resolve().parents[1]
 WORKBOOKS = [
-    ("Goa_Qar..xlsx", "goa-coastal-charm-cultural-escape", "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85"),
-    ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85"),
-    ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png"),
-    ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85"),
-    ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png"),
+    ("Bali Qa..xlsx", "bali-island-of-gods-iconic-wonders-hidden-gems", "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85", "Indonesia"),
+    ("Goa_Qar..xlsx", "goa-coastal-charm-cultural-escape", "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png", "India"),
+    ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
 
 # Editorial image sets are deliberately grouped by the actual experience planned
 # for each day.  They are kept here (rather than entered by hand in the generated
 # TypeScript) so regenerating the workbook data never removes the day galleries.
 IMAGE_LIBRARY = {
+    "bali-island": [
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=1800&q=85",
+    ],
     "goa-heritage": [
         "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
         "https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1800&q=85",
@@ -116,6 +123,7 @@ IMAGE_LIBRARY = {
 }
 
 DAY_IMAGE_THEMES = {
+    "bali-island-of-gods-iconic-wonders-hidden-gems": ["bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island"],
     "goa-coastal-charm-cultural-escape": ["goa-heritage", "goa-heritage", "goa-coast", "goa-coast", "goa-nature", "goa-coast", "goa-heritage"],
     "kerala-serenity-escape": ["kerala-heritage", "kerala-hills", "kerala-hills", "kerala-wildlife", "kerala-water", "kerala-water", "kerala-heritage"],
     "ladakh-himalayan-expedition": ["ladakh-town", "ladakh-town", "ladakh-desert", "ladakh-desert", "ladakh-lake", "ladakh-lake", "ladakh-town"],
@@ -126,6 +134,15 @@ DAY_IMAGE_THEMES = {
 # Local day galleries use the supplied photography. Each list is the carousel
 # sequence: e.g. day 1 starts with day1-1.jpeg.
 LOCAL_DAY_IMAGES = {
+    "bali-island-of-gods-iconic-wonders-hidden-gems": {
+        1: ["/images/bali/daywise/day1-1.jpg", "/images/bali/daywise/day1-2.jpg"],
+        2: ["/images/bali/daywise/day2-1.jpeg", "/images/bali/daywise/day2-2.jpeg"],
+        3: ["/images/bali/daywise/day3-1.jpeg", "/images/bali/daywise/day3-2.jpeg"],
+        4: ["/images/bali/daywise/day4-1.jpeg", "/images/bali/daywise/day4-2.jpeg"],
+        5: ["/images/bali/daywise/day5-1.jpg", "/images/bali/daywise/day5-2.jpeg"],
+        6: ["/images/bali/daywise/day6-1.jpeg", "/images/bali/daywise/day6-2.jpg"],
+        7: ["/images/bali/daywise/day7-1.jpeg", "/images/bali/daywise/day7-2.jpeg"],
+    },
     "goa-coastal-charm-cultural-escape": {
         1: ["/images/goa/daywise/day1-1.jpeg", "/images/goa/daywise/day1-2.jpeg", "/images/goa/daywise/day1-3.jpeg", "/images/goa/daywise/day1-4.jpeg"],
         2: ["/images/goa/daywise/day2-1.jpeg", "/images/goa/daywise/day2-2.jpeg", "/images/goa/daywise/day2-3.jpeg"],
@@ -215,7 +232,7 @@ def as_bool(value: str) -> bool:
 
 def main() -> None:
     trips = []
-    for filename, slug, cover in WORKBOOKS:
+    for filename, slug, cover, country in WORKBOOKS:
         with zipfile.ZipFile(ROOT / filename) as workbook:
             strings_root = ET.fromstring(workbook.read("xl/sharedStrings.xml"))
             strings = ["".join(item.itertext()) for item in strings_root.findall(f"{NS}si")]
@@ -246,7 +263,7 @@ def main() -> None:
         days_match = re.search(r"(\d+)\s*Days?", duration, re.I)
         trips.append({
             "id": slug, "slug": slug, "packageName": about["Package Name"], "coverImage": cover,
-            "country": "India", "duration": duration, "durationDays": int(days_match.group(1)) if days_match else len(days),
+            "country": country, "duration": duration, "durationDays": int(days_match.group(1)) if days_match else len(days),
             "citiesCovered": as_list(about["Cities Covered"]), "bestSeason": as_list(about["Best Season"]),
             "startPoint": about["Start Point"], "endPoint": about["End Point"],
             "tripType": about["Trip Type (Adventure / Leisure / Mixed)"], "idealFor": as_list(about["Ideal For"]),

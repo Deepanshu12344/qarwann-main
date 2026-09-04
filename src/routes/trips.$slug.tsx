@@ -104,6 +104,12 @@ const ITINERARY_FALLBACK_IMAGES = [
 ];
 
 const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
+  "bali-island-of-gods-iconic-wonders-hidden-gems": [
+    "/images/bali/collage/aronvisuals-nature-3846403.jpg",
+    "/images/bali/collage/18531141-woman-7790612.jpg",
+    "/images/bali/collage/1287b89ead15bd15b5e16d67e6a11b8e.jpg",
+    "/images/bali/collage/kienhau-bali-7969001.jpg",
+  ],
   "goa-coastal-charm-cultural-escape": [
     "/images/goa/collage/alexey-turenkov-bWJiSZjIgTM-unsplash.jpg",
     "/images/goa/collage/raja-sen-FYos6AbcDsY-unsplash.jpg",

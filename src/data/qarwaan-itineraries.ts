@@ -1,6 +1,372 @@
 // Generated from the Qarwaan Excel workbooks. Run scripts/build-itineraries.py after updating them.
 export const QARWAAN_ITINERARIES = [
   {
+    "id": "bali-island-of-gods-iconic-wonders-hidden-gems",
+    "slug": "bali-island-of-gods-iconic-wonders-hidden-gems",
+    "packageName": "Bali – Island of Gods: Iconic Wonders & Hidden Gems",
+    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
+    "country": "Indonesia",
+    "duration": "6 Nights / 7 Days",
+    "durationDays": 7,
+    "citiesCovered": [
+      "Ubud",
+      "Kintamani",
+      "Sidemen",
+      "Nusa Penida",
+      "Uluwatu",
+      "Seminyak / Canggu"
+    ],
+    "bestSeason": [
+      "April – October"
+    ],
+    "startPoint": "Bali International Airport (Denpasar)",
+    "endPoint": "Bali International Airport (Denpasar)",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "First-time Visitors",
+      "Nature Lovers",
+      "Culture Seekers",
+      "Adventure Travellers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Bali – Island of Gods: Iconic Wonders & Hidden Gems is a carefully designed 6 Nights / 7 Days journey through Bali's most distinctive landscapes, cultural treasures and coastal experiences. The itinerary begins in Ubud, Bali's cultural heart, combining royal heritage, sacred temples, lush rice terraces and local artistic traditions. From Central Bali, the journey continues towards the volcanic landscapes of Kintamani and the peaceful countryside of Sidemen, offering a quieter and more authentic side of the island. The adventure then moves offshore to Nusa Penida, known for dramatic cliffs, turquoise waters and iconic viewpoints such as Kelingking Beach and Broken Beach. The final part of the journey explores the Bukit Peninsula, including Uluwatu Temple, spectacular beaches and the traditional Kecak sunset performance. Selected hidden gems, village experiences, local food, handicrafts and lesser-known natural spots are woven throughout the route, ensuring the trip is not simply a checklist of famous attractions. This compact itinerary is designed to maximize Bali's diversity while keeping unnecessary cross-island travel to a minimum.",
+    "whyThisTrip": "Experience Bali’s iconic attractions and lesser-known gems in one compact journey, explore the cultural heart of Ubud and its surrounding temples and rice terraces, discover the peaceful landscapes and traditional village life of Sidemen, experience the dramatic coastline and natural wonders of Nusa Penida, witness the spectacular cliffs and sunset atmosphere of Uluwatu, connect with Balinese spirituality through sacred temples and traditional rituals, enjoy authentic Balinese cuisine and local village interactions, and experience a perfect blend of nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
+    "keyExperiences": [
+      "Ubud",
+      "Tegallalang Rice Terraces",
+      "Tirta Empul",
+      "Goa Gajah",
+      "Tukad Cepung Waterfall",
+      "Kintamani",
+      "Mount Batur views",
+      "Sidemen Valley",
+      "Nusa Penida",
+      "Kelingking Beach",
+      "Broken Beach",
+      "Angel's Billabong",
+      "Diamond Beach / Atuh Beach",
+      "Uluwatu Temple",
+      "Padang-Padang / Bingin",
+      "Kecak Dance",
+      "Tanah Lot",
+      "Balinese cuisine",
+      "Village experiences",
+      "Traditional arts & handicrafts."
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Bali Airport → Ubud",
+        "location": "Ubud",
+        "phase": "Arrival & Cultural Introduction",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Ubud Palace",
+          "Saraswati Temple",
+          "Ubud Art Market",
+          "Campuhan Ridge Walk"
+        ],
+        "experienceDetails": "Arrive at Bali's Ngurah Rai International Airport and transfer towards Ubud. After check-in and some relaxation, explore central Ubud around the Palace, Saraswati Temple and traditional market. End the day with a gentle Campuhan Ridge Walk or a Balinese cultural performance, depending on arrival time.",
+        "hiddenGems": [
+          "Campuhan Ridge Walk",
+          "small art galleries and quieter lanes around Ubud"
+        ],
+        "activities": [
+          "Walking tour",
+          "cultural performance",
+          "photography",
+          "optional Balinese massage"
+        ],
+        "localFood": [
+          "Nasi Campur Bali",
+          "Mie Goreng",
+          "Pisang Goreng"
+        ],
+        "localExperience": "Browse Ubud Art Market, meet local artisans and explore traditional handicrafts",
+        "festivals": [
+          "Local ceremonies / performances as per calendar"
+        ],
+        "stayType": "Boutique Hotel / Resort",
+        "accessibility": "Flight arrival + approx. 1.5–2.5 hr road transfer to Ubud depending on traffic",
+        "images": [
+          "/images/bali/daywise/day1-1.jpg",
+          "/images/bali/daywise/day1-2.jpg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Ubud → Tegallalang → Tirta Empul → Goa Gajah → Ubud",
+        "location": "Central Bali / Ubud",
+        "phase": "Nature, Culture & Spirituality",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Tegallalang Rice Terraces",
+          "Tirta Empul Temple",
+          "Goa Gajah",
+          "Ubud countryside"
+        ],
+        "experienceDetails": "Travel through Bali's lush interior, beginning with the iconic Tegallalang rice terraces. Continue to Tirta Empul's sacred spring complex, where visitors can learn about Balinese purification traditions. Explore the ancient Goa Gajah archaeological site before returning through the countryside towards Ubud.",
+        "hiddenGems": [
+          "Tukad Cepung Waterfall",
+          "village lanes and lesser-known rice-field paths"
+        ],
+        "activities": [
+          "Rice terrace walk",
+          "waterfall visit",
+          "temple exploration",
+          "photography"
+        ],
+        "localFood": [
+          "Balinese rijsttafel-style dishes",
+          "Sate Lilit",
+          "Lawar"
+        ],
+        "localExperience": "Local coffee / herbal tasting and handicraft browsing",
+        "festivals": [
+          "Temple ceremonies as per calendar"
+        ],
+        "stayType": "Ubud Resort / Boutique Hotel",
+        "accessibility": "Road-based; short regional transfers with walking sections",
+        "images": [
+          "/images/bali/daywise/day2-1.jpeg",
+          "/images/bali/daywise/day2-2.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Ubud → Kintamani → Sidemen",
+        "location": "Kintamani & Sidemen",
+        "phase": "Volcanic Landscapes & Rural Bali",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Mount Batur Viewpoint",
+          "Lake Batur",
+          "Kintamani Highlands",
+          "Sidemen Rice Terraces"
+        ],
+        "experienceDetails": "Head towards the highlands of Kintamani for spectacular views across Mount Batur and Lake Batur. Continue east towards Sidemen, a peaceful valley surrounded by rice fields and traditional villages. Spend the afternoon exploring the countryside and experiencing a slower, more authentic side of Bali.",
+        "hiddenGems": [
+          "Sidemen Valley viewpoints",
+          "traditional irrigation channels",
+          "quiet village trails"
+        ],
+        "activities": [
+          "Countryside walk",
+          "optional cycling",
+          "photography",
+          "village exploration"
+        ],
+        "localFood": [
+          "Balinese coffee",
+          "local rice dishes",
+          "fresh tropical fruit"
+        ],
+        "localExperience": "Visit traditional weaving / craft communities and interact with local villagers",
+        "festivals": [
+          "Village ceremonies as per calendar"
+        ],
+        "stayType": "Valley Resort / Boutique Villa",
+        "accessibility": "Road; mountain and rural roads with scenic stops",
+        "images": [
+          "/images/bali/daywise/day3-1.jpeg",
+          "/images/bali/daywise/day3-2.jpeg"
+        ]
+      },
+      {
+        "day": 4,
+        "route": "Sidemen → Sanur → Nusa Penida",
+        "location": "Nusa Penida",
+        "phase": "Island Adventure",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Kelingking Beach",
+          "Broken Beach",
+          "Angel's Billabong",
+          "Crystal Bay"
+        ],
+        "experienceDetails": "Transfer to Sanur and board a fast boat to Nusa Penida. Explore the island's dramatic western coastline, including the famous Kelingking viewpoint, Broken Beach and Angel's Billabong. If sea and timing conditions permit, include a short snorkeling experience before returning to the island base.",
+        "hiddenGems": [
+          "Crystal Bay and quieter coastal viewpoints away from the busiest stops"
+        ],
+        "activities": [
+          "Fast boat",
+          "coastal sightseeing",
+          "snorkeling",
+          "viewpoint walks"
+        ],
+        "localFood": [
+          "Fresh grilled seafood",
+          "Nasi Campur",
+          "local tropical fruits"
+        ],
+        "localExperience": "Purchase locally made souvenirs and interact with island vendors",
+        "festivals": [
+          "Nusa Penida Festival Oct 8–10",
+          "2026 if dates coincide"
+        ],
+        "stayType": "Nusa Penida Hotel / Boutique Stay",
+        "accessibility": "Road + fast boat; island roads can be uneven and slower",
+        "images": [
+          "/images/bali/daywise/day4-1.jpeg",
+          "/images/bali/daywise/day4-2.jpeg"
+        ]
+      },
+      {
+        "day": 5,
+        "route": "Nusa Penida → Sanur → Uluwatu",
+        "location": "Nusa Penida → South Bali",
+        "phase": "Coastal Adventure & Transfer",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Diamond Beach / Atuh Beach",
+          "Sanur",
+          "Bingin / Padang-Padang"
+        ],
+        "experienceDetails": "Begin with selected eastern Nusa Penida highlights if timing allows, prioritising Diamond Beach or Atuh Beach for dramatic coastal scenery. Return by fast boat to Sanur and continue towards South Bali. Finish around the Bukit Peninsula with a sunset beach stop around Bingin or Padang-Padang.",
+        "hiddenGems": [
+          "Diamond Beach",
+          "Atuh Beach and quieter Bukit coastline viewpoints"
+        ],
+        "activities": [
+          "Beach exploration",
+          "coastal walks",
+          "photography",
+          "optional surfing"
+        ],
+        "localFood": [
+          "Seafood",
+          "Nasi Goreng",
+          "tropical juices"
+        ],
+        "localExperience": "Explore small beachside cafés, surf communities and local boutiques",
+        "festivals": [
+          "Local ceremonies as per calendar"
+        ],
+        "stayType": "Uluwatu / Bingin Resort",
+        "accessibility": "Fast boat + road; boat schedule and sea conditions dependent",
+        "images": [
+          "/images/bali/daywise/day5-1.jpg",
+          "/images/bali/daywise/day5-2.jpeg"
+        ]
+      },
+      {
+        "day": 6,
+        "route": "Uluwatu → South Bali → Tanah Lot → Seminyak / Canggu",
+        "location": "Uluwatu & West Coast",
+        "phase": "Heritage, Culture & Sunset",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Uluwatu Temple",
+          "Kecak Dance",
+          "Padang-Padang / Thomas Beach",
+          "Tanah Lot"
+        ],
+        "experienceDetails": "Explore the dramatic Bukit coastline before visiting Uluwatu Temple, dramatically positioned above the Indian Ocean. Experience the traditional Kecak sunset performance. Continue north towards Tanah Lot for another iconic coastal temple setting and finish the evening around Seminyak or Canggu.",
+        "hiddenGems": [
+          "Thomas Beach / Nyang Nyang Beach",
+          "quieter coastal viewpoints"
+        ],
+        "activities": [
+          "Temple visit",
+          "beach time",
+          "Kecak performance",
+          "sunset photography"
+        ],
+        "localFood": [
+          "Jimbaran-style seafood",
+          "Balinese satay",
+          "Babi Guling / vegetarian alternatives"
+        ],
+        "localExperience": "Beachside cafés, boutique shopping and local handicrafts",
+        "festivals": [
+          "Balinese temple ceremonies as per calendar"
+        ],
+        "stayType": "Seminyak / Canggu Hotel or Resort",
+        "accessibility": "Road; South-to-West Bali transfer can be traffic dependent",
+        "images": [
+          "/images/bali/daywise/day6-1.jpeg",
+          "/images/bali/daywise/day6-2.jpg"
+        ]
+      },
+      {
+        "day": 7,
+        "route": "Seminyak / Canggu → Bali Airport",
+        "location": "South Bali",
+        "phase": "Leisure & Departure",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Seminyak Beach",
+          "Canggu",
+          "local markets",
+          "shopping areas"
+        ],
+        "experienceDetails": "Enjoy a relaxed final morning with time for breakfast, a short beach walk or last-minute shopping depending on the flight schedule. Explore local boutiques and handicraft stores before transferring to Ngurah Rai International Airport for departure.",
+        "hiddenGems": [
+          "Local artisan shops and smaller neighbourhood markets"
+        ],
+        "activities": [
+          "Shopping",
+          "beach walk",
+          "café experience",
+          "optional spa"
+        ],
+        "localFood": [
+          "Balinese coffee",
+          "pastries",
+          "Nasi Campur",
+          "local desserts"
+        ],
+        "localExperience": "Purchase batik, woven crafts, woodwork and locally made souvenirs",
+        "festivals": [],
+        "stayType": "Departure",
+        "accessibility": "Road transfer to Bali Airport; allow generous time for traffic",
+        "images": [
+          "/images/bali/daywise/day7-1.jpeg",
+          "/images/bali/daywise/day7-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
     "id": "goa-coastal-charm-cultural-escape",
     "slug": "goa-coastal-charm-cultural-escape",
     "packageName": "Goa – Coastal Charm & Cultural Escape",
@@ -1278,7 +1644,8 @@ export const QARWAAN_ITINERARIES = [
         "accessibility": "Flight (Leh Airport transfer for departure)",
         "images": [
           "/images/ladakh/daywise/day7-1.jpeg",
-          "/images/ladakh/daywise/day7-2.jpeg"
+          "/images/ladakh/daywise/day7-2.jpeg",
+          "/images/ladakh/daywise/day7-3.jpeg"
         ]
       }
     ]
