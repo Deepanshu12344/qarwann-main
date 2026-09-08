@@ -57,7 +57,9 @@ const NAV: { label: string; to: string }[] = [
 
 const TRIP_IMAGES = {
   bali: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
+  bhutan: "/images/bhutan/bhutan-main.png",
   goa: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+  nepal: "/images/nepal/Nepal Main Photo.avif",
   kerala: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
   ladakh: "/images/ladakh-cover.png",
   rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
@@ -67,7 +69,7 @@ const TRIP_IMAGES = {
 const DESTINATIONS = [
   { name: "Bali", country: "Indonesia", region: "Bali", img: TRIP_IMAGES.bali, tag: "Island of Gods", slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
   { name: "Goa", country: "India", region: "Goa", img: TRIP_IMAGES.goa, tag: "Coast & Culture", slug: "goa-coastal-charm-cultural-escape" },
-  { name: "Kerala", country: "India", region: "Kerala", img: TRIP_IMAGES.kerala, tag: "Serenity Escape", slug: "kerala-serenity-escape" },
+  { name: "Nepal", country: "Nepal", region: "Himalayas", img: TRIP_IMAGES.nepal, tag: "Himalayan Heritage", slug: "nepal-himalayan-heritage-lakes-jungle-escape" },
   { name: "Ladakh", country: "India", region: "Ladakh", img: TRIP_IMAGES.ladakh, tag: "Himalayan Roads", slug: "ladakh-himalayan-expedition" },
   { name: "Rajasthan", country: "India", region: "Rajasthan", img: TRIP_IMAGES.rajasthan, tag: "Royal Heritage", slug: "rajasthan-royal-heritage-desert-odyssey" },
 ];
@@ -97,7 +99,9 @@ const PILLARS = [
 
 const EXPERIENCES: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
   { title: "Island of Gods: Iconic Wonders & Hidden Gems", place: "Bali", country: "Indonesia", duration: "6 nights", img: TRIP_IMAGES.bali, slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
+  { title: "Bhutan – Himalayan Serenity & Cultural Discovery", place: "Bhutan", country: "Bhutan", duration: "6 nights", img: TRIP_IMAGES.bhutan, slug: "bhutan-himalayan-serenity-cultural-discovery" },
   { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
+  { title: "Nepal – Himalayan Heritage, Lakes & Jungle Escape", place: "Nepal", country: "Nepal", duration: "7 nights", img: TRIP_IMAGES.nepal, slug: "nepal-himalayan-heritage-lakes-jungle-escape" },
   { title: "Kerala Serenity Escape", place: "Kerala", country: "India", duration: "6 nights", img: TRIP_IMAGES.kerala, slug: "kerala-serenity-escape" },
   { title: "Ultimate Ladakh Road Journey", place: "Ladakh", country: "India", duration: "6 nights", img: TRIP_IMAGES.ladakh, slug: "ladakh-himalayan-expedition" },
   { title: "Royal Heritage & Desert Odyssey", place: "Rajasthan", country: "India", duration: "10 nights", img: TRIP_IMAGES.rajasthan, slug: "rajasthan-royal-heritage-desert-odyssey" },
@@ -106,7 +110,9 @@ const EXPERIENCES: { title: string; place: string; country: string; duration: st
 
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
   { title: "Island of Gods: Iconic Wonders & Hidden Gems", place: "Bali", country: "Indonesia", duration: "6 nights", img: TRIP_IMAGES.bali, slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
+  { title: "Bhutan – Himalayan Serenity & Cultural Discovery", place: "Bhutan", country: "Bhutan", duration: "6 nights", img: TRIP_IMAGES.bhutan, slug: "bhutan-himalayan-serenity-cultural-discovery" },
   { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
+  { title: "Nepal – Himalayan Heritage, Lakes & Jungle Escape", place: "Nepal", country: "Nepal", duration: "7 nights", img: TRIP_IMAGES.nepal, slug: "nepal-himalayan-heritage-lakes-jungle-escape" },
   { title: "Kerala Serenity Escape", place: "Kerala", country: "India", duration: "6 nights", img: TRIP_IMAGES.kerala, slug: "kerala-serenity-escape" },
   { title: "Ultimate Ladakh Road Journey", place: "Ladakh", country: "India", duration: "6 nights", img: TRIP_IMAGES.ladakh, slug: "ladakh-himalayan-expedition" },
   { title: "Royal Heritage & Desert Odyssey", place: "Rajasthan", country: "India", duration: "10 nights", img: TRIP_IMAGES.rajasthan, slug: "rajasthan-royal-heritage-desert-odyssey" },

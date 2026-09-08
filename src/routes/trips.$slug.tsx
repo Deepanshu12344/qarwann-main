@@ -116,11 +116,17 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/goa/collage/raja-sen-MzmI2I1GCnU-unsplash.jpg",
     "/images/goa/collage/sarang-pande-IijeyJbmrec-unsplash.jpg",
   ],
-  "kerala-serenity-escape": [
-    "/images/kerala/collage/abhishek-prasad-ayFW56Rz5Cs-unsplash.jpg",
-    "/images/kerala/collage/ajin-k-s-0tuzOfs-T3s-unsplash.jpg",
-    "/images/kerala/collage/anantha-krishnan-hx9jfP3Yrs0-unsplash.jpg",
-    "/images/kerala/collage/deepak-h-nath-P0Z_8CyiRxg-unsplash.jpg",
+  "nepal-himalayan-heritage-lakes-jungle-escape": [
+    "/images/nepal/Nepal Main Photo.avif",
+    "/images/nepal/collage/3bb2c5ec4cb636294f694fb438a8e932.jpg",
+    "/images/nepal/collage/a5cc9a2fe4223fc31886962b9f02887b.jpg",
+    "/images/nepal/collage/c85832f838e0fa689e615b52e61f6cda.jpg",
+  ],
+  "bhutan-himalayan-serenity-cultural-discovery": [
+    "/images/bhutan/collage/bhutan-main.png",
+    "/images/bhutan/collage/clg2.jpg",
+    "/images/bhutan/collage/275500e8c98801494578fa873f23f571.jpg",
+    "/images/bhutan/collage/rkishorek-chinese-god-2126296.jpg",
   ],
   "ladakh-himalayan-expedition": [
     "/images/ladakh/collage/rish-agarwal-f8tGje5BkpQ-unsplash.jpg",
@@ -302,10 +308,25 @@ function Hero({ trip }: { trip: TripDetail }) {
         <img
           src={trip.coverImage}
           alt={trip.packageName}
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full object-cover ${
+            trip.slug === "nepal-himalayan-heritage-lakes-jungle-escape"
+              ? "brightness-110 contrast-105"
+              : ""
+          }`}
+          style={
+            trip.slug === "nepal-himalayan-heritage-lakes-jungle-escape"
+              ? { objectPosition: "center 68%" }
+              : undefined
+          }
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/30" />
+      <div
+        className={`absolute inset-0 ${
+          trip.slug === "nepal-himalayan-heritage-lakes-jungle-escape"
+            ? "bg-gradient-to-t from-black/80 via-black/30 to-black/15"
+            : "bg-gradient-to-t from-black/85 via-black/40 to-black/30"
+        }`}
+      />
       <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col justify-end pb-12 md:pb-20 text-white">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

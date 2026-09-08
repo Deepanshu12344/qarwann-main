@@ -367,6 +367,379 @@ export const QARWAAN_ITINERARIES = [
     ]
   },
   {
+    "id": "bhutan-himalayan-serenity-cultural-discovery",
+    "slug": "bhutan-himalayan-serenity-cultural-discovery",
+    "packageName": "Bhutan – Himalayan Serenity & Cultural Discovery",
+    "coverImage": "/images/bhutan/bhutan-main.png",
+    "country": "Bhutan",
+    "duration": "6 Nights / 7 Days",
+    "durationDays": 7,
+    "citiesCovered": [
+      "Paro",
+      "Thimphu",
+      "Punakha",
+      "Phobjikha (Gangtey)"
+    ],
+    "bestSeason": [
+      "March – May & September – November"
+    ],
+    "startPoint": "Paro",
+    "endPoint": "Paro",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Nature Lovers",
+      "Culture Seekers",
+      "Spiritual Travellers",
+      "Adventure Enthusiasts"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Bhutan – Himalayan Serenity & Cultural Discovery is a carefully designed 6 Nights / 7 Days journey through Bhutan's most remarkable cultural, spiritual and natural landscapes. Beginning in Paro, the journey introduces travellers to Bhutanese architecture, Buddhist traditions and the dramatic Himalayan setting surrounding the valley. The route continues to Thimphu, the kingdom's capital, combining important monasteries, traditional institutions, local markets and modern Bhutanese life. From Thimphu, the journey crosses the spectacular Dochula Pass before reaching Punakha, the former capital and one of Bhutan's most beautiful valleys, home to the magnificent Punakha Dzong and riverside landscapes. The journey then continues to the peaceful Phobjikha Valley, where traditional villages, Gangtey Monastery, nature trails and seasonal black-necked crane sightings offer a quieter and more authentic side of Bhutan. The final days return to Paro for the unforgettable hike to Taktsang, or Tiger's Nest Monastery. The itinerary combines iconic landmarks with hidden valleys, local cuisine, village interactions, nature walks and spiritual experiences while keeping the route compact and practical. Bhutan's official tourism resources emphasize its combination of culture-packed towns, rural life, dramatic landscapes and outdoor experiences.",
+    "whyThisTrip": "Experience Bhutan's iconic monasteries, Himalayan landscapes and authentic local culture in one compact journey, explore the vibrant yet traditional capital of Thimphu, cross the spectacular Dochula Pass, discover the historic Punakha Valley and its magnificent dzong, experience the peaceful landscapes and village life of Phobjikha, walk through the Gangtey Nature Trail, connect with Bhutanese Buddhist traditions, enjoy traditional Bhutanese cuisine and local handicrafts, experience the unforgettable Tiger's Nest hike, and combine nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
+    "keyExperiences": [
+      "Paro",
+      "Thimphu",
+      "Punakha",
+      "Phobjikha Valley",
+      "Tiger's Nest Monastery",
+      "Paro Dzong",
+      "National Memorial Chorten",
+      "Buddha Dordenma",
+      "Thimphu",
+      "Dochula Pass",
+      "108 Druk Wangyal Chortens",
+      "Punakha Dzong",
+      "Chimi Lhakhang",
+      "Khamsum Yulley Namgyel Chorten",
+      "Gangtey Monastery",
+      "Gangtey Nature Trail",
+      "Phobjikha Valley",
+      "Himalayan mountain views",
+      "traditional Bhutanese villages",
+      "Buddhist monasteries",
+      "archery",
+      "hot stone bath",
+      "Bhutanese cuisine",
+      "local handicrafts"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Paro Airport → Thimphu",
+        "location": "Paro & Thimphu",
+        "phase": "Arrival & Cultural Introduction",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Paro Valley",
+          "Rinpung Dzong",
+          "Buddha Dordenma",
+          "National Memorial Chorten",
+          "Thimphu town"
+        ],
+        "experienceDetails": "Arrive at Paro International Airport and begin the scenic drive towards Thimphu. After check-in, explore selected highlights of the capital, including the Buddha Dordenma statue and National Memorial Chorten. Spend the evening walking through central Thimphu and experiencing Bhutanese architecture, cafés and local life.",
+        "hiddenGems": [
+          "Motithang neighbourhood",
+          "local lanes and small traditional craft workshops"
+        ],
+        "activities": [
+          "Scenic drive",
+          "sightseeing",
+          "photography",
+          "evening walk"
+        ],
+        "localFood": [
+          "Ema Datshi",
+          "Momos",
+          "Phaksha Paa"
+        ],
+        "localExperience": "Explore local handicraft shops, textiles, traditional crafts and Bhutanese souvenirs",
+        "festivals": [
+          "Local festivals and religious ceremonies as per calendar"
+        ],
+        "stayType": "Boutique Hotel / Heritage Hotel",
+        "accessibility": "Flight arrival + approx. 1–1.5 hr road transfer to Thimphu",
+        "images": [
+          "/images/bhutan/daywise/day1-1.jpeg",
+          "/images/bhutan/daywise/day1-2.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Thimphu Sightseeing",
+        "location": "Thimphu",
+        "phase": "Culture, Spirituality & Local Life",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Tashichho Dzong",
+          "Buddha Dordenma",
+          "Memorial Chorten",
+          "Simply Bhutan",
+          "Folk Heritage Museum",
+          "Centenary Farmers' Market"
+        ],
+        "experienceDetails": "Spend a full day discovering Thimphu's cultural and spiritual character. Visit important Buddhist and government landmarks before experiencing Bhutanese traditions through local museums, markets and demonstrations. The evening can be kept relaxed with time to explore the town independently.",
+        "hiddenGems": [
+          "Tango Monastery area or local neighbourhood walks depending on time"
+        ],
+        "activities": [
+          "Heritage sightseeing",
+          "cultural demonstrations",
+          "market exploration",
+          "short hike option"
+        ],
+        "localFood": [
+          "Ema Datshi",
+          "Jasha Maru",
+          "Suja (butter tea)",
+          "Red Rice"
+        ],
+        "localExperience": "Visit the farmers' market and traditional handicraft shops; interact with local artisans",
+        "festivals": [
+          "Thimphu Tshechu / other local festivals as per calendar"
+        ],
+        "stayType": "Boutique Hotel / Heritage Hotel",
+        "accessibility": "Road-based local sightseeing",
+        "images": [
+          "/images/bhutan/daywise/day2-1.jpeg",
+          "/images/bhutan/daywise/day2-2.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Thimphu → Dochula → Chimi Lhakhang → Punakha",
+        "location": "Dochula & Punakha",
+        "phase": "Himalayan Pass & Heritage",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Dochula Pass",
+          "108 Druk Wangyal Chortens",
+          "Chimi Lhakhang",
+          "Punakha Dzong",
+          "Mo Chhu & Pho Chhu rivers"
+        ],
+        "experienceDetails": "Travel through the mountains towards Punakha, stopping at Dochula Pass for panoramic Himalayan views and the famous 108 chortens. Continue through traditional villages to Chimi Lhakhang before reaching Punakha Dzong, dramatically positioned between two rivers and surrounded by mountain scenery.",
+        "hiddenGems": [
+          "Lungchutse viewpoint for an optional short hike from Dochula",
+          "if group timing and fitness permit"
+        ],
+        "activities": [
+          "Mountain drive",
+          "short hike",
+          "temple visit",
+          "photography"
+        ],
+        "localFood": [
+          "Buckwheat pancakes",
+          "Ema Datshi",
+          "local red rice dishes"
+        ],
+        "localExperience": "Village stops and small roadside craft stalls",
+        "festivals": [
+          "Punakha Drubchen / Tshechu depending on dates"
+        ],
+        "stayType": "Riverside Resort / Boutique Hotel",
+        "accessibility": "Road; mountain route with winding sections and scenic stops",
+        "images": [
+          "/images/bhutan/daywise/day3-1.jpeg",
+          "/images/bhutan/daywise/day3-2.jpeg"
+        ]
+      },
+      {
+        "day": 4,
+        "route": "Punakha Sightseeing",
+        "location": "Punakha",
+        "phase": "Nature, Spirituality & Adventure",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Khamsum Yulley Namgyel Chorten",
+          "Punakha Suspension Bridge",
+          "Punakha Valley",
+          "riverside landscapes"
+        ],
+        "experienceDetails": "Explore the peaceful Punakha Valley with a hike to Khamsum Yulley Namgyel Chorten through rice fields and traditional countryside. Continue to the impressive suspension bridge over the Pho Chhu River. Optional river rafting can be considered for suitable groups and seasonal conditions.",
+        "hiddenGems": [
+          "Riverside village trails and lesser-known viewpoints around the Punakha Valley"
+        ],
+        "activities": [
+          "Hiking",
+          "photography",
+          "optional rafting",
+          "village walk"
+        ],
+        "localFood": [
+          "Local rice",
+          "Ema Datshi",
+          "Hoentay dumplings"
+        ],
+        "localExperience": "Meet local farmers and explore village handicrafts and traditional homes",
+        "festivals": [
+          "Local religious festivals as per calendar"
+        ],
+        "stayType": "Riverside Resort / Boutique Hotel",
+        "accessibility": "Road + walking/hiking sections",
+        "images": [
+          "/images/bhutan/daywise/day4-1.jpeg",
+          "/images/bhutan/daywise/day4-2.jpeg"
+        ]
+      },
+      {
+        "day": 5,
+        "route": "Punakha → Wangdue → Phobjikha Valley",
+        "location": "Phobjikha / Gangtey",
+        "phase": "Valley & Wildlife",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Phobjikha Valley",
+          "Gangtey Monastery",
+          "Gangtey Nature Trail",
+          "traditional villages"
+        ],
+        "experienceDetails": "Drive towards the peaceful Phobjikha Valley, passing through mountain landscapes and traditional settlements. Visit Gangtey Monastery and enjoy the gentle Gangtey Nature Trail through forests and open valley landscapes. During the winter months, the valley becomes especially significant for black-necked crane sightings. (Bhutan Travel)",
+        "hiddenGems": [
+          "Longtey Village and quieter sections of Phobjikha Valley"
+        ],
+        "activities": [
+          "Nature walk",
+          "birdwatching",
+          "photography",
+          "village exploration"
+        ],
+        "localFood": [
+          "Buckwheat noodles",
+          "Phaksha Paa",
+          "butter tea"
+        ],
+        "localExperience": "Visit local villages, traditional homes and handicraft producers",
+        "festivals": [
+          "Black-Necked Crane Festival",
+          "usually November"
+        ],
+        "stayType": "Valley Resort / Traditional Guesthouse",
+        "accessibility": "Road; scenic mountain transfer",
+        "images": [
+          "/images/bhutan/daywise/day5-1.jpeg",
+          "/images/bhutan/daywise/day5-2.jpeg"
+        ]
+      },
+      {
+        "day": 6,
+        "route": "Phobjikha → Paro",
+        "location": "Phobjikha & Paro",
+        "phase": "Scenic Return & Paro",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Phobjikha Valley",
+          "Dochula Pass",
+          "Paro Valley",
+          "Paro Dzong",
+          "Kyichu Lhakhang"
+        ],
+        "experienceDetails": "Return towards Paro through Bhutan's spectacular mountain roads. After arrival, explore Paro's cultural landmarks, including Paro Dzong and the ancient Kyichu Lhakhang. Keep the evening relaxed in preparation for the following day's Tiger's Nest hike.",
+        "hiddenGems": [
+          "Kyichu Lhakhang surroundings",
+          "Paro village lanes and traditional farmhouses"
+        ],
+        "activities": [
+          "Scenic drive",
+          "temple visit",
+          "photography",
+          "relaxed village walk"
+        ],
+        "localFood": [
+          "Suja",
+          "Momos",
+          "Ema Datshi",
+          "local seasonal vegetables"
+        ],
+        "localExperience": "Explore Paro's traditional handicraft shops and local markets",
+        "festivals": [
+          "Local festivals and temple events as per calendar"
+        ],
+        "stayType": "Paro Heritage Hotel / Boutique Resort",
+        "accessibility": "Road; long scenic mountain transfer",
+        "images": [
+          "/images/bhutan/daywise/day6-1.jpeg",
+          "/images/bhutan/daywise/day6-2.jpeg"
+        ]
+      },
+      {
+        "day": 7,
+        "route": "Paro → Tiger's Nest → Paro Airport",
+        "location": "Paro",
+        "phase": "Spiritual Finale & Departure",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Taktsang Monastery (Tiger's Nest)",
+          "Paro Valley",
+          "Taktsang viewpoint"
+        ],
+        "experienceDetails": "Begin early for Bhutan's signature experience, the hike to Taktsang, or Tiger's Nest Monastery. The trail climbs through pine forests to the cliffside monastery and provides spectacular valley views. After descending, return to Paro for lunch and transfer to the airport according to the departure schedule. The official tourism board identifies the Tiger's Nest hike as one of Bhutan's essential experiences. (Bhutan Travel)",
+        "hiddenGems": [
+          "Prayer-flag viewpoints and forest sections along the Taktsang trail"
+        ],
+        "activities": [
+          "Hiking",
+          "photography",
+          "meditation",
+          "monastery visit"
+        ],
+        "localFood": [
+          "Traditional Bhutanese lunch",
+          "Red Rice",
+          "Ema Datshi"
+        ],
+        "localExperience": "Last-minute handicraft shopping and locally made souvenirs",
+        "festivals": [
+          "—"
+        ],
+        "stayType": "—",
+        "accessibility": "Road + 5–6 hr round-trip hike; flight departure from Paro",
+        "images": [
+          "/images/bhutan/daywise/day7-1.jpeg",
+          "/images/bhutan/daywise/day7-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
     "id": "goa-coastal-charm-cultural-escape",
     "slug": "goa-coastal-charm-cultural-escape",
     "packageName": "Goa – Coastal Charm & Cultural Escape",
@@ -834,6 +1207,402 @@ export const QARWAAN_ITINERARIES = [
         "images": [
           "/images/goa/daywise/day7-1.jpeg",
           "/images/goa/daywise/day7-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nepal-himalayan-heritage-lakes-jungle-escape",
+    "slug": "nepal-himalayan-heritage-lakes-jungle-escape",
+    "packageName": "Nepal – Himalayan Heritage, Lakes & Jungle Escape",
+    "coverImage": "/images/nepal/Nepal Main Photo.avif",
+    "country": "Nepal",
+    "duration": "7 Nights / 8 Days",
+    "durationDays": 8,
+    "citiesCovered": [
+      "Kathmandu",
+      "Bandipur",
+      "Pokhara",
+      "Chitwan"
+    ],
+    "bestSeason": [
+      "October – November & March – April"
+    ],
+    "startPoint": "Kathmandu",
+    "endPoint": "Kathmandu",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Nature Lovers",
+      "Culture Seekers",
+      "Adventure Travellers",
+      "Wildlife Enthusiasts"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Nepal – Himalayan Heritage, Lakes & Jungle Escape is a carefully designed 7 Nights / 8 Days journey combining Nepal's cultural heritage, Himalayan landscapes, peaceful hill towns and wildlife experiences. The journey begins in Kathmandu, where ancient temples, stupas, historic squares and vibrant local neighbourhoods introduce travellers to Nepal's rich cultural and spiritual traditions. From Kathmandu, the route continues towards Pokhara with a scenic stop at Bandipur, a beautifully preserved Newari hill town offering mountain views, traditional architecture and a quieter side of Nepal. Pokhara forms the heart of the journey, with the magnificent Annapurna range, Phewa Lake, World Peace Pagoda, caves, waterfalls and opportunities for boating and adventure activities. The journey then continues to Chitwan, where jungle safaris, birdwatching, canoeing and Tharu cultural experiences bring an entirely different dimension to the trip. The itinerary balances famous landmarks with lesser-known experiences, local cuisine, village interactions, nature and adventure, while keeping the number of travel days to a practical minimum. Nepal's Kathmandu Valley, Pokhara and Chitwan are among the country's major tourism highlights.",
+    "whyThisTrip": "Experience Nepal's iconic Himalayan landscapes, ancient heritage and wildlife in one compact journey, explore the spiritual and cultural heart of Kathmandu Valley, discover the preserved Newari charm and mountain views of Bandipur, experience Pokhara's lakes, waterfalls and Annapurna panorama, enjoy adventure activities and peaceful Himalayan surroundings, explore the wilderness of Chitwan National Park and its rich wildlife, connect with Tharu culture and local communities, savour authentic Nepali cuisine and combine nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
+    "keyExperiences": [
+      "Kathmandu Durbar Square",
+      "Swayambhunath",
+      "Boudhanath Stupa",
+      "Pashupatinath Temple",
+      "Patan Durbar Square",
+      "Kirtipur",
+      "Bandipur",
+      "Tundikhel",
+      "Siddha Gufa",
+      "Pokhara",
+      "Phewa Lake",
+      "World Peace Pagoda",
+      "Davis Falls",
+      "Gupteshwar Cave",
+      "Sarangkot sunrise",
+      "Annapurna mountain views",
+      "Begnas Lake",
+      "Chitwan National Park",
+      "Jungle Safari",
+      "Canoeing",
+      "Birdwatching",
+      "Tharu Village",
+      "Tharu cultural performance",
+      "Nepali cuisine",
+      "Local handicrafts"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Kathmandu Airport → Kathmandu",
+        "location": "Kathmandu",
+        "phase": "Arrival & Cultural Introduction",
+        "nature": false,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Boudhanath Stupa",
+          "Thamel",
+          "Garden of Dreams"
+        ],
+        "experienceDetails": "Arrive in Kathmandu and transfer to the hotel. After check-in and relaxation, explore the spiritual atmosphere around Boudhanath and the lively streets of Thamel. Depending on arrival time, enjoy a relaxed evening introducing yourself to Nepalese cuisine, handicrafts and local culture.",
+        "hiddenGems": [
+          "Kirtipur neighbourhoods",
+          "local courtyards and smaller Buddhist shrines"
+        ],
+        "activities": [
+          "Heritage walk",
+          "photography",
+          "local market exploration"
+        ],
+        "localFood": [
+          "Momo",
+          "Thukpa",
+          "Sel Roti"
+        ],
+        "localExperience": "Explore Thamel shops, Tibetan handicrafts, prayer flags and local souvenirs",
+        "festivals": [
+          "Local festivals and ceremonies as per calendar"
+        ],
+        "stayType": "Boutique Hotel / City Hotel",
+        "accessibility": "Flight arrival + short road transfer",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Kathmandu → Patan → Kathmandu",
+        "location": "Kathmandu Valley",
+        "phase": "Heritage & Spiritual Exploration",
+        "nature": false,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Kathmandu Durbar Square",
+          "Swayambhunath",
+          "Pashupatinath Temple",
+          "Patan Durbar Square"
+        ],
+        "experienceDetails": "Explore Kathmandu Valley's historic and spiritual landmarks, including the ancient royal squares, Swayambhunath's hilltop stupa and the sacred Pashupatinath Temple complex. Continue to Patan to experience its refined Newari architecture, courtyards, temples and traditional artistic heritage. Kathmandu Valley contains seven UNESCO World Heritage shrine complexes within its cultural heritage landscape. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Kirtipur",
+          "traditional bahals and lesser-known Patan courtyards"
+        ],
+        "activities": [
+          "Heritage walk",
+          "temple visits",
+          "photography",
+          "handicraft exploration"
+        ],
+        "localFood": [
+          "Newari Khaja Set",
+          "Yomari",
+          "Bara"
+        ],
+        "localExperience": "Visit traditional metalwork and woodcraft shops and interact with local artisans",
+        "festivals": [
+          "Indra Jatra / Dashain / Tihar and other festivals as per calendar"
+        ],
+        "stayType": "Boutique Hotel / City Hotel",
+        "accessibility": "Road-based local sightseeing",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Kathmandu → Bandipur → Pokhara",
+        "location": "Bandipur & Pokhara",
+        "phase": "Scenic Hill Journey",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Bandipur Bazaar",
+          "Tundikhel",
+          "Himalayan viewpoints",
+          "Pokhara Lakeside"
+        ],
+        "experienceDetails": "Travel west towards Pokhara with a stop in Bandipur, a preserved Newari hill settlement known for traditional architecture, mountain views and hiking trails. Explore the old bazaar and panoramic viewpoints before continuing towards Pokhara for check-in and an evening around Lakeside. Bandipur is officially promoted for its hill culture, mountain views, hiking and traditional Newari character. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Tundikhel viewpoint",
+          "traditional Newari courtyards and Siddha Cave area"
+        ],
+        "activities": [
+          "Short village walk",
+          "viewpoint stop",
+          "scenic road journey"
+        ],
+        "localFood": [
+          "Newari snacks",
+          "local tea",
+          "Dal Bhat"
+        ],
+        "localExperience": "Explore Bandipur's small craft shops and local homes / cafés",
+        "festivals": [
+          "Local festivals as per calendar"
+        ],
+        "stayType": "Lakeside Resort / Hotel",
+        "accessibility": "Road; full-day scenic transfer, timing dependent on traffic and road conditions",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 4,
+        "route": "Pokhara City Tour",
+        "location": "Pokhara",
+        "phase": "Lakes, Caves & Mountain Views",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Phewa Lake",
+          "World Peace Pagoda",
+          "Davis Falls",
+          "Gupteshwar Cave",
+          "International Mountain Museum"
+        ],
+        "experienceDetails": "Discover Pokhara's diverse landscapes, beginning with a boat ride on Phewa Lake and a visit to the World Peace Pagoda. Continue to Davis Falls and Gupteshwar Cave before exploring the city's mountain heritage. End the day around Lakeside with views towards the Annapurna region. Pokhara is known for Phewa Lake, mountain views, caves, waterfalls and adventure activities. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Begnas Lake or Seti Gorge depending on timing"
+        ],
+        "activities": [
+          "Boating",
+          "short hike",
+          "cave exploration",
+          "photography"
+        ],
+        "localFood": [
+          "Thakali Thali",
+          "Momo",
+          "Gurung-style dishes"
+        ],
+        "localExperience": "Lakeside cafés, Tibetan handicrafts and local souvenir shopping",
+        "festivals": [
+          "Local festivals as per calendar"
+        ],
+        "stayType": "Lakeside Resort / Hotel",
+        "accessibility": "Road-based sightseeing",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 5,
+        "route": "Pokhara → Sarangkot → Pokhara",
+        "location": "Pokhara",
+        "phase": "Himalayan Panorama & Adventure",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Sarangkot",
+          "Annapurna & Machhapuchhre viewpoints",
+          "Phewa Lake"
+        ],
+        "experienceDetails": "Start early for sunrise from Sarangkot, one of the region's best-known Himalayan viewpoints. Return to Pokhara for breakfast and enjoy the remainder of the day with optional adventure activities or relaxed exploration around the lake. Pokhara offers paragliding, boating, hiking, mountain biking and other adventure activities. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Peaceful village trails around Sarangkot and lesser-known lake viewpoints"
+        ],
+        "activities": [
+          "Paragliding",
+          "boating",
+          "cycling",
+          "hiking or leisure"
+        ],
+        "localFood": [
+          "Tibetan bread",
+          "Thakali Thali",
+          "local coffee"
+        ],
+        "localExperience": "Interact with mountain guides, local cafés and small handicraft stores",
+        "festivals": [
+          "Local festivals as per calendar"
+        ],
+        "stayType": "Lakeside Resort / Hotel",
+        "accessibility": "Road; short mountain transfer + optional adventure activities",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 6,
+        "route": "Pokhara → Chitwan",
+        "location": "Chitwan / Sauraha",
+        "phase": "Jungle & Wildlife",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Chitwan National Park",
+          "Rapti River",
+          "Sauraha"
+        ],
+        "experienceDetails": "Travel towards the Terai lowlands and enter the Chitwan region. After check-in, enjoy a relaxed riverside experience around Sauraha and an introductory nature walk or village visit. Chitwan National Park is a UNESCO World Heritage natural site and is known for wildlife, birdwatching, canoeing and jungle activities. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Beeshazar and Associated Lakes / quieter riverside areas"
+        ],
+        "activities": [
+          "Nature walk",
+          "birdwatching",
+          "canoeing",
+          "sunset by Rapti River"
+        ],
+        "localFood": [
+          "Tharu cuisine",
+          "Dal Bhat",
+          "local fish preparations"
+        ],
+        "localExperience": "Visit Tharu villages and local craft stalls",
+        "festivals": [
+          "Tharu cultural events as per calendar"
+        ],
+        "stayType": "Jungle Resort / Wildlife Lodge",
+        "accessibility": "Road; scenic transfer, generally several hours depending on road conditions",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 7,
+        "route": "Chitwan National Park",
+        "location": "Chitwan",
+        "phase": "Wildlife & Local Culture",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Jungle Safari",
+          "Rapti River",
+          "Tharu Village",
+          "Sauraha"
+        ],
+        "experienceDetails": "Spend a full day exploring Chitwan's wildlife and landscapes. Depending on park regulations and seasonal conditions, enjoy a jeep safari, canoe ride, nature walk and birdwatching. Later experience Tharu culture through a village interaction and traditional cultural performance. Chitwan is home to one-horned rhinoceros and many other species, while Tharu cultural experiences are an important part of the region. (Nepal Tourism Board)",
+        "hiddenGems": [
+          "Meghauli or quieter community areas around Sauraha"
+        ],
+        "activities": [
+          "Jeep safari",
+          "canoeing",
+          "birdwatching",
+          "nature walk"
+        ],
+        "localFood": [
+          "Tharu fish curry",
+          "Dhikri",
+          "local rice dishes"
+        ],
+        "localExperience": "Tharu village interaction and traditional handicraft shopping",
+        "festivals": [
+          "Tharu cultural programs / local festivals as per calendar"
+        ],
+        "stayType": "Jungle Resort / Wildlife Lodge",
+        "accessibility": "Road-based local sightseeing; park access subject to regulations",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
+        ]
+      },
+      {
+        "day": 8,
+        "route": "Chitwan → Bharatpur Airport → Kathmandu → Departure",
+        "location": "Chitwan / Kathmandu",
+        "phase": "Departure",
+        "nature": false,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Bharatpur",
+          "Kathmandu airport transfer",
+          "last-minute shopping"
+        ],
+        "experienceDetails": "Enjoy an early morning nature activity if the departure schedule permits, then transfer towards Bharatpur Airport for a flight to Kathmandu. Allow sufficient time for the onward international departure. If the flight schedule requires it, the final transfer can instead be arranged by road.",
+        "hiddenGems": [
+          "Local Sauraha market"
+        ],
+        "activities": [
+          "Short nature walk",
+          "shopping",
+          "airport transfer"
+        ],
+        "localFood": [
+          "Tea",
+          "Sel Roti",
+          "local snacks"
+        ],
+        "localExperience": "Last-minute Nepali handicrafts and souvenirs",
+        "festivals": [
+          "—"
+        ],
+        "stayType": "—",
+        "accessibility": "Road + domestic flight; schedule dependent",
+        "images": [
+          "/images/nepal/Nepal Main Photo.avif"
         ]
       }
     ]

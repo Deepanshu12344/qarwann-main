@@ -13,7 +13,9 @@ NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 ROOT = Path(__file__).resolve().parents[1]
 WORKBOOKS = [
     ("Bali Qa..xlsx", "bali-island-of-gods-iconic-wonders-hidden-gems", "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85", "Indonesia"),
+    ("Bhutan Qa..xlsx", "bhutan-himalayan-serenity-cultural-discovery", "/images/bhutan/bhutan-main.png", "Bhutan"),
     ("Goa_Qar..xlsx", "goa-coastal-charm-cultural-escape", "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Nepal Qa..xlsx", "nepal-himalayan-heritage-lakes-jungle-escape", "/images/nepal/Nepal Main Photo.avif", "Nepal"),
     ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png", "India"),
     ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85", "India"),
@@ -24,6 +26,9 @@ WORKBOOKS = [
 # for each day.  They are kept here (rather than entered by hand in the generated
 # TypeScript) so regenerating the workbook data never removes the day galleries.
 IMAGE_LIBRARY = {
+    "bhutan-himalayas": [
+        "/images/bhutan/bhutan-main.png",
+    ],
     "bali-island": [
         "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
         "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&w=1800&q=85",
@@ -47,6 +52,9 @@ IMAGE_LIBRARY = {
         "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85",
         "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85",
         "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85",
+    ],
+    "nepal-himalayas": [
+        "/images/nepal/Nepal Main Photo.avif",
     ],
     "kerala-heritage": [
         "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
@@ -124,7 +132,9 @@ IMAGE_LIBRARY = {
 
 DAY_IMAGE_THEMES = {
     "bali-island-of-gods-iconic-wonders-hidden-gems": ["bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island"],
+    "bhutan-himalayan-serenity-cultural-discovery": ["bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas"],
     "goa-coastal-charm-cultural-escape": ["goa-heritage", "goa-heritage", "goa-coast", "goa-coast", "goa-nature", "goa-coast", "goa-heritage"],
+    "nepal-himalayan-heritage-lakes-jungle-escape": ["nepal-himalayas", "nepal-himalayas", "nepal-himalayas", "nepal-himalayas", "nepal-himalayas", "nepal-himalayas", "nepal-himalayas", "nepal-himalayas"],
     "kerala-serenity-escape": ["kerala-heritage", "kerala-hills", "kerala-hills", "kerala-wildlife", "kerala-water", "kerala-water", "kerala-heritage"],
     "ladakh-himalayan-expedition": ["ladakh-town", "ladakh-town", "ladakh-desert", "ladakh-desert", "ladakh-lake", "ladakh-lake", "ladakh-town"],
     "rajasthan-royal-heritage-desert-odyssey": ["rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-desert", "rajasthan-desert", "rajasthan-desert", "rajasthan-palace", "rajasthan-lake", "rajasthan-lake"],
@@ -142,6 +152,15 @@ LOCAL_DAY_IMAGES = {
         5: ["/images/bali/daywise/day5-1.jpg", "/images/bali/daywise/day5-2.jpeg"],
         6: ["/images/bali/daywise/day6-1.jpeg", "/images/bali/daywise/day6-2.jpg"],
         7: ["/images/bali/daywise/day7-1.jpeg", "/images/bali/daywise/day7-2.jpeg"],
+    },
+    "bhutan-himalayan-serenity-cultural-discovery": {
+        1: ["/images/bhutan/daywise/day1-1.jpeg", "/images/bhutan/daywise/day1-2.jpeg"],
+        2: ["/images/bhutan/daywise/day2-1.jpeg", "/images/bhutan/daywise/day2-2.jpeg"],
+        3: ["/images/bhutan/daywise/day3-1.jpeg", "/images/bhutan/daywise/day3-2.jpeg"],
+        4: ["/images/bhutan/daywise/day4-1.jpeg", "/images/bhutan/daywise/day4-2.jpeg"],
+        5: ["/images/bhutan/daywise/day5-1.jpeg", "/images/bhutan/daywise/day5-2.jpeg"],
+        6: ["/images/bhutan/daywise/day6-1.jpeg", "/images/bhutan/daywise/day6-2.jpeg"],
+        7: ["/images/bhutan/daywise/day7-1.jpeg", "/images/bhutan/daywise/day7-2.jpeg"],
     },
     "goa-coastal-charm-cultural-escape": {
         1: ["/images/goa/daywise/day1-1.jpeg", "/images/goa/daywise/day1-2.jpeg", "/images/goa/daywise/day1-3.jpeg", "/images/goa/daywise/day1-4.jpeg"],
