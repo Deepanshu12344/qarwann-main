@@ -9,6 +9,7 @@ export const Route = createFileRoute("/weekend-getaways")({
       { title: "Weekend Getaways — QARWAAN" },
       { name: "description", content: "Weekend getaways are coming soon at Qarwaan." },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/weekend-getaways" }],
   }),
   component: WeekendGetawaysPage,
 });

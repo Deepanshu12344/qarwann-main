@@ -68,6 +68,7 @@ export const Route = createFileRoute("/trips/")({
         content: "Discover curated luxury journeys across the world.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/trips" }],
   }),
   component: TripsPage,
 });
@@ -178,6 +179,8 @@ function TripsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader page="destinations" />
+      <h1 className="sr-only">Qarwaan travel itineraries</h1>
+      <h2 className="sr-only">Browse curated travel journeys</h2>
 
       <section className="px-7 py-10 md:px-16 md:py-14 lg:px-20 xl:px-28">
         <motion.div
@@ -387,6 +390,8 @@ function TripCard({ trip, index }: { trip: Trip; index: number }) {
           src={trip.cover}
           alt={trip.name}
           loading="lazy"
+          width={1200}
+          height={900}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute top-3 left-3 inline-flex items-center gap-1 rounded-full bg-background/90 backdrop-blur px-3 py-1 text-xs">

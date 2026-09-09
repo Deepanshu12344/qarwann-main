@@ -65,5 +65,9 @@ const sections: LegalSection[] = [
 ];
 
 export const Route = createFileRoute("/privacy")({
+  head: () => ({
+    meta: [{ title: "Privacy Policy — QARWAAN" }, { name: "description", content: "Read Qarwaan's Privacy Policy." }],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/privacy" }],
+  }),
   component: () => <LegalPage title="Privacy Policy" sections={sections} />,
 });

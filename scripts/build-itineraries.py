@@ -12,6 +12,7 @@ from pathlib import Path
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 ROOT = Path(__file__).resolve().parents[1]
 WORKBOOKS = [
+    ("Andaman Qa..xlsx", "andaman-island-escape-beaches-blue-waters-island-stories", "/images/andaman/Andaman Main Photo.jpeg", "India"),
     ("Bali Qa..xlsx", "bali-island-of-gods-iconic-wonders-hidden-gems", "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85", "Indonesia"),
     ("Bhutan Qa..xlsx", "bhutan-himalayan-serenity-cultural-discovery", "/images/bhutan/bhutan-main.png", "Bhutan"),
     ("Goa_Qar..xlsx", "goa-coastal-charm-cultural-escape", "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85", "India"),
@@ -26,6 +27,9 @@ WORKBOOKS = [
 # for each day.  They are kept here (rather than entered by hand in the generated
 # TypeScript) so regenerating the workbook data never removes the day galleries.
 IMAGE_LIBRARY = {
+    "andaman-islands": [
+        "/images/andaman/Andaman Main Photo.jpeg",
+    ],
     "bhutan-himalayas": [
         "/images/bhutan/bhutan-main.png",
     ],
@@ -131,6 +135,7 @@ IMAGE_LIBRARY = {
 }
 
 DAY_IMAGE_THEMES = {
+    "andaman-island-escape-beaches-blue-waters-island-stories": ["andaman-islands", "andaman-islands", "andaman-islands", "andaman-islands", "andaman-islands", "andaman-islands", "andaman-islands"],
     "bali-island-of-gods-iconic-wonders-hidden-gems": ["bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island", "bali-island"],
     "bhutan-himalayan-serenity-cultural-discovery": ["bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas", "bhutan-himalayas"],
     "goa-coastal-charm-cultural-escape": ["goa-heritage", "goa-heritage", "goa-coast", "goa-coast", "goa-nature", "goa-coast", "goa-heritage"],

@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 import {
   Carousel,
   CarouselContent,
@@ -104,6 +105,12 @@ const ITINERARY_FALLBACK_IMAGES = [
 ];
 
 const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
+  "andaman-island-escape-beaches-blue-waters-island-stories": [
+    "/images/andaman/collage/Andaman Main Photo.jpeg",
+    "/images/andaman/collage/0db9460ab1c14af064a671b1de801675.jpg",
+    "/images/andaman/collage/d086a85ed1174add6b61720cd4c3ef16.jpg",
+    "/images/andaman/collage/237daefcf2d8374e498e3b0ad2515d5d.jpg",
+  ],
   "bali-island-of-gods-iconic-wonders-hidden-gems": [
     "/images/bali/collage/aronvisuals-nature-3846403.jpg",
     "/images/bali/collage/18531141-woman-7790612.jpg",
@@ -170,16 +177,21 @@ function enquirySearch(trip: TripDetail) {
 }
 
 export const Route = createFileRoute("/trips/$slug")({
-  head: ({ params }) => ({
-    meta: [
-      { title: `QARWAAN · Trip ${params.slug}` },
-      {
-        name: "description",
-        content:
-          "A curated QARWAAN journey — detailed itinerary, key experiences, and signature stays.",
-      },
-    ],
-  }),
+  head: ({ params }) => {
+    const trip = QARWAAN_ITINERARIES.find((item) => item.slug === params.slug);
+    const title = trip ? `${trip.packageName} — QARWAAN` : "Journey not found — QARWAAN";
+    const description = trip?.detailedOverview ?? "Browse curated QARWAAN journeys and detailed itineraries.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        ...(trip?.coverImage ? [{ property: "og:image", content: trip.coverImage }] : []),
+      ],
+      links: [{ rel: "canonical", href: `https://qarwaan.com/trips/${params.slug}` }],
+    };
+  },
   component: TripDetailsPage,
   errorComponent: ({ error, reset }) => {
     const router = useRouter();
@@ -308,6 +320,8 @@ function Hero({ trip }: { trip: TripDetail }) {
         <img
           src={trip.coverImage}
           alt={trip.packageName}
+          width={1920}
+          height={1080}
           className={`absolute inset-0 h-full w-full object-cover ${
             trip.slug === "nepal-himalayan-heritage-lakes-jungle-escape"
               ? "brightness-110 contrast-105"
@@ -550,6 +564,8 @@ function CollageGrid({ trip, images }: { trip: TripDetail; images: string[] }) {
               src={src}
               alt={`${trip.country ?? trip.packageName} travel scene ${index + 1}`}
               loading="lazy"
+              width={1200}
+              height={900}
               className="h-full w-full object-cover"
             />
           </div>
@@ -760,6 +776,8 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
                 src={src}
                 alt={`Day ${day} in ${location}, scene ${i + 1}`}
                 loading="lazy"
+                width={1200}
+                height={900}
                 className={`h-full w-full object-cover ${
                   src === "/images/bali/daywise/day5-1.jpg"
                     ? "object-[50%_55%]"

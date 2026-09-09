@@ -49,5 +49,9 @@ const sections: LegalSection[] = [
 ];
 
 export const Route = createFileRoute("/cancellation")({
+  head: () => ({
+    meta: [{ title: "Cancellation Policy — QARWAAN" }, { name: "description", content: "Read Qarwaan's cancellation and rescheduling policy." }],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/cancellation" }],
+  }),
   component: () => <LegalPage title="Cancellation" sections={sections} />,
 });

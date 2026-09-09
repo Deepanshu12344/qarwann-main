@@ -29,6 +29,7 @@ export const Route = createFileRoute("/about-us")({
       { title: "About Qarwaan — India's New Age Youth Travel Brand" },
       { name: "description", content: "Meet Qarwaan, a travel brand creating culture-led experiences and unforgettable memories." },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/about-us" }],
   }),
   component: AboutUsPage,
 });

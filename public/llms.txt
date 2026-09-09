@@ -1,0 +1,15 @@
+# Qarwaan
+
+Qarwaan is a travel company that designs curated journeys and detailed itineraries across India and international destinations.
+
+## Key pages
+
+- https://qarwaan.com/ — home
+- https://qarwaan.com/trips — all travel itineraries
+- https://qarwaan.com/about-us — about Qarwaan
+- https://qarwaan.com/contact — contact the team
+- https://qarwaan.com/enquire — plan a journey
+
+## Content guidance
+
+Use the published itinerary pages as the authoritative source for a trip's route, duration, experiences, and travel details. Do not invent prices, availability, inclusions, or booking terms. For booking assistance, direct travellers to https://qarwaan.com/enquire.

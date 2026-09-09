@@ -81,19 +81,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "QARWAAN — Travel Beyond The Expected" },
       { name: "description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Qarwaan" },
       { property: "og:title", content: "QARWAAN — Travel Beyond The Expected" },
       { property: "og:description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@qarwaantravels" },
       { name: "twitter:title", content: "QARWAAN — Travel Beyond The Expected" },
       { name: "twitter:description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7082a31b-b861-4897-8547-7d7309b74417/id-preview-f6dae0c7--8984b653-f6a4-47e7-83ff-7174406cb98a.lovable.app-1783395449750.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7082a31b-b861-4897-8547-7d7309b74417/id-preview-f6dae0c7--8984b653-f6a4-47e7-83ff-7174406cb98a.lovable.app-1783395449750.png" },
     ],
     links: [
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.svg?v=3", type: "image/svg+xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -128,6 +128,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            name: "Qarwaan",
+            url: "https://qarwaan.com",
+            email: "team@qarwaan.com",
+            sameAs: ["https://www.instagram.com/qarwaantravels/"],
+          }),
+        }}
+      />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <EnquiryDialog />

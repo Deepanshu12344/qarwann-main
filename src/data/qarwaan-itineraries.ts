@@ -1,6 +1,398 @@
 // Generated from the Qarwaan Excel workbooks. Run scripts/build-itineraries.py after updating them.
 export const QARWAAN_ITINERARIES = [
   {
+    "id": "andaman-island-escape-beaches-blue-waters-island-stories",
+    "slug": "andaman-island-escape-beaches-blue-waters-island-stories",
+    "packageName": "Andaman Island Escape – Beaches, Blue Waters & Island Stories",
+    "coverImage": "/images/andaman/Andaman Main Photo.jpeg",
+    "country": "India",
+    "duration": "6 Nights / 7 Days",
+    "durationDays": 7,
+    "citiesCovered": [
+      "Sri Vijaya Puram",
+      "Swaraj Dweep",
+      "Shaheed Dweep",
+      "Wandoor"
+    ],
+    "bestSeason": [
+      "October – May"
+    ],
+    "startPoint": "Sri Vijaya Puram Airport",
+    "endPoint": "Sri Vijaya Puram Airport",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Beach Lovers",
+      "Adventure Seekers",
+      "First-Time Andaman Travellers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Discover the finest of the Andaman Islands through a carefully paced 6-night journey combining colonial history, tropical beaches, coral reefs, island hopping and authentic coastal experiences. Begin in Sri Vijaya Puram with the historic Cellular Jail, museums, Corbyn’s Cove and the moving Sound & Light Show. Continue to Netaji Subhas Chandra Bose Dweep and North Bay for island exploration, coral viewing and optional water activities. The journey then moves to Swaraj Dweep, where Radhanagar Beach offers spectacular sunsets, Elephant Beach introduces vibrant marine life and Kalapathar provides a quieter coastal escape away from the busiest areas. Continue to Shaheed Dweep for Bharatpur, Sitapur, Laxmanpur and the naturally formed rock bridge. A Wandoor excursion adds another dimension through Mahatma Gandhi Marine National Park and its protected marine ecosystem, subject to operational conditions. End the journey at Chidiya Tapu and Munda Pahar, known for peaceful coastal scenery and memorable sunset views. (Andaman & Nicobar Islands Tourism)",
+    "whyThisTrip": "A compact Andaman journey that combines the islands' most iconic attractions with quieter beaches, marine experiences, heritage, sunsets and local island life without making the itinerary unnecessarily rushed.",
+    "keyExperiences": [
+      "Cellular Jail",
+      "Sound & Light Show",
+      "Netaji Subhas Chandra Bose Dweep",
+      "North Bay",
+      "Radhanagar Beach",
+      "Elephant Beach",
+      "Snorkelling",
+      "Scuba Diving",
+      "Kalapathar Beach",
+      "Bharatpur Beach",
+      "Sitapur Beach",
+      "Laxmanpur Beach",
+      "Natural Bridge",
+      "Wandoor",
+      "Mahatma Gandhi Marine National Park",
+      "Jolly Buoy/Red Skin subject to access",
+      "Chidiya Tapu",
+      "Munda Pahar",
+      "Island Hopping",
+      "Seafood & Coastal Cuisine"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Airport → Sri Vijaya Puram City → Cellular Jail",
+        "location": "Sri Vijaya Puram",
+        "phase": "Arrival & Heritage",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Cellular Jail",
+          "Corbyn’s Cove Beach",
+          "Samudrika Naval Marine Museum",
+          "Anthropological Museum",
+          "Chatham Saw Mill",
+          "Sagarika Emporium",
+          "Sound & Light Show"
+        ],
+        "experienceDetails": "Begin the Andaman journey with a relaxed introduction to Sri Vijaya Puram. After arrival and hotel check-in, explore the city's historical and cultural highlights, including Cellular Jail and selected museums. Spend the evening at Corbyn’s Cove before experiencing the powerful Sound & Light Show that narrates the history of India’s freedom struggle and the Cellular Jail. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Chatham Saw Mill and Forest Museum",
+          "Sagarika Emporium",
+          "quieter stretches around Corbyn’s Cove"
+        ],
+        "activities": [
+          "City sightseeing",
+          "museum visit",
+          "heritage walk",
+          "beach leisure",
+          "Sound & Light Show",
+          "local shopping"
+        ],
+        "localFood": [
+          "Fish curry",
+          "grilled seafood",
+          "coconut-based curries",
+          "Andaman-style fish fry",
+          "tropical fruits"
+        ],
+        "localExperience": "Browse local handicrafts, shell-based souvenirs where legally sourced, coconut products and island handicrafts at local markets and Sagarika Emporium",
+        "festivals": [
+          "Seasonal/local cultural events"
+        ],
+        "stayType": "Comfortable city hotel",
+        "accessibility": "Flight + Road",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Sri Vijaya Puram → Netaji Subhas Chandra Bose Dweep → North Bay → Sri Vijaya Puram",
+        "location": "Netaji Subhas Chandra Bose Dweep & North Bay",
+        "phase": "Island Exploration",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Historic ruins of Netaji Subhas Chandra Bose Dweep",
+          "North Bay coral reefs",
+          "glass-bottom boat experience",
+          "snorkelling",
+          "optional scuba diving"
+        ],
+        "experienceDetails": "Take a morning boat excursion to the historic Netaji Subhas Chandra Bose Dweep, walking through its tropical ruins and remnants of the former British settlement. Continue towards North Bay for coral viewing and optional snorkelling or scuba diving. Return to Sri Vijaya Puram by evening and enjoy a relaxed coastal evening. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Old colonial ruins and forested pathways of Netaji Subhas Chandra Bose Dweep",
+          "quieter viewpoints away from the main jetty area"
+        ],
+        "activities": [
+          "Island hopping",
+          "glass-bottom boat ride",
+          "snorkelling",
+          "optional scuba diving",
+          "photography",
+          "heritage exploration"
+        ],
+        "localFood": [
+          "Fresh seafood",
+          "fish thali",
+          "prawn dishes",
+          "coconut water",
+          "tropical fruit"
+        ],
+        "localExperience": "Interact with boat operators and local island vendors; purchase locally made handicrafts and souvenirs",
+        "festivals": [
+          "Seasonal/local events"
+        ],
+        "stayType": "City hotel",
+        "accessibility": "Boat/Ferry + Road",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Sri Vijaya Puram → Swaraj Dweep → Radhanagar Beach",
+        "location": "Swaraj Dweep",
+        "phase": "Island Transfer & Beach Leisure",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Radhanagar Beach",
+          "island roads",
+          "tropical forests",
+          "coastal viewpoints"
+        ],
+        "experienceDetails": "Transfer by morning ferry or high-speed boat to Swaraj Dweep, one of the most popular island destinations in Andaman. After check-in and lunch, head towards the famous Radhanagar Beach. Spend the afternoon walking along its broad sandy shoreline, swimming where conditions permit and watching the changing colours of the sky during sunset. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Vijaynagar Beach and quieter stretches of coastline around the island"
+        ],
+        "activities": [
+          "Beach walk",
+          "swimming",
+          "photography",
+          "cycling",
+          "sunset viewing",
+          "leisure time"
+        ],
+        "localFood": [
+          "Grilled fish",
+          "seafood platter",
+          "coconut-based curries",
+          "fresh juices",
+          "tropical fruit"
+        ],
+        "localExperience": "Explore small local cafés, handicraft stalls and island markets; interact with local shopkeepers and boat operators",
+        "festivals": [
+          "Seasonal/local cultural events"
+        ],
+        "stayType": "Beach Resort / Island Hotel",
+        "accessibility": "Ferry/High-Speed Boat + Road",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 4,
+        "route": "Swaraj Dweep → Elephant Beach → Kalapathar Beach → Swaraj Dweep",
+        "location": "Swaraj Dweep",
+        "phase": "Marine Adventure & Hidden Coast",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Elephant Beach",
+          "coral reefs",
+          "snorkelling",
+          "scuba diving",
+          "sea activities",
+          "Kalapathar Beach"
+        ],
+        "experienceDetails": "Dedicate the day to Swaraj Dweep’s marine and coastal experiences. Visit Elephant Beach for its clear waters, coral-rich surroundings and optional snorkelling, scuba diving or sea-based activities. Later, move towards Kalapathar Beach, a quieter and more scenic stretch known for its peaceful atmosphere, turquoise waters and forest-backed coastline. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Kalapathar Beach",
+          "Vijaynagar Beach and quieter forest-lined coastal stretches"
+        ],
+        "activities": [
+          "Snorkelling",
+          "scuba diving",
+          "sea walking where available",
+          "kayaking",
+          "beach walking",
+          "photography",
+          "sunset leisure"
+        ],
+        "localFood": [
+          "Fresh seafood",
+          "fish fry",
+          "prawns",
+          "crab preparations",
+          "coconut rice",
+          "tropical drinks"
+        ],
+        "localExperience": "Visit small island cafés and local markets; speak with activity operators and local residents about island life and marine activities",
+        "festivals": [
+          "Seasonal/local events"
+        ],
+        "stayType": "Beach Resort / Island Hotel",
+        "accessibility": "Road + Boat",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 5,
+        "route": "Swaraj Dweep → Shaheed Dweep → Bharatpur → Natural Bridge → Laxmanpur",
+        "location": "Shaheed Dweep",
+        "phase": "Island Hopping & Coastal Exploration",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Bharatpur Beach",
+          "Sitapur Beach",
+          "Laxmanpur Beach",
+          "Natural Bridge",
+          "coral reefs"
+        ],
+        "experienceDetails": "Travel by boat to Shaheed Dweep, a quieter island known for its beaches, coral formations and relaxed atmosphere. Begin with Bharatpur Beach and continue towards the Natural Bridge before exploring Laxmanpur Beach. If time permits, visit Sitapur Beach for its distinctive coastal landscape and peaceful setting. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Natural Bridge",
+          "Sitapur Beach and quieter coastal stretches around Laxmanpur"
+        ],
+        "activities": [
+          "Snorkelling",
+          "glass-bottom boat ride",
+          "beach walking",
+          "swimming",
+          "photography",
+          "sunset viewing"
+        ],
+        "localFood": [
+          "Seafood curry",
+          "grilled fish",
+          "prawns",
+          "coconut-based dishes",
+          "local snacks and fresh fruit"
+        ],
+        "localExperience": "Explore small island markets, interact with local boatmen and shopkeepers, and experience the slower pace of Shaheed Dweep",
+        "festivals": [
+          "Seasonal/local cultural events"
+        ],
+        "stayType": "Island Resort / Eco-Resort",
+        "accessibility": "Ferry/Boat + Road",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 6,
+        "route": "Shaheed Dweep → Sri Vijaya Puram → Wandoor → Marine National Park → Sri Vijaya Puram",
+        "location": "Wandoor / Mahatma Gandhi Marine National Park",
+        "phase": "Marine & Nature Experience",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Wandoor Beach",
+          "Mahatma Gandhi Marine National Park",
+          "Jolly Buoy or Red Skin Island subject to access",
+          "coral reefs",
+          "mangroves"
+        ],
+        "experienceDetails": "Return towards Sri Vijaya Puram and continue to Wandoor for a marine-focused day. Take a permitted boat excursion into Mahatma Gandhi Marine National Park, where coral reefs, mangroves and marine habitats form the highlight of the experience. Jolly Buoy or Red Skin Island can be selected depending on permissions, weather and operational availability. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Wandoor coastline",
+          "Sippighat agricultural landscape and lesser-visited coastal viewpoints"
+        ],
+        "activities": [
+          "Boat excursion",
+          "coral viewing",
+          "snorkelling where permitted",
+          "nature photography",
+          "beach walk"
+        ],
+        "localFood": [
+          "Fresh fish curry",
+          "seafood thali",
+          "coconut water",
+          "tropical fruit and local snacks"
+        ],
+        "localExperience": "Interact with local boat crews and guides; learn about marine conservation and island ecosystems",
+        "festivals": [
+          "Seasonal/local events"
+        ],
+        "stayType": "City Hotel",
+        "accessibility": "Boat + Road",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      },
+      {
+        "day": 7,
+        "route": "Sri Vijaya Puram → Chidiya Tapu → Munda Pahar → Airport",
+        "location": "Chidiya Tapu / Sri Vijaya Puram",
+        "phase": "Nature, Sunset & Departure",
+        "nature": true,
+        "adventure": true,
+        "culture": false,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Chidiya Tapu",
+          "Munda Pahar",
+          "Biological Park",
+          "coastal viewpoints"
+        ],
+        "experienceDetails": "Complete the journey with a final excursion to Chidiya Tapu, one of South Andaman’s best-known nature and sunset areas. Walk towards Munda Pahar for coastal views and a short nature experience before returning to Sri Vijaya Puram. Depending on flight timing, enjoy lunch or a final shopping stop before airport transfer. (Andaman & Nicobar Islands Tourism)",
+        "hiddenGems": [
+          "Munda Pahar",
+          "quieter forest trails and coastal viewpoints around Chidiya Tapu"
+        ],
+        "activities": [
+          "Short trek/walk",
+          "birdwatching",
+          "photography",
+          "sunset viewing if timing permits",
+          "souvenir shopping"
+        ],
+        "localFood": [
+          "Seafood lunch",
+          "fish curry",
+          "coconut water",
+          "fresh juices and tropical fruits"
+        ],
+        "localExperience": "Last-minute shopping for handicrafts, spices, coconut products and locally made souvenirs",
+        "festivals": [
+          "Seasonal/local events"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road + Flight",
+        "images": [
+          "/images/andaman/Andaman Main Photo.jpeg"
+        ]
+      }
+    ]
+  },
+  {
     "id": "bali-island-of-gods-iconic-wonders-hidden-gems",
     "slug": "bali-island-of-gods-iconic-wonders-hidden-gems",
     "packageName": "Bali – Island of Gods: Iconic Wonders & Hidden Gems",

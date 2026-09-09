@@ -89,6 +89,7 @@ export const Route = createFileRoute("/enquire")({
         content: "Begin a conversation with QARWAAN's travel designers.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/enquire" }],
   }),
   component: EnquirePage,
 });
@@ -359,7 +360,7 @@ function EnquirePage() {
 
           {image && (
             <aside className="relative hidden min-h-full overflow-hidden rounded-md bg-primary lg:block">
-              <img src={image} alt={trip ? `${trip} travel destination` : "Travel destination"} className="absolute inset-0 h-full w-full object-cover" />
+              <img src={image} alt={trip ? `${trip} travel destination` : "Travel destination"} width={1200} height={1600} className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/15 to-transparent" />
               {trip && <p className="absolute inset-x-0 bottom-0 p-7 font-serif text-3xl leading-tight text-primary-foreground">{trip}</p>}
             </aside>

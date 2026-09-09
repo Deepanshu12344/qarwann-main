@@ -45,6 +45,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image", content: heroImage },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/" }],
   }),
   component: Home,
 });
@@ -56,6 +57,7 @@ const NAV: { label: string; to: string }[] = [
 ];
 
 const TRIP_IMAGES = {
+  andaman: "/images/andaman/Andaman Main Photo.jpeg",
   bali: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
   bhutan: "/images/bhutan/bhutan-main.png",
   goa: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
@@ -98,6 +100,7 @@ const PILLARS = [
 ];
 
 const EXPERIENCES: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
+  { title: "Andaman Island Escape – Beaches, Blue Waters & Island Stories", place: "Andaman Islands", country: "India", duration: "6 nights", img: TRIP_IMAGES.andaman, slug: "andaman-island-escape-beaches-blue-waters-island-stories" },
   { title: "Island of Gods: Iconic Wonders & Hidden Gems", place: "Bali", country: "Indonesia", duration: "6 nights", img: TRIP_IMAGES.bali, slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
   { title: "Bhutan – Himalayan Serenity & Cultural Discovery", place: "Bhutan", country: "Bhutan", duration: "6 nights", img: TRIP_IMAGES.bhutan, slug: "bhutan-himalayan-serenity-cultural-discovery" },
   { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
@@ -308,6 +311,8 @@ function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
         src={heroImage}
         alt="Qarwaan travel experience"
+        width={1920}
+        height={1080}
       />
 
       {/* Cinematic vignette */}
@@ -498,8 +503,7 @@ function Destinations() {
                 <div className="absolute inset-x-0 bottom-0 p-6 text-background md:p-7">
                   <span className="eyebrow text-accent">{d.tag}</span>
                   <h3 className="mt-2 font-serif text-3xl md:text-4xl">{d.name}</h3>
-                  <div className="mt-1 flex items-center justify-between">
-                    <span className="text-sm text-background/75">{d.region}</span>
+                  <div className="mt-1 flex items-center justify-end">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-background/40 transition-all group-hover:bg-accent group-hover:border-accent group-hover:text-accent-foreground">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
@@ -579,7 +583,6 @@ function Experiences() {
     <section id="experiences" className="px-5 py-24 sm:px-8 md:py-32">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Signature Experiences"
           title={
             <>
               Where will <em className="not-italic text-accent">you go next ?</em>

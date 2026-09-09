@@ -29,10 +29,11 @@ const footerLinks = {
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
+      <h2 className="sr-only">Qarwaan travel resources and contact information</h2>
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <img src={lightLogo} alt="Qarwaan" className="h-16 w-auto object-contain" />
+            <img src={lightLogo} alt="Qarwaan" width={240} height={128} className="h-16 w-auto object-contain" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-background/70">
               Curating unforgettable journeys to the world's most iconic and hidden destinations.
             </p>

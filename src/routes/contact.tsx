@@ -18,6 +18,7 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact Us — QARWAAN" },
       { name: "description", content: "Get in touch with the QARWAAN team for travel advice, trip enquiries, and support." },
     ],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/contact" }],
   }),
   component: ContactPage,
 });

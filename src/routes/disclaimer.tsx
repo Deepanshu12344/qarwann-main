@@ -36,5 +36,9 @@ const sections: LegalSection[] = [
 ];
 
 export const Route = createFileRoute("/disclaimer")({
+  head: () => ({
+    meta: [{ title: "Disclaimer — QARWAAN" }, { name: "description", content: "Read Qarwaan's website and travel information disclaimer." }],
+    links: [{ rel: "canonical", href: "https://qarwaan.com/disclaimer" }],
+  }),
   component: () => <LegalPage title="Disclaimer" sections={sections} />,
 });
