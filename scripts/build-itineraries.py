@@ -189,6 +189,16 @@ LOCAL_DAY_IMAGES = {
         6: ["/images/ladakh/daywise/day6-1.jpeg", "/images/ladakh/daywise/day6-2.jpeg"],
         7: ["/images/ladakh/daywise/day7-1.jpeg", "/images/ladakh/daywise/day7-2.jpeg", "/images/ladakh/daywise/day7-3.jpeg"],
     },
+    "nepal-himalayan-heritage-lakes-jungle-escape": {
+        1: ["/images/nepal/daywise/day1-1.jpeg", "/images/nepal/daywise/day1-2.jpeg"],
+        2: ["/images/nepal/daywise/day2-1.jpeg", "/images/nepal/daywise/day2-2.jpeg"],
+        3: ["/images/nepal/daywise/day3-1.jpeg", "/images/nepal/daywise/day3-2.jpeg"],
+        4: ["/images/nepal/daywise/day4-1.jpeg", "/images/nepal/daywise/day4-2.jpeg"],
+        5: ["/images/nepal/daywise/day5-1.jpeg", "/images/nepal/daywise/day5-2.jpeg"],
+        6: ["/images/nepal/daywise/day6-1.png", "/images/nepal/daywise/day6-2.jpeg"],
+        7: ["/images/nepal/daywise/day7-1.jpeg", "/images/nepal/daywise/day7-2.jpg"],
+        8: ["/images/nepal/daywise/day8-1.jpeg", "/images/nepal/daywise/day8-2.jpeg"],
+    },
     "rajasthan-royal-heritage-desert-odyssey": {
         1: ["/images/rajasthan/daywise/day1-1.jpeg", "/images/rajasthan/daywise/day1-2.jpeg"],
         2: ["/images/rajasthan/daywise/day2-1.jpeg", "/images/rajasthan/daywise/day2-2.jpeg", "/images/rajasthan/daywise/day2-3.jpeg"],

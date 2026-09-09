@@ -1310,7 +1310,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Boutique Hotel / City Hotel",
         "accessibility": "Flight arrival + short road transfer",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day1-1.jpeg",
+          "/images/nepal/daywise/day1-2.jpeg"
         ]
       },
       {
@@ -1353,7 +1354,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Boutique Hotel / City Hotel",
         "accessibility": "Road-based local sightseeing",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day2-1.jpeg",
+          "/images/nepal/daywise/day2-2.jpeg"
         ]
       },
       {
@@ -1395,7 +1397,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Lakeside Resort / Hotel",
         "accessibility": "Road; full-day scenic transfer, timing dependent on traffic and road conditions",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day3-1.jpeg",
+          "/images/nepal/daywise/day3-2.jpeg"
         ]
       },
       {
@@ -1438,7 +1441,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Lakeside Resort / Hotel",
         "accessibility": "Road-based sightseeing",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day4-1.jpeg",
+          "/images/nepal/daywise/day4-2.jpeg"
         ]
       },
       {
@@ -1479,7 +1483,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Lakeside Resort / Hotel",
         "accessibility": "Road; short mountain transfer + optional adventure activities",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day5-1.jpeg",
+          "/images/nepal/daywise/day5-2.jpeg"
         ]
       },
       {
@@ -1520,7 +1525,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Jungle Resort / Wildlife Lodge",
         "accessibility": "Road; scenic transfer, generally several hours depending on road conditions",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day6-1.png",
+          "/images/nepal/daywise/day6-2.jpeg"
         ]
       },
       {
@@ -1562,7 +1568,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Jungle Resort / Wildlife Lodge",
         "accessibility": "Road-based local sightseeing; park access subject to regulations",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day7-1.jpeg",
+          "/images/nepal/daywise/day7-2.jpg"
         ]
       },
       {
@@ -1602,7 +1609,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "—",
         "accessibility": "Road + domestic flight; schedule dependent",
         "images": [
-          "/images/nepal/Nepal Main Photo.avif"
+          "/images/nepal/daywise/day8-1.jpeg",
+          "/images/nepal/daywise/day8-2.jpeg"
         ]
       }
     ]
