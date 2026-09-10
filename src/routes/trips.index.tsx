@@ -10,9 +10,8 @@ import {
   ArrowUpRight,
   SlidersHorizontal,
   X,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
+import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
   Dialog,
@@ -73,7 +72,6 @@ export const Route = createFileRoute("/trips/")({
   component: TripsPage,
 });
 
-const PAGE_SIZE = 6;
 const DURATION_OPTIONS = [
   { value: "", label: "Any duration" },
   { value: "short", label: "Up to 5 days" },
@@ -103,7 +101,6 @@ function TripsPage() {
   const [idealFor, setIdealFor] = useState("");
   const [budgetBand, setBudgetBand] = useState("any");
   const [sort, setSort] = useState("popular");
-  const [page, setPage] = useState(1);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   useEffect(() => {
@@ -114,10 +111,6 @@ function TripsPage() {
     const t = setTimeout(() => setQDebounced(q), 300);
     return () => clearTimeout(t);
   }, [q]);
-
-  useEffect(() => {
-    setPage(1);
-  }, [qDebounced, country, tripType, duration, bestSeason, idealFor, budgetBand, sort]);
 
   const budget = BUDGET_BANDS.find((b) => b.value === budgetBand)!;
 
@@ -132,10 +125,8 @@ function TripsPage() {
     p.set("minBudget", String(budget.min));
     p.set("maxBudget", String(budget.max));
     p.set("sort", sort);
-    p.set("page", String(page));
-    p.set("pageSize", String(PAGE_SIZE));
     return p.toString();
-  }, [qDebounced, country, tripType, duration, bestSeason, idealFor, budget, sort, page]);
+  }, [qDebounced, country, tripType, duration, bestSeason, idealFor, budget, sort]);
 
   const { data, isLoading, isFetching, isError } = useQuery<TripsResponse>({
     queryKey: ["trips", params],
@@ -148,8 +139,6 @@ function TripsPage() {
   });
 
   const facets = data?.facets;
-  const totalPages = data ? Math.max(1, Math.ceil(data.total / PAGE_SIZE)) : 1;
-
   const activeFilters = [
     q && { label: `Search: “${q}”`, clear: () => setQ("") },
     country && { label: country, clear: () => setCountry("") },
@@ -181,6 +170,17 @@ function TripsPage() {
       <SiteHeader page="destinations" />
       <h1 className="sr-only">Qarwaan travel itineraries</h1>
       <h2 className="sr-only">Browse curated travel journeys</h2>
+      <nav aria-label="All Qarwaan itinerary pages" className="sr-only">
+        <ul>
+          {QARWAAN_ITINERARIES.map((trip) => (
+            <li key={trip.slug}>
+              <Link to="/trips/$slug" params={{ slug: trip.slug }}>
+                {trip.packageName}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <section className="px-7 py-10 md:px-16 md:py-14 lg:px-20 xl:px-28">
         <motion.div
@@ -254,10 +254,13 @@ function TripsPage() {
 
         {/* Results */}
           <div className="mt-12 flex flex-wrap items-center justify-between gap-3 mb-8">
-            <p className="font-serif text-3xl text-primary">
-              {isLoading ? "Loading..." : `${data?.total ?? 0} journeys found`}
-              {isFetching && !isLoading && " · updating"}
-            </p>
+            <div>
+              <p className="font-serif text-3xl text-primary">
+                {isLoading ? "Loading..." : `${data?.total ?? 0} journeys found`}
+                {isFetching && !isLoading && " · updating"}
+              </p>
+              <p className="mt-1 text-sm text-foreground/60">Note: All prices are without airfare.</p>
+            </div>
             {!isLoading && <p className="text-sm text-foreground/60">Showing {data?.items.length ?? 0} of {data?.total ?? 0} journeys</p>}
           </div>
 
@@ -292,41 +295,6 @@ function TripsPage() {
             </div>
           )}
 
-          {/* Pagination */}
-          {data && data.total > PAGE_SIZE && (
-            <div className="mt-10 flex items-center justify-center gap-2">
-              <button
-                onClick={() => setPage((p) => Math.max(1, p - 1))}
-                disabled={page === 1}
-                className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm disabled:opacity-40 hover:bg-card transition"
-              >
-                <ChevronLeft className="h-4 w-4" /> Prev
-              </button>
-              {Array.from({ length: totalPages }).map((_, i) => {
-                const p = i + 1;
-                return (
-                  <button
-                    key={p}
-                    onClick={() => setPage(p)}
-                    className={`h-9 w-9 rounded-full text-sm transition ${
-                      p === page
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-card border border-border"
-                    }`}
-                  >
-                    {p}
-                  </button>
-                );
-              })}
-              <button
-                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                disabled={page === totalPages}
-                className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm disabled:opacity-40 hover:bg-card transition"
-              >
-                Next <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
-          )}
         <Dialog open={filtersOpen} onOpenChange={setFiltersOpen}>
           <DialogContent className="max-h-[85svh] max-w-2xl overflow-y-auto p-6 sm:p-8">
             <DialogHeader>
@@ -398,7 +366,7 @@ function TripCard({ trip, index }: { trip: Trip; index: number }) {
           <MapPin className="h-3 w-3" /> {trip.country}
         </div>
         <div className="absolute top-3 right-3 rounded-full bg-accent text-accent-foreground px-3 py-1 text-xs font-medium">
-          {trip.budget > 0 ? `₹${trip.budget.toLocaleString("en-IN")}` : "Price on request"}
+          Starting from ₹{trip.budget.toLocaleString("en-IN")}/-
         </div>
       </div>
       <div className="p-5 flex flex-col flex-1">

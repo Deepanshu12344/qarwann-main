@@ -69,11 +69,11 @@ const TRIP_IMAGES = {
 };
 
 const DESTINATIONS = [
-  { name: "Bali", country: "Indonesia", region: "Bali", img: TRIP_IMAGES.bali, tag: "Island of Gods", slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
-  { name: "Goa", country: "India", region: "Goa", img: TRIP_IMAGES.goa, tag: "Coast & Culture", slug: "goa-coastal-charm-cultural-escape" },
-  { name: "Nepal", country: "Nepal", region: "Himalayas", img: TRIP_IMAGES.nepal, tag: "Himalayan Heritage", slug: "nepal-himalayan-heritage-lakes-jungle-escape" },
-  { name: "Ladakh", country: "India", region: "Ladakh", img: TRIP_IMAGES.ladakh, tag: "Himalayan Roads", slug: "ladakh-himalayan-expedition" },
-  { name: "Rajasthan", country: "India", region: "Rajasthan", img: TRIP_IMAGES.rajasthan, tag: "Royal Heritage", slug: "rajasthan-royal-heritage-desert-odyssey" },
+  { name: "Bali", country: "Indonesia", region: "Bali", img: TRIP_IMAGES.bali, tag: "Island of Gods", slug: "bali-island-of-gods-iconic-wonders-hidden-gems", price: 39999 },
+  { name: "Goa", country: "India", region: "Goa", img: TRIP_IMAGES.goa, tag: "Coast & Culture", slug: "goa-coastal-charm-cultural-escape", price: 13500 },
+  { name: "Nepal", country: "Nepal", region: "Himalayas", img: TRIP_IMAGES.nepal, tag: "Himalayan Heritage", slug: "nepal-himalayan-heritage-lakes-jungle-escape", price: 24999 },
+  { name: "Ladakh", country: "India", region: "Ladakh", img: TRIP_IMAGES.ladakh, tag: "Himalayan Roads", slug: "ladakh-himalayan-expedition", price: 27999 },
+  { name: "Rajasthan", country: "India", region: "Rajasthan", img: TRIP_IMAGES.rajasthan, tag: "Royal Heritage", slug: "rajasthan-royal-heritage-desert-odyssey", price: 40000 },
 ];
 
 const PILLARS = [
@@ -503,7 +503,8 @@ function Destinations() {
                 <div className="absolute inset-x-0 bottom-0 p-6 text-background md:p-7">
                   <span className="eyebrow text-accent">{d.tag}</span>
                   <h3 className="mt-2 font-serif text-3xl md:text-4xl">{d.name}</h3>
-                  <div className="mt-1 flex items-center justify-end">
+                  <div className="mt-3 flex items-center justify-between gap-3">
+                    <span className="text-sm font-medium">Starting from ₹{d.price.toLocaleString("en-IN")}/-</span>
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-background/40 transition-all group-hover:bg-accent group-hover:border-accent group-hover:text-accent-foreground">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>

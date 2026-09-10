@@ -28,7 +28,7 @@ export const QARWAAN_ITINERARIES = [
       "Adventure Seekers",
       "First-Time Andaman Travellers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 39500,
     "detailedOverview": "Discover the finest of the Andaman Islands through a carefully paced 6-night journey combining colonial history, tropical beaches, coral reefs, island hopping and authentic coastal experiences. Begin in Sri Vijaya Puram with the historic Cellular Jail, museums, Corbyn’s Cove and the moving Sound & Light Show. Continue to Netaji Subhas Chandra Bose Dweep and North Bay for island exploration, coral viewing and optional water activities. The journey then moves to Swaraj Dweep, where Radhanagar Beach offers spectacular sunsets, Elephant Beach introduces vibrant marine life and Kalapathar provides a quieter coastal escape away from the busiest areas. Continue to Shaheed Dweep for Bharatpur, Sitapur, Laxmanpur and the naturally formed rock bridge. A Wandoor excursion adds another dimension through Mahatma Gandhi Marine National Park and its protected marine ecosystem, subject to operational conditions. End the journey at Chidiya Tapu and Munda Pahar, known for peaceful coastal scenery and memorable sunset views. (Andaman & Nicobar Islands Tourism)",
     "whyThisTrip": "A compact Andaman journey that combines the islands' most iconic attractions with quieter beaches, marine experiences, heritage, sunsets and local island life without making the itinerary unnecessarily rushed.",
     "keyExperiences": [
@@ -103,7 +103,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Comfortable city hotel",
         "accessibility": "Flight + Road",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day1-1.jpeg",
+          "/images/andaman/daywise/day1-2.jpeg"
         ]
       },
       {
@@ -151,7 +152,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "City hotel",
         "accessibility": "Boat/Ferry + Road",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day2-1.jpeg",
+          "/images/andaman/daywise/day2-2.jpeg"
         ]
       },
       {
@@ -197,7 +199,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Beach Resort / Island Hotel",
         "accessibility": "Ferry/High-Speed Boat + Road",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day3-1.jpeg",
+          "/images/andaman/daywise/day3-2.jpeg"
         ]
       },
       {
@@ -248,7 +251,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Beach Resort / Island Hotel",
         "accessibility": "Road + Boat",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day4-1.jpg",
+          "/images/andaman/daywise/day4-2.jpeg"
         ]
       },
       {
@@ -296,7 +300,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Island Resort / Eco-Resort",
         "accessibility": "Ferry/Boat + Road",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day5-1.jpeg",
+          "/images/andaman/daywise/day5-2.jpeg"
         ]
       },
       {
@@ -342,7 +347,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "City Hotel",
         "accessibility": "Boat + Road",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day6-1.jpeg",
+          "/images/andaman/daywise/day6-2.jpeg"
         ]
       },
       {
@@ -387,7 +393,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Departure",
         "accessibility": "Road + Flight",
         "images": [
-          "/images/andaman/Andaman Main Photo.jpeg"
+          "/images/andaman/daywise/day7-1.jpeg",
+          "/images/andaman/daywise/day7-2.jpeg"
         ]
       }
     ]
@@ -423,7 +430,7 @@ export const QARWAAN_ITINERARIES = [
       "Culture Seekers",
       "Adventure Travellers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 39999,
     "detailedOverview": "Bali – Island of Gods: Iconic Wonders & Hidden Gems is a carefully designed 6 Nights / 7 Days journey through Bali's most distinctive landscapes, cultural treasures and coastal experiences. The itinerary begins in Ubud, Bali's cultural heart, combining royal heritage, sacred temples, lush rice terraces and local artistic traditions. From Central Bali, the journey continues towards the volcanic landscapes of Kintamani and the peaceful countryside of Sidemen, offering a quieter and more authentic side of the island. The adventure then moves offshore to Nusa Penida, known for dramatic cliffs, turquoise waters and iconic viewpoints such as Kelingking Beach and Broken Beach. The final part of the journey explores the Bukit Peninsula, including Uluwatu Temple, spectacular beaches and the traditional Kecak sunset performance. Selected hidden gems, village experiences, local food, handicrafts and lesser-known natural spots are woven throughout the route, ensuring the trip is not simply a checklist of famous attractions. This compact itinerary is designed to maximize Bali's diversity while keeping unnecessary cross-island travel to a minimum.",
     "whyThisTrip": "Experience Bali’s iconic attractions and lesser-known gems in one compact journey, explore the cultural heart of Ubud and its surrounding temples and rice terraces, discover the peaceful landscapes and traditional village life of Sidemen, experience the dramatic coastline and natural wonders of Nusa Penida, witness the spectacular cliffs and sunset atmosphere of Uluwatu, connect with Balinese spirituality through sacred temples and traditional rituals, enjoy authentic Balinese cuisine and local village interactions, and experience a perfect blend of nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
     "keyExperiences": [
@@ -787,7 +794,7 @@ export const QARWAAN_ITINERARIES = [
       "Spiritual Travellers",
       "Adventure Enthusiasts"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 21999,
     "detailedOverview": "Bhutan – Himalayan Serenity & Cultural Discovery is a carefully designed 6 Nights / 7 Days journey through Bhutan's most remarkable cultural, spiritual and natural landscapes. Beginning in Paro, the journey introduces travellers to Bhutanese architecture, Buddhist traditions and the dramatic Himalayan setting surrounding the valley. The route continues to Thimphu, the kingdom's capital, combining important monasteries, traditional institutions, local markets and modern Bhutanese life. From Thimphu, the journey crosses the spectacular Dochula Pass before reaching Punakha, the former capital and one of Bhutan's most beautiful valleys, home to the magnificent Punakha Dzong and riverside landscapes. The journey then continues to the peaceful Phobjikha Valley, where traditional villages, Gangtey Monastery, nature trails and seasonal black-necked crane sightings offer a quieter and more authentic side of Bhutan. The final days return to Paro for the unforgettable hike to Taktsang, or Tiger's Nest Monastery. The itinerary combines iconic landmarks with hidden valleys, local cuisine, village interactions, nature walks and spiritual experiences while keeping the route compact and practical. Bhutan's official tourism resources emphasize its combination of culture-packed towns, rural life, dramatic landscapes and outdoor experiences.",
     "whyThisTrip": "Experience Bhutan's iconic monasteries, Himalayan landscapes and authentic local culture in one compact journey, explore the vibrant yet traditional capital of Thimphu, cross the spectacular Dochula Pass, discover the historic Punakha Valley and its magnificent dzong, experience the peaceful landscapes and village life of Phobjikha, walk through the Gangtey Nature Trail, connect with Bhutanese Buddhist traditions, enjoy traditional Bhutanese cuisine and local handicrafts, experience the unforgettable Tiger's Nest hike, and combine nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
     "keyExperiences": [
@@ -1158,7 +1165,7 @@ export const QARWAAN_ITINERARIES = [
       "Honeymooners",
       "Beach Lovers & Leisure Travelers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 13500,
     "detailedOverview": "Discover Goa beyond its famous beaches on a thoughtfully curated 6 Nights / 7 Days journey combining coastal beauty, Portuguese heritage, local culture, nature, adventure, and relaxed tropical experiences. Explore the colourful Latin Quarter of Fontainhas and the historic churches of Old Goa before discovering the energetic beaches and vibrant atmosphere of North Goa. Experience scenic forts, local markets, traditional Goan villages, hidden beaches, and memorable sunsets along the Arabian Sea. Continue into South Goa for a quieter side of the state, where palm-fringed beaches, peaceful coastal landscapes, and charming villages create a more relaxed experience. The journey also introduces travelers to authentic Goan cuisine, local handicrafts, traditional architecture, spice plantations, and opportunities for meaningful interactions with local communities. From heritage walks and water activities to river cruises and leisurely beach evenings, each day reveals a different side of Goa. Blending iconic attractions with lesser-known experiences, this itinerary is designed for travelers seeking a complete and immersive Goan holiday.",
     "whyThisTrip": "Beautiful beaches, Portuguese heritage, authentic Goan culture, hidden coastal gems, local cuisine, scenic forts, vibrant markets, water activities, tropical landscapes, village experiences, river cruises, and relaxing sunsets.",
     "keyExperiences": [
@@ -1632,7 +1639,7 @@ export const QARWAAN_ITINERARIES = [
       "Adventure Travellers",
       "Wildlife Enthusiasts"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 24999,
     "detailedOverview": "Nepal – Himalayan Heritage, Lakes & Jungle Escape is a carefully designed 7 Nights / 8 Days journey combining Nepal's cultural heritage, Himalayan landscapes, peaceful hill towns and wildlife experiences. The journey begins in Kathmandu, where ancient temples, stupas, historic squares and vibrant local neighbourhoods introduce travellers to Nepal's rich cultural and spiritual traditions. From Kathmandu, the route continues towards Pokhara with a scenic stop at Bandipur, a beautifully preserved Newari hill town offering mountain views, traditional architecture and a quieter side of Nepal. Pokhara forms the heart of the journey, with the magnificent Annapurna range, Phewa Lake, World Peace Pagoda, caves, waterfalls and opportunities for boating and adventure activities. The journey then continues to Chitwan, where jungle safaris, birdwatching, canoeing and Tharu cultural experiences bring an entirely different dimension to the trip. The itinerary balances famous landmarks with lesser-known experiences, local cuisine, village interactions, nature and adventure, while keeping the number of travel days to a practical minimum. Nepal's Kathmandu Valley, Pokhara and Chitwan are among the country's major tourism highlights.",
     "whyThisTrip": "Experience Nepal's iconic Himalayan landscapes, ancient heritage and wildlife in one compact journey, explore the spiritual and cultural heart of Kathmandu Valley, discover the preserved Newari charm and mountain views of Bandipur, experience Pokhara's lakes, waterfalls and Annapurna panorama, enjoy adventure activities and peaceful Himalayan surroundings, explore the wilderness of Chitwan National Park and its rich wildlife, connect with Tharu culture and local communities, savour authentic Nepali cuisine and combine nature, adventure, culture, spirituality, heritage and leisure without unnecessarily extending the trip.",
     "keyExperiences": [
@@ -2035,7 +2042,7 @@ export const QARWAAN_ITINERARIES = [
       "Friends",
       "Honeymooners & Nature Lovers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 13500,
     "detailedOverview": "Discover the enchanting beauty of Kerala, famously known as God's Own Country, on this carefully curated 6 Nights / 7 Days journey through its most iconic destinations. Begin your adventure in the historic city of Kochi, where colonial architecture, vibrant markets, and cultural heritage create a memorable first impression. Continue to the misty hills of Munnar, surrounded by sprawling tea plantations, cascading waterfalls, and breathtaking viewpoints. Explore the rich biodiversity of Thekkady with its renowned wildlife sanctuary and aromatic spice plantations before experiencing the tranquil backwaters of Alleppey aboard a traditional houseboat. Conclude your journey in the coastal paradise of Kovalam, where golden beaches, scenic cliffs, and spectacular sunsets offer the perfect setting for relaxation. Along the way, discover hidden gems, savor authentic Kerala cuisine, interact with local communities, and experience the state's unique traditions and natural beauty. With comfortable road journeys, diverse landscapes, and unforgettable experiences, this itinerary offers the perfect blend of nature, culture, heritage, and leisure for every traveler.",
     "whyThisTrip": "Tea plantation landscapes, wildlife experiences, scenic backwaters, luxury houseboat stay, pristine beaches, colonial heritage, authentic Kerala cuisine, hidden gems, and rich cultural experiences.",
     "keyExperiences": [
@@ -2477,7 +2484,7 @@ export const QARWAAN_ITINERARIES = [
       "Friends",
       "Adventure Seekers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 27999,
     "detailedOverview": "This Ladakh journey takes you through some of the most breathtaking landscapes in India, covering Leh, Nubra Valley, and Pangong Lake. Starting from Leh, you acclimatize to the altitude while exploring local markets and monasteries. The journey continues through Khardung La, one of the highest motorable roads, leading to Nubra Valley’s cold desert and unique sand dunes. Experience the beauty of Pangong Lake, known for its changing colors and peaceful surroundings. Along the way, visit ancient monasteries, interact with locals, and enjoy scenic drives through valleys and rivers. This trip is ideal for travelers looking for adventure, nature, and cultural richness in one unforgettable journey.",
     "whyThisTrip": "High-altitude road trip, unique desert landscape, iconic Pangong Lake stay, monastery exploration",
     "keyExperiences": [
@@ -2849,7 +2856,7 @@ export const QARWAAN_ITINERARIES = [
       "Culture Enthusiasts",
       "Photographers & Experiential Travelers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 40000,
     "detailedOverview": "Experience the royal legacy of Rajasthan on an immersive 10 Nights / 11 Days journey through its most celebrated cities, desert landscapes, historic forts, sacred sites, and colourful local communities. Begin in Jaipur, exploring magnificent forts, palaces, traditional bazaars, and architectural landmarks before travelling through Ajmer and the spiritual town of Pushkar. Continue to Jodhpur, where Mehrangarh Fort towers above the vibrant lanes of the Blue City, before heading west to the golden landscapes of Jaisalmer. Discover ornate havelis, the living Jaisalmer Fort, desert villages, and the sweeping dunes of the Thar Desert with a memorable overnight desert experience. The journey then moves towards Udaipur via Ranakpur, combining remarkable Jain architecture with the scenic landscapes of the Aravalli Hills. Conclude among Udaipur's elegant palaces, lakes, heritage streets, and traditional markets. Authentic Rajasthani cuisine, artisan interactions, folk performances, local shopping, hidden gems, heritage stays, and carefully curated cultural experiences make this journey a comprehensive introduction to Rajasthan's royal heritage and living traditions.",
     "whyThisTrip": "Royal forts and palaces, UNESCO heritage, Thar Desert landscapes, historic cities, sacred destinations, traditional villages, Rajasthani cuisine, folk performances, artisan interactions, colourful bazaars, heritage stays, hidden gems, photography, and authentic cultural experiences.",
     "keyExperiences": [
@@ -3570,7 +3577,7 @@ export const QARWAAN_ITINERARIES = [
       "Couples",
       "Friends & Explorers"
     ],
-    "budgetFrom": 0,
+    "budgetFrom": 15999,
     "detailedOverview": "Embark on an unforgettable journey through Spiti Valley, one of the most spectacular high-altitude regions of the Indian Himalayas. Beginning in Shimla, the journey gradually ascends through the breathtaking landscapes of Kinnaur before entering the remote Trans-Himalayan terrain of Spiti. Experience the scenic beauty of Kalpa, discover the ancient Buddhist heritage of Tabo, and explore Kaza, the cultural heart of Spiti Valley. Visit centuries-old monasteries, dramatic mountain viewpoints, and remarkable high-altitude villages including Key, Kibber, Langza, Hikkim, and Komic. Along the way, witness barren mountains, deep river valleys, traditional mud-brick homes, prayer flags, and extraordinary Himalayan landscapes. Authentic local food, interactions with Spitian communities, photography, stargazing, and scenic road journeys add depth to the experience. The adventure concludes with a spectacular drive towards Manali. Combining nature, adventure, Buddhist culture, remote villages, and hidden Himalayan experiences, this journey offers an immersive introduction to the distinctive landscapes and traditions of Spiti Valley.",
     "whyThisTrip": "Dramatic Himalayan landscapes, ancient Buddhist monasteries, remote high-altitude villages, scenic road journeys, authentic Spitian culture, stargazing, photography, local interactions, hidden gems, and adventurous mountain experiences.",
     "keyExperiences": [

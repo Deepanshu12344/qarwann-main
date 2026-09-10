@@ -23,6 +23,20 @@ WORKBOOKS = [
     ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
 
+# Starting prices are maintained here so regenerated itinerary data keeps the
+# published destination pricing.
+STARTING_PRICES = {
+    "andaman-island-escape-beaches-blue-waters-island-stories": 39500,
+    "bali-island-of-gods-iconic-wonders-hidden-gems": 39999,
+    "bhutan-himalayan-serenity-cultural-discovery": 21999,
+    "goa-coastal-charm-cultural-escape": 13500,
+    "nepal-himalayan-heritage-lakes-jungle-escape": 24999,
+    "kerala-serenity-escape": 13500,
+    "ladakh-himalayan-expedition": 27999,
+    "rajasthan-royal-heritage-desert-odyssey": 40000,
+    "spiti-valley-expedition": 15999,
+}
+
 # Editorial image sets are deliberately grouped by the actual experience planned
 # for each day.  They are kept here (rather than entered by hand in the generated
 # TypeScript) so regenerating the workbook data never removes the day galleries.
@@ -149,6 +163,15 @@ DAY_IMAGE_THEMES = {
 # Local day galleries use the supplied photography. Each list is the carousel
 # sequence: e.g. day 1 starts with day1-1.jpeg.
 LOCAL_DAY_IMAGES = {
+    "andaman-island-escape-beaches-blue-waters-island-stories": {
+        1: ["/images/andaman/daywise/day1-1.jpeg", "/images/andaman/daywise/day1-2.jpeg"],
+        2: ["/images/andaman/daywise/day2-1.jpeg", "/images/andaman/daywise/day2-2.jpeg"],
+        3: ["/images/andaman/daywise/day3-1.jpeg", "/images/andaman/daywise/day3-2.jpeg"],
+        4: ["/images/andaman/daywise/day4-1.jpg", "/images/andaman/daywise/day4-2.jpeg"],
+        5: ["/images/andaman/daywise/day5-1.jpeg", "/images/andaman/daywise/day5-2.jpeg"],
+        6: ["/images/andaman/daywise/day6-1.jpeg", "/images/andaman/daywise/day6-2.jpeg"],
+        7: ["/images/andaman/daywise/day7-1.jpeg", "/images/andaman/daywise/day7-2.jpeg"],
+    },
     "bali-island-of-gods-iconic-wonders-hidden-gems": {
         1: ["/images/bali/daywise/day1-1.jpg", "/images/bali/daywise/day1-2.jpg"],
         2: ["/images/bali/daywise/day2-1.jpeg", "/images/bali/daywise/day2-2.jpeg"],
@@ -301,7 +324,7 @@ def main() -> None:
             "citiesCovered": as_list(about["Cities Covered"]), "bestSeason": as_list(about["Best Season"]),
             "startPoint": about["Start Point"], "endPoint": about["End Point"],
             "tripType": about["Trip Type (Adventure / Leisure / Mixed)"], "idealFor": as_list(about["Ideal For"]),
-            "budgetFrom": 0, "detailedOverview": about["Detailed Overview (150–200 words)"],
+            "budgetFrom": STARTING_PRICES[slug], "detailedOverview": about["Detailed Overview (150–200 words)"],
             "whyThisTrip": about["Why This Trip"], "keyExperiences": as_list(about["Key Experiences"]),
             "locationBanners": {}, "journeyDays": days,
         })

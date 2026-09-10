@@ -104,6 +104,18 @@ const ITINERARY_FALLBACK_IMAGES = [
   "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=85",
 ];
 
+const TRIP_SEO_TITLES: Record<string, string> = {
+  "andaman-island-escape-beaches-blue-waters-island-stories": "Andaman Island Escape Itinerary | Qarwaan",
+  "bali-island-of-gods-iconic-wonders-hidden-gems": "Bali Island of Gods Itinerary | Qarwaan",
+  "bhutan-himalayan-serenity-cultural-discovery": "Bhutan Cultural Discovery Itinerary | Qarwaan",
+  "goa-coastal-charm-cultural-escape": "Goa Coastal Escape Itinerary | Qarwaan",
+  "nepal-himalayan-heritage-lakes-jungle-escape": "Nepal Heritage & Jungle Itinerary | Qarwaan",
+  "kerala-serenity-escape": "Kerala Serenity Escape Itinerary | Qarwaan",
+  "ladakh-himalayan-expedition": "Ladakh Himalayan Expedition | Qarwaan",
+  "rajasthan-royal-heritage-desert-odyssey": "Rajasthan Heritage & Desert Itinerary | Qarwaan",
+  "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
+};
+
 const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
   "andaman-island-escape-beaches-blue-waters-island-stories": [
     "/images/andaman/collage/Andaman Main Photo.jpeg",
@@ -179,8 +191,10 @@ function enquirySearch(trip: TripDetail) {
 export const Route = createFileRoute("/trips/$slug")({
   head: ({ params }) => {
     const trip = QARWAAN_ITINERARIES.find((item) => item.slug === params.slug);
-    const title = trip ? `${trip.packageName} — QARWAAN` : "Journey not found — QARWAAN";
-    const description = trip?.detailedOverview ?? "Browse curated QARWAAN journeys and detailed itineraries.";
+    const title = trip ? TRIP_SEO_TITLES[trip.slug] : "Journey not found | Qarwaan";
+    const description = trip
+      ? `Explore Qarwaan's ${trip.duration} ${trip.country} itinerary covering ${trip.citiesCovered.join(", ")}.`
+      : "Browse curated Qarwaan journeys and detailed itineraries.";
     return {
       meta: [
         { title },
@@ -232,9 +246,13 @@ export const Route = createFileRoute("/trips/$slug")({
 
 function TripDetailsPage() {
   const { slug } = Route.useParams();
+  const staticTrip = QARWAAN_ITINERARIES.find(
+    (item) => item.id === slug || item.slug === slug,
+  ) as unknown as TripDetail | undefined;
 
   const { data, isLoading, error } = useQuery<TripDetail>({
     queryKey: ["trip", slug],
+    initialData: staticTrip,
     queryFn: async () => {
       const res = await fetch(`/api/public/trips/${slug}`);
       if (!res.ok) throw new Error("Failed to load trip");
@@ -389,9 +407,9 @@ function Hero({ trip }: { trip: TripDetail }) {
             </a>
             {trip.budgetFrom ? (
               <div className="text-sm text-white/80">
-                From{" "}
+                Starting from{" "}
                 <span className="font-medium text-white">
-                  ₹{trip.budgetFrom.toLocaleString("en-IN")}
+                  ₹{trip.budgetFrom.toLocaleString("en-IN")}/-
                 </span>{" "}
                 per person
               </div>

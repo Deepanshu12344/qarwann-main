@@ -282,8 +282,12 @@ export const Route = createFileRoute("/api/public/trips")({
         const minBudget = Number(url.searchParams.get("minBudget") ?? 0);
         const maxBudget = Number(url.searchParams.get("maxBudget") ?? 100000);
         const sort = url.searchParams.get("sort") ?? "popular";
-        const page = Math.max(1, Number(url.searchParams.get("page") ?? 1));
-        const pageSize = Math.max(1, Number(url.searchParams.get("pageSize") ?? 6));
+        // Omitting pagination returns the complete filtered result set. Page and
+        // pageSize remain supported for a future infinite-scroll client.
+        const requestedPage = url.searchParams.get("page");
+        const requestedPageSize = url.searchParams.get("pageSize");
+        const page = requestedPage ? Math.max(1, Number(requestedPage)) : 1;
+        const pageSize = requestedPageSize ? Math.max(1, Number(requestedPageSize)) : undefined;
 
         let results = TRIPS.filter((t) => {
           if (q) {
@@ -308,8 +312,8 @@ export const Route = createFileRoute("/api/public/trips")({
         else results.sort((a, b) => b.popularity - a.popularity);
 
         const total = results.length;
-        const start = (page - 1) * pageSize;
-        const items = results.slice(start, start + pageSize);
+        const start = pageSize ? (page - 1) * pageSize : 0;
+        const items = pageSize ? results.slice(start, start + pageSize) : results;
 
         const facets = {
           countries: [...new Set(TRIPS.map((t) => t.country))].sort(),
