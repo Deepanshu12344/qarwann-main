@@ -245,8 +245,14 @@ export const LEGACY_TRIPS: Trip[] = [
   },
 ];
 
-/** The four journeys supplied in the Qarwaan workbooks. */
-export const TRIPS: Trip[] = QARWAAN_ITINERARIES.map((trip, index) => ({
+const WEEKEND_GETAWAY_SLUGS = new Set([
+  "rishikesh-reset-by-the-ganga-weekend-escape",
+]);
+
+/** Destination journeys supplied in the Qarwaan workbooks. */
+export const TRIPS: Trip[] = QARWAAN_ITINERARIES.filter(
+  (trip) => !WEEKEND_GETAWAY_SLUGS.has(trip.slug),
+).map((trip, index) => ({
   id: trip.id,
   name: trip.packageName,
   country: trip.country,

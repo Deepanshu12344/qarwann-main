@@ -30,6 +30,18 @@ const toList = (v) => {
     .filter(Boolean);
 };
 
+const isPlaceholder = (v) => ['', '-', '—', 'n/a', 'na'].includes(toStr(v).toLowerCase());
+
+const toFestivals = (v) => {
+  const festivals = toList(v).filter((festival) => !isPlaceholder(festival));
+  return festivals.length ? festivals : ['N/A'];
+};
+
+const toStayType = (v) => {
+  const stayType = toStr(v);
+  return isPlaceholder(stayType) ? 'Departure' : stayType;
+};
+
 const toBool = (v) => {
   if (typeof v === 'boolean') return v;
   if (typeof v === 'number') return v !== 0;
@@ -107,8 +119,8 @@ function mapJourneyRow(row) {
     activities: toList(get('activities', 'Activities')),
     localFood: toList(get('localFood', 'Local Food')),
     localExperience: toStr(get('localExperience', 'Local Experience')),
-    festivals: toList(get('festivals', 'Festivals')),
-    stayType: toStr(get('stayType', 'Stay Type', 'stay')),
+    festivals: toFestivals(get('festivals', 'Festivals')),
+    stayType: toStayType(get('stayType', 'Stay Type', 'stay')),
     accessibility: toStr(get('accessibility', 'Accessibility')),
   };
 }

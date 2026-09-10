@@ -20,6 +20,7 @@ WORKBOOKS = [
     ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png", "India"),
     ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
 
@@ -34,6 +35,7 @@ STARTING_PRICES = {
     "kerala-serenity-escape": 13500,
     "ladakh-himalayan-expedition": 27999,
     "rajasthan-royal-heritage-desert-odyssey": 40000,
+    "rishikesh-reset-by-the-ganga-weekend-escape": 0,
     "spiti-valley-expedition": 15999,
 }
 
@@ -146,6 +148,9 @@ IMAGE_LIBRARY = {
         "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85",
         "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
     ],
+    "rishikesh-riverside": [
+        "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85",
+    ],
 }
 
 DAY_IMAGE_THEMES = {
@@ -157,6 +162,7 @@ DAY_IMAGE_THEMES = {
     "kerala-serenity-escape": ["kerala-heritage", "kerala-hills", "kerala-hills", "kerala-wildlife", "kerala-water", "kerala-water", "kerala-heritage"],
     "ladakh-himalayan-expedition": ["ladakh-town", "ladakh-town", "ladakh-desert", "ladakh-desert", "ladakh-lake", "ladakh-lake", "ladakh-town"],
     "rajasthan-royal-heritage-desert-odyssey": ["rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-desert", "rajasthan-desert", "rajasthan-desert", "rajasthan-palace", "rajasthan-lake", "rajasthan-lake"],
+    "rishikesh-reset-by-the-ganga-weekend-escape": ["rishikesh-riverside", "rishikesh-riverside", "rishikesh-riverside"],
     "spiti-valley-expedition": ["spiti-mountains", "spiti-mountains", "spiti-monastery", "spiti-monastery", "spiti-monastery", "spiti-mountains", "spiti-mountains"],
 }
 
@@ -287,6 +293,16 @@ def as_bool(value: str) -> bool:
     return value.strip().lower() in {"yes", "y", "true", "1", "x", "✓", "tick", "✔"}
 
 
+def festivals_or_na(value: str) -> list[str]:
+    placeholders = {"", "-", "—", "n/a", "na"}
+    festivals = [item for item in as_list(value) if item.strip().lower() not in placeholders]
+    return festivals or ["N/A"]
+
+
+def stay_or_departure(value: str) -> str:
+    return "Departure" if value.strip().lower() in {"", "-", "—", "n/a", "na"} else value
+
+
 def main() -> None:
     trips = []
     for filename, slug, cover, country in WORKBOOKS:
@@ -313,7 +329,7 @@ def main() -> None:
                 "keyAttractions": as_list(row["Key Attractions"]), "experienceDetails": row["Experience Details"],
                 "hiddenGems": as_list(row["Hidden Gems"]), "activities": as_list(row["Activities"]),
                 "localFood": as_list(row["Local Food"]), "localExperience": row["Local Experience (Shopping / Interaction)"],
-                "festivals": as_list(row["Festivals (if any)"]), "stayType": row["Stay Type"],
+                "festivals": festivals_or_na(row["Festivals (if any)"]), "stayType": stay_or_departure(row["Stay Type"]),
                 "accessibility": row["Accessibility (Road/Flight)"], "images": images,
             })
         duration = about["Duration"]

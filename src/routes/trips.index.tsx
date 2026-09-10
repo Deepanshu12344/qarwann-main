@@ -48,6 +48,10 @@ type TripsResponse = {
   };
 };
 
+const WEEKEND_GETAWAY_SLUGS = new Set([
+  "rishikesh-reset-by-the-ganga-weekend-escape",
+]);
+
 export const Route = createFileRoute("/trips/")({
   validateSearch: (s: Record<string, unknown>) => ({
     destination: typeof s.destination === "string" ? s.destination : undefined,
@@ -172,7 +176,7 @@ function TripsPage() {
       <h2 className="sr-only">Browse curated travel journeys</h2>
       <nav aria-label="All Qarwaan itinerary pages" className="sr-only">
         <ul>
-          {QARWAAN_ITINERARIES.map((trip) => (
+          {QARWAAN_ITINERARIES.filter((trip) => !WEEKEND_GETAWAY_SLUGS.has(trip.slug)).map((trip) => (
             <li key={trip.slug}>
               <Link to="/trips/$slug" params={{ slug: trip.slug }}>
                 {trip.packageName}

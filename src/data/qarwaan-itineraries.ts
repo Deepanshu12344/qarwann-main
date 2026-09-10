@@ -755,7 +755,9 @@ export const QARWAAN_ITINERARIES = [
           "local desserts"
         ],
         "localExperience": "Purchase batik, woven crafts, woodwork and locally made souvenirs",
-        "festivals": [],
+        "festivals": [
+          "N/A"
+        ],
         "stayType": "Departure",
         "accessibility": "Road transfer to Bali Airport; allow generous time for traffic",
         "images": [
@@ -1127,9 +1129,9 @@ export const QARWAAN_ITINERARIES = [
         ],
         "localExperience": "Last-minute handicraft shopping and locally made souvenirs",
         "festivals": [
-          "—"
+          "N/A"
         ],
-        "stayType": "—",
+        "stayType": "Departure",
         "accessibility": "Road + 5–6 hr round-trip hike; flight departure from Paro",
         "images": [
           "/images/bhutan/daywise/day7-1.jpeg",
@@ -2003,9 +2005,9 @@ export const QARWAAN_ITINERARIES = [
         ],
         "localExperience": "Last-minute Nepali handicrafts and souvenirs",
         "festivals": [
-          "—"
+          "N/A"
         ],
-        "stayType": "—",
+        "stayType": "Departure",
         "accessibility": "Road + domestic flight; schedule dependent",
         "images": [
           "/images/nepal/daywise/day8-1.jpeg",
@@ -2816,7 +2818,7 @@ export const QARWAAN_ITINERARIES = [
         "festivals": [
           "N/A"
         ],
-        "stayType": "N/A",
+        "stayType": "Departure",
         "accessibility": "Flight (Leh Airport transfer for departure)",
         "images": [
           "/images/ladakh/daywise/day7-1.jpeg",
@@ -3540,6 +3542,192 @@ export const QARWAAN_ITINERARIES = [
         "images": [
           "/images/rajasthan/daywise/day11-1.jpeg",
           "/images/rajasthan/daywise/day11-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rishikesh-reset-by-the-ganga-weekend-escape",
+    "slug": "rishikesh-reset-by-the-ganga-weekend-escape",
+    "packageName": "Rishikesh – Reset by the Ganga | Weekend Escape",
+    "coverImage": "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Rishikesh"
+    ],
+    "bestSeason": [
+      "February – April & September – November"
+    ],
+    "startPoint": "Delhi",
+    "endPoint": "Delhi",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Wellness Seekers",
+      "Adventure Travellers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Rishikesh – Reset by the Ganga is a thoughtfully designed 2 Nights / 3 Days weekend escape from Delhi that combines the spiritual energy of the Ganga, Himalayan foothill scenery, gentle exploration, optional adventure and genuine downtime. The journey begins with a scenic road transfer from Delhi, followed by a relaxed arrival in Rishikesh and an evening Ganga Aarti at Triveni Ghat. The second day is the heart of the experience, combining the riverside atmosphere around Ram Jhula and Swarg Ashram with the artistic and meditative setting of Beatles Ashram. Travellers can choose between an optional river rafting experience and a slower afternoon at the hotel, followed by time for cafés, local markets and riverside walks. The final morning is intentionally unhurried, allowing guests to enjoy breakfast, a short riverside stroll or quiet time before returning to Delhi. Rather than filling every hour with sightseeing, the itinerary is designed around a balanced rhythm of explore, experience, relax and return.",
+    "whyThisTrip": "This getaway turns a short weekend into a meaningful break from city life. It combines Rishikesh’s strongest experiences without making the itinerary feel rushed, allowing travellers to experience spirituality, nature, adventure, local culture and leisure within three days.",
+    "keyExperiences": [
+      "Ganga Aarti at Triveni Ghat",
+      "Ram Jhula and Swarg Ashram",
+      "Beatles Ashram and its murals",
+      "optional Ganga river rafting",
+      "riverside cafés",
+      "local markets",
+      "peaceful Ganga walks",
+      "optional sunrise or yoga session",
+      "local vegetarian cuisine and a relaxed road journey from Delhi."
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Delhi → Rishikesh",
+        "location": "Rishikesh",
+        "phase": "Arrival, Riverside Welcome & Ganga Aarti",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Scenic Delhi–Rishikesh drive",
+          "Triveni Ghat",
+          "Ganga riverfront",
+          "Rishikesh market area"
+        ],
+        "experienceDetails": "Depart from Delhi in the morning and travel towards Rishikesh by road. The journey gradually changes from the bustle of Delhi to the greener landscapes approaching the Himalayan foothills. After arrival, check into the hotel or resort and allow time to refresh and settle in. Keep the afternoon intentionally light so the first day feels like a genuine escape rather than a sightseeing marathon. Later, head towards the Ganga riverfront and explore the atmosphere around Triveni Ghat. As evening approaches, experience the Ganga Aarti, where lamps, chants and the flowing river create one of Rishikesh’s most memorable spiritual moments. After the aarti, return at a relaxed pace and enjoy dinner at the hotel or a local vegetarian restaurant.",
+        "hiddenGems": [
+          "Quiet stretches of the Ganga riverfront away from the busiest ghat areas",
+          "small local lanes and neighbourhood cafés"
+        ],
+        "activities": [
+          "Scenic road journey",
+          "riverside walk",
+          "Ganga Aarti",
+          "photography",
+          "relaxed evening exploration"
+        ],
+        "localFood": [
+          "Aloo Puri",
+          "North Indian vegetarian thali",
+          "Kachori",
+          "Lassi",
+          "local sweets"
+        ],
+        "localExperience": "Explore local shops for prayer items, handicrafts, cotton clothing, books, incense and small travel souvenirs",
+        "festivals": [
+          "Local religious ceremonies and festivals as per the calendar",
+          "exact dates vary annually"
+        ],
+        "stayType": "Riverside Resort / Boutique Hotel / Comfortable Hotel",
+        "accessibility": "Road journey; approximately 250 km from Delhi, with travel time dependent on traffic and road conditions",
+        "images": [
+          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Rishikesh Local Exploration",
+        "location": "Rishikesh",
+        "phase": "Spiritual Heritage, Art & Optional Adventure",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": true,
+        "keyAttractions": [
+          "Ram Jhula",
+          "Swarg Ashram area",
+          "Beatles Ashram",
+          "Ganga riverfront",
+          "local cafés"
+        ],
+        "experienceDetails": "Begin the day with breakfast and a relaxed visit around Ram Jhula and the Swarg Ashram side of Rishikesh, taking in the river views, temples, ashrams and lively pedestrian lanes. Continue to Beatles Ashram, also known as Chaurasi Kutia, where meditation huts, murals and forested surroundings offer a distinctive mix of music history, spirituality and art. After lunch, keep the schedule flexible. Guests looking for adventure can choose an optional white-water rafting experience, subject to season, weather, river conditions and local operating rules. Those preferring a slower day can return to the hotel, enjoy a wellness or yoga session, or spend the afternoon at a riverside café. In the evening, explore the local market and cafés at an easy pace.",
+        "hiddenGems": [
+          "Small ashram lanes",
+          "quieter river viewpoints",
+          "lesser-known cafés and artistic corners around the Beatles Ashram area"
+        ],
+        "activities": [
+          "Bridge and riverside walk",
+          "Beatles Ashram visit",
+          "optional rafting",
+          "yoga or meditation",
+          "café hopping",
+          "local shopping"
+        ],
+        "localFood": [
+          "Vegetarian thali",
+          "Aloo Puri",
+          "Pakora",
+          "Masala Chai",
+          "fresh juices",
+          "café-style vegetarian dishes"
+        ],
+        "localExperience": "Browse local handicrafts, spiritual books, handmade jewellery, clothing, incense and locally inspired art",
+        "festivals": [
+          "Yoga",
+          "spiritual and local cultural events vary by season and calendar"
+        ],
+        "stayType": "Riverside Resort / Boutique Hotel / Comfortable Hotel",
+        "accessibility": "Local road transfers and walking; rafting access depends on the selected operator and river conditions",
+        "images": [
+          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Rishikesh → Delhi",
+        "location": "Rishikesh / Delhi",
+        "phase": "Slow Morning, Final Riverside Moment & Departure",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Ganga riverfront",
+          "local café area",
+          "Rishikesh market",
+          "scenic return route"
+        ],
+        "experienceDetails": "Keep the final morning deliberately unhurried. After breakfast, guests can enjoy a short riverside walk, spend quiet time at the property, join an optional yoga or meditation session, or explore a nearby café before check-out. This slower start gives the trip a sense of completion rather than ending abruptly after a packed sightseeing schedule. Check out and begin the return journey towards Delhi. Depending on the departure time, a short local market stop can be included for last-minute souvenirs or snacks. Continue by road towards Delhi, allowing the journey itself to become the final part of the getaway. Arrive in Delhi by evening, concluding the 2 Nights / 3 Days Rishikesh escape.",
+        "hiddenGems": [
+          "A quiet morning beside the Ganga",
+          "peaceful café corners and small local shops away from the busiest tourist areas"
+        ],
+        "activities": [
+          "Morning walk",
+          "optional yoga or meditation",
+          "café stop",
+          "souvenir shopping and scenic road journey"
+        ],
+        "localFood": [
+          "Fresh fruit",
+          "breakfast dishes",
+          "local tea",
+          "vegetarian snacks and café-style food"
+        ],
+        "localExperience": "Pick up locally made souvenirs, spiritual books, small handicrafts, clothing and packaged local snacks",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road journey; return timing depends on traffic and departure schedule",
+        "images": [
+          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
         ]
       }
     ]
