@@ -113,6 +113,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "kerala-serenity-escape": "Kerala Serenity Escape Itinerary | Qarwaan",
   "ladakh-himalayan-expedition": "Ladakh Himalayan Expedition | Qarwaan",
   "rajasthan-royal-heritage-desert-odyssey": "Rajasthan Heritage & Desert Itinerary | Qarwaan",
+  "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
 };
 
@@ -158,6 +159,12 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/rajasthan/collage/maninder-sidhu-4Q0GId_0Fko-unsplash.jpg",
     "/images/rajasthan/collage/meric-dagli-ZgbzOZW9U3o-unsplash.jpg",
     "/images/rajasthan/collage/shravan-k-acharya-vFvfgCnrW4A-unsplash.jpg",
+  ],
+  "rishikesh-reset-by-the-ganga-weekend-escape": [
+    "/images/rishikesh/collage/colg1.jpg",
+    "/images/rishikesh/collage/a94b1e47750d78d4f36382120ad8b353.jpg",
+    "/images/rishikesh/collage/5aa3afafb988a9a6a784dc1c740c183b.jpg",
+    "/images/rishikesh/collage/eabfab6d72850ab692d0ce22d01c7edc.jpg",
   ],
   "spiti-valley-expedition": [
     "/images/spiti/collage/anmol-arora-fSs7jp_rx0w-unsplash.jpg",

@@ -3632,7 +3632,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Riverside Resort / Boutique Hotel / Comfortable Hotel",
         "accessibility": "Road journey; approximately 250 km from Delhi, with travel time dependent on traffic and road conditions",
         "images": [
-          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
+          "/images/rishikesh/daywise/day1-1.jpeg",
+          "/images/rishikesh/daywise/day1-2.jpeg"
         ]
       },
       {
@@ -3683,7 +3684,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Riverside Resort / Boutique Hotel / Comfortable Hotel",
         "accessibility": "Local road transfers and walking; rafting access depends on the selected operator and river conditions",
         "images": [
-          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
+          "/images/rishikesh/daywise/day2-1.jpeg",
+          "/images/rishikesh/daywise/day2-2.jpeg"
         ]
       },
       {
@@ -3727,7 +3729,8 @@ export const QARWAAN_ITINERARIES = [
         "stayType": "Departure",
         "accessibility": "Road journey; return timing depends on traffic and departure schedule",
         "images": [
-          "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85"
+          "/images/rishikesh/daywise/day3-1.jpeg",
+          "/images/rishikesh/daywise/day3-2.jpeg"
         ]
       }
     ]

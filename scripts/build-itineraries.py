@@ -246,6 +246,11 @@ LOCAL_DAY_IMAGES = {
         10: ["/images/rajasthan/daywise/day10-1.jpeg", "/images/rajasthan/daywise/day10-2.jpeg", "/images/rajasthan/daywise/day10-3.jpeg"],
         11: ["/images/rajasthan/daywise/day11-1.jpeg", "/images/rajasthan/daywise/day11-2.jpeg"],
     },
+    "rishikesh-reset-by-the-ganga-weekend-escape": {
+        1: ["/images/rishikesh/daywise/day1-1.jpeg", "/images/rishikesh/daywise/day1-2.jpeg"],
+        2: ["/images/rishikesh/daywise/day2-1.jpeg", "/images/rishikesh/daywise/day2-2.jpeg"],
+        3: ["/images/rishikesh/daywise/day3-1.jpeg", "/images/rishikesh/daywise/day3-2.jpeg"],
+    },
     "spiti-valley-expedition": {
         1: ["/images/spiti/daywise/day1-1.jpeg", "/images/spiti/daywise/day1-2.jpeg", "/images/spiti/daywise/day1-3.jpeg"],
         2: ["/images/spiti/daywise/day2-1.jpeg", "/images/spiti/daywise/day2-2.jpeg"],
