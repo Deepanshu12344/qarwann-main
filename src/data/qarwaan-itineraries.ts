@@ -3547,6 +3547,409 @@ export const QARWAAN_ITINERARIES = [
     ]
   },
   {
+    "id": "jim-corbett-wild-trails-and-forest-escape",
+    "slug": "jim-corbett-wild-trails-and-forest-escape",
+    "packageName": "Jim Corbett – Wild Trails & Forest Escape",
+    "coverImage": "/images/jim-corbett/hero-image.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Ramnagar / Jim Corbett National Park"
+    ],
+    "bestSeason": [
+      "October – June"
+    ],
+    "startPoint": "Delhi",
+    "endPoint": "Delhi",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Wildlife Enthusiasts",
+      "Adventure Travellers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Jim Corbett – Wild Trails & Forest Escape is a thoughtfully designed 2 Nights / 3 Days getaway from Delhi that brings together wildlife, forest landscapes, outdoor exploration and genuine downtime. The journey begins with a scenic road transfer towards Ramnagar and a relaxed arrival at a forest-edge resort. The first evening is intentionally unhurried, allowing guests to settle in, enjoy the surroundings and experience the calm of the Corbett landscape. The second day is the heart of the journey, with an early-morning guided jeep safari through a permitted zone of Jim Corbett National Park, followed by a slow afternoon for resort leisure, birdwatching or a nature-led experience. The final morning offers time for a peaceful riverside walk or short guided nature experience before the return journey to Delhi. Rather than treating Corbett as only a safari destination, this itinerary creates a balanced rhythm of adventure, nature, local flavours and relaxation, making a short forest escape feel complete without being rushed.",
+    "whyThisTrip": "This getaway transforms a short break from Delhi into an immersive forest experience. It combines wildlife, nature, comfortable stays, local culture and unhurried time in the outdoors while keeping the journey practical for a 3-day escape.",
+    "keyExperiences": [
+      "Guided jeep safari",
+      "forest landscapes",
+      "wildlife and birdwatching",
+      "riverside moments",
+      "optional nature walk",
+      "Kumaoni-inspired cuisine",
+      "scenic road journey",
+      "premium resort leisure and sunset views."
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Delhi → Ramnagar / Corbett",
+        "location": "Ramnagar / Corbett",
+        "phase": "Arrival, Forest Welcome & Sunset",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Scenic Delhi–Corbett drive",
+          "forest-edge resort",
+          "Ramnagar surroundings",
+          "riverside landscape"
+        ],
+        "experienceDetails": "Depart from Delhi in the morning and travel towards Ramnagar and the Corbett region by road. As the cityscape gives way to greener foothills and forest landscapes, the journey becomes part of the getaway. After arrival, check into the resort and take time to refresh and settle in. Keep the afternoon intentionally light, with an opportunity to enjoy the property, relax in the natural surroundings or take a short guided nature walk where permitted. Later, experience the changing colours of the forest landscape around sunset. End the day with a relaxed dinner, ideally including Kumaoni-inspired dishes and locally sourced flavours.",
+        "hiddenGems": [
+          "Quiet forest-edge viewpoints",
+          "lesser-known village roads and peaceful riverside stretches away from the busiest resort areas"
+        ],
+        "activities": [
+          "Scenic road journey",
+          "resort leisure",
+          "optional nature walk",
+          "sunset photography and relaxed evening"
+        ],
+        "localFood": [
+          "Kumaoni-inspired cuisine",
+          "Aloo Ke Gutke",
+          "Bhatt Ki Churkani",
+          "local breads",
+          "seasonal vegetables and tea"
+        ],
+        "localExperience": "Explore local shops for Kumaoni handicrafts, honey, spices and small locally made products, subject to availability",
+        "festivals": [
+          "Local fairs and cultural celebrations vary by season and calendar"
+        ],
+        "stayType": "Forest Resort / Boutique Jungle Lodge / Premium Hotel",
+        "accessibility": "Road journey; approximately 250–280 km from Delhi depending on the selected route and resort location. Ramnagar is the main rail gateway; Pantnagar Airport is the nearest commercial airport with road transfer.",
+        "images": [
+          "/images/jim-corbett/daywise/day1-1.png",
+          "/images/jim-corbett/daywise/day1-2.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Corbett → Safari Zone → Corbett",
+        "location": "Jim Corbett National Park",
+        "phase": "Wildlife Safari & Forest Immersion",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Guided jeep safari",
+          "sal forests",
+          "grasslands",
+          "river corridors and wildlife habitat"
+        ],
+        "experienceDetails": "Begin before sunrise for a guided jeep safari in a permitted zone of Jim Corbett National Park. The early morning offers a special forest atmosphere as light moves through the trees and bird calls begin across the landscape. Wildlife sightings are never guaranteed, but the safari provides an opportunity to observe the wider ecosystem and, with luck, animals such as elephants, deer, wild boar and a range of birds. Return to the resort for breakfast and a relaxed afternoon. Guests can choose to rest, enjoy a wellness session, read by the property, or take part in birdwatching or another permitted nature activity. Spend the evening at leisure and enjoy dinner surrounded by the quieter rhythm of the forest.",
+        "hiddenGems": [
+          "Quiet birding locations",
+          "forest viewpoints and less-crowded nature spots depending on the permitted safari zone and local conditions"
+        ],
+        "activities": [
+          "Early-morning jeep safari",
+          "wildlife photography",
+          "birdwatching",
+          "resort leisure",
+          "nature interpretation and optional wellness time"
+        ],
+        "localFood": [
+          "Breakfast at resort",
+          "Kumaoni dishes",
+          "seasonal local vegetables",
+          "snacks and multi-cuisine dinner"
+        ],
+        "localExperience": "Optional visit to nearby local markets for honey, spices, handicrafts and regional products",
+        "festivals": [
+          "Seasonal local events vary by date and location"
+        ],
+        "stayType": "Forest Resort / Boutique Jungle Lodge / Premium Hotel",
+        "accessibility": "Safari access is by permitted jeep from the selected entry gate. Safari permits, zones, timings and vehicle rules are subject to current forest department regulations.",
+        "images": [
+          "/images/jim-corbett/daywise/day2-1.jpeg",
+          "/images/jim-corbett/daywise/day2-2.png"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Corbett → Ramnagar → Delhi",
+        "location": "Corbett / Ramnagar / Delhi",
+        "phase": "Slow Forest Morning & Departure",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": true,
+        "keyAttractions": [
+          "Forest-edge landscapes",
+          "riverside area",
+          "local market and scenic return route"
+        ],
+        "experienceDetails": "Keep the final morning deliberately unhurried. After breakfast, guests can enjoy the resort surroundings, take a short guided nature walk where permitted, or spend quiet time with views of the forest landscape. If time and local conditions allow, include a brief riverside stop or a local market visit before departure. Check out and begin the return journey towards Delhi. A planned lunch stop can be included en route, with the road journey offering one last chance to enjoy the changing scenery from forested foothills back towards the plains. Arrive in Delhi by evening, concluding the 2 Nights / 3 Days forest escape.",
+        "hiddenGems": [
+          "Peaceful forest-edge mornings",
+          "small local shops and quieter riverside moments away from the main tourist circuit"
+        ],
+        "activities": [
+          "Morning nature walk",
+          "riverside stop",
+          "local shopping",
+          "lunch stop and scenic road journey"
+        ],
+        "localFood": [
+          "Local tea",
+          "Kumaoni snacks",
+          "seasonal vegetables",
+          "North Indian lunch and regional sweets"
+        ],
+        "localExperience": "Pick up locally made honey, spices, handicrafts and packaged regional products, subject to availability",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road journey; return timing depends on traffic and the selected resort location",
+        "images": [
+          "/images/jim-corbett/daywise/day3-1.png",
+          "/images/jim-corbett/daywise/day3-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hampi-heritage-weekend-escape",
+    "slug": "hampi-heritage-weekend-escape",
+    "packageName": "Hampi – Ancient Stones & Stories",
+    "coverImage": "/images/hampi/hero-image-hampi.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Hampi"
+    ],
+    "bestSeason": [
+      "October – March"
+    ],
+    "startPoint": "Bengaluru",
+    "endPoint": "Bengaluru",
+    "tripType": "Leisure / Cultural",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Solo Travellers",
+      "History Lovers",
+      "Culture Enthusiasts",
+      "Photographers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Hampi – Ancient Stones & Stories is a thoughtfully designed 2 Nights / 3 Days getaway from Bengaluru into one of South India’s most remarkable heritage landscapes. Surrounded by giant granite boulders, the Tungabhadra River and the remains of the Vijayanagara Empire, Hampi offers a rare combination of history, architecture, spirituality, nature and slow travel. The journey begins with a relaxed arrival and an evening exploration around Hampi Bazaar, Virupaksha Temple and Hemakuta Hill. The second day is dedicated to the heart of Hampi, including the Vijaya Vittala Temple and its iconic Stone Chariot, followed by the Royal Centre with its grand archaeological remains. The final morning is intentionally unhurried, with an optional sunrise viewpoint and a peaceful riverside experience before returning to Bengaluru. Rather than rushing between monuments, the itinerary allows travellers to understand the stories behind the ruins, enjoy local Karnataka flavours and experience Hampi’s extraordinary landscape at a comfortable pace.",
+    "whyThisTrip": "This getaway transforms a short break from Bengaluru into a meaningful journey through history and landscape. It combines Hampi’s iconic monuments with quieter viewpoints, local food, photography, riverside moments and optional cycling, creating a balanced experience of heritage, culture, nature and leisure.",
+    "keyExperiences": [
+      "Virupaksha Temple",
+      "Hampi Bazaar",
+      "Hemakuta Hill",
+      "Vijaya Vittala Temple and Stone Chariot",
+      "Royal Centre",
+      "Lotus Mahal",
+      "Elephant Stables",
+      "Queen’s Bath",
+      "Mahanavami Dibba",
+      "Tungabhadra riverside",
+      "optional sunrise viewpoint",
+      "local Karnataka cuisine and relaxed heritage walks."
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Bengaluru → Hampi",
+        "location": "Hampi",
+        "phase": "Arrival, Heritage Welcome & Sunset",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Hampi Bazaar",
+          "Virupaksha Temple",
+          "Hemakuta Hill",
+          "Tungabhadra River"
+        ],
+        "experienceDetails": "Depart Bengaluru and travel towards Hampi/Hosapete by road. After arrival, check into the selected hotel and allow time to refresh. Keep the afternoon light so the journey begins at an unhurried pace. Later, explore the historic Hampi Bazaar area and visit the surroundings of Virupaksha Temple, one of the most important surviving temple complexes in Hampi. As evening approaches, head towards Hemakuta Hill for panoramic views across the ancient landscape and a beautiful sunset. Return to the hotel for dinner and a relaxed introduction to the stories of the Vijayanagara Empire.",
+        "hiddenGems": [
+          "Quieter lanes around Hampi Bazaar",
+          "smaller temple clusters on Hemakuta Hill",
+          "lesser-visited viewpoints over the boulder landscape",
+          "Achyutaraya Temple area for a quieter heritage atmosphere",
+          "old market streets and small shrines away from the main visitor flow."
+        ],
+        "activities": [
+          "Scenic road journey",
+          "relaxed heritage walk",
+          "Virupaksha Temple visit",
+          "Hemakuta Hill sunset",
+          "photography",
+          "café time",
+          "optional short local orientation walk."
+        ],
+        "localFood": [
+          "Idli",
+          "vada and sambar for breakfast",
+          "Karnataka-style vegetarian thali",
+          "jolada rotti and seasonal vegetable preparations",
+          "dosa",
+          "local sweets",
+          "filter coffee and fresh juices."
+        ],
+        "localExperience": "Browse Hampi Bazaar for handicrafts, handmade jewellery, textiles, pottery, carved wooden items and locally inspired souvenirs. Where available, introduce guests to local artisans rather than treating shopping as a standard market stop.",
+        "festivals": [
+          "Hampi Utsav / Vijaya Utsav and local cultural celebrations",
+          "subject to official dates and annual programme."
+        ],
+        "stayType": "Boutique Heritage Hotel / Premium Hotel / Heritage-style Resort",
+        "accessibility": "Road journey from Bengaluru; Hospete Junction is the nearest major railway access, with onward road transfer to Hampi. Local exploration involves walking on uneven stone surfaces.",
+        "images": [
+          "/images/hampi/daywise/day1-1.png",
+          "/images/hampi/daywise/day1-2.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Hampi Local Exploration",
+        "location": "Hampi",
+        "phase": "Sacred Centre, Vittala Complex & Royal Heritage",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Vijaya Vittala Temple",
+          "Stone Chariot",
+          "Royal Enclosure",
+          "Mahanavami Dibba",
+          "Queen’s Bath",
+          "Lotus Mahal",
+          "Elephant Stables"
+        ],
+        "experienceDetails": "Begin early after breakfast for a guided exploration of Hampi’s major heritage areas. Start with the Vijaya Vittala Temple complex and its iconic Stone Chariot, taking time to understand the architecture, craftsmanship and history of the Vijayanagara period. Continue through the Royal Centre, including Mahanavami Dibba, Queen’s Bath, Lotus Mahal and the Elephant Stables. After lunch, keep the pace relaxed with time for photography, a short walk through the historic landscape or optional cycling where suitable. Finish the day with a scenic sunset experience before returning to the hotel.",
+        "hiddenGems": [
+          "Pushkarani and historic water structures",
+          "quieter architectural details around the Royal Centre",
+          "ancient market streets",
+          "Achyutaraya Temple and its surrounding ruins",
+          "smaller shrines and carvings that are easy to miss without a guide",
+          "quieter sections around the Vittala Temple approach."
+        ],
+        "activities": [
+          "Guided heritage walk",
+          "Vijaya Vittala Temple and Stone Chariot",
+          "Royal Enclosure",
+          "Lotus Mahal",
+          "Elephant Stables",
+          "Queen’s Bath",
+          "photography",
+          "optional cycling",
+          "sunset experience."
+        ],
+        "localFood": [
+          "Traditional Karnataka thali",
+          "jolada rotti",
+          "ennegai-style stuffed brinjal",
+          "saaru",
+          "palya",
+          "curd rice",
+          "dosa or local breakfast",
+          "regional sweets such as chiroti where available."
+        ],
+        "localExperience": "Explore local craft stalls and artisan products including Lambani-style embroidered textiles and jewellery, stone handicrafts, pottery, handmade bags and regional souvenirs. Avoid presenting replica coins or artefacts as genuine antiques.",
+        "festivals": [
+          "Hampi Utsav / Vijaya Utsav",
+          "subject to official dates",
+          "other local religious and cultural events vary by calendar."
+        ],
+        "stayType": "Boutique Heritage Hotel / Premium Hotel / Heritage-style Resort",
+        "accessibility": "Local sightseeing by private vehicle, walking and selected electric-cart services where available. The heritage area requires comfortable footwear, water and sun protection.",
+        "images": [
+          "/images/hampi/daywise/day2-1.jpeg",
+          "/images/hampi/daywise/day2-2.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Hampi → Bengaluru",
+        "location": "Hampi / Bengaluru",
+        "phase": "Sunrise, Riverside Calm & Departure",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Matanga Hill or suitable sunrise viewpoint",
+          "Tungabhadra riverside",
+          "selected local heritage area"
+        ],
+        "experienceDetails": "Wake early for an optional sunrise experience from a suitable viewpoint such as Matanga Hill, subject to weather, access and fitness level. Return for breakfast and check out. If time permits, enjoy a quiet Tungabhadra riverside moment or a short local heritage experience before beginning the return journey to Bengaluru. Stop for lunch en route and continue by road, arriving in Bengaluru by evening depending on traffic and road conditions.",
+        "hiddenGems": [
+          "Anegundi village",
+          "Huchappayana Matha Temple",
+          "Gagan Mahal",
+          "Pampa Sarovar",
+          "Anjanadri Hill views",
+          "quiet Tungabhadra riverbank",
+          "countryside and paddy-field landscapes",
+          "Onake Kindi cave-painting area",
+          "subject to time and access."
+        ],
+        "activities": [
+          "Optional sunrise at Matanga Hill",
+          "riverside walk",
+          "Anegundi village exploration",
+          "optional coracle crossing where operating and safe",
+          "local craft interaction",
+          "breakfast",
+          "photography",
+          "scenic return journey."
+        ],
+        "localFood": [
+          "Traditional Karnataka breakfast",
+          "idli",
+          "vada and sambar",
+          "local thali",
+          "jowar/jolada rotti-based regional meal",
+          "seasonal vegetable curries",
+          "fresh fruit and local snacks."
+        ],
+        "localExperience": "Anegundi offers opportunities to experience village crafts and local artisan traditions. Look for banana-fibre products, woven items, embroidered textiles and locally made accessories where workshops or artisans are available.",
+        "festivals": [
+          "Local religious and cultural celebrations in Anegundi vary by calendar",
+          "festival visits should be confirmed for the travel dates."
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road transfer back to Bengaluru; Hospete Junction can be used for rail connections. Vidyanagar Airport serves the region. Anegundi river crossings/coracle services are seasonal and weather-dependent.",
+        "images": [
+          "/images/hampi/daywise/day3-1.jpeg",
+          "/images/hampi/daywise/day3-2.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "rishikesh-reset-by-the-ganga-weekend-escape",
     "slug": "rishikesh-reset-by-the-ganga-weekend-escape",
     "packageName": "Rishikesh – Reset by the Ganga | Weekend Escape",

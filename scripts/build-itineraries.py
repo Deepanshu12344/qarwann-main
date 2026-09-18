@@ -20,6 +20,8 @@ WORKBOOKS = [
     ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png", "India"),
     ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85", "India"),
+    ("Jim Corbett Getaway.xlsx", "jim-corbett-wild-trails-and-forest-escape", "/images/jim-corbett/hero-image.png", "India"),
+    ("Hampi Getaway.xlsx", "hampi-heritage-weekend-escape", "/images/hampi/hero-image-hampi.png", "India"),
     ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
@@ -35,6 +37,8 @@ STARTING_PRICES = {
     "kerala-serenity-escape": 13500,
     "ladakh-himalayan-expedition": 27999,
     "rajasthan-royal-heritage-desert-odyssey": 40000,
+    "jim-corbett-wild-trails-and-forest-escape": 0,
+    "hampi-heritage-weekend-escape": 0,
     "rishikesh-reset-by-the-ganga-weekend-escape": 0,
     "spiti-valley-expedition": 15999,
 }
@@ -151,6 +155,12 @@ IMAGE_LIBRARY = {
     "rishikesh-riverside": [
         "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85",
     ],
+    "corbett-forest": [
+        "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85",
+    ],
+    "hampi-heritage": [
+        "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1800&q=85",
+    ],
 }
 
 DAY_IMAGE_THEMES = {
@@ -162,6 +172,8 @@ DAY_IMAGE_THEMES = {
     "kerala-serenity-escape": ["kerala-heritage", "kerala-hills", "kerala-hills", "kerala-wildlife", "kerala-water", "kerala-water", "kerala-heritage"],
     "ladakh-himalayan-expedition": ["ladakh-town", "ladakh-town", "ladakh-desert", "ladakh-desert", "ladakh-lake", "ladakh-lake", "ladakh-town"],
     "rajasthan-royal-heritage-desert-odyssey": ["rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-palace", "rajasthan-desert", "rajasthan-desert", "rajasthan-desert", "rajasthan-palace", "rajasthan-lake", "rajasthan-lake"],
+    "jim-corbett-wild-trails-and-forest-escape": ["corbett-forest", "corbett-forest", "corbett-forest"],
+    "hampi-heritage-weekend-escape": ["hampi-heritage", "hampi-heritage", "hampi-heritage"],
     "rishikesh-reset-by-the-ganga-weekend-escape": ["rishikesh-riverside", "rishikesh-riverside", "rishikesh-riverside"],
     "spiti-valley-expedition": ["spiti-mountains", "spiti-mountains", "spiti-monastery", "spiti-monastery", "spiti-monastery", "spiti-mountains", "spiti-mountains"],
 }
@@ -245,6 +257,16 @@ LOCAL_DAY_IMAGES = {
         9: ["/images/rajasthan/daywise/day9-1.jpeg", "/images/rajasthan/daywise/day9-2.jpeg", "/images/rajasthan/daywise/day9-3.jpeg"],
         10: ["/images/rajasthan/daywise/day10-1.jpeg", "/images/rajasthan/daywise/day10-2.jpeg", "/images/rajasthan/daywise/day10-3.jpeg"],
         11: ["/images/rajasthan/daywise/day11-1.jpeg", "/images/rajasthan/daywise/day11-2.jpeg"],
+    },
+    "jim-corbett-wild-trails-and-forest-escape": {
+        1: ["/images/jim-corbett/daywise/day1-1.png", "/images/jim-corbett/daywise/day1-2.jpeg"],
+        2: ["/images/jim-corbett/daywise/day2-1.jpeg", "/images/jim-corbett/daywise/day2-2.png"],
+        3: ["/images/jim-corbett/daywise/day3-1.png", "/images/jim-corbett/daywise/day3-2.jpeg"],
+    },
+    "hampi-heritage-weekend-escape": {
+        1: ["/images/hampi/daywise/day1-1.png", "/images/hampi/daywise/day1-2.jpeg"],
+        2: ["/images/hampi/daywise/day2-1.jpeg", "/images/hampi/daywise/day2-2.jpeg"],
+        3: ["/images/hampi/daywise/day3-1.jpeg", "/images/hampi/daywise/day3-2.png"],
     },
     "rishikesh-reset-by-the-ganga-weekend-escape": {
         1: ["/images/rishikesh/daywise/day1-1.jpeg", "/images/rishikesh/daywise/day1-2.jpeg"],

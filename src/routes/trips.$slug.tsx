@@ -113,6 +113,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "kerala-serenity-escape": "Kerala Serenity Escape Itinerary | Qarwaan",
   "ladakh-himalayan-expedition": "Ladakh Himalayan Expedition | Qarwaan",
   "rajasthan-royal-heritage-desert-odyssey": "Rajasthan Heritage & Desert Itinerary | Qarwaan",
+  "hampi-heritage-weekend-escape": "Hampi Heritage Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
 };
@@ -160,11 +161,23 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/rajasthan/collage/meric-dagli-ZgbzOZW9U3o-unsplash.jpg",
     "/images/rajasthan/collage/shravan-k-acharya-vFvfgCnrW4A-unsplash.jpg",
   ],
+  "jim-corbett-wild-trails-and-forest-escape": [
+    "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85",
+    "/images/jim-corbett/collage/Tiger at Jim corbett national park.jpeg",
+    "/images/jim-corbett/collage/jim corbett national park.jpeg",
+    "/images/jim-corbett/collage/jpeg",
+  ],
   "rishikesh-reset-by-the-ganga-weekend-escape": [
     "/images/rishikesh/collage/colg1.jpg",
     "/images/rishikesh/collage/a94b1e47750d78d4f36382120ad8b353.jpg",
     "/images/rishikesh/collage/5aa3afafb988a9a6a784dc1c740c183b.jpg",
     "/images/rishikesh/collage/eabfab6d72850ab692d0ce22d01c7edc.jpg",
+  ],
+  "hampi-heritage-weekend-escape": [
+    "/images/hampi/hero-image-hampi.png",
+    "/images/hampi/collage/hampi1101.jpeg",
+    "/images/hampi/collage/Hampi.jpeg",
+    "/images/hampi/collage/e98e40641263511f9a89fff33b724b8a.jpg",
   ],
   "spiti-valley-expedition": [
     "/images/spiti/collage/anmol-arora-fSs7jp_rx0w-unsplash.jpg",
@@ -591,7 +604,7 @@ function CollageGrid({ trip, images }: { trip: TripDetail; images: string[] }) {
               loading="lazy"
               width={1200}
               height={900}
-              className="h-full w-full object-cover"
+              className={`h-full w-full object-cover ${src === "/images/jim-corbett/collage/jpeg" ? "object-[center_90%]" : ""}`}
             />
           </div>
         ))}
@@ -808,7 +821,9 @@ function DayGallery({ day, location, images }: { day: number; location: string; 
                     ? "object-[50%_55%]"
                     : src === "/images/bali/daywise/day6-2.jpg"
                       ? "object-[50%_20%]"
-                      : ""
+                      : src === "/images/jim-corbett/daywise/day1-1.png"
+                        ? "object-[90%_90%]"
+                        : ""
                 }`}
               />
             </div>

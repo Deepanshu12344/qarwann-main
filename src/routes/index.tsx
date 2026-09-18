@@ -22,6 +22,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 
 import patagonia from "@/assets/dest-patagonia.jpg";
 import heroImage from "../../hero-image.png";
@@ -65,8 +66,13 @@ const TRIP_IMAGES = {
   kerala: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
   ladakh: "/images/ladakh-cover.png",
   rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+  jimCorbett: "/images/jim-corbett/collage/elephant-in-jim-corbett.jpg",
   spiti: "/images/spiti-cover.png",
 };
+
+const HERO_IMAGES_BY_SLUG = new Map(
+  QARWAAN_ITINERARIES.map((trip) => [trip.slug, trip.coverImage]),
+);
 
 const DESTINATIONS = [
   { name: "Bali", country: "Indonesia", region: "Bali", img: TRIP_IMAGES.bali, tag: "Island of Gods", slug: "bali-island-of-gods-iconic-wonders-hidden-gems", price: 39999 },
@@ -112,6 +118,7 @@ const EXPERIENCES: { title: string; place: string; country: string; duration: st
 ];
 
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
+  { title: "Jim Corbett – Wild Trails & Forest Escape", place: "Jim Corbett", country: "India", duration: "2 nights", img: TRIP_IMAGES.jimCorbett, slug: "jim-corbett-wild-trails-and-forest-escape" },
   { title: "Island of Gods: Iconic Wonders & Hidden Gems", place: "Bali", country: "Indonesia", duration: "6 nights", img: TRIP_IMAGES.bali, slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
   { title: "Bhutan – Himalayan Serenity & Cultural Discovery", place: "Bhutan", country: "Bhutan", duration: "6 nights", img: TRIP_IMAGES.bhutan, slug: "bhutan-himalayan-serenity-cultural-discovery" },
   { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
@@ -666,7 +673,7 @@ function ExperienceCarousel({
             >
               <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
                 <img
-                  src={e.img}
+                  src={HERO_IMAGES_BY_SLUG.get(e.slug) ?? e.img}
                   alt={e.title}
                   loading="lazy"
                   width={1280}

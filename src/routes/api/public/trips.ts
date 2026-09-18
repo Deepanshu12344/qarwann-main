@@ -246,7 +246,9 @@ export const LEGACY_TRIPS: Trip[] = [
 ];
 
 const WEEKEND_GETAWAY_SLUGS = new Set([
+  "jim-corbett-wild-trails-and-forest-escape",
   "rishikesh-reset-by-the-ganga-weekend-escape",
+  "hampi-heritage-weekend-escape",
 ]);
 
 /** Destination journeys supplied in the Qarwaan workbooks. */

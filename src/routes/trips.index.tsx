@@ -49,7 +49,9 @@ type TripsResponse = {
 };
 
 const WEEKEND_GETAWAY_SLUGS = new Set([
+  "jim-corbett-wild-trails-and-forest-escape",
   "rishikesh-reset-by-the-ganga-weekend-escape",
+  "hampi-heritage-weekend-escape",
 ]);
 
 export const Route = createFileRoute("/trips/")({

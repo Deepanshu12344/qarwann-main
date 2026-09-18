@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+
+const HERO_IMAGES_BY_SLUG = new Map(
+  QARWAAN_ITINERARIES.map((trip) => [trip.slug, trip.coverImage]),
+);
 
 export const Route = createFileRoute("/weekend-getaways")({
   head: () => ({
@@ -48,9 +53,25 @@ function WeekendGetawaysPage() {
             </button>
             <div ref={scrollerRef} className="flex min-w-0 flex-1 items-stretch snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.7 }} data-getaway-card className="h-full w-[85%] shrink-0 snap-start sm:w-[48%] md:w-[32%]">
+                <Link to="/trips/$slug" params={{ slug: "jim-corbett-wild-trails-and-forest-escape" }} className="group block h-full">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
+                    <img src={HERO_IMAGES_BY_SLUG.get("jim-corbett-wild-trails-and-forest-escape")} alt="Elephant in Jim Corbett" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]" />
+                    <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-primary">2 nights</span>
+                    <span className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-foreground">On Request</span>
+                  </div>
+                  <div className="mt-5 flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Jim Corbett</span>
+                      <h2 className="mt-1 font-serif text-2xl text-primary">Wild Trails & Forest Escape</h2>
+                    </div>
+                    <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span>
+                  </div>
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.7 }} data-getaway-card className="h-full w-[85%] shrink-0 snap-start sm:w-[48%] md:w-[32%]">
                 <Link to="/trips/$slug" params={{ slug: "rishikesh-reset-by-the-ganga-weekend-escape" }} className="group block h-full">
                   <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
-                    <img src="https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85" alt="Rishikesh beside the Ganga" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]" />
+                    <img src={HERO_IMAGES_BY_SLUG.get("rishikesh-reset-by-the-ganga-weekend-escape")} alt="Rishikesh beside the Ganga" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]" />
                     <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-primary">2 nights</span>
                     <span className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-foreground">On Request</span>
                   </div>
@@ -58,6 +79,22 @@ function WeekendGetawaysPage() {
                     <div className="min-w-0">
                       <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Rishikesh</span>
                       <h2 className="mt-1 font-serif text-2xl text-primary">Reset by the Ganga</h2>
+                    </div>
+                    <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span>
+                  </div>
+                </Link>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.7 }} data-getaway-card className="h-full w-[85%] shrink-0 snap-start sm:w-[48%] md:w-[32%]">
+                <Link to="/trips/$slug" params={{ slug: "hampi-heritage-weekend-escape" }} className="group block h-full">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
+                    <img src={HERO_IMAGES_BY_SLUG.get("hampi-heritage-weekend-escape")} alt="Ancient ruins in Hampi" loading="lazy" width={1280} height={1600} className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]" />
+                    <span className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-primary">2 nights</span>
+                    <span className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-accent-foreground">On Request</span>
+                  </div>
+                  <div className="mt-5 flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Hampi</span>
+                      <h2 className="mt-1 font-serif text-2xl text-primary">Ancient Stones & Stories</h2>
                     </div>
                     <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground"><ArrowUpRight className="h-4 w-4" /></span>
                   </div>
