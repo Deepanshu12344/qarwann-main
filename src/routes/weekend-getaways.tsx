@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { SITE_URL } from "@/lib/seo";
 
 const HERO_IMAGES_BY_SLUG = new Map(
   QARWAAN_ITINERARIES.map((trip) => [trip.slug, trip.coverImage]),
@@ -15,8 +16,11 @@ export const Route = createFileRoute("/weekend-getaways")({
     meta: [
       { title: "Weekend Getaways — QARWAAN" },
       { name: "description", content: "Discover Qarwaan's curated weekend getaways." },
+      { property: "og:title", content: "Weekend Getaways — QARWAAN" },
+      { property: "og:description", content: "Discover Qarwaan's curated weekend getaways." },
+      { property: "og:url", content: `${SITE_URL}/weekend-getaways` },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/weekend-getaways" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/weekend-getaways` }],
   }),
   component: WeekendGetawaysPage,
 });

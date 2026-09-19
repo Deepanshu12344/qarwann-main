@@ -11,7 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SITE_URL } from "../lib/seo";
 import EnquiryDialog from "../components/EnquiryDialog";
+// import { StickyJourneyCta } from "../components/StickyJourneyCta";
 import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
@@ -89,8 +91,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@qarwaantravels" },
       { name: "twitter:title", content: "QARWAAN — Travel Beyond The Expected" },
       { name: "twitter:description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7082a31b-b861-4897-8547-7d7309b74417/id-preview-f6dae0c7--8984b653-f6a4-47e7-83ff-7174406cb98a.lovable.app-1783395449750.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7082a31b-b861-4897-8547-7d7309b74417/id-preview-f6dae0c7--8984b653-f6a4-47e7-83ff-7174406cb98a.lovable.app-1783395449750.png" },
+      { property: "og:site_name", content: "Qarwaan" },
+      { property: "og:locale", content: "en_IN" },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
+      { name: "twitter:image", content: `${SITE_URL}/images/ladakh-cover.png` },
     ],
     links: [
       { rel: "icon", href: "/favicon.svg?v=3", type: "image/svg+xml" },
@@ -135,8 +139,17 @@ function RootComponent() {
             "@context": "https://schema.org",
             "@type": "TravelAgency",
             name: "Qarwaan",
-            url: "https://qarwaan.com",
+            url: SITE_URL,
             email: "team@qarwaan.com",
+            telephone: "+91-87961-62117",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "14th Floor, CD-B1 1402, Ireo Corridors, Sector 67",
+              addressLocality: "Gurugram",
+              addressRegion: "Haryana",
+              postalCode: "122102",
+              addressCountry: "IN",
+            },
             sameAs: ["https://www.instagram.com/qarwaantravels/"],
           }),
         }}
@@ -144,6 +157,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <EnquiryDialog />
+      {/* <StickyJourneyCta /> */}
       <Toaster />
     </QueryClientProvider>
   );

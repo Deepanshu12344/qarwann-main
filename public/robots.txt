@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://qarwaan.com/sitemap.xml
+Sitemap: https://www.qarwaan.com/sitemap.xml

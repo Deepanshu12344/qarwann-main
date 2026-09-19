@@ -31,6 +31,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { absoluteUrl, SITE_URL } from "@/lib/seo";
 import {
   Carousel,
   CarouselContent,
@@ -113,6 +114,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "kerala-serenity-escape": "Kerala Serenity Escape Itinerary | Qarwaan",
   "ladakh-himalayan-expedition": "Ladakh Himalayan Expedition | Qarwaan",
   "rajasthan-royal-heritage-desert-odyssey": "Rajasthan Heritage & Desert Itinerary | Qarwaan",
+  "jim-corbett-wild-trails-and-forest-escape": "Jim Corbett Weekend Getaway Itinerary | Qarwaan",
   "hampi-heritage-weekend-escape": "Hampi Heritage Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
@@ -211,7 +213,9 @@ function enquirySearch(trip: TripDetail) {
 export const Route = createFileRoute("/trips/$slug")({
   head: ({ params }) => {
     const trip = QARWAAN_ITINERARIES.find((item) => item.slug === params.slug);
-    const title = trip ? TRIP_SEO_TITLES[trip.slug] : "Journey not found | Qarwaan";
+    const title = trip
+      ? (TRIP_SEO_TITLES[trip.slug] ?? `${trip.packageName} Itinerary | Qarwaan`)
+      : "Journey not found | Qarwaan";
     const description = trip
       ? `Explore Qarwaan's ${trip.duration} ${trip.country} itinerary covering ${trip.citiesCovered.join(", ")}.`
       : "Browse curated Qarwaan journeys and detailed itineraries.";
@@ -221,9 +225,10 @@ export const Route = createFileRoute("/trips/$slug")({
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
-        ...(trip?.coverImage ? [{ property: "og:image", content: trip.coverImage }] : []),
+        ...(trip?.coverImage ? [{ property: "og:image", content: absoluteUrl(trip.coverImage) }] : []),
+        { property: "og:url", content: `${SITE_URL}/trips/${params.slug}` },
       ],
-      links: [{ rel: "canonical", href: `https://qarwaan.com/trips/${params.slug}` }],
+      links: [{ rel: "canonical", href: `${SITE_URL}/trips/${params.slug}` }],
     };
   },
   component: TripDetailsPage,
@@ -302,6 +307,7 @@ function TripDetailsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader page="destinations" />
+      <TripStructuredData trip={data} />
       <Hero trip={data} />
       <Overview trip={data} />
       {data.keyExperiences && data.keyExperiences.length > 0 && (
@@ -320,8 +326,42 @@ function TripDetailsPage() {
       {/* <HowItWorks trip={data} /> */}
       <CtaBand trip={data} />
       <SiteFooter />
-      <StickyEnquire trip={data} />
     </div>
+  );
+}
+
+function TripStructuredData({ trip }: { trip: TripDetail }) {
+  const isWeekendGetaway = trip.durationDays <= 3;
+  const listingName = isWeekendGetaway ? "Weekend Getaways" : "Destinations";
+  const listingUrl = `${SITE_URL}${isWeekendGetaway ? "/weekend-getaways" : "/trips"}`;
+  const tripUrl = `${SITE_URL}/trips/${trip.slug}`;
+  const description = trip.detailedOverview || `Explore Qarwaan's ${trip.packageName} itinerary.`;
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+              { "@type": "ListItem", position: 2, name: listingName, item: listingUrl },
+              { "@type": "ListItem", position: 3, name: trip.packageName, item: tripUrl },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            name: trip.packageName,
+            description,
+            url: tripUrl,
+            ...(trip.coverImage ? { image: absoluteUrl(trip.coverImage) } : {}),
+          },
+        ]),
+      }}
+    />
   );
 }
 
@@ -360,6 +400,7 @@ function Hero({ trip }: { trip: TripDetail }) {
           alt={trip.packageName}
           width={1920}
           height={1080}
+          fetchPriority="high"
           className={`absolute inset-0 h-full w-full object-cover ${
             trip.slug === "nepal-himalayan-heritage-lakes-jungle-escape"
               ? "brightness-110 contrast-105"
@@ -379,6 +420,15 @@ function Hero({ trip }: { trip: TripDetail }) {
             : "bg-gradient-to-t from-black/85 via-black/40 to-black/30"
         }`}
       />
+      <nav aria-label="Breadcrumb" className="absolute left-4 top-24 z-10 max-w-[calc(100%-2rem)] text-xs text-white/85 md:left-8 md:top-28">
+        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <li><Link to="/" className="hover:text-white">Home</Link></li>
+          <li aria-hidden="true">/</li>
+          <li><Link to={trip.durationDays <= 3 ? "/weekend-getaways" : "/trips"} className="hover:text-white">{trip.durationDays <= 3 ? "Weekend Getaways" : "Destinations"}</Link></li>
+          <li aria-hidden="true">/</li>
+          <li className="truncate" aria-current="page">{trip.packageName}</li>
+        </ol>
+      </nav>
       <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col justify-end pb-12 md:pb-20 text-white">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -1056,21 +1106,6 @@ function CtaBand({ trip }: { trip: TripDetail }) {
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---------------- Sticky mobile enquire ---------------- */
-function StickyEnquire({ trip }: { trip: TripDetail }) {
-  return (
-    <div className="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-border bg-background/95 backdrop-blur p-3">
-      <Link
-        to="/enquire"
-        search={enquirySearch(trip)}
-        className="flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground py-3 text-sm font-medium"
-      >
-        Enquire About This Trip <ArrowUpRight className="h-4 w-4" />
-      </Link>
-    </div>
   );
 }
 

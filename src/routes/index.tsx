@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import CloudShaderFlightHeroDemo from "@/components/cloud-shader-flight-hero-demo";
 import {
   Accordion,
   AccordionContent,
@@ -23,6 +24,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { SITE_URL } from "@/lib/seo";
 
 import patagonia from "@/assets/dest-patagonia.jpg";
 import heroImage from "../../hero-image.png";
@@ -44,9 +46,10 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Curated luxury journeys, designed around you.",
       },
-      { property: "og:image", content: heroImage },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Home,
 });
@@ -157,13 +160,11 @@ const TESTIMONIALS = [
 function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader page="home" transparentAtTop />
-      <Hero />
+      <CloudShaderFlightHeroDemo />
       <Destinations />
       <WhyQarwaan />
       <Experiences />
-      {/* Temporarily hidden */}
-      {/* <Testimonials /> */}
+      <Testimonials />
       {/* <Newsletter /> */}
       <Faq />
       <SiteFooter />
@@ -220,7 +221,7 @@ function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
-            to="/enquire"
+            to="/trips"
             className={`group inline-flex items-center gap-1.5 text-sm tracking-wide transition-colors ${
               scrolled ? "text-primary" : "text-background"
             }`}
@@ -320,6 +321,7 @@ function Hero() {
         alt="Qarwaan travel experience"
         width={1920}
         height={1080}
+        fetchPriority="high"
       />
 
       {/* Cinematic vignette */}

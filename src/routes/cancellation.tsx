@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage, type LegalSection } from "@/components/LegalPage";
+import { SITE_URL } from "@/lib/seo";
 
 const sections: LegalSection[] = [
   {
@@ -50,8 +51,8 @@ const sections: LegalSection[] = [
 
 export const Route = createFileRoute("/cancellation")({
   head: () => ({
-    meta: [{ title: "Cancellation Policy — QARWAAN" }, { name: "description", content: "Read Qarwaan's cancellation and rescheduling policy." }],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/cancellation" }],
+    meta: [{ title: "Cancellation Policy — QARWAAN" }, { name: "description", content: "Read Qarwaan's cancellation and rescheduling policy." }, { property: "og:title", content: "Cancellation Policy — QARWAAN" }, { property: "og:description", content: "Read Qarwaan's cancellation and rescheduling policy." }, { property: "og:url", content: `${SITE_URL}/cancellation` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/cancellation` }],
   }),
   component: () => <LegalPage title="Cancellation" sections={sections} />,
 });

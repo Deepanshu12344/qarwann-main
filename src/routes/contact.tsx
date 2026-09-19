@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { submitContact } from "@/lib/formspree";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SITE_URL } from "@/lib/seo";
 
 const ADDRESS = "14th Floor, CD-B1 1402, Ireo Corridors - Gurgaon, 93P9+3WQ, Samrat Mihir Bhoj Rd, Ramgarh, Sector 67, Gurugram, Haryana, Gurugram-122102";
 // Keep the map search focused on the office suite, while retaining the full address for visitors.
@@ -17,8 +18,11 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact Us — QARWAAN" },
       { name: "description", content: "Get in touch with the QARWAAN team for travel advice, trip enquiries, and support." },
+      { property: "og:title", content: "Contact Us — QARWAAN" },
+      { property: "og:description", content: "Get in touch with the QARWAAN team for travel advice, trip enquiries, and support." },
+      { property: "og:url", content: `${SITE_URL}/contact` },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/contact" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),
   component: ContactPage,
 });
@@ -57,7 +61,6 @@ function ContactPage() {
       <SiteHeader page="contact" />
 
       <section className="px-5 py-20 text-center sm:px-8 md:py-28">
-        <p className="eyebrow text-accent">Contact Us</p>
         <h1 className="mx-auto mt-5 max-w-5xl font-serif text-5xl leading-[0.9] text-primary sm:text-6xl md:text-7xl">
           Get in touch with us.
         </h1>

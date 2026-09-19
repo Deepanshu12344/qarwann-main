@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { SITE_URL } from "@/lib/seo";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
   Dialog,
@@ -72,8 +73,10 @@ export const Route = createFileRoute("/trips/")({
         property: "og:description",
         content: "Discover curated luxury journeys across the world.",
       },
+      { property: "og:url", content: `${SITE_URL}/trips` },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/trips" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/trips` }],
   }),
   component: TripsPage,
 });

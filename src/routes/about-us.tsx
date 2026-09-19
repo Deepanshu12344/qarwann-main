@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SITE_URL } from "@/lib/seo";
 
 const FOUNDERS = [
   {
@@ -28,8 +29,11 @@ export const Route = createFileRoute("/about-us")({
     meta: [
       { title: "About Qarwaan — India's New Age Youth Travel Brand" },
       { name: "description", content: "Meet Qarwaan, a travel brand creating culture-led experiences and unforgettable memories." },
+      { property: "og:title", content: "About Qarwaan — India's New Age Youth Travel Brand" },
+      { property: "og:description", content: "Meet Qarwaan, a travel brand creating culture-led experiences and unforgettable memories." },
+      { property: "og:url", content: `${SITE_URL}/about-us` },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/about-us" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about-us` }],
   }),
   component: AboutUsPage,
 });

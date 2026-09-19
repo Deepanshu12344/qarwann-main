@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SITE_URL } from "@/lib/seo";
 
 const DESTINATIONS = [
   "Japan",
@@ -88,8 +89,9 @@ export const Route = createFileRoute("/enquire")({
         property: "og:description",
         content: "Begin a conversation with QARWAAN's travel designers.",
       },
+      { name: "robots", content: "noindex, follow" },
     ],
-    links: [{ rel: "canonical", href: "https://qarwaan.com/enquire" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/enquire` }],
   }),
   component: EnquirePage,
 });

@@ -147,7 +147,9 @@ export default function EnquiryDialog() {
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 40, opacity: 0 }}
-            transition={{ type: "spring", damping: 24, stiffness: 220 }}
+          transition={{ type: "spring", damping: 24, stiffness: 220 }}
+          role="dialog"
+          aria-modal="true"
             className="relative w-full max-w-2xl overflow-hidden rounded-t-2xl bg-background shadow-2xl sm:rounded-2xl"
           >
             <button
