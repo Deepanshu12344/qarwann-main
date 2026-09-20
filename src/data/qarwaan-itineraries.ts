@@ -3726,6 +3726,183 @@ export const QARWAAN_ITINERARIES = [
     ]
   },
   {
+    "id": "coorg-coffee-forests-kodava-culture",
+    "slug": "coorg-coffee-forests-kodava-culture",
+    "packageName": "Coorg – Coffee, Forests & Kodava Culture",
+    "coverImage": "/images/coorg/main.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Bengaluru – Coorg"
+    ],
+    "bestSeason": [
+      "October – March"
+    ],
+    "startPoint": "Bengaluru",
+    "endPoint": "Bengaluru",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Students",
+      "Corporate Groups",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Coffee Enthusiasts"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Escape Bengaluru for a refreshing 2 Nights / 3 Days journey into Coorg, one of Karnataka’s most celebrated coffee-growing regions. Surrounded by green hills, forests, plantations and waterfalls, Coorg offers a natural change of pace from city life while remaining practical for a weekend road trip from Bengaluru. The journey is designed around Madikeri, the district headquarters and the main base for exploring central Coorg. The first day focuses on the scenic journey from Bengaluru, arrival in Coorg and a relaxed introduction to Madikeri, including Raja’s Seat around sunset. The second day brings together the region’s natural, historical and culinary character through Abbey Falls, Madikeri Fort, Omkareshwara Temple and a curated coffee plantation experience. The final morning is intentionally kept relaxed, allowing travellers to enjoy the property, coffee estate surroundings and local shopping before beginning the return journey to Bengaluru. Rather than attempting to cover every attraction across Kodagu, this itinerary focuses on meaningful experiences within a comfortable weekend pace.",
+    "whyThisTrip": "A practical weekend escape from Bengaluru combining nature, coffee, local culture, heritage and relaxation without excessive driving between attractions.",
+    "keyExperiences": [
+      "Scenic Western Ghats drive",
+      "Raja’s Seat",
+      "Abbey Falls",
+      "Madikeri Fort",
+      "Omkareshwara Temple",
+      "coffee plantation experience",
+      "Coorg coffee tasting",
+      "Kodava cuisine and local shopping"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Bengaluru → Coorg",
+        "location": "Coorg / Madikeri",
+        "phase": "Arrival & Sunset Experience",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Raja’s Seat",
+          "Madikeri town",
+          "local market"
+        ],
+        "experienceDetails": "Depart Bengaluru in the morning and travel towards Coorg by road via the Bengaluru–Mysuru–Kushalnagar–Madikeri corridor. The journey takes approximately 5–6 hours depending on traffic, road conditions and stops. After arriving in Coorg, check into the hotel, resort or coffee-estate stay and allow time to relax after the drive. In the late afternoon, head to Raja’s Seat for panoramic views of the surrounding valleys and hills. The evening can then be kept relaxed with a short exploration of Madikeri town and its local market before returning to the property for dinner and overnight stay.",
+        "hiddenGems": [
+          "Quiet plantation roads around Madikeri and smaller local cafés away from the main tourist areas"
+        ],
+        "activities": [
+          "Scenic road journey",
+          "sunset viewing",
+          "photography",
+          "relaxed walking and local market exploration"
+        ],
+        "localFood": [
+          "Pandi Curry",
+          "Kadambuttu",
+          "Akki Roti",
+          "Coorg coffee and Karnataka-style vegetarian dishes"
+        ],
+        "localExperience": "Explore local shops for Coorg coffee, spices, honey, chocolates and regional products",
+        "festivals": [
+          "Puthari",
+          "Kailpodh and Madikeri Dasara",
+          "dates vary annually"
+        ],
+        "stayType": "Coffee Estate Stay / Boutique Resort / Premium Hotel",
+        "accessibility": "Road: Bengaluru to Madikeri is approximately 250–260 km and takes around 5–6 hours under normal conditions. Coorg has no railway station or airport; road travel is the primary access. (Karnataka Tourism)",
+        "images": [
+          "/images/coorg/daywise/day1-1.png",
+          "/images/coorg/daywise/day1-2.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Madikeri → Abbey Falls → Madikeri Fort → Omkareshwara Temple → Coffee Estate → Madikeri",
+        "location": "Coorg / Madikeri",
+        "phase": "Nature, Heritage & Coffee Experience",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Abbey Falls",
+          "Madikeri Fort",
+          "Omkareshwara Temple",
+          "coffee plantation"
+        ],
+        "experienceDetails": "Start with breakfast and travel to Abbey Falls, located approximately 6 km from Madikeri. Walk through the lush plantation surroundings to reach the waterfall viewpoint. Continue back towards Madikeri for a heritage-focused visit to Madikeri Fort. From there, visit Omkareshwara Temple, located within walking distance of the fort area. After lunch, spend the afternoon at a coffee plantation or estate. Learn about coffee cultivation, processing and roasting, followed by a tasting experience. Depending on the property, travellers can also enjoy a short plantation walk. Return to the hotel or resort for a relaxed evening and overnight stay.",
+        "hiddenGems": [
+          "Smaller coffee-estate trails",
+          "plantation viewpoints and quieter countryside roads around Madikeri"
+        ],
+        "activities": [
+          "Waterfall visit",
+          "heritage sightseeing",
+          "temple visit",
+          "coffee plantation walk",
+          "coffee tasting and photography"
+        ],
+        "localFood": [
+          "Coorg coffee",
+          "Pandi Curry",
+          "Kadambuttu",
+          "Akki Roti and seasonal local preparations"
+        ],
+        "localExperience": "Interact with plantation hosts and purchase estate-grown coffee, spices, honey and handmade products",
+        "festivals": [
+          "Local festivals and cultural events vary according to the annual calendar"
+        ],
+        "stayType": "Coffee Estate Stay / Boutique Resort / Premium Hotel",
+        "accessibility": "Local road transfers: Abbey Falls is approximately 6 km from Madikeri. Madikeri Fort and Omkareshwara Temple are close to each other, making them a logical sightseeing cluster. Abbey Falls is open 9 AM–5 PM according to Karnataka Tourism. (Karnataka Tourism)",
+        "images": [
+          "/images/coorg/daywise/day2-1.png",
+          "/images/coorg/daywise/day2-2.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Coorg → Bengaluru",
+        "location": "Coorg / Bengaluru",
+        "phase": "Slow Morning & Return Journey",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": false,
+        "modern": false,
+        "keyAttractions": [
+          "Coffee estate surroundings",
+          "Madikeri local market",
+          "scenic Bengaluru–Coorg route"
+        ],
+        "experienceDetails": "Begin the morning slowly with breakfast at the property. Depending on the accommodation, enjoy a short plantation walk, spend time around the estate or have a relaxed coffee-tasting session. Check out and use the remaining morning for local shopping in Madikeri, particularly for Coorg coffee, spices, honey and regional products. Have an early lunch before starting the return journey to Bengaluru. Follow the same broad Bengaluru–Mysuru corridor and allow sufficient time for traffic before reaching Bengaluru in the evening. The day is deliberately kept light so that the return journey does not become exhausting.",
+        "hiddenGems": [
+          "Quiet plantation surroundings and small local shops away from major tourist stops"
+        ],
+        "activities": [
+          "Morning nature walk",
+          "coffee experience",
+          "local shopping",
+          "photography and scenic road journey"
+        ],
+        "localFood": [
+          "Fresh Coorg coffee",
+          "local breakfast",
+          "Karnataka snacks and seasonal produce"
+        ],
+        "localExperience": "Purchase locally produced coffee, spices, honey, chocolates and other regional products",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road: Return journey from Madikeri to Bengaluru is approximately 250–260 km. Allow around 5–6 hours or longer depending on traffic and stops. (Karnataka Tourism)",
+        "images": [
+          "/images/coorg/daywise/day3-1.png",
+          "/images/coorg/daywise/day3-2.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "hampi-heritage-weekend-escape",
     "slug": "hampi-heritage-weekend-escape",
     "packageName": "Hampi – Ancient Stones & Stories",

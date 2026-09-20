@@ -248,6 +248,7 @@ export const LEGACY_TRIPS: Trip[] = [
 const WEEKEND_GETAWAY_SLUGS = new Set([
   "jim-corbett-wild-trails-and-forest-escape",
   "rishikesh-reset-by-the-ganga-weekend-escape",
+  "coorg-coffee-forests-kodava-culture",
   "hampi-heritage-weekend-escape",
 ]);
 

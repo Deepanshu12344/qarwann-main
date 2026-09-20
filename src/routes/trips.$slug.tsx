@@ -115,6 +115,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "ladakh-himalayan-expedition": "Ladakh Himalayan Expedition | Qarwaan",
   "rajasthan-royal-heritage-desert-odyssey": "Rajasthan Heritage & Desert Itinerary | Qarwaan",
   "jim-corbett-wild-trails-and-forest-escape": "Jim Corbett Weekend Getaway Itinerary | Qarwaan",
+  "coorg-coffee-forests-kodava-culture": "Coorg Weekend Getaway Itinerary | Qarwaan",
   "hampi-heritage-weekend-escape": "Hampi Heritage Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
@@ -168,6 +169,12 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/jim-corbett/collage/Tiger at Jim corbett national park.jpeg",
     "/images/jim-corbett/collage/jim corbett national park.jpeg",
     "/images/jim-corbett/collage/jpeg",
+  ],
+  "coorg-coffee-forests-kodava-culture": [
+    "/images/coorg/main.png",
+    "/images/coorg/collage/f9f95d1ab7ff6a5776c03a461aaeddd1.jpg",
+    "/images/coorg/collage/811993d8b5e42dc9d11706c7f4e41596.jpg",
+    "/images/coorg/collage/12af7cccf18f392be90c8476cf8f1795.jpg",
   ],
   "rishikesh-reset-by-the-ganga-weekend-escape": [
     "/images/rishikesh/collage/colg1.jpg",
