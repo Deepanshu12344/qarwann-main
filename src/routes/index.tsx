@@ -164,7 +164,7 @@ function Home() {
       <Destinations />
       <WhyQarwaan />
       <Experiences />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Newsletter /> */}
       <Faq />
       <SiteFooter />
@@ -382,14 +382,14 @@ function Hero() {
         >
           <Link
             to="/trips"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium tracking-[0.15em] uppercase text-accent-foreground transition-all hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30"
+            className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-accent px-7 text-sm font-medium tracking-[0.15em] uppercase text-accent-foreground transition-all hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30 sm:w-56"
           >
             Explore Journeys
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
           <Link
             to="/enquire"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-background/40 px-7 py-3.5 text-sm font-medium tracking-[0.15em] uppercase text-background transition-all hover:bg-background/10"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-background/40 px-7 text-sm font-medium tracking-[0.15em] uppercase text-background transition-all hover:bg-background/10 sm:w-56"
           >
             Plan Your Journey
           </Link>

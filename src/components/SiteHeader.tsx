@@ -47,7 +47,7 @@ export function SiteHeader({ page, transparentAtTop = false }: { page: Page; tra
 
   return (
     <header className={`sticky inset-x-0 top-0 z-50 transition-all duration-500 ${transparentAtTop ? "max-md:fixed md:fixed" : "border-b border-border/50 bg-background/90 backdrop-blur"} ${scrolled && transparentAtTop ? "border-b border-border bg-background/85 backdrop-blur-md" : ""}`}>
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:px-8 md:h-20">
+      <div className="mx-auto grid h-[4.5rem] max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 lg:px-8 md:h-[5.5rem]">
         <Link to="/" className="justify-self-start">
           <img src={logo} alt="Qarwaan" width={240} height={96} className="h-10 w-auto object-contain md:h-12" />
         </Link>
