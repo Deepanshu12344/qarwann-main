@@ -24,6 +24,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { findMatchingItinerarySlug } from "@/lib/itinerary-search";
 import { SITE_URL } from "@/lib/seo";
 
 import patagonia from "@/assets/dest-patagonia.jpg";
@@ -70,6 +71,7 @@ const TRIP_IMAGES = {
   ladakh: "/images/ladakh-cover.png",
   rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
   jimCorbett: "/images/jim-corbett/collage/elephant-in-jim-corbett.jpg",
+  ooty: "/images/ooty/main-image.png",
   spiti: "/images/spiti-cover.png",
 };
 
@@ -122,14 +124,10 @@ const EXPERIENCES: { title: string; place: string; country: string; duration: st
 
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
   { title: "Jim Corbett – Wild Trails & Forest Escape", place: "Jim Corbett", country: "India", duration: "2 nights", img: TRIP_IMAGES.jimCorbett, slug: "jim-corbett-wild-trails-and-forest-escape" },
-  { title: "Island of Gods: Iconic Wonders & Hidden Gems", place: "Bali", country: "Indonesia", duration: "6 nights", img: TRIP_IMAGES.bali, slug: "bali-island-of-gods-iconic-wonders-hidden-gems" },
-  { title: "Bhutan – Himalayan Serenity & Cultural Discovery", place: "Bhutan", country: "Bhutan", duration: "6 nights", img: TRIP_IMAGES.bhutan, slug: "bhutan-himalayan-serenity-cultural-discovery" },
-  { title: "Coastal Charm & Cultural Escape", place: "Goa", country: "India", duration: "6 nights", img: TRIP_IMAGES.goa, slug: "goa-coastal-charm-cultural-escape" },
-  { title: "Nepal – Himalayan Heritage, Lakes & Jungle Escape", place: "Nepal", country: "Nepal", duration: "7 nights", img: TRIP_IMAGES.nepal, slug: "nepal-himalayan-heritage-lakes-jungle-escape" },
-  { title: "Kerala Serenity Escape", place: "Kerala", country: "India", duration: "6 nights", img: TRIP_IMAGES.kerala, slug: "kerala-serenity-escape" },
-  { title: "Ultimate Ladakh Road Journey", place: "Ladakh", country: "India", duration: "6 nights", img: TRIP_IMAGES.ladakh, slug: "ladakh-himalayan-expedition" },
-  { title: "Royal Heritage & Desert Odyssey", place: "Rajasthan", country: "India", duration: "10 nights", img: TRIP_IMAGES.rajasthan, slug: "rajasthan-royal-heritage-desert-odyssey" },
-  { title: "Spiti Valley – The Himalayan Odyssey", place: "Spiti Valley", country: "India", duration: "6 nights", img: TRIP_IMAGES.spiti, slug: "spiti-valley-expedition" },
+  { title: "Ooty & Coonoor – Tea Trails, Misty Hills & Nilgiri Escapes", place: "Ooty & Coonoor", country: "India", duration: "2 nights", img: TRIP_IMAGES.ooty, slug: "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes" },
+  { title: "Rishikesh – Reset by the Ganga", place: "Rishikesh", country: "India", duration: "2 nights", img: "/images/rishikesh/collage/colg1.jpg", slug: "rishikesh-reset-by-the-ganga-weekend-escape" },
+  { title: "Coorg – Coffee, Forests & Kodava Culture", place: "Coorg", country: "India", duration: "2 nights", img: "/images/coorg/main.png", slug: "coorg-coffee-forests-kodava-culture" },
+  { title: "Hampi – Ancient Stones & Stories", place: "Hampi", country: "India", duration: "2 nights", img: "/images/hampi/hero-image-hampi.png", slug: "hampi-heritage-weekend-escape" },
 ];
 
 
@@ -310,7 +308,10 @@ function Hero() {
   const searchTrips = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const q = query.trim();
-    navigate({ to: "/trips", search: q ? { q } : {} });
+    const matchingSlug = findMatchingItinerarySlug(q);
+    navigate(matchingSlug
+      ? { to: "/trips/$slug", params: { slug: matchingSlug } }
+      : { to: "/trips", search: q ? { q } : {} });
   };
 
   return (

@@ -11,6 +11,7 @@ const importRoutes = require('./routes/import.routes');
 const enquiryRoutes = require('./routes/enquiry.routes');
 const authRoutes = require('./routes/auth.routes');
 const adminRoutes = require('./routes/admin.routes');
+const googleReviewsRoutes = require('./routes/googleReviews.routes');
 const { notFound, errorHandler } = require('./middleware/error');
 
 const app = express();
@@ -28,6 +29,7 @@ app.use('/api/import', importRoutes);
 app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/google-reviews', googleReviewsRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

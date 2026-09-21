@@ -4130,7 +4130,7 @@ export const QARWAAN_ITINERARIES = [
     "id": "rishikesh-reset-by-the-ganga-weekend-escape",
     "slug": "rishikesh-reset-by-the-ganga-weekend-escape",
     "packageName": "Rishikesh – Reset by the Ganga | Weekend Escape",
-    "coverImage": "https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=1800&q=85",
+    "coverImage": "/images/rishikesh/collage/colg1.jpg",
     "country": "India",
     "duration": "2 Nights / 3 Days",
     "durationDays": 3,
@@ -4311,6 +4311,184 @@ export const QARWAAN_ITINERARIES = [
         "images": [
           "/images/rishikesh/daywise/day3-1.jpeg",
           "/images/rishikesh/daywise/day3-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
+    "slug": "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
+    "packageName": "Ooty & Coonoor – Tea Trails, Misty Hills & Nilgiri Escapes",
+    "coverImage": "/images/ooty/main-image.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Bengaluru – Ooty – Coonoor"
+    ],
+    "bestSeason": [
+      "October – March"
+    ],
+    "startPoint": "Bengaluru",
+    "endPoint": "Bengaluru",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Students",
+      "Corporate Groups",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Tea Enthusiasts"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Escape Bengaluru for a refreshing 2 Nights / 3 Days journey into the Nilgiri Hills, combining the scenic charm of Ooty with the quieter tea-country atmosphere of Coonoor. The journey begins with a scenic road transfer from Bengaluru towards Ooty, followed by a relaxed introduction to the hill station and its surrounding landscapes. The first evening is kept light so travellers can settle into the cool mountain environment. The second day focuses on Coonoor, with visits to Sims Park, Lamb’s Rock, Dolphin’s Nose and a curated tea experience before returning to Ooty. The final morning explores Ooty’s characteristic landscapes through Doddabetta and the Government Botanical Garden before beginning the return journey to Bengaluru. The itinerary is designed around the natural geography of the Nilgiris rather than attempting to cover every attraction in one weekend. It combines tea plantations, mountain viewpoints, gardens, local food and relaxed hill-station experiences, making it suitable for couples, families, friends and corporate groups looking for a short escape from Bengaluru.",
+    "whyThisTrip": "Ooty and Coonoor provide two complementary Nilgiri experiences within one practical getaway: Ooty offers the classic hill-station experience while Coonoor adds tea estates, viewpoints and a quieter mountain atmosphere.",
+    "keyExperiences": [
+      "Nilgiri mountain drive",
+      "Ooty Lake",
+      "Botanical Garden",
+      "Doddabetta Peak",
+      "Coonoor tea estates",
+      "Sims Park",
+      "Lamb’s Rock",
+      "Dolphin’s Nose",
+      "tea tasting and local Nilgiri shopping"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Bengaluru → Ooty",
+        "location": "Ooty",
+        "phase": "Scenic Arrival & Hill-Stay Experience",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Ooty Lake",
+          "Ooty town",
+          "Charing Cross / local market"
+        ],
+        "experienceDetails": "Depart Bengaluru in the morning and begin the road journey towards the Nilgiris. The route gradually changes from the plains into the mountain landscape as the journey approaches Ooty. After reaching Ooty, check into the hotel and allow time to refresh. Depending on the arrival time, visit Ooty Lake for a relaxed walk around the waterfront or optional boating. Later, explore the central Ooty area and local market around Charing Cross before returning to the hotel. Keep the first evening deliberately relaxed after the long road journey, with dinner and overnight stay in Ooty.",
+        "hiddenGems": [
+          "Quiet lanes around the central market and smaller local tea/chocolate shops"
+        ],
+        "activities": [
+          "Scenic road journey",
+          "photography",
+          "lake visit",
+          "relaxed walking and local market exploration"
+        ],
+        "localFood": [
+          "Ooty tea",
+          "homemade chocolates",
+          "varkey",
+          "fresh bakery items and South Indian cuisine"
+        ],
+        "localExperience": "Explore local shops for Nilgiri tea, homemade chocolates, eucalyptus products, spices, woollens and local handicrafts",
+        "festivals": [
+          "Ooty Summer Festival / Flower Show",
+          "dates vary annually"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Hill Resort",
+        "accessibility": "Road: Bengaluru to Ooty is a long hill road journey and should be planned as a full travel day. Ooty is also accessible via the Nilgiri Mountain Railway from Mettupalayam; the railway is a UNESCO World Heritage component. (Incredible India)",
+        "images": [
+          "/images/ooty/daywise/day1-1.jpeg",
+          "/images/ooty/daywise/day1-2.jpeg"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Ooty → Coonoor → Ooty",
+        "location": "Coonoor & Ooty",
+        "phase": "Tea Country, Viewpoints & Nilgiri Experience",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Sims Park",
+          "Lamb’s Rock",
+          "Dolphin’s Nose",
+          "Coonoor tea estates",
+          "Tea Factory / Tea Museum"
+        ],
+        "experienceDetails": "After breakfast, travel from Ooty to Coonoor, which is around 19–21 km away. Begin with Sims Park, a historic botanical garden with a diverse collection of plants and trees. Continue towards Lamb’s Rock for expansive views over the surrounding valleys and tea-covered hills, followed by Dolphin’s Nose, one of Coonoor’s prominent viewpoints. Continue with a curated tea-estate or tea-factory experience where travellers can learn about Nilgiri tea production and enjoy a tasting. Allow time for lunch in Coonoor before beginning the return drive to Ooty. If available and suitable for the group's timing, the Nilgiri Mountain Railway can be considered as an optional experience, but it should not be made mandatory in the core itinerary because train schedules and seat availability need to be confirmed.",
+        "hiddenGems": [
+          "Smaller tea-estate roads and quieter viewpoints around Coonoor"
+        ],
+        "activities": [
+          "Viewpoint visits",
+          "tea-estate walk",
+          "tea tasting",
+          "photography and optional heritage railway experience"
+        ],
+        "localFood": [
+          "Nilgiri tea",
+          "Ooty varkey",
+          "homemade chocolates",
+          "South Indian lunch and local bakery items"
+        ],
+        "localExperience": "Purchase Nilgiri tea, homemade preserves, chocolates and locally produced products; interact with tea-estate staff",
+        "festivals": [
+          "Coonoor Fruit & Flower Show",
+          "dates vary annually"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Hill Resort in Ooty",
+        "accessibility": "Road: Ooty–Coonoor is a short inter-town hill transfer. Sims Park, Lamb’s Rock and Dolphin’s Nose form a practical Coonoor sightseeing circuit. The Nilgiris district confirms Coonoor's major viewpoints and Sims Park. (Nilgiris District)",
+        "images": [
+          "/images/ooty/daywise/day2-1.png",
+          "/images/ooty/daywise/day2-2.png"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Ooty → Doddabetta → Government Botanical Garden → Bengaluru",
+        "location": "Ooty & Bengaluru",
+        "phase": "Mountain Viewpoints, Garden Experience & Return Journey",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Doddabetta Peak",
+          "Government Botanical Garden",
+          "Ooty town"
+        ],
+        "experienceDetails": "Begin the final day with breakfast and check out from the hotel. Drive towards Doddabetta Peak, the highest peak in the Nilgiris, for panoramic views of the surrounding mountain landscape, subject to weather and visibility. Continue to the Government Botanical Garden, one of Ooty's signature attractions, and spend time exploring its landscaped sections and collection of plants. After lunch, begin the return road journey towards Bengaluru. Allow sufficient travel time because the return involves descending from the Nilgiris and continuing through the plains. Depending on traffic, weather and departure time, arrive in Bengaluru in the evening.",
+        "hiddenGems": [
+          "Quiet viewpoints and smaller tea-growing stretches along the mountain roads"
+        ],
+        "activities": [
+          "Mountain viewpoint",
+          "garden walk",
+          "photography",
+          "tea/chocolate shopping and scenic return drive"
+        ],
+        "localFood": [
+          "Nilgiri tea",
+          "homemade chocolates",
+          "varkey",
+          "bakery snacks and South Indian lunch"
+        ],
+        "localExperience": "Final opportunity to purchase tea, chocolates, spices and local products before leaving Ooty",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road: Ooty is well connected by road to Bengaluru and other South Indian cities. Doddabetta is about 10 km from Ooty town according to the Nilgiris district tourism information. (Nilgiris District)",
+        "images": [
+          "/images/ooty/daywise/day3-1.jpeg",
+          "/images/ooty/daywise/3-2.jpeg"
         ]
       }
     ]

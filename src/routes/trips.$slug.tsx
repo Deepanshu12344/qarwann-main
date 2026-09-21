@@ -118,6 +118,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "coorg-coffee-forests-kodava-culture": "Coorg Weekend Getaway Itinerary | Qarwaan",
   "hampi-heritage-weekend-escape": "Hampi Heritage Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
+  "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": "Ooty & Coonoor Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
 };
 
@@ -187,6 +188,12 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/hampi/collage/hampi1101.jpeg",
     "/images/hampi/collage/Hampi.jpeg",
     "/images/hampi/collage/e98e40641263511f9a89fff33b724b8a.jpg",
+  ],
+  "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": [
+    "/images/ooty/main-image.png",
+    "/images/ooty/collage/7b9a08f7fce9bd9cd99eed8b2c93f5a3.jpg",
+    "/images/ooty/collage/7e4eaa7754c670b0a11ea1beb6c3768b.jpg",
+    "/images/ooty/collage/c32fb14f-09fa-4ea5-8512-9c33d5cc01a6.png",
   ],
   "spiti-valley-expedition": [
     "/images/spiti/collage/anmol-arora-fSs7jp_rx0w-unsplash.jpg",
@@ -427,15 +434,6 @@ function Hero({ trip }: { trip: TripDetail }) {
             : "bg-gradient-to-t from-black/85 via-black/40 to-black/30"
         }`}
       />
-      <nav aria-label="Breadcrumb" className="absolute left-4 top-24 z-10 max-w-[calc(100%-2rem)] text-xs text-white/85 md:left-8 md:top-28">
-        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <li><Link to="/" className="hover:text-white">Home</Link></li>
-          <li aria-hidden="true">/</li>
-          <li><Link to={trip.durationDays <= 3 ? "/weekend-getaways" : "/trips"} className="hover:text-white">{trip.durationDays <= 3 ? "Weekend Getaways" : "Destinations"}</Link></li>
-          <li aria-hidden="true">/</li>
-          <li className="truncate" aria-current="page">{trip.packageName}</li>
-        </ol>
-      </nav>
       <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col justify-end pb-12 md:pb-20 text-white">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

@@ -250,6 +250,7 @@ const WEEKEND_GETAWAY_SLUGS = new Set([
   "rishikesh-reset-by-the-ganga-weekend-escape",
   "coorg-coffee-forests-kodava-culture",
   "hampi-heritage-weekend-escape",
+  "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
 ]);
 
 /** Destination journeys supplied in the Qarwaan workbooks. */

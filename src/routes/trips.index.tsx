@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
+import { findMatchingItinerarySlug } from "@/lib/itinerary-search";
 import { SITE_URL } from "@/lib/seo";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
@@ -54,6 +55,7 @@ const WEEKEND_GETAWAY_SLUGS = new Set([
   "rishikesh-reset-by-the-ganga-weekend-escape",
   "coorg-coffee-forests-kodava-culture",
   "hampi-heritage-weekend-escape",
+  "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
 ]);
 
 export const Route = createFileRoute("/trips/")({
@@ -102,6 +104,7 @@ const BUDGET_BANDS = [
 
 function TripsPage() {
   const { destination, q: initialQuery } = Route.useSearch();
+  const navigate = useNavigate();
   const [q, setQ] = useState(initialQuery ?? "");
   const [qDebounced, setQDebounced] = useState(initialQuery ?? "");
   const [country, setCountry] = useState(destination ?? "");
@@ -175,6 +178,17 @@ function TripsPage() {
     setQ("");
   };
 
+  const submitSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const searched = q.trim();
+    const matchingSlug = findMatchingItinerarySlug(searched);
+    if (matchingSlug) {
+      navigate({ to: "/trips/$slug", params: { slug: matchingSlug } });
+      return;
+    }
+    setQDebounced(searched);
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader page="destinations" />
@@ -227,7 +241,7 @@ function TripsPage() {
             </button>
           </div>
 
-          <div className="relative mt-8">
+          <form onSubmit={submitSearch} className="relative mt-8">
             <Search className="absolute left-6 top-1/2 h-5 w-5 -translate-y-1/2 text-foreground/45" />
             <input
               value={q}
@@ -236,13 +250,12 @@ function TripsPage() {
               className="w-full rounded-full border border-border bg-card py-5 pl-14 pr-32 text-base outline-none transition focus:border-accent"
             />
             <button
-              type="button"
-              onClick={() => setQDebounced(q.trim())}
+              type="submit"
               className="absolute right-2 top-2 bottom-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
             >
               Search
             </button>
-          </div>
+          </form>
 
           {activeFilters.length > 0 && (
             <div className="mt-5 flex flex-wrap items-center gap-2">
