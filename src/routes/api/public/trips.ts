@@ -250,6 +250,7 @@ const WEEKEND_GETAWAY_SLUGS = new Set([
   "rishikesh-reset-by-the-ganga-weekend-escape",
   "coorg-coffee-forests-kodava-culture",
   "hampi-heritage-weekend-escape",
+  "kasauli-colonial-charm-pine-trails-slow-mountain-living",
   "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
 ]);
 

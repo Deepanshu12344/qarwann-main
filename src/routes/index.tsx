@@ -125,9 +125,10 @@ const EXPERIENCES: { title: string; place: string; country: string; duration: st
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
   { title: "Jim Corbett – Wild Trails & Forest Escape", place: "Jim Corbett", country: "India", duration: "2 nights", img: TRIP_IMAGES.jimCorbett, slug: "jim-corbett-wild-trails-and-forest-escape" },
   { title: "Ooty & Coonoor – Tea Trails, Misty Hills & Nilgiri Escapes", place: "Ooty & Coonoor", country: "India", duration: "2 nights", img: TRIP_IMAGES.ooty, slug: "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes" },
-  { title: "Rishikesh – Reset by the Ganga", place: "Rishikesh", country: "India", duration: "2 nights", img: "/images/rishikesh/collage/colg1.jpg", slug: "rishikesh-reset-by-the-ganga-weekend-escape" },
+  { title: "Rishikesh – Reset by the Ganga", place: "Rishikesh", country: "India", duration: "2 nights", img: "/images/rishikesh/hero-image.jpg", slug: "rishikesh-reset-by-the-ganga-weekend-escape" },
   { title: "Coorg – Coffee, Forests & Kodava Culture", place: "Coorg", country: "India", duration: "2 nights", img: "/images/coorg/main.png", slug: "coorg-coffee-forests-kodava-culture" },
   { title: "Hampi – Ancient Stones & Stories", place: "Hampi", country: "India", duration: "2 nights", img: "/images/hampi/hero-image-hampi.png", slug: "hampi-heritage-weekend-escape" },
+  { title: "Kasauli – Colonial Charm, Pine Trails & Slow Mountain Living", place: "Kasauli", country: "India", duration: "2 nights", img: "/images/kasauli/hero-image.png", slug: "kasauli-colonial-charm-pine-trails-slow-mountain-living" },
 ];
 
 

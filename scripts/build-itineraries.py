@@ -23,7 +23,8 @@ WORKBOOKS = [
     ("Jim Corbett Getaway.xlsx", "jim-corbett-wild-trails-and-forest-escape", "/images/jim-corbett/hero-image.png", "India"),
     ("COORG Getaway QA..xlsx", "coorg-coffee-forests-kodava-culture", "/images/coorg/main.png", "India"),
     ("Hampi Getaway.xlsx", "hampi-heritage-weekend-escape", "/images/hampi/hero-image-hampi.png", "India"),
-    ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "/images/rishikesh/collage/colg1.jpg", "India"),
+    ("Kasauli Getaway Qa..xlsx", "kasauli-colonial-charm-pine-trails-slow-mountain-living", "/images/kasauli/hero-image.png", "India"),
+    ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "/images/rishikesh/hero-image.jpg", "India"),
     ("Ooty_Coonoor Getaway Qa,.xlsx", "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes", "/images/ooty/main-image.png", "India"),
     ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
@@ -42,6 +43,7 @@ STARTING_PRICES = {
     "jim-corbett-wild-trails-and-forest-escape": 0,
     "coorg-coffee-forests-kodava-culture": 0,
     "hampi-heritage-weekend-escape": 0,
+    "kasauli-colonial-charm-pine-trails-slow-mountain-living": 0,
     "rishikesh-reset-by-the-ganga-weekend-escape": 0,
     "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": 0,
     "spiti-valley-expedition": 15999,
@@ -157,7 +159,7 @@ IMAGE_LIBRARY = {
         "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=85",
     ],
     "rishikesh-riverside": [
-        "/images/rishikesh/collage/colg1.jpg",
+        "/images/rishikesh/hero-image.jpg",
     ],
     "corbett-forest": [
         "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=85",
@@ -167,6 +169,9 @@ IMAGE_LIBRARY = {
     ],
     "hampi-heritage": [
         "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1800&q=85",
+    ],
+    "kasauli-hills": [
+        "/images/kasauli/hero-image.png",
     ],
     "ooty-tea-country": [
         "/images/ooty/main-image.png",
@@ -185,6 +190,7 @@ DAY_IMAGE_THEMES = {
     "jim-corbett-wild-trails-and-forest-escape": ["corbett-forest", "corbett-forest", "corbett-forest"],
     "coorg-coffee-forests-kodava-culture": ["coorg-coffee-country", "coorg-coffee-country", "coorg-coffee-country"],
     "hampi-heritage-weekend-escape": ["hampi-heritage", "hampi-heritage", "hampi-heritage"],
+    "kasauli-colonial-charm-pine-trails-slow-mountain-living": ["kasauli-hills", "kasauli-hills", "kasauli-hills"],
     "rishikesh-reset-by-the-ganga-weekend-escape": ["rishikesh-riverside", "rishikesh-riverside", "rishikesh-riverside"],
     "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": ["ooty-tea-country", "ooty-tea-country", "ooty-tea-country"],
     "spiti-valley-expedition": ["spiti-mountains", "spiti-mountains", "spiti-monastery", "spiti-monastery", "spiti-monastery", "spiti-mountains", "spiti-mountains"],
@@ -279,6 +285,11 @@ LOCAL_DAY_IMAGES = {
         1: ["/images/hampi/daywise/day1-1.png", "/images/hampi/daywise/day1-2.jpeg"],
         2: ["/images/hampi/daywise/day2-1.jpeg", "/images/hampi/daywise/day2-2.jpeg"],
         3: ["/images/hampi/daywise/day3-1.jpeg", "/images/hampi/daywise/day3-2.png"],
+    },
+    "kasauli-colonial-charm-pine-trails-slow-mountain-living": {
+        1: ["/images/kasauli/daywise/day1-1.jpeg", "/images/kasauli/daywise/day1-2.png"],
+        2: ["/images/kasauli/daywise/day2-1.jpeg", "/images/kasauli/daywise/day2-2.jpeg"],
+        3: ["/images/kasauli/daywise/day3-1.jpeg", "/images/kasauli/daywise/day3-2.jpeg"],
     },
     "rishikesh-reset-by-the-ganga-weekend-escape": {
         1: ["/images/rishikesh/daywise/day1-1.jpeg", "/images/rishikesh/daywise/day1-2.jpeg"],

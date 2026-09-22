@@ -117,6 +117,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "jim-corbett-wild-trails-and-forest-escape": "Jim Corbett Weekend Getaway Itinerary | Qarwaan",
   "coorg-coffee-forests-kodava-culture": "Coorg Weekend Getaway Itinerary | Qarwaan",
   "hampi-heritage-weekend-escape": "Hampi Heritage Weekend Getaway Itinerary | Qarwaan",
+  "kasauli-colonial-charm-pine-trails-slow-mountain-living": "Kasauli Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": "Ooty & Coonoor Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
@@ -178,7 +179,7 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/coorg/collage/12af7cccf18f392be90c8476cf8f1795.jpg",
   ],
   "rishikesh-reset-by-the-ganga-weekend-escape": [
-    "/images/rishikesh/collage/colg1.jpg",
+    "/images/rishikesh/hero-image.jpg",
     "/images/rishikesh/collage/a94b1e47750d78d4f36382120ad8b353.jpg",
     "/images/rishikesh/collage/5aa3afafb988a9a6a784dc1c740c183b.jpg",
     "/images/rishikesh/collage/eabfab6d72850ab692d0ce22d01c7edc.jpg",
@@ -188,6 +189,12 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/hampi/collage/hampi1101.jpeg",
     "/images/hampi/collage/Hampi.jpeg",
     "/images/hampi/collage/e98e40641263511f9a89fff33b724b8a.jpg",
+  ],
+  "kasauli-colonial-charm-pine-trails-slow-mountain-living": [
+    "/images/kasauli/hero-image.png",
+    "/images/kasauli/collage/e229455531f19e27ac253e1b884136ed.jpg",
+    "/images/kasauli/collage/cd59b7e64d0da49d2ee3f3113b88db83.jpg",
+    "/images/kasauli/collage/7cba31f6e97dc562cdbecba32d16e48d.jpg",
   ],
   "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": [
     "/images/ooty/main-image.png",

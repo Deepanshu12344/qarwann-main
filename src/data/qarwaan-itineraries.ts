@@ -4127,10 +4127,186 @@ export const QARWAAN_ITINERARIES = [
     ]
   },
   {
+    "id": "kasauli-colonial-charm-pine-trails-slow-mountain-living",
+    "slug": "kasauli-colonial-charm-pine-trails-slow-mountain-living",
+    "packageName": "Kasauli – Colonial Charm, Pine Trails & Slow Mountain Living",
+    "coverImage": "/images/kasauli/hero-image.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Delhi – Kasauli"
+    ],
+    "bestSeason": [
+      "March – June & September – November"
+    ],
+    "startPoint": "Delhi",
+    "endPoint": "Delhi",
+    "tripType": "Leisure",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Students",
+      "Corporate Groups",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Weekend Travellers"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Kasauli is a compact Himalayan hill retreat known for its colonial character, pine-covered hills, quiet walking trails and panoramic valley views. This 2 Nights / 3 Days getaway from Delhi is designed as a slow mountain escape rather than a packed sightseeing tour. The journey begins with a comfortable road transfer from Delhi towards Kasauli, followed by hotel check-in and a relaxed introduction to the town through the Mall area and sunset views. The second day focuses on Kasauli’s distinctive character, combining the heritage atmosphere around Christ Church and the old Mall with a nature walk along the Gilbert Trail and a visit to Monkey Point, subject to access and security restrictions. The final morning remains deliberately unhurried, allowing time for breakfast, local shopping and a final walk through the town before beginning the return journey to Delhi. The itinerary balances colonial heritage, pine forests, walking experiences, viewpoints and leisure, making Kasauli particularly suitable for travellers who want a short break from the pace of Delhi without an overly demanding schedule.",
+    "whyThisTrip": "Kasauli is close enough to Delhi for a practical weekend road getaway while offering a distinctly different mountain environment, colonial heritage and slow-travel experience.",
+    "keyExperiences": [
+      "Scenic Himalayan road journey",
+      "Mall Road",
+      "Christ Church",
+      "Gilbert Trail",
+      "Monkey Point",
+      "sunset views",
+      "pine forests",
+      "local cafés and Himachali products"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Delhi → Kasauli",
+        "location": "Kasauli",
+        "phase": "Scenic Arrival & Colonial Town Experience",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Mall Road",
+          "Christ Church",
+          "Upper & Lower Mall",
+          "Sunset Point"
+        ],
+        "experienceDetails": "Depart Delhi in the morning and travel towards Kasauli by road via the Chandigarh–Parwanoo–Dharampur corridor. The journey is approximately 290–300 km and normally takes around 6 hours, depending on traffic, stops and hill-road conditions. After reaching Kasauli, check into the hotel and allow time to relax. In the late afternoon, take a gentle walk through the Mall area and explore the colonial streets surrounding Christ Church. Continue towards a suitable sunset viewpoint to enjoy the changing light over the surrounding hills and plains. Return to the property for dinner and overnight stay. The first day is intentionally kept light because the Delhi–Kasauli transfer itself is substantial.",
+        "hiddenGems": [
+          "Quiet colonial lanes away from the busiest Mall area and smaller local cafés"
+        ],
+        "activities": [
+          "Scenic road journey",
+          "heritage walk",
+          "photography",
+          "sunset viewing and café time"
+        ],
+        "localFood": [
+          "Himachali rajma",
+          "madra",
+          "sidu",
+          "pakoras",
+          "local breads and traditional North Indian dishes"
+        ],
+        "localExperience": "Explore shops selling Himachali woollens, handicrafts, local jams, teas and souvenirs",
+        "festivals": [
+          "Kasauli Rhythm & Blues Festival / Kasauli Music Festival",
+          "dates vary annually"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Hill Resort",
+        "accessibility": "Road: Delhi to Kasauli is approximately 290–300 km and generally takes around 6 hours in normal conditions. Kasauli has no airport or railway station of its own. The nearest airport is Chandigarh and the nearest railhead is Kalka. (TravelTriangle.com)",
+        "images": [
+          "/images/kasauli/daywise/day1-1.jpeg",
+          "/images/kasauli/daywise/day1-2.png"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Kasauli → Gilbert Trail → Monkey Point → Kasauli",
+        "location": "Kasauli",
+        "phase": "Nature Trails, Viewpoints & Heritage",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Gilbert Trail",
+          "Monkey Point",
+          "Christ Church",
+          "Kasauli Mall"
+        ],
+        "experienceDetails": "Begin the day with breakfast before exploring Kasauli on foot. Start with a nature walk along the Gilbert Trail, passing through pine-covered surroundings and enjoying views over the valleys. Continue towards Monkey Point, the highest point in Kasauli, where access is subject to security and operating restrictions because of the Air Force presence. Visitors should follow current entry rules and timings. After the viewpoint experience, return towards the central town and spend time around the Mall and Christ Church area. Keep the afternoon flexible for lunch, café time and relaxation at the property. In the evening, enjoy a slow walk or sunset experience rather than adding another distant excursion. This keeps the day focused on Kasauli itself.",
+        "hiddenGems": [
+          "Quiet forest stretches around the walking trails and less-busy sections of the old town"
+        ],
+        "activities": [
+          "Nature walk",
+          "viewpoint visit",
+          "photography",
+          "café hopping and relaxed exploration"
+        ],
+        "localFood": [
+          "Himachali thali",
+          "local tea",
+          "sidu",
+          "pakoras and seasonal mountain produce"
+        ],
+        "localExperience": "Interact with local shopkeepers and explore handmade products, woollens, jams, pickles and regional foods",
+        "festivals": [
+          "Local events vary annually"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Hill Resort",
+        "accessibility": "Walking + local road transfers: Gilbert Trail is a walking experience. Monkey Point is within a restricted area and entry conditions must be confirmed before the visit. Incredible India identifies Monkey Point as Kasauli's highest point and notes the Air Force restrictions. (Incredible India)",
+        "images": [
+          "/images/kasauli/daywise/day2-1.jpeg",
+          "/images/kasauli/daywise/day2-2.jpeg"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Kasauli → Delhi",
+        "location": "Kasauli / Delhi",
+        "phase": "Slow Morning, Local Shopping & Return Journey",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Kasauli town",
+          "Mall Road",
+          "local market"
+        ],
+        "experienceDetails": "Begin with a relaxed breakfast and checkout. Use the morning for a final walk through the Mall area, photography around the old colonial buildings or a short café stop. Travellers can use the remaining time for shopping for local products before beginning the drive back to Delhi. The return journey follows the hill road down towards Dharampur and onward through the Chandigarh/Delhi corridor. Allow sufficient time for traffic, particularly while entering Delhi. No major sightseeing stop is added on Day 3 so that the itinerary remains comfortable and the return journey does not become rushed.",
+        "hiddenGems": [
+          "Small local shops and quieter lanes around the heritage core"
+        ],
+        "activities": [
+          "Morning walk",
+          "photography",
+          "shopping",
+          "café experience and scenic drive"
+        ],
+        "localFood": [
+          "Local tea",
+          "Himachali snacks",
+          "bakery items and North Indian lunch en route"
+        ],
+        "localExperience": "Final opportunity to purchase woollens, local preserves, tea, handicrafts and regional products",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road: Kasauli has road connectivity to Delhi, Chandigarh and other northern cities. Weather and hill-road conditions can affect travel times. (District Solan)",
+        "images": [
+          "/images/kasauli/daywise/day3-1.jpeg",
+          "/images/kasauli/daywise/day3-2.jpeg"
+        ]
+      }
+    ]
+  },
+  {
     "id": "rishikesh-reset-by-the-ganga-weekend-escape",
     "slug": "rishikesh-reset-by-the-ganga-weekend-escape",
     "packageName": "Rishikesh – Reset by the Ganga | Weekend Escape",
-    "coverImage": "/images/rishikesh/collage/colg1.jpg",
+    "coverImage": "/images/rishikesh/hero-image.jpg",
     "country": "India",
     "duration": "2 Nights / 3 Days",
     "durationDays": 3,
