@@ -36,13 +36,13 @@ import t3 from "@/assets/testimonial-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "QARWAAN — Travel Beyond The Expected" },
+      { title: "QARWAAN — Your Next Adventure Starts Here" },
       {
         name: "description",
         content:
-          "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places.",
+          "Book your next adventure with Qarwaan Travels. Explore curated group trips, backpacking adventures and unforgettable domestic and international journeys. Choose your destination, find your people and get ready to travel, explore and make memories.",
       },
-      { property: "og:title", content: "QARWAAN — Travel Beyond The Expected" },
+      { property: "og:title", content: "QARWAAN — Your Next Adventure Starts Here" },
       {
         property: "og:description",
         content: "Curated luxury journeys, designed around you.",
