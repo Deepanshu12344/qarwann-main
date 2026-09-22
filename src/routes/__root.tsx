@@ -81,6 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "google-site-verification",
+        content: "JEbZ26Sjnq9rNiyjtPYF_EXuSvywHAI6rAx4AxtbhIE",
+      },
       { title: "QARWAAN — Travel Beyond The Expected" },
       { name: "description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
       { name: "author", content: "Qarwaan" },
