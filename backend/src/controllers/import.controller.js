@@ -1,4 +1,4 @@
-const XLSX = require('xlsx');
+const ExcelJS = require('exceljs');
 const slugify = require('slugify');
 const asyncHandler = require('express-async-handler');
 const Trip = require('../models/Trip');
@@ -6,6 +6,30 @@ const JourneyDay = require('../models/JourneyDay');
 
 const ABOUT_SHEET = 'ABOUT TRIP';
 const JOURNEY_SHEET = 'JOURNEY MASTER';
+const MAX_ROWS_PER_SHEET = 2_000;
+
+function isXlsxBuffer(buffer) {
+  if (!Buffer.isBuffer(buffer) || buffer.length < 4) return false;
+  return buffer.subarray(0, 4).equals(Buffer.from([0x50, 0x4b, 0x03, 0x04]));
+}
+
+function worksheetRows(worksheet) {
+  const headers = [];
+  worksheet.getRow(1).eachCell({ includeEmpty: false }, (cell, column) => {
+    headers[column] = String(cell.text || cell.value || '').trim();
+  });
+
+  const rows = [];
+  worksheet.eachRow({ includeEmpty: false }, (row, rowNumber) => {
+    if (rowNumber === 1) return;
+    const result = {};
+    for (let column = 1; column < headers.length; column += 1) {
+      if (headers[column]) result[headers[column]] = row.getCell(column).text;
+    }
+    rows.push(result);
+  });
+  return rows;
+}
 
 /* -------------------------------------------------------------------------- */
 /*  Helpers                                                                    */
@@ -134,13 +158,17 @@ const importExcel = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error('No file uploaded. Use form-field "file".');
   }
-
-  let workbook;
-  try {
-    workbook = XLSX.read(req.file.buffer, { type: 'buffer', cellDates: true });
-  } catch (e) {
+  if (!isXlsxBuffer(req.file.buffer)) {
     res.status(400);
-    throw new Error(`Could not parse Excel file: ${e.message}`);
+    throw new Error('Uploaded file is not a valid .xlsx workbook');
+  }
+
+  const workbook = new ExcelJS.Workbook();
+  try {
+    await workbook.xlsx.load(req.file.buffer);
+  } catch {
+    res.status(400);
+    throw new Error('Could not parse Excel file');
   }
 
   const summary = {
@@ -154,28 +182,26 @@ const importExcel = asyncHandler(async (req, res) => {
 
   // Find sheets case-insensitively
   const findSheet = (name) =>
-    workbook.SheetNames.find((s) => s.trim().toLowerCase() === name.toLowerCase());
+    workbook.worksheets.find((sheet) => sheet.name.trim().toLowerCase() === name.toLowerCase());
 
-  const aboutSheetName = findSheet(ABOUT_SHEET);
-  const journeySheetName = findSheet(JOURNEY_SHEET);
+  const aboutSheet = findSheet(ABOUT_SHEET);
+  const journeySheet = findSheet(JOURNEY_SHEET);
 
-  if (!aboutSheetName) {
+  if (!aboutSheet) {
     res.status(400);
     throw new Error(`Required sheet "${ABOUT_SHEET}" not found in workbook`);
   }
-  if (!journeySheetName) {
+  if (!journeySheet) {
     res.status(400);
     throw new Error(`Required sheet "${JOURNEY_SHEET}" not found in workbook`);
   }
 
-  const aboutRows = XLSX.utils.sheet_to_json(workbook.Sheets[aboutSheetName], {
-    defval: '',
-    raw: false,
-  });
-  const journeyRows = XLSX.utils.sheet_to_json(workbook.Sheets[journeySheetName], {
-    defval: '',
-    raw: false,
-  });
+  const aboutRows = worksheetRows(aboutSheet);
+  const journeyRows = worksheetRows(journeySheet);
+  if (aboutRows.length > MAX_ROWS_PER_SHEET || journeyRows.length > MAX_ROWS_PER_SHEET) {
+    res.status(400);
+    throw new Error(`Workbook sheets must contain at most ${MAX_ROWS_PER_SHEET} rows`);
+  }
 
   /* ---------- 1. Upsert trips ------------------------------------------- */
 
@@ -257,7 +283,7 @@ const importExcel = asyncHandler(async (req, res) => {
   res.json({
     success: true,
     file: req.file.originalname,
-    sheetsProcessed: [aboutSheetName, journeySheetName],
+    sheetsProcessed: [aboutSheet.name, journeySheet.name],
     ...summary,
   });
 });

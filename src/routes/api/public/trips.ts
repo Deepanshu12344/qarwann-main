@@ -273,16 +273,17 @@ export const TRIPS: Trip[] = QARWAAN_ITINERARIES.filter(
   popularity: 100 - index,
 }));
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
+const MAX_PAGE_SIZE = 100;
+
+function boundedNumber(value: string | null, fallback: number, minimum: number, maximum: number) {
+  if (value === null || value.trim() === "") return fallback;
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.min(maximum, Math.max(minimum, number)) : fallback;
+}
 
 export const Route = createFileRoute("/api/public/trips")({
   server: {
     handlers: {
-      OPTIONS: async () => new Response(null, { status: 204, headers: corsHeaders }),
       GET: async ({ request }) => {
         const url = new URL(request.url);
         const q = url.searchParams.get("q")?.toLowerCase().trim() ?? "";
@@ -291,15 +292,15 @@ export const Route = createFileRoute("/api/public/trips")({
         const duration = url.searchParams.get("duration") ?? "";
         const bestSeason = url.searchParams.get("bestSeason") ?? "";
         const idealFor = url.searchParams.get("idealFor") ?? "";
-        const minBudget = Number(url.searchParams.get("minBudget") ?? 0);
-        const maxBudget = Number(url.searchParams.get("maxBudget") ?? 100000);
+        const minBudget = boundedNumber(url.searchParams.get("minBudget"), 0, 0, 10_000_000);
+        const maxBudget = boundedNumber(url.searchParams.get("maxBudget"), 100000, 0, 10_000_000);
         const sort = url.searchParams.get("sort") ?? "popular";
         // Omitting pagination returns the complete filtered result set. Page and
         // pageSize remain supported for a future infinite-scroll client.
         const requestedPage = url.searchParams.get("page");
         const requestedPageSize = url.searchParams.get("pageSize");
-        const page = requestedPage ? Math.max(1, Number(requestedPage)) : 1;
-        const pageSize = requestedPageSize ? Math.max(1, Number(requestedPageSize)) : undefined;
+        const page = requestedPage ? boundedNumber(requestedPage, 1, 1, 10_000) : 1;
+        const pageSize = requestedPageSize ? boundedNumber(requestedPageSize, 20, 1, MAX_PAGE_SIZE) : undefined;
 
         let results = TRIPS.filter((t) => {
           if (q) {
@@ -336,7 +337,7 @@ export const Route = createFileRoute("/api/public/trips")({
 
         return new Response(
           JSON.stringify({ items, total, page, pageSize, facets }),
-          { headers: { "Content-Type": "application/json", ...corsHeaders } },
+          { headers: { "Content-Type": "application/json" } },
         );
       },
     },

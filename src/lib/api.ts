@@ -9,24 +9,14 @@ const ENV_BASE =
 export const API_BASE_URL: string =
   (ENV_BASE || "http://localhost:5000").replace(/\/+$/, "");
 
-const TOKEN_KEY = "qarwaan_admin_token";
+let csrfToken: string | null = null;
 
-export function getToken(): string | null {
-  if (typeof window === "undefined") return null;
-  try {
-    return window.localStorage.getItem(TOKEN_KEY);
-  } catch {
-    return null;
-  }
+export function getCsrfToken(): string | null {
+  return csrfToken;
 }
-export function setToken(token: string | null) {
-  if (typeof window === "undefined") return;
-  try {
-    if (token) window.localStorage.setItem(TOKEN_KEY, token);
-    else window.localStorage.removeItem(TOKEN_KEY);
-  } catch {
-    /* ignore */
-  }
+
+export function setCsrfToken(token: string | null) {
+  csrfToken = token;
 }
 
 export class ApiError extends Error {
@@ -50,12 +40,12 @@ export async function api<T = any>(path: string, opts: Opts = {}): Promise<T> {
   if (body && !(body instanceof FormData) && !finalHeaders["Content-Type"]) {
     finalHeaders["Content-Type"] = "application/json";
   }
-  if (auth) {
-    const token = getToken();
-    if (token) finalHeaders.Authorization = `Bearer ${token}`;
+  if (auth && !["GET", "HEAD", "OPTIONS"].includes((rest.method || "GET").toUpperCase())) {
+    const csrfToken = getCsrfToken();
+    if (csrfToken) finalHeaders["X-CSRF-Token"] = csrfToken;
   }
   const url = path.startsWith("http") ? path : `${API_BASE_URL}${path}`;
-  const res = await fetch(url, { ...rest, headers: finalHeaders, body });
+  const res = await fetch(url, { ...rest, headers: finalHeaders, body, credentials: rest.credentials ?? "include" });
   if (raw) return res as any;
   const isJson = (res.headers.get("content-type") || "").includes("application/json");
   const data = isJson ? await res.json().catch(() => null) : await res.text();

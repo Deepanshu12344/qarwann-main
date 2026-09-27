@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-import { api, API_BASE_URL, getToken } from "@/lib/api";
+import { api, API_BASE_URL, getCsrfToken } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -116,7 +116,8 @@ function EnquiriesPage() {
       const sp = new URLSearchParams();
       if (status) sp.set("status", status);
       const res = await fetch(`${API_BASE_URL}/api/enquiries/export?${sp.toString()}`, {
-        headers: { Authorization: `Bearer ${getToken() || ""}` },
+        credentials: "include",
+        headers: getCsrfToken() ? { "X-CSRF-Token": getCsrfToken()! } : {},
       });
       if (!res.ok) throw new Error(`Export failed (${res.status})`);
       const blob = await res.blob();

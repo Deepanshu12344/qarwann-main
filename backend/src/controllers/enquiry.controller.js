@@ -1,8 +1,13 @@
 const asyncHandler = require('express-async-handler');
-const XLSX = require('xlsx');
+const ExcelJS = require('exceljs');
 const Enquiry = require('../models/Enquiry');
 const { sendEnquiryEmail } = require('../services/mailer');
 const { addSubscriber } = require('../services/brevo');
+
+function safeCell(value) {
+  const stringValue = String(value ?? '');
+  return /^[=+\-@]/.test(stringValue) ? `'${stringValue}` : stringValue;
+}
 
 exports.createEnquiry = asyncHandler(async (req, res) => {
   const payload = { ...req.body };
@@ -91,22 +96,24 @@ exports.exportEnquiries = asyncHandler(async (req, res) => {
   const items = await Enquiry.find(filter).sort({ createdAt: -1 }).lean();
   const rows = items.map((e) => ({
     Date: new Date(e.createdAt).toISOString(),
-    Name: e.name,
-    Email: e.email,
-    Phone: e.phone,
-    Trip: e.tripName || '',
+    Name: safeCell(e.name),
+    Email: safeCell(e.email),
+    Phone: safeCell(e.phone),
+    Trip: safeCell(e.tripName),
     Travelers: e.travelers,
     'Start Date': e.travelStartDate ? new Date(e.travelStartDate).toISOString().slice(0, 10) : '',
     'End Date': e.travelEndDate ? new Date(e.travelEndDate).toISOString().slice(0, 10) : '',
-    Message: e.message || '',
+    Message: safeCell(e.message),
     'Newsletter Opt-In': e.newsletterOptIn ? 'Yes' : 'No',
     Status: e.status,
-    Source: e.source || '',
+    Source: safeCell(e.source),
   }));
-  const ws = XLSX.utils.json_to_sheet(rows);
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Enquiries');
-  const buf = XLSX.write(wb, { type: 'buffer', bookType: 'xlsx' });
+  const headers = ['Date', 'Name', 'Email', 'Phone', 'Trip', 'Travelers', 'Start Date', 'End Date', 'Message', 'Newsletter Opt-In', 'Status', 'Source'];
+  const wb = new ExcelJS.Workbook();
+  const ws = wb.addWorksheet('Enquiries');
+  ws.columns = headers.map((header) => ({ header, key: header, width: 24 }));
+  ws.addRows(rows);
+  const buf = Buffer.from(await wb.xlsx.writeBuffer());
   const filename = `qarwaan-enquiries-${new Date().toISOString().slice(0, 10)}.xlsx`;
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);

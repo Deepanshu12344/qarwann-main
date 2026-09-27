@@ -4,10 +4,9 @@ function notFound(req, res, next) {
 
 function errorHandler(err, req, res, _next) {
   const status = err.statusCode || (err.name === 'ValidationError' ? 400 : 500);
-  const payload = {
-    message: err.message || 'Internal Server Error',
-  };
-  if (err.issues) payload.issues = err.issues; // zod
+  const isServerError = status >= 500;
+  const payload = { message: isServerError ? 'Internal Server Error' : (err.message || 'Request failed') };
+  if (!isServerError && err.issues) payload.issues = err.issues; // zod
   if (process.env.NODE_ENV !== 'production') payload.stack = err.stack;
   res.status(status).json(payload);
 }

@@ -12,6 +12,7 @@ export function submitEnquiry(payload: Record<string, unknown>) {
   return api<FormspreeResponse>(FORMSPREE_ENQUIRY_ENDPOINT, {
     method: "POST",
     body: JSON.stringify(payload),
+    credentials: "omit",
   });
 }
 
@@ -20,5 +21,6 @@ export function submitContact(payload: Record<string, unknown>) {
   return api<FormspreeResponse>(FORMSPREE_CONTACT_ENDPOINT, {
     method: "POST",
     body: JSON.stringify(payload),
+    credentials: "omit",
   });
 }

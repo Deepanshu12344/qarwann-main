@@ -155,7 +155,7 @@ function RootComponent() {
               addressCountry: "IN",
             },
             sameAs: ["https://www.instagram.com/qarwaantravels/"],
-          }),
+          }).replace(/</g, "\\u003c"),
         }}
       />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

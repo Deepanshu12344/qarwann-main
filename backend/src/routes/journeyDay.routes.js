@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const validate = require('../middleware/validate');
-const { requireAdmin } = require('../middleware/auth');
+const { requireAdmin, requireCsrf } = require('../middleware/auth');
 const {
   journeyDayCreateSchema,
   journeyDayUpdateSchema,
@@ -12,16 +12,16 @@ const ctrl = require('../controllers/journeyDay.controller');
 router
   .route('/')
   .get(validate({ query: listQuerySchema }), ctrl.listJourneyDays)
-  .post(requireAdmin, validate({ body: journeyDayCreateSchema }), ctrl.createJourneyDay);
+  .post(requireAdmin, requireCsrf, validate({ body: journeyDayCreateSchema }), ctrl.createJourneyDay);
 
 router
   .route('/:id')
   .get(validate({ params: idParamSchema }), ctrl.getJourneyDay)
   .patch(
-    requireAdmin,
+    requireAdmin, requireCsrf,
     validate({ params: idParamSchema, body: journeyDayUpdateSchema }),
     ctrl.updateJourneyDay
   )
-  .delete(requireAdmin, validate({ params: idParamSchema }), ctrl.deleteJourneyDay);
+  .delete(requireAdmin, requireCsrf, validate({ params: idParamSchema }), ctrl.deleteJourneyDay);
 
 module.exports = router;

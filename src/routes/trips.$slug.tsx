@@ -387,7 +387,7 @@ function TripStructuredData({ trip }: { trip: TripDetail }) {
             url: tripUrl,
             ...(trip.coverImage ? { image: absoluteUrl(trip.coverImage) } : {}),
           },
-        ]),
+        ]).replace(/</g, "\\u003c"),
       }}
     />
   );

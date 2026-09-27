@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import { api, getToken, setToken } from "./api";
+import { api, setCsrfToken } from "./api";
 
 export type AdminUser = { email: string; role: string };
 
@@ -10,50 +10,41 @@ function emit() {
 }
 
 export async function adminLogin(email: string, password: string): Promise<AdminUser> {
-  const data = await api<{ token: string; user: AdminUser }>("/api/auth/login", {
+  const data = await api<{ csrfToken: string; user: AdminUser }>("/api/auth/login", {
     method: "POST",
     body: JSON.stringify({ email, password }),
   });
-  setToken(data.token);
+  setCsrfToken(data.csrfToken);
   emit();
   return data.user;
 }
 
-export function adminLogout() {
-  setToken(null);
+export async function adminLogout() {
+  try {
+    await api("/api/auth/logout", { method: "POST", auth: true });
+  } finally {
+    setCsrfToken(null);
+  }
   emit();
 }
 
 export function useAdminAuth() {
-  const [token, setT] = useState<string | null>(() => getToken());
   const [user, setUser] = useState<AdminUser | null>(null);
-  const [loading, setLoading] = useState<boolean>(!!getToken());
-
-  useEffect(() => {
-    const sync = () => setT(getToken());
-    window.addEventListener(EVENT, sync);
-    window.addEventListener("storage", sync);
-    return () => {
-      window.removeEventListener(EVENT, sync);
-      window.removeEventListener("storage", sync);
-    };
-  }, []);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
-    if (!token) {
-      setUser(null);
-      setLoading(false);
-      return;
-    }
     setLoading(true);
-    api<{ user: AdminUser }>("/api/auth/me", { auth: true })
+    api<{ csrfToken: string; user: AdminUser }>("/api/auth/me", { auth: true })
       .then((d) => {
-        if (!cancelled) setUser(d.user);
+        if (!cancelled) {
+          setCsrfToken(d.csrfToken);
+          setUser(d.user);
+        }
       })
       .catch(() => {
         if (!cancelled) {
-          setToken(null);
+          setCsrfToken(null);
           setUser(null);
         }
       })
@@ -63,11 +54,11 @@ export function useAdminAuth() {
     return () => {
       cancelled = true;
     };
-  }, [token]);
-
-  const logout = useCallback(() => {
-    adminLogout();
   }, []);
 
-  return { token, user, loading, isAuthenticated: !!user, logout };
+  const logout = useCallback(async () => {
+    await adminLogout();
+  }, []);
+
+  return { user, loading, isAuthenticated: !!user, logout };
 }

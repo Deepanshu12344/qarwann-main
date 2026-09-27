@@ -6,17 +6,16 @@ const storage = multer.memoryStorage();
 const fileFilter = (_req, file, cb) => {
   const ok = [
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', // .xlsx
-    'application/vnd.ms-excel', // .xls
     'application/octet-stream', // some browsers
-  ].includes(file.mimetype) || /\.(xlsx|xls)$/i.test(file.originalname);
-  if (!ok) return cb(new Error('Only .xlsx or .xls files are allowed'));
+  ].includes(file.mimetype) || /\.xlsx$/i.test(file.originalname);
+  if (!ok) return cb(new Error('Only .xlsx files are allowed'));
   cb(null, true);
 };
 
 const upload = multer({
   storage,
   fileFilter,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB
+  limits: { fileSize: 10 * 1024 * 1024, files: 1, fields: 20, fieldSize: 10 * 1024 }, // 10 MB file; tightly bounded multipart metadata
 });
 
 module.exports = upload;

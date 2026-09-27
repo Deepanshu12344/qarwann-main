@@ -16,10 +16,13 @@ export const Route = createFileRoute("/admin/login")({
 function LoginPage() {
   const navigate = useNavigate();
   const { isAuthenticated, loading } = useAdminAuth();
-  const redirectTo =
+  const requestedRedirect =
     (typeof window !== "undefined" &&
       new URLSearchParams(window.location.search).get("redirect")) ||
     "/admin";
+  const redirectTo = requestedRedirect.startsWith("/") && !requestedRedirect.startsWith("//")
+    ? requestedRedirect
+    : "/admin";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ArrowLeft, FileUp, Loader2, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 
-import { API_BASE_URL, getToken } from "@/lib/api";
+import { API_BASE_URL, getCsrfToken } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -34,7 +34,8 @@ function ImportTripsPage() {
       fd.append("file", file);
       const res = await fetch(`${API_BASE_URL}/api/import/excel`, {
         method: "POST",
-        headers: { Authorization: `Bearer ${getToken() || ""}` },
+        credentials: "include",
+        headers: getCsrfToken() ? { "X-CSRF-Token": getCsrfToken()! } : {},
         body: fd,
       });
       const data = await res.json().catch(() => null);
@@ -69,11 +70,11 @@ function ImportTripsPage() {
         <form onSubmit={onUpload} className="space-y-5">
           <label className="block">
             <span className="text-xs uppercase tracking-[0.18em] text-foreground/70">
-              Excel file (.xlsx / .xls)
+              Excel file (.xlsx)
             </span>
             <input
               type="file"
-              accept=".xlsx,.xls"
+              accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
               onChange={(e) => setFile(e.target.files?.[0] ?? null)}
               className="mt-2 block w-full rounded-md border border-input bg-background p-3 text-sm file:mr-3 file:rounded-md file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-primary-foreground"
             />

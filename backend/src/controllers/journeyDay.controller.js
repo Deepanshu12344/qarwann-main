@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const JourneyDay = require('../models/JourneyDay');
 const Trip = require('../models/Trip');
+const SORTS = new Set(['day', '-day', 'createdAt', '-createdAt']);
 
 // POST /api/journey-days
 const createJourneyDay = asyncHandler(async (req, res) => {
@@ -21,7 +22,7 @@ const listJourneyDays = asyncHandler(async (req, res) => {
 
   const skip = (page - 1) * limit;
   const [items, total] = await Promise.all([
-    JourneyDay.find(filter).sort(sort).skip(skip).limit(limit),
+    JourneyDay.find(filter).sort(SORTS.has(sort) ? sort : 'day').skip(skip).limit(limit),
     JourneyDay.countDocuments(filter),
   ]);
 
