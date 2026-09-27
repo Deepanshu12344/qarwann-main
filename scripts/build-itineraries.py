@@ -18,7 +18,7 @@ WORKBOOKS = [
     ("Goa_Qar..xlsx", "goa-coastal-charm-cultural-escape", "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Nepal Qa..xlsx", "nepal-himalayan-heritage-lakes-jungle-escape", "/images/nepal/Nepal Main Photo.avif", "Nepal"),
     ("Kerala Qa..xlsx", "kerala-serenity-escape", "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85", "India"),
-    ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh-cover.png", "India"),
+    ("Ladakh Qa.xlsx", "ladakh-himalayan-expedition", "/images/ladakh/ladakh-cover.png", "India"),
     ("Rajasthan Qar..xlsx", "rajasthan-royal-heritage-desert-odyssey", "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85", "India"),
     ("Jim Corbett Getaway.xlsx", "jim-corbett-wild-trails-and-forest-escape", "/images/jim-corbett/hero-image.png", "India"),
     ("COORG Getaway QA..xlsx", "coorg-coffee-forests-kodava-culture", "/images/coorg/main.png", "India"),
@@ -27,7 +27,7 @@ WORKBOOKS = [
     ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "/images/rishikesh/hero-image.jpg", "India"),
     ("Ooty_Coonoor Getaway Qa,.xlsx", "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes", "/images/ooty/main-image.png", "India"),
     ("Darjeeling Getaway Qa..xlsx", "darjeeling-tea-trails-himalayan-views-toy-train-heritage", "/images/darjeeling/main-image.png", "India"),
-    ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
+    ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti/spiti-cover.png", "India"),
 ]
 
 # Starting prices are maintained here so regenerated itinerary data keeps the

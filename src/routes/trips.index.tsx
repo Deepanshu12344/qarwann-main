@@ -79,7 +79,7 @@ export const Route = createFileRoute("/trips/")({
         content: "Discover curated luxury journeys across the world.",
       },
       { property: "og:url", content: `${SITE_URL}/trips` },
-      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh/ladakh-cover.png` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/trips` }],
   }),

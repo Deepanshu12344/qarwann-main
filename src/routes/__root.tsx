@@ -97,8 +97,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "QARWAAN crafts effortless, personal journeys to the world's most iconic and hidden places." },
       { property: "og:site_name", content: "Qarwaan" },
       { property: "og:locale", content: "en_IN" },
-      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
-      { name: "twitter:image", content: `${SITE_URL}/images/ladakh-cover.png` },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh/ladakh-cover.png` },
+      { name: "twitter:image", content: `${SITE_URL}/images/ladakh/ladakh-cover.png` },
     ],
     links: [
       { rel: "icon", href: "/favicon.svg?v=3", type: "image/svg+xml" },

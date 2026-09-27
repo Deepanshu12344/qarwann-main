@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
         content: "Curated luxury journeys, designed around you.",
       },
       { property: "og:url", content: `${SITE_URL}/` },
-      { property: "og:image", content: `${SITE_URL}/images/ladakh-cover.png` },
+      { property: "og:image", content: `${SITE_URL}/images/ladakh/ladakh-cover.png` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
@@ -68,11 +68,11 @@ const TRIP_IMAGES = {
   goa: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
   nepal: "/images/nepal/Nepal Main Photo.avif",
   kerala: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
-  ladakh: "/images/ladakh-cover.png",
+  ladakh: "/images/ladakh/ladakh-cover.png",
   rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
   jimCorbett: "/images/jim-corbett/collage/elephant-in-jim-corbett.jpg",
   ooty: "/images/ooty/main-image.png",
-  spiti: "/images/spiti-cover.png",
+  spiti: "/images/spiti/spiti-cover.png",
 };
 
 const HERO_IMAGES_BY_SLUG = new Map(
