@@ -57,6 +57,7 @@ const WEEKEND_GETAWAY_SLUGS = new Set([
   "hampi-heritage-weekend-escape",
   "kasauli-colonial-charm-pine-trails-slow-mountain-living",
   "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes",
+  "darjeeling-tea-trails-himalayan-views-toy-train-heritage",
 ]);
 
 export const Route = createFileRoute("/trips/")({

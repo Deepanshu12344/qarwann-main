@@ -4670,6 +4670,186 @@ export const QARWAAN_ITINERARIES = [
     ]
   },
   {
+    "id": "darjeeling-tea-trails-himalayan-views-toy-train-heritage",
+    "slug": "darjeeling-tea-trails-himalayan-views-toy-train-heritage",
+    "packageName": "Darjeeling – Tea Trails, Himalayan Views & Toy Train Heritage",
+    "coverImage": "/images/darjeeling/main-image.png",
+    "country": "India",
+    "duration": "2 Nights / 3 Days",
+    "durationDays": 3,
+    "citiesCovered": [
+      "Bagdogra – Darjeeling"
+    ],
+    "bestSeason": [
+      "October – April"
+    ],
+    "startPoint": "Bagdogra",
+    "endPoint": "Bagdogra",
+    "tripType": "Mixed",
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Friends",
+      "Students",
+      "Corporate Groups",
+      "Solo Travellers",
+      "Nature Lovers",
+      "Tea Enthusiasts"
+    ],
+    "budgetFrom": 0,
+    "detailedOverview": "Experience the timeless charm of Darjeeling through a 2 Nights / 3 Days escape combining Himalayan scenery, tea gardens, colonial heritage and the celebrated Darjeeling Himalayan Railway. The journey begins at Bagdogra, followed by a scenic mountain transfer to Darjeeling and a relaxed introduction to the town around Chowrasta and Mall Road. Day two begins early with a sunrise excursion to Tiger Hill, followed by Batasia Loop and Ghoom before continuing with Darjeeling's cultural and heritage attractions. The afternoon is dedicated to a curated tea experience at a Darjeeling tea estate, followed by leisure time around Chowrasta. The final morning is kept comfortable, with time for a heritage walk, local shopping and optional visits depending on departure timing before transferring back to Bagdogra. Rather than attempting to cover every attraction in the wider Darjeeling hills, this itinerary focuses on the experiences that define the destination: Kanchenjunga views, Darjeeling tea, the Toy Train, colonial-era townscape, Himalayan culture and relaxed mountain living.",
+    "whyThisTrip": "Darjeeling combines iconic Himalayan scenery, world-famous tea, heritage railways and a distinctive mountain-town culture within one compact destination.",
+    "keyExperiences": [
+      "Tiger Hill sunrise",
+      "Kanchenjunga views",
+      "Batasia Loop",
+      "Ghoom",
+      "Darjeeling Himalayan Railway",
+      "tea-estate experience",
+      "Chowrasta",
+      "Himalayan heritage and local cuisine"
+    ],
+    "locationBanners": {},
+    "journeyDays": [
+      {
+        "day": 1,
+        "route": "Bagdogra → Darjeeling",
+        "location": "Darjeeling",
+        "phase": "Scenic Arrival & Colonial Town Experience",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": false,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Chowrasta",
+          "Mall Road",
+          "Darjeeling town"
+        ],
+        "experienceDetails": "Arrive at Bagdogra Airport and begin the road transfer towards Darjeeling via Siliguri and the Himalayan mountain roads. The official Darjeeling district tourism information places Bagdogra approximately 90 km from Darjeeling. (Darjeeling District) After reaching Darjeeling, check into the hotel and allow time to settle in. In the late afternoon, explore Chowrasta and the surrounding Mall area on foot. Spend time taking in the colonial architecture, mountain atmosphere and local cafés before enjoying a relaxed evening. Keep the first day deliberately light because the transfer from the plains into the hills is itself an important part of the experience.",
+        "hiddenGems": [
+          "Quiet lanes around Chowrasta and smaller local cafés away from the busiest stretches"
+        ],
+        "activities": [
+          "Scenic mountain drive",
+          "heritage walk",
+          "photography",
+          "café experience and relaxed shopping"
+        ],
+        "localFood": [
+          "Momos",
+          "thukpa",
+          "Darjeeling tea",
+          "Tibetan-style noodles",
+          "local bakery items and traditional Nepali dishes"
+        ],
+        "localExperience": "Explore local shops for Darjeeling tea, woollens, handicrafts, handmade products and local snacks",
+        "festivals": [
+          "Darjeeling Carnival / Darjeeling Tea & Tourism Festival",
+          "dates vary annually"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Mountain Resort",
+        "accessibility": "Air + Road: Bagdogra is the nearest airport, approximately 90 km from Darjeeling. The road journey from Bagdogra/Siliguri to Darjeeling generally takes several hours depending on traffic and hill-road conditions. (Darjeeling District)",
+        "images": [
+          "/images/darjeeling/daywise/day1-1.png",
+          "/images/darjeeling/daywise/day1-2.png"
+        ]
+      },
+      {
+        "day": 2,
+        "route": "Darjeeling → Tiger Hill → Ghoom → Batasia Loop → Darjeeling → Tea Estate → Chowrasta",
+        "location": "Darjeeling / Ghoom",
+        "phase": "Himalayan Sunrise, Heritage & Tea Experience",
+        "nature": true,
+        "adventure": true,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Tiger Hill",
+          "Ghoom",
+          "Batasia Loop",
+          "Darjeeling Himalayan Railway",
+          "Happy Valley Tea Estate",
+          "Chowrasta"
+        ],
+        "experienceDetails": "Begin before sunrise for the drive to Tiger Hill, one of Darjeeling's signature viewpoints. On clear mornings, the sunrise illuminates Kanchenjunga and the surrounding Himalayan peaks; Mount Everest can also be visible from Tiger Hill under suitable conditions. (Darjeeling District) Continue towards Ghoom and Batasia Loop, where travellers can experience the landscape associated with the Darjeeling Himalayan Railway. The official district tourism source identifies Batasia Loop as being about 5 km from Darjeeling and highlights its views and railway engineering. (Darjeeling District) After breakfast, continue with a curated tea-estate experience, preferably including a guided walk and tea tasting. Happy Valley Tea Estate is approximately 3 km from Darjeeling town and is one of the area's historic tea estates. (Darjeeling District) Return to town for lunch and spend the evening around Chowrasta.",
+        "hiddenGems": [
+          "Smaller tea-growing lanes and quieter viewpoints around Darjeeling"
+        ],
+        "activities": [
+          "Sunrise viewing",
+          "photography",
+          "heritage railway experience",
+          "tea-estate walk",
+          "tea tasting and local exploration"
+        ],
+        "localFood": [
+          "Darjeeling tea",
+          "momos",
+          "thukpa",
+          "churpee",
+          "Tibetan-style snacks and local bakery items"
+        ],
+        "localExperience": "Purchase estate tea, handmade products, woollens and local handicrafts; interact with tea-estate staff during the guided experience",
+        "festivals": [
+          "Seasonal local cultural events"
+        ],
+        "stayType": "Heritage Hotel / Boutique Hotel / Premium Mountain Resort",
+        "accessibility": "Local road transfers + walking: Tiger Hill is approximately 13 km from Darjeeling town. The DHR is a UNESCO World Heritage railway, and tourist joy rides operate subject to the current railway schedule and availability. (West Bengal Tourism)",
+        "images": [
+          "/images/darjeeling/daywise/day2-1.png",
+          "/images/darjeeling/daywise/day2-2.png"
+        ]
+      },
+      {
+        "day": 3,
+        "route": "Darjeeling → Local Heritage Experience → Bagdogra",
+        "location": "Darjeeling / Bagdogra",
+        "phase": "Heritage, Local Shopping & Departure",
+        "nature": true,
+        "adventure": false,
+        "culture": true,
+        "spiritual": true,
+        "heritage": true,
+        "modern": false,
+        "keyAttractions": [
+          "Himalayan Mountaineering Institute",
+          "Padmaja Naidu Himalayan Zoological Park",
+          "Observatory Hill / Mahakal Temple",
+          "Chowrasta"
+        ],
+        "experienceDetails": "Start with breakfast and check out according to the departure schedule. If the flight/train timing permits, visit the Himalayan Mountaineering Institute and Padmaja Naidu Himalayan Zoological Park, both recognised attractions in Darjeeling's official tourism listings. (Darjeeling District) Alternatively, keep the morning slower with a final heritage walk around Chowrasta and Observatory Hill. Spend the remaining time shopping for Darjeeling tea, local handicrafts and regional products before beginning the road transfer to Bagdogra. The day is deliberately not overloaded because the descent from Darjeeling and transfer to the airport require sufficient buffer time.",
+        "hiddenGems": [
+          "Quiet morning around Chowrasta and Observatory Hill"
+        ],
+        "activities": [
+          "Heritage walk",
+          "museum/zoo visit where timing permits",
+          "photography and local shopping"
+        ],
+        "localFood": [
+          "Darjeeling tea",
+          "momos",
+          "thukpa",
+          "local bakery products and Nepali/Tibetan dishes"
+        ],
+        "localExperience": "Final opportunity to purchase premium Darjeeling tea, woollens, handicrafts and locally produced items",
+        "festivals": [
+          "N/A"
+        ],
+        "stayType": "Departure",
+        "accessibility": "Road + Air: Transfer by road from Darjeeling to Bagdogra Airport. Exact departure time should be planned around the flight schedule and hill-road conditions.",
+        "images": [
+          "/images/darjeeling/daywise/day3-1.png",
+          "/images/darjeeling/daywise/day3-2.png"
+        ]
+      }
+    ]
+  },
+  {
     "id": "spiti-valley-expedition",
     "slug": "spiti-valley-expedition",
     "packageName": "Spiti Valley – The Himalayan Odyssey",

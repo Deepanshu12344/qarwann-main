@@ -120,6 +120,7 @@ const TRIP_SEO_TITLES: Record<string, string> = {
   "kasauli-colonial-charm-pine-trails-slow-mountain-living": "Kasauli Weekend Getaway Itinerary | Qarwaan",
   "rishikesh-reset-by-the-ganga-weekend-escape": "Rishikesh Weekend Getaway Itinerary | Qarwaan",
   "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": "Ooty & Coonoor Weekend Getaway Itinerary | Qarwaan",
+  "darjeeling-tea-trails-himalayan-views-toy-train-heritage": "Darjeeling Weekend Getaway Itinerary | Qarwaan",
   "spiti-valley-expedition": "Spiti Valley Expedition Itinerary | Qarwaan",
 };
 
@@ -201,6 +202,12 @@ const TRIP_COLLAGE_IMAGES: Record<string, string[]> = {
     "/images/ooty/collage/7b9a08f7fce9bd9cd99eed8b2c93f5a3.jpg",
     "/images/ooty/collage/7e4eaa7754c670b0a11ea1beb6c3768b.jpg",
     "/images/ooty/collage/c32fb14f-09fa-4ea5-8512-9c33d5cc01a6.png",
+  ],
+  "darjeeling-tea-trails-himalayan-views-toy-train-heritage": [
+    "/images/darjeeling/main-image.png",
+    "/images/darjeeling/collage/c666cf67645422c2e03115ea3abe089e.jpg",
+    "/images/darjeeling/collage/e79337c48efb44d3bcbfc2529e6a1076.jpg",
+    "/images/darjeeling/collage/ChatGPT Image Sep 26, 2026, 11_56_41 PM.png",
   ],
   "spiti-valley-expedition": [
     "/images/spiti/collage/anmol-arora-fSs7jp_rx0w-unsplash.jpg",
@@ -666,7 +673,7 @@ function CollageGrid({ trip, images }: { trip: TripDetail; images: string[] }) {
               loading="lazy"
               width={1200}
               height={900}
-              className={`h-full w-full object-cover ${src === "/images/jim-corbett/collage/jpeg" ? "object-[center_90%]" : ""}`}
+              className={`h-full w-full object-cover ${src === "/images/jim-corbett/collage/jpeg" ? "object-[center_90%]" : ""} ${trip.slug === "darjeeling-tea-trails-himalayan-views-toy-train-heritage" && index === 2 ? "object-[center_35%]" : ""}`}
             />
           </div>
         ))}

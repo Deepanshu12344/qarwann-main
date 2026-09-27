@@ -26,6 +26,7 @@ WORKBOOKS = [
     ("Kasauli Getaway Qa..xlsx", "kasauli-colonial-charm-pine-trails-slow-mountain-living", "/images/kasauli/hero-image.png", "India"),
     ("Rishikesh Getaway Qa..xlsx", "rishikesh-reset-by-the-ganga-weekend-escape", "/images/rishikesh/hero-image.jpg", "India"),
     ("Ooty_Coonoor Getaway Qa,.xlsx", "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes", "/images/ooty/main-image.png", "India"),
+    ("Darjeeling Getaway Qa..xlsx", "darjeeling-tea-trails-himalayan-views-toy-train-heritage", "/images/darjeeling/main-image.png", "India"),
     ("Spiti Valley Qar..xlsx", "spiti-valley-expedition", "/images/spiti-cover.png", "India"),
 ]
 
@@ -46,6 +47,7 @@ STARTING_PRICES = {
     "kasauli-colonial-charm-pine-trails-slow-mountain-living": 0,
     "rishikesh-reset-by-the-ganga-weekend-escape": 0,
     "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": 0,
+    "darjeeling-tea-trails-himalayan-views-toy-train-heritage": 0,
     "spiti-valley-expedition": 15999,
 }
 
@@ -176,6 +178,9 @@ IMAGE_LIBRARY = {
     "ooty-tea-country": [
         "/images/ooty/main-image.png",
     ],
+    "darjeeling-himalayas": [
+        "/images/darjeeling/main-image.png",
+    ],
 }
 
 DAY_IMAGE_THEMES = {
@@ -193,6 +198,7 @@ DAY_IMAGE_THEMES = {
     "kasauli-colonial-charm-pine-trails-slow-mountain-living": ["kasauli-hills", "kasauli-hills", "kasauli-hills"],
     "rishikesh-reset-by-the-ganga-weekend-escape": ["rishikesh-riverside", "rishikesh-riverside", "rishikesh-riverside"],
     "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes": ["ooty-tea-country", "ooty-tea-country", "ooty-tea-country"],
+    "darjeeling-tea-trails-himalayan-views-toy-train-heritage": ["darjeeling-himalayas", "darjeeling-himalayas", "darjeeling-himalayas"],
     "spiti-valley-expedition": ["spiti-mountains", "spiti-mountains", "spiti-monastery", "spiti-monastery", "spiti-monastery", "spiti-mountains", "spiti-mountains"],
 }
 
@@ -315,6 +321,11 @@ LOCAL_DAY_IMAGES = {
         6: ["/images/spiti/daywise/day6-1.jpeg", "/images/spiti/daywise/day6-2.jpeg", "/images/spiti/daywise/day6-3.jpeg"],
         7: ["/images/spiti/daywise/day7-1.jpeg", "/images/spiti/daywise/day7-2.jpeg", "/images/spiti/daywise/day7-3.jpeg"],
     },
+    "darjeeling-tea-trails-himalayan-views-toy-train-heritage": {
+        1: ["/images/darjeeling/daywise/day1-1.png", "/images/darjeeling/daywise/day1-2.png"],
+        2: ["/images/darjeeling/daywise/day2-1.png", "/images/darjeeling/daywise/day2-2.png"],
+        3: ["/images/darjeeling/daywise/day3-1.png", "/images/darjeeling/daywise/day3-2.png"],
+    },
 }
 
 
@@ -393,6 +404,8 @@ def main() -> None:
                 "accessibility": row["Accessibility (Road/Flight)"], "images": images,
             })
         duration = about["Duration"]
+        if duration.strip().isdigit():
+            duration = f"{max(len(days) - 1, 0)} Nights / {len(days)} Days"
         days_match = re.search(r"(\d+)\s*Days?", duration, re.I)
         trips.append({
             "id": slug, "slug": slug, "packageName": about["Package Name"], "coverImage": cover,
