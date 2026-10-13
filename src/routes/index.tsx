@@ -232,10 +232,10 @@ function Navbar() {
 
         <button
           aria-label="Menu"
-          className={`md:hidden ${scrolled ? "text-primary" : "text-background"}`}
+          className={`md:hidden flex items-center justify-center p-2 rounded-lg ${scrolled ? "text-primary" : "text-background"} hover:opacity-80 transition`}
           onClick={() => setOpen(true)}
         >
-          <Menu className="h-6 w-6" />
+          <Menu className="h-6 w-6 stroke-[1.75]" />
         </button>
       </div>
 
@@ -245,54 +245,55 @@ function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-primary text-primary-foreground"
+            className="fixed inset-0 z-[100] bg-[#004643] text-[#F0EDE5] flex flex-col justify-between overflow-y-auto"
           >
-            <div className="flex items-center justify-between px-5 py-4">
-              <span className="font-serif text-2xl tracking-[0.2em]">QARWAAN</span>
-              <button aria-label="Close" onClick={() => setOpen(false)}>
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-            <motion.nav
-              initial="hidden"
-              animate="show"
-              variants={{
-                show: { transition: { staggerChildren: 0.06 } },
-              }}
-              className="mt-16 flex flex-col gap-6 px-8"
-            >
-              {NAV.map((n) => (
-                <motion.div
-                  key={n.label}
-                  variants={{
-                    hidden: { opacity: 0, y: 12 },
-                    show: { opacity: 1, y: 0 },
-                  }}
-                >
-                  <Link
-                    to={n.to}
-                    onClick={() => setOpen(false)}
-                    className="font-serif text-4xl"
-                  >
-                    {n.label}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  show: { opacity: 1, y: 0 },
-                }}
-              >
-                <Link
-                  to="/enquire"
+            <div>
+              <div className="flex items-center justify-between px-6 py-5">
+                <span className="font-serif text-2xl tracking-[0.2em] text-[#F0EDE5]">QARWAAN</span>
+                <button
+                  aria-label="Close"
                   onClick={() => setOpen(false)}
-                  className="mt-8 inline-flex items-center gap-2 text-sm tracking-[0.25em] uppercase text-accent"
+                  className="rounded-full p-2 text-[#F0EDE5] hover:bg-white/10 transition"
                 >
-                  Plan a Journey <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </motion.div>
-            </motion.nav>
+                  <X className="h-6 w-6 stroke-[2]" />
+                </button>
+              </div>
+              <motion.nav
+                initial="hidden"
+                animate="show"
+                variants={{
+                  show: { transition: { staggerChildren: 0.06 } },
+                }}
+                className="mt-12 flex flex-col gap-6 px-8"
+              >
+                {NAV.map((n) => (
+                  <motion.div
+                    key={n.label}
+                    variants={{
+                      hidden: { opacity: 0, y: 12 },
+                      show: { opacity: 1, y: 0 },
+                    }}
+                  >
+                    <Link
+                      to={n.to}
+                      onClick={() => setOpen(false)}
+                      className="font-serif text-3xl sm:text-4xl text-[#F0EDE5] hover:text-[#C9A227] transition-colors"
+                    >
+                      {n.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.nav>
+            </div>
+            <div className="px-8 pb-8 pt-6 border-t border-white/15">
+              <Link
+                to="/enquire"
+                onClick={() => setOpen(false)}
+                className="inline-flex items-center gap-2 text-base font-semibold tracking-wide text-[#C9A227] hover:text-white transition"
+              >
+                Plan Your Journey <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -675,7 +676,8 @@ function ExperienceCarousel({
               params={{ slug: e.slug }}
               className="group block h-full"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
+              {/* Card Container: Full-height rounded-2xl on mobile, aspect-[3/4] rounded-md on desktop */}
+              <div className="relative h-[380px] w-full overflow-hidden rounded-2xl bg-muted md:h-auto md:aspect-[3/4] md:rounded-md">
                 <img
                   src={HERO_IMAGES_BY_SLUG.get(e.slug) ?? e.img}
                   alt={e.title}
@@ -684,11 +686,25 @@ function ExperienceCarousel({
                   height={1600}
                   className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
                 />
-                <div className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-primary">
+                
+                {/* Duration Badge */}
+                <div className="absolute left-3.5 top-3.5 rounded-full bg-black/45 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-white backdrop-blur-md md:left-4 md:top-4 md:bg-background/90 md:text-primary">
                   {e.duration}
                 </div>
+
+                {/* Mobile-Only Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:hidden" />
+
+                {/* Mobile-Only Overlaid Destination Name (Bottom-Left) */}
+                <div className="absolute inset-x-0 bottom-0 p-5 md:hidden z-10 text-left">
+                  <h4 className="text-white font-bold text-2xl leading-tight drop-shadow-sm">
+                    {e.title}
+                  </h4>
+                </div>
               </div>
-              <div className="mt-5 flex items-start justify-between gap-4">
+
+              {/* Desktop-Only Information Area (Hidden on Mobile) */}
+              <div className="mt-5 hidden md:flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
                     {e.place}

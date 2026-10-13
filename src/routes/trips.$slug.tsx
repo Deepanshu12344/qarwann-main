@@ -650,21 +650,21 @@ function Collage({ trip }: { trip: TripDetail }) {
 function CollageGrid({ trip, images }: { trip: TripDetail; images: string[] }) {
   return (
     <section
-      className="h-[70svh] min-h-[420px] w-full overflow-hidden bg-background"
+      className="h-[60svh] min-h-[380px] w-full overflow-hidden bg-background md:h-[70svh] md:min-h-[420px]"
       aria-label={`${trip.country ?? trip.packageName} journey highlights`}
     >
-      <div className="grid h-full grid-cols-2 grid-rows-3 gap-3 md:grid-cols-[2fr_1fr_1fr] md:grid-rows-2">
+      <div className="flex h-full w-full overflow-x-auto snap-x snap-mandatory gap-3 px-3 scrollbar-none md:px-0 md:grid md:grid-cols-[2fr_1fr_1fr] md:grid-rows-2">
         {images.map((src, index) => (
           <div
             key={`${src}-${index}`}
             className={
               index === 0
-                ? "row-span-2 overflow-hidden md:row-span-2"
+                ? "shrink-0 w-[85vw] snap-center h-full overflow-hidden rounded-2xl md:w-auto md:rounded-none md:shrink md:row-span-2"
                 : index === 1
-                  ? "row-span-2 overflow-hidden md:col-start-2 md:row-span-2"
+                  ? "shrink-0 w-[85vw] snap-center h-full overflow-hidden rounded-2xl md:w-auto md:rounded-none md:shrink md:col-start-2 md:row-span-2"
                   : index === 2
-                    ? "overflow-hidden md:col-start-3"
-                    : "overflow-hidden md:col-start-3"
+                    ? "shrink-0 w-[85vw] snap-center h-full overflow-hidden rounded-2xl md:w-auto md:rounded-none md:shrink md:col-start-3"
+                    : "shrink-0 w-[85vw] snap-center h-full overflow-hidden rounded-2xl md:w-auto md:rounded-none md:shrink md:col-start-3"
             }
           >
             <img
@@ -695,9 +695,9 @@ function Itinerary({
   return (
     <section
       id="itinerary"
-      className="px-7 py-16 md:px-16 md:py-24 lg:px-20 xl:px-28"
+      className="px-3 sm:px-4 py-14 md:px-16 md:py-24 lg:px-20 xl:px-28"
     >
-      <div className="flex items-end justify-between flex-wrap gap-4">
+      <div className="flex items-end justify-between flex-wrap gap-4 px-1 sm:px-0">
         <div>
           <SectionLabel>Day by Day</SectionLabel>
           <h2 className="mt-3 font-serif text-3xl md:text-4xl text-primary">
@@ -709,7 +709,7 @@ function Itinerary({
         </p>
       </div>
 
-      <div className="mt-10 space-y-20 md:mt-14 md:space-y-28">
+      <div className="mt-8 space-y-16 md:mt-14 md:space-y-28">
           {groups.map((group, gi) => {
             return (
               <div
@@ -735,7 +735,7 @@ function Itinerary({
                   </div>
                 </motion.div>
 
-                <div className="mx-auto mt-10 w-[90%] space-y-12 md:mt-14 md:space-y-16">
+                <div className="mx-auto mt-8 w-full space-y-8 px-0 sm:px-2 md:mt-14 md:w-[90%] md:space-y-16">
                   {group.days.map((d, dayIndex) => (
                     <DayCard
                       key={d.day}
@@ -765,12 +765,12 @@ function DayCard({ d, images }: { d: JourneyDay; images: string[] }) {
 
   return (
     <article className="overflow-hidden rounded-2xl border border-border bg-card/60 md:rounded-3xl">
-      <div className="border-b border-border px-5 py-5 md:px-7">
-          <h3 className="font-serif text-2xl text-primary md:text-3xl">
+      <div className="border-b border-border px-3.5 py-4 sm:px-5 sm:py-5 md:px-7">
+          <h3 className="font-serif text-xl sm:text-2xl text-primary md:text-3xl">
             Day {d.day} <span className="text-accent">—</span> {d.location}
           </h3>
       </div>
-      <div className="px-5 py-6 md:px-7 md:py-7">
+      <div className="px-3.5 py-5 sm:px-5 sm:py-6 md:px-7 md:py-7">
         {categories.length > 0 && (
           <div className="mb-5 flex flex-wrap gap-2">
             {categories.map(({ key, label, Icon }) => (

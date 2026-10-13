@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SITE_URL } from "../lib/seo";
 import EnquiryDialog from "../components/EnquiryDialog";
 // import { StickyJourneyCta } from "../components/StickyJourneyCta";
+import { FloatingAiChatbot } from "../components/FloatingAiChatbot";
 import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
@@ -161,6 +162,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <EnquiryDialog />
+      <FloatingAiChatbot />
       {/* <StickyJourneyCta /> */}
       <Toaster />
     </QueryClientProvider>

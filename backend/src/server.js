@@ -12,6 +12,7 @@ const enquiryRoutes = require('./routes/enquiry.routes');
 const authRoutes = require('./routes/auth.routes');
 const adminRoutes = require('./routes/admin.routes');
 const googleReviewsRoutes = require('./routes/googleReviews.routes');
+const aiTravelRoutes = require('./routes/aiTravel.routes');
 const { notFound, errorHandler } = require('./middleware/error');
 const { getAllowedOrigins, getJwtSecret } = require('./config/security');
 
@@ -50,6 +51,7 @@ app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/google-reviews', googleReviewsRoutes);
+app.use('/api/ai', aiTravelRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
@@ -58,9 +60,11 @@ const PORT = process.env.PORT || 5000;
 
 connectDB(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(PORT, () => console.log(`QARWAAN API running on :${PORT}`));
+    console.log('MongoDB connected successfully');
   })
   .catch((err) => {
-    console.error('Failed to connect to MongoDB', err);
-    process.exit(1);
+    console.warn('MongoDB connection failed or not running; running with in-memory catalogue fallback:', err.message);
+  })
+  .finally(() => {
+    app.listen(PORT, () => console.log(`QARWAAN API running on :${PORT}`));
   });

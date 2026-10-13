@@ -27,20 +27,27 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-export type EnquiryOpenDetail = { tripName?: string };
+export type EnquiryOpenDetail = {
+  tripName?: string;
+  travelers?: number;
+  travelStartDate?: string;
+  message?: string;
+  source?: string;
+};
 
 export const ENQUIRY_OPEN_EVENT = "qarwaan:enquire";
 
-export function openEnquiry(tripName?: string) {
+export function openEnquiry(tripName?: string, details: Omit<EnquiryOpenDetail, "tripName"> = {}) {
   if (typeof window === "undefined") return;
   window.dispatchEvent(
-    new CustomEvent<EnquiryOpenDetail>(ENQUIRY_OPEN_EVENT, { detail: { tripName } })
+    new CustomEvent<EnquiryOpenDetail>(ENQUIRY_OPEN_EVENT, { detail: { tripName, ...details } })
   );
 }
 
 export default function EnquiryDialog() {
   const [open, setOpen] = useState(false);
   const [tripName, setTripName] = useState<string>("");
+  const [enquirySource, setEnquirySource] = useState("website");
   const [done, setDone] = useState(false);
 
   const form = useForm<FormValues>({
@@ -63,16 +70,17 @@ export default function EnquiryDialog() {
       const ce = e as CustomEvent<EnquiryOpenDetail>;
       const tn = ce.detail?.tripName || "";
       setTripName(tn);
+      setEnquirySource(ce.detail?.source || "website");
       setDone(false);
       form.reset({
         name: "",
         email: "",
         phone: "",
         tripName: tn,
-        travelers: 2,
-        travelStartDate: "",
+        travelers: ce.detail?.travelers || 2,
+        travelStartDate: ce.detail?.travelStartDate || "",
         travelEndDate: "",
-        message: "",
+        message: ce.detail?.message || "",
         newsletterOptIn: false,
       });
       setOpen(true);
@@ -115,7 +123,7 @@ export default function EnquiryDialog() {
 
   async function onSubmit(values: FormValues) {
     try {
-      const payload: any = { ...values, source: "website" };
+      const payload: any = { ...values, source: enquirySource };
       if (!payload.travelStartDate) delete payload.travelStartDate;
       if (!payload.travelEndDate) delete payload.travelEndDate;
       await submitEnquiry(payload);

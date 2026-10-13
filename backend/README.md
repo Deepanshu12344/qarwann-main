@@ -28,6 +28,9 @@ Put the resulting string into `ADMIN_PASSWORD_HASH` in `.env`.
 - `GET  /api/trips/slug/:slug`
 - `GET  /api/trips/:id/journey-days`
 - `POST /api/enquiries` — submit website enquiry (sends Zoho email + optional Brevo subscribe)
+- `GET /api/ai/discovery` — catalogue-backed AI destination and trip cards
+- `POST /api/ai/travel-chat` — structured Qarwaan AI conversation
+- `POST /api/ai/brochure` — generates a downloadable itinerary PDF
 
 ### Admin (requires `Authorization: Bearer <jwt>`)
 
@@ -46,3 +49,4 @@ Put the resulting string into `ADMIN_PASSWORD_HASH` in `.env`.
 
 - **Zoho Mail (SMTP)** — every new enquiry is emailed to `ZOHO_TO_EMAIL` via `smtp.zoho.com:465`.
 - **Brevo** — when an enquirer ticks the consent checkbox, their email is upserted onto `BREVO_LIST_ID`.
+- **Qarwaan AI** — the public travel planner runs entirely in the browser from the published journey catalogue. It does not require an AI provider, Express API, or deployment environment variables.

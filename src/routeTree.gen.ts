@@ -20,6 +20,7 @@ import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TripsIndexRouteImport } from './routes/trips.index'
+import { Route as AiIndexRouteImport } from './routes/ai.index'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as TripsSlugRouteImport } from './routes/trips.$slug'
 import { Route as AdminTripsRouteImport } from './routes/admin.trips'
@@ -27,6 +28,7 @@ import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminEnquiriesRouteImport } from './routes/admin.enquiries'
 import { Route as AdminTripsIndexRouteImport } from './routes/admin.trips.index'
 import { Route as ApiPublicTripsRouteImport } from './routes/api/public/trips'
+import { Route as ApiAiChatRouteImport } from './routes/api/ai/chat'
 import { Route as AdminTripsNewRouteImport } from './routes/admin.trips.new'
 import { Route as AdminTripsImportRouteImport } from './routes/admin.trips.import'
 import { Route as ApiPublicTripsSlugRouteImport } from './routes/api/public/trips.$slug'
@@ -87,6 +89,11 @@ const TripsIndexRoute = TripsIndexRouteImport.update({
   path: '/trips/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiIndexRoute = AiIndexRouteImport.update({
+  id: '/ai/',
+  path: '/ai/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -120,6 +127,11 @@ const AdminTripsIndexRoute = AdminTripsIndexRouteImport.update({
 const ApiPublicTripsRoute = ApiPublicTripsRouteImport.update({
   id: '/api/public/trips',
   path: '/api/public/trips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAiChatRoute = ApiAiChatRouteImport.update({
+  id: '/api/ai/chat',
+  path: '/api/ai/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminTripsNewRoute = AdminTripsNewRouteImport.update({
@@ -159,9 +171,11 @@ export interface FileRoutesByFullPath {
   '/admin/trips': typeof AdminTripsRouteWithChildren
   '/trips/$slug': typeof TripsSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/ai/': typeof AiIndexRoute
   '/trips/': typeof TripsIndexRoute
   '/admin/trips/import': typeof AdminTripsImportRoute
   '/admin/trips/new': typeof AdminTripsNewRoute
+  '/api/ai/chat': typeof ApiAiChatRoute
   '/api/public/trips': typeof ApiPublicTripsRouteWithChildren
   '/admin/trips/': typeof AdminTripsIndexRoute
   '/admin/trips/$id/edit': typeof AdminTripsIdEditRoute
@@ -181,9 +195,11 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/trips/$slug': typeof TripsSlugRoute
   '/admin': typeof AdminIndexRoute
+  '/ai': typeof AiIndexRoute
   '/trips': typeof TripsIndexRoute
   '/admin/trips/import': typeof AdminTripsImportRoute
   '/admin/trips/new': typeof AdminTripsNewRoute
+  '/api/ai/chat': typeof ApiAiChatRoute
   '/api/public/trips': typeof ApiPublicTripsRouteWithChildren
   '/admin/trips': typeof AdminTripsIndexRoute
   '/admin/trips/$id/edit': typeof AdminTripsIdEditRoute
@@ -206,9 +222,11 @@ export interface FileRoutesById {
   '/admin/trips': typeof AdminTripsRouteWithChildren
   '/trips/$slug': typeof TripsSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/ai/': typeof AiIndexRoute
   '/trips/': typeof TripsIndexRoute
   '/admin/trips/import': typeof AdminTripsImportRoute
   '/admin/trips/new': typeof AdminTripsNewRoute
+  '/api/ai/chat': typeof ApiAiChatRoute
   '/api/public/trips': typeof ApiPublicTripsRouteWithChildren
   '/admin/trips/': typeof AdminTripsIndexRoute
   '/admin/trips/$id/edit': typeof AdminTripsIdEditRoute
@@ -232,9 +250,11 @@ export interface FileRouteTypes {
     | '/admin/trips'
     | '/trips/$slug'
     | '/admin/'
+    | '/ai/'
     | '/trips/'
     | '/admin/trips/import'
     | '/admin/trips/new'
+    | '/api/ai/chat'
     | '/api/public/trips'
     | '/admin/trips/'
     | '/admin/trips/$id/edit'
@@ -254,9 +274,11 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/trips/$slug'
     | '/admin'
+    | '/ai'
     | '/trips'
     | '/admin/trips/import'
     | '/admin/trips/new'
+    | '/api/ai/chat'
     | '/api/public/trips'
     | '/admin/trips'
     | '/admin/trips/$id/edit'
@@ -278,9 +300,11 @@ export interface FileRouteTypes {
     | '/admin/trips'
     | '/trips/$slug'
     | '/admin/'
+    | '/ai/'
     | '/trips/'
     | '/admin/trips/import'
     | '/admin/trips/new'
+    | '/api/ai/chat'
     | '/api/public/trips'
     | '/admin/trips/'
     | '/admin/trips/$id/edit'
@@ -299,7 +323,9 @@ export interface RootRouteChildren {
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   WeekendGetawaysRoute: typeof WeekendGetawaysRoute
   TripsSlugRoute: typeof TripsSlugRoute
+  AiIndexRoute: typeof AiIndexRoute
   TripsIndexRoute: typeof TripsIndexRoute
+  ApiAiChatRoute: typeof ApiAiChatRoute
   ApiPublicTripsRoute: typeof ApiPublicTripsRouteWithChildren
 }
 
@@ -382,6 +408,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TripsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai/': {
+      id: '/ai/'
+      path: '/ai'
+      fullPath: '/ai/'
+      preLoaderRoute: typeof AiIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/': {
       id: '/admin/'
       path: '/'
@@ -429,6 +462,13 @@ declare module '@tanstack/react-router' {
       path: '/api/public/trips'
       fullPath: '/api/public/trips'
       preLoaderRoute: typeof ApiPublicTripsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/ai/chat': {
+      id: '/api/ai/chat'
+      path: '/api/ai/chat'
+      fullPath: '/api/ai/chat'
+      preLoaderRoute: typeof ApiAiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/trips/new': {
@@ -520,7 +560,9 @@ const rootRouteChildren: RootRouteChildren = {
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   WeekendGetawaysRoute: WeekendGetawaysRoute,
   TripsSlugRoute: TripsSlugRoute,
+  AiIndexRoute: AiIndexRoute,
   TripsIndexRoute: TripsIndexRoute,
+  ApiAiChatRoute: ApiAiChatRoute,
   ApiPublicTripsRoute: ApiPublicTripsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
