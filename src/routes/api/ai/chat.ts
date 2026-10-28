@@ -1,20 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 
-const GEMINI_API_KEY =
-  process.env.AI_API_KEY ||
-  process.env.GEMINI_API_KEY;
+function getAiConfig() {
+  let key = process.env.AI_API_KEY || process.env.GEMINI_API_KEY;
 
-const GEMINI_OPENAI_URL =
-  process.env.AI_API_BASE_URL ||
-  "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
+  if (!key) {
+    try {
+      const fs = require("node:fs");
+      const path = require("node:path");
+      const candidates = [
+        path.resolve(process.cwd(), ".env"),
+        path.resolve(process.cwd(), "backend/.env"),
+      ];
+      for (const envPath of candidates) {
+        if (fs.existsSync(envPath)) {
+          const content = fs.readFileSync(envPath, "utf-8");
+          for (const line of content.split("\n")) {
+            const match = line.match(/^\s*(AI_API_KEY|GEMINI_API_KEY)\s*=\s*(.*)$/);
+            if (match && match[2]) {
+              key = match[2].trim().replace(/^['"]|['"]$/g, "");
+              process.env[match[1]] = key;
+              break;
+            }
+          }
+          if (key) break;
+        }
+      }
+    } catch {
+      // ignore in browser or restricted environments
+    }
+  }
 
-const CANDIDATE_MODELS = [
-  "gemini-3.5-flash-lite",
-  "gemini-3.1-flash-lite",
-  "gemini-3.8-flash",
-  "gemini-3.5-flash",
-];
+  const endpoint =
+    process.env.AI_API_BASE_URL ||
+    "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
+
+  const configuredModel = process.env.AI_MODEL || "gemini-flash-lite-latest";
+  const candidateModels = [
+    configuredModel,
+    "gemini-flash-lite-latest",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-3.5-flash",
+  ].filter((v, i, a) => Boolean(v) && a.indexOf(v) === i);
+
+  return { key, endpoint, candidateModels };
+}
 
 const CATALOGUE_SNIPPETS = QARWAAN_ITINERARIES.map((trip) => ({
   id: trip.id,
@@ -948,10 +980,11 @@ export const Route = createFileRoute("/api/ai/chat")({
   server: {
     handlers: {
       GET: async () => {
+        const { candidateModels } = getAiConfig();
         return new Response(
           JSON.stringify({
             status: "online",
-            models: CANDIDATE_MODELS,
+            models: candidateModels,
             catalog: CATALOGUE_SNIPPETS.slice(0, 10),
           }),
           { headers: { "Content-Type": "application/json" } },
@@ -971,7 +1004,9 @@ export const Route = createFileRoute("/api/ai/chat")({
             );
           }
 
-          if (!GEMINI_API_KEY) {
+          const { key: apiKey, endpoint, candidateModels } = getAiConfig();
+
+          if (!apiKey) {
             return new Response(
               JSON.stringify({ error: "AI_API_KEY or GEMINI_API_KEY must be configured on the server." }),
               { status: 503, headers: { "Content-Type": "application/json" } },
@@ -1006,13 +1041,13 @@ export const Route = createFileRoute("/api/ai/chat")({
           let rawData: any = null;
           let lastErrorMsg = "";
 
-          for (const modelName of CANDIDATE_MODELS) {
+          for (const modelName of candidateModels) {
             // Attempt 1: Gemini via OpenAI Chat Completions endpoint with reasoning_effort low
             try {
-              const res = await fetch(GEMINI_OPENAI_URL, {
+              const res = await fetch(endpoint, {
                 method: "POST",
                 headers: {
-                  Authorization: `Bearer ${GEMINI_API_KEY}`,
+                  Authorization: `Bearer ${apiKey}`,
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ ...basePayload, model: modelName }),
@@ -1033,7 +1068,7 @@ export const Route = createFileRoute("/api/ai/chat")({
 
             // Attempt 2: Direct Gemini generateContent native endpoint as fallback
             try {
-              const nativeUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
+              const nativeUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
               const userQueryText = formattedMessages[formattedMessages.length - 1]?.content || "";
               const nativeRes = await fetch(nativeUrl, {
                 method: "POST",

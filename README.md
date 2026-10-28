@@ -4,9 +4,9 @@
   <img src="qarwaan-dark-logo.png" alt="Qarwaan" width="300" />
 </p>
 
-Qarwaan is a premium travel-planning platform for showcasing curated journeys, capturing customer enquiries, and managing travel products and leads. It contains a public TanStack Start web application and a companion Express/MongoDB API for the protected administration experience.
+Qarwaan is a premium full-stack MERN travel-planning platform for showcasing curated luxury journeys, capturing customer enquiries, and managing travel products and leads. It features a modern React 19 / TanStack Start frontend powered by an Express 4 and MongoDB Atlas backend, with high-performance Cloudinary CDN media delivery.
 
-The public catalogue is committed to the repository, so the website's destination and trip-detail pages work without a database. The separate backend is needed when using the admin dashboard, MongoDB-backed trip management, Excel imports, enquiry management, email notifications, or the optional backend AI endpoints.
+MongoDB Atlas is the single source of truth for all journeys, weekend getaways, day-by-day itineraries, and media assets. The public website dynamically reads all content from the Express API with smart HTTP caching (`Cache-Control: public, max-age=60, stale-while-revalidate`), while the administration dashboard provides end-to-end trip creation, Cloudinary gallery uploads, day editing, and Excel workbook synchronization.
 
 ## Contents
 
@@ -30,9 +30,9 @@ The public catalogue is committed to the repository, so the website's destinatio
 ### Public website
 
 - Responsive landing page with featured destinations, signature journeys, weekend getaways, testimonials, FAQs, and calls to action.
-- Searchable trip catalogue and destination-detail pages with rich day-by-day itineraries, image galleries, inclusions, and travel information.
+- Searchable trip catalogue and destination-detail pages with rich day-by-day itineraries, image galleries, inclusions, and travel information, powered live by MongoDB Atlas.
 - Dedicated pages for about, contact, enquiries, weekend getaways, privacy, cancellation, disclaimer, and terms.
-- SEO metadata, canonical links, sitemap, robots directives, and static public assets.
+- Dynamic SEO metadata, canonical links, XML sitemap generated from database, robots directives, and Cloudinary media optimization.
 - A browser-facing **Qarwaan AI** travel concierge that creates trip ideas and downloadable itinerary content through a server-side AI route.
 - Enquiry and contact forms that submit to the configured Formspree forms.
 
@@ -40,33 +40,34 @@ The public catalogue is committed to the repository, so the website's destinatio
 
 - Cookie-based admin login with JWT verification and CSRF protection for state-changing operations.
 - Dashboard metrics for journeys, enquiries, enquiry status, daily enquiry activity, journey types, and optional Brevo subscriber counts.
-- Trip and day-by-day itinerary CRUD operations.
+- Complete Trip and day-by-day itinerary CRUD operations with Cloudinary asset uploads.
 - Excel workbook import that upserts trips and journey days.
 - Enquiry searching, status updates, deletion, and Excel export.
 - Optional Zoho SMTP email notifications and Brevo newsletter enrolment.
 - Public Google-review endpoint with an approved manual-review fallback.
-- Rate limiting and schema validation on sensitive public endpoints.
+- Rate limiting, connection pooling, and schema validation on sensitive public and administrative endpoints.
 
 ## Architecture
 
 ```text
 Browser
   │
-  ├─ TanStack Start application (this repository root)
-  │    ├─ static itinerary catalogue in src/data/qarwaan-itineraries.ts
-  │    ├─ public trip API routes under /api/public/trips
+  ├─ TanStack Start application (this repository root; React 19 + TypeScript)
+  │    ├─ dynamic TanStack Query hooks & SSR loaders
+  │    ├─ server routes under /api/public/trips forwarding to Express API
   │    ├─ server-side AI route at /api/ai/chat
   │    └─ Formspree enquiry/contact submissions
   │
   └─ Express API (backend/; default http://localhost:5000)
-       ├─ MongoDB: trips, journey days, enquiries
+       ├─ MongoDB Atlas: trips, journey days, enquiries
+       ├─ Cloudinary: image storage, transforms & CDN delivery
        ├─ admin authentication and dashboard
        ├─ Excel import/export
        ├─ Zoho SMTP and Brevo integrations
-       └─ optional AI, reviews, and brochure endpoints
+       └─ AI concierge, reviews, and brochure endpoints
 ```
 
-The public storefront reads the repository's generated itinerary file for its trip list and trip details. The admin UI points to the Express API using `VITE_API_BASE_URL`; it defaults to `http://localhost:5000` for local development.
+The public storefront reads from the Express API (defaulting to `http://localhost:5000` via `VITE_API_BASE_URL`), with MongoDB Atlas as the single source of truth. All images are delivered via Cloudinary CDN.
 
 ## Technology
 

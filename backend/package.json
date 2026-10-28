@@ -7,11 +7,16 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "backfill": "node scripts/backfill-trips.js",
+    "migrate:images": "node scripts/migrate-images.js",
+    "migrate:static": "node scripts/migrate-static-catalogue.js",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "axios": "^1.18.0",
     "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.11.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "exceljs": "^4.4.0",

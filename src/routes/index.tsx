@@ -1,4 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -26,6 +27,7 @@ import {
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
 import { findMatchingItinerarySlug } from "@/lib/itinerary-search";
 import { SITE_URL } from "@/lib/seo";
+import { resolveImageUrl } from "@/lib/media";
 
 import patagonia from "@/assets/dest-patagonia.jpg";
 import heroImage from "../../hero-image.png";
@@ -62,21 +64,21 @@ const NAV: { label: string; to: string }[] = [
 ];
 
 const TRIP_IMAGES = {
-  andaman: "/images/andaman/Andaman Main Photo.jpeg",
+  andaman: resolveImageUrl("/images/andaman/Andaman Main Photo.jpeg"),
   bali: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
-  bhutan: "/images/bhutan/bhutan-main.png",
+  bhutan: resolveImageUrl("/images/bhutan/bhutan-main.png"),
   goa: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
-  nepal: "/images/nepal/Nepal Main Photo.avif",
+  nepal: resolveImageUrl("/images/nepal/Nepal Main Photo.avif"),
   kerala: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
-  ladakh: "/images/ladakh/ladakh-cover.png",
+  ladakh: resolveImageUrl("/images/ladakh/ladakh-cover.png"),
   rajasthan: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
-  jimCorbett: "/images/jim-corbett/collage/elephant-in-jim-corbett.jpg",
-  ooty: "/images/ooty/main-image.png",
-  spiti: "/images/spiti/spiti-cover.png",
+  jimCorbett: resolveImageUrl("/images/jim-corbett/collage/elephant-in-jim-corbett.jpg"),
+  ooty: resolveImageUrl("/images/ooty/main-image.png"),
+  spiti: resolveImageUrl("/images/spiti/spiti-cover.png"),
 };
 
 const HERO_IMAGES_BY_SLUG = new Map(
-  QARWAAN_ITINERARIES.map((trip) => [trip.slug, trip.coverImage]),
+  QARWAAN_ITINERARIES.map((trip) => [trip.slug, resolveImageUrl(trip.coverImage)]),
 );
 
 const DESTINATIONS = [
@@ -125,10 +127,10 @@ const EXPERIENCES: { title: string; place: string; country: string; duration: st
 const WEEKEND_GETAWAYS: { title: string; place: string; country: string; duration: string; img: string; slug: string }[] = [
   { title: "Jim Corbett – Wild Trails & Forest Escape", place: "Jim Corbett", country: "India", duration: "2 nights", img: TRIP_IMAGES.jimCorbett, slug: "jim-corbett-wild-trails-and-forest-escape" },
   { title: "Ooty & Coonoor – Tea Trails, Misty Hills & Nilgiri Escapes", place: "Ooty & Coonoor", country: "India", duration: "2 nights", img: TRIP_IMAGES.ooty, slug: "ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes" },
-  { title: "Rishikesh – Reset by the Ganga", place: "Rishikesh", country: "India", duration: "2 nights", img: "/images/rishikesh/hero-image.jpg", slug: "rishikesh-reset-by-the-ganga-weekend-escape" },
-  { title: "Coorg – Coffee, Forests & Kodava Culture", place: "Coorg", country: "India", duration: "2 nights", img: "/images/coorg/main.png", slug: "coorg-coffee-forests-kodava-culture" },
-  { title: "Hampi – Ancient Stones & Stories", place: "Hampi", country: "India", duration: "2 nights", img: "/images/hampi/hero-image-hampi.png", slug: "hampi-heritage-weekend-escape" },
-  { title: "Kasauli – Colonial Charm, Pine Trails & Slow Mountain Living", place: "Kasauli", country: "India", duration: "2 nights", img: "/images/kasauli/hero-image.png", slug: "kasauli-colonial-charm-pine-trails-slow-mountain-living" },
+  { title: "Rishikesh – Reset by the Ganga", place: "Rishikesh", country: "India", duration: "2 nights", img: resolveImageUrl("/images/rishikesh/hero-image.jpg"), slug: "rishikesh-reset-by-the-ganga-weekend-escape" },
+  { title: "Coorg – Coffee, Forests & Kodava Culture", place: "Coorg", country: "India", duration: "2 nights", img: resolveImageUrl("/images/coorg/main.png"), slug: "coorg-coffee-forests-kodava-culture" },
+  { title: "Hampi – Ancient Stones & Stories", place: "Hampi", country: "India", duration: "2 nights", img: resolveImageUrl("/images/hampi/hero-image-hampi.png"), slug: "hampi-heritage-weekend-escape" },
+  { title: "Kasauli – Colonial Charm, Pine Trails & Slow Mountain Living", place: "Kasauli", country: "India", duration: "2 nights", img: resolveImageUrl("/images/kasauli/hero-image.png"), slug: "kasauli-colonial-charm-pine-trails-slow-mountain-living" },
 ];
 
 
@@ -592,6 +594,18 @@ function WhyQarwaan() {
 /* ---------- Experiences ---------- */
 
 function Experiences() {
+  const { data } = useQuery<{ items: typeof EXPERIENCES }>({
+    queryKey: ["trips", "journey"],
+    queryFn: async () => {
+      const res = await fetch("/api/public/trips?category=journey&limit=20");
+      if (!res.ok) throw new Error("Failed to load journeys");
+      return res.json();
+    },
+    staleTime: 60_000,
+  });
+
+  const items = data?.items && data.items.length > 0 ? data.items : EXPERIENCES;
+
   return (
     <section id="experiences" className="px-5 py-24 sm:px-8 md:py-32">
       <div className="mx-auto max-w-7xl">
@@ -605,7 +619,7 @@ function Experiences() {
         />
 
         <div className="mt-14">
-          <ExperienceCarousel items={EXPERIENCES} idPrefix="signature" />
+          <ExperienceCarousel items={items} idPrefix="signature" />
         </div>
 
         {/*
@@ -629,11 +643,27 @@ function Experiences() {
   );
 }
 
+type ExperienceItem = {
+  title?: string;
+  name?: string;
+  packageName?: string;
+  place?: string;
+  destination?: string;
+  country?: string;
+  duration?: string;
+  durationDays?: number;
+  img?: string;
+  coverImage?: string;
+  cover?: string;
+  slug?: string;
+  id?: string;
+};
+
 function ExperienceCarousel({
   items,
   idPrefix,
 }: {
-  items: typeof EXPERIENCES;
+  items: ExperienceItem[];
   idPrefix: string;
 }) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
@@ -661,63 +691,75 @@ function ExperienceCarousel({
         ref={scrollerRef}
         className="flex min-w-0 flex-1 items-stretch snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {items.map((e, i) => (
-          <motion.div
-            key={e.title}
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: i * 0.1 }}
-            data-experience-card
-            className="h-full w-[85%] shrink-0 snap-start sm:w-[48%] md:w-[32%]"
-          >
-            <Link
-              to="/trips/$slug"
-              params={{ slug: e.slug }}
-              className="group block h-full"
+        {items.map((e, i) => {
+          const tripSlug = e.slug || e.id || "";
+          const imgSrc = resolveImageUrl(
+            e.img || e.coverImage || e.cover || HERO_IMAGES_BY_SLUG.get(tripSlug),
+          );
+          const durationLabel =
+            e.duration ||
+            (e.durationDays ? `${e.durationDays} Days` : "Curated");
+          const placeLabel = e.place || e.destination || e.country || "";
+          const titleLabel = e.title || e.packageName || e.name || "Journey";
+
+          return (
+            <motion.div
+              key={tripSlug || e.title || i}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: i * 0.1 }}
+              data-experience-card
+              className="h-full w-[85%] shrink-0 snap-start sm:w-[48%] md:w-[32%]"
             >
-              {/* Card Container: Full-height rounded-2xl on mobile, aspect-[3/4] rounded-md on desktop */}
-              <div className="relative h-[380px] w-full overflow-hidden rounded-2xl bg-muted md:h-auto md:aspect-[3/4] md:rounded-md">
-                <img
-                  src={HERO_IMAGES_BY_SLUG.get(e.slug) ?? e.img}
-                  alt={e.title}
-                  loading="lazy"
-                  width={1280}
-                  height={1600}
-                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
-                />
-                
-                {/* Duration Badge */}
-                <div className="absolute left-3.5 top-3.5 rounded-full bg-black/45 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-white backdrop-blur-md md:left-4 md:top-4 md:bg-background/90 md:text-primary">
-                  {e.duration}
+              <Link
+                to="/trips/$slug"
+                params={{ slug: tripSlug }}
+                className="group block h-full"
+              >
+                {/* Card Container: Full-height rounded-2xl on mobile, aspect-[3/4] rounded-md on desktop */}
+                <div className="relative h-[380px] w-full overflow-hidden rounded-2xl bg-muted md:h-auto md:aspect-[3/4] md:rounded-md">
+                  <img
+                    src={imgSrc}
+                    alt={titleLabel}
+                    loading="lazy"
+                    width={1280}
+                    height={1600}
+                    className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                  />
+
+                  {/* Duration Badge */}
+                  <div className="absolute left-3.5 top-3.5 rounded-full bg-black/45 px-3 py-1 text-[10px] tracking-[0.2em] uppercase text-white backdrop-blur-md md:left-4 md:top-4 md:bg-background/90 md:text-primary">
+                    {durationLabel}
+                  </div>
+
+                  {/* Mobile-Only Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:hidden" />
+
+                  {/* Mobile-Only Overlaid Destination Name (Bottom-Left) */}
+                  <div className="absolute inset-x-0 bottom-0 p-5 md:hidden z-10 text-left">
+                    <h4 className="text-white font-bold text-2xl leading-tight drop-shadow-sm">
+                      {titleLabel}
+                    </h4>
+                  </div>
                 </div>
 
-                {/* Mobile-Only Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:hidden" />
-
-                {/* Mobile-Only Overlaid Destination Name (Bottom-Left) */}
-                <div className="absolute inset-x-0 bottom-0 p-5 md:hidden z-10 text-left">
-                  <h4 className="text-white font-bold text-2xl leading-tight drop-shadow-sm">
-                    {e.title}
-                  </h4>
-                </div>
-              </div>
-
-              {/* Desktop-Only Information Area (Hidden on Mobile) */}
-              <div className="mt-5 hidden md:flex items-start justify-between gap-4">
-                <div className="min-w-0">
-                  <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                    {e.place}
+                {/* Desktop-Only Information Area (Hidden on Mobile) */}
+                <div className="mt-5 hidden md:flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
+                      {placeLabel}
+                    </span>
+                    <h4 className="mt-1 font-serif text-2xl text-primary">{titleLabel}</h4>
+                  </div>
+                  <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+                    <ArrowUpRight className="h-4 w-4" />
                   </span>
-                  <h4 className="mt-1 font-serif text-2xl text-primary">{e.title}</h4>
                 </div>
-                <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
+              </Link>
+            </motion.div>
+          );
+        })}
       </div>
       <button
         type="button"

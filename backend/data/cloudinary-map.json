@@ -1,0 +1,1443 @@
+{
+  "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85": {
+    "url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85",
+    "publicId": "",
+    "isRemote": true
+  },
+  "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85": {
+    "url": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1800&q=85",
+    "publicId": "",
+    "isRemote": true
+  },
+  "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85": {
+    "url": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+    "publicId": "",
+    "isRemote": true
+  },
+  "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85": {
+    "url": "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85",
+    "publicId": "",
+    "isRemote": true
+  },
+  "/images/andaman/Andaman Main Photo.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191260/qarwaan/images/andaman/andaman-main-photo.jpg",
+    "publicId": "qarwaan/images/andaman/andaman-main-photo",
+    "width": 6016,
+    "height": 4000,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191280/qarwaan/images/andaman/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day1-1",
+    "width": 1280,
+    "height": 720,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191280/qarwaan/images/andaman/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day3-1",
+    "width": 1300,
+    "height": 882,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191281/qarwaan/images/andaman/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day2-1",
+    "width": 2048,
+    "height": 1360,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191281/qarwaan/images/andaman/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day2-2",
+    "width": 3000,
+    "height": 2250,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191281/qarwaan/images/andaman/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day3-2",
+    "width": 2048,
+    "height": 1152,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191281/qarwaan/images/andaman/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day1-2",
+    "width": 5308,
+    "height": 2986,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191282/qarwaan/images/andaman/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day6-1",
+    "width": 2048,
+    "height": 1360,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191282/qarwaan/images/andaman/daywise/day4-2.png",
+    "publicId": "qarwaan/images/andaman/daywise/day4-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/andaman/daywise/day4-1.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191283/qarwaan/images/andaman/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day4-1",
+    "width": 1080,
+    "height": 718,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day1-2.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191283/qarwaan/images/bali/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day1-2",
+    "width": 1189,
+    "height": 757,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191283/qarwaan/images/andaman/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day7-1",
+    "width": 1200,
+    "height": 766,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191283/qarwaan/images/andaman/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day5-1",
+    "width": 2048,
+    "height": 1336,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191283/qarwaan/images/andaman/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/andaman/daywise/day5-2",
+    "width": 5160,
+    "height": 3440,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191284/qarwaan/images/bali/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day4-1",
+    "width": 1280,
+    "height": 844,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191284/qarwaan/images/bali/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day2-2",
+    "width": 2048,
+    "height": 1366,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day1-1.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191284/qarwaan/images/bali/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day1-1",
+    "width": 1152,
+    "height": 864,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191284/qarwaan/images/andaman/daywise/day6-2.png",
+    "publicId": "qarwaan/images/andaman/daywise/day6-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/bali/daywise/day6-2.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191285/qarwaan/images/bali/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day6-2",
+    "width": 1536,
+    "height": 1024,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day5-1.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191285/qarwaan/images/bali/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day5-1",
+    "width": 1199,
+    "height": 799,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191285/qarwaan/images/bali/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day2-1",
+    "width": 1400,
+    "height": 933,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191285/qarwaan/images/bali/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day3-2",
+    "width": 1500,
+    "height": 1125,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191286/qarwaan/images/bhutan/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day1-2",
+    "width": 1264,
+    "height": 848,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191286/qarwaan/images/bali/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day7-2",
+    "width": 1024,
+    "height": 473,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191286/qarwaan/images/bali/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day4-2",
+    "width": 2048,
+    "height": 1150,
+    "format": "jpg"
+  },
+  "/images/andaman/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191286/qarwaan/images/andaman/daywise/day7-2.png",
+    "publicId": "qarwaan/images/andaman/daywise/day7-2",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/bhutan/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bhutan/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day4-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bhutan/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day2-2",
+    "width": 2048,
+    "height": 1363,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bali/daywise/day6-1.png",
+    "publicId": "qarwaan/images/bali/daywise/day6-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/bali/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bali/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day7-1",
+    "width": 2048,
+    "height": 1143,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bali/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day3-1",
+    "width": 2048,
+    "height": 887,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191287/qarwaan/images/bhutan/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day6-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/bhutan/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day5-1",
+    "width": 1600,
+    "height": 946,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/bhutan/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day1-1",
+    "width": 2309,
+    "height": 1299,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/bhutan/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day2-1",
+    "width": 1230,
+    "height": 800,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day1-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/goa/daywise/day1-3.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day1-3",
+    "width": 1080,
+    "height": 810,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/bhutan/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day7-2",
+    "width": 1280,
+    "height": 720,
+    "format": "jpg"
+  },
+  "/images/bali/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191288/qarwaan/images/bali/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/bali/daywise/day5-2",
+    "width": 2048,
+    "height": 875,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191289/qarwaan/images/bhutan/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day3-2",
+    "width": 1376,
+    "height": 768,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191289/qarwaan/images/bhutan/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day4-2",
+    "width": 1920,
+    "height": 1080,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191289/qarwaan/images/goa/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day2-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191289/qarwaan/images/goa/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day3-1",
+    "width": 1280,
+    "height": 853,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191290/qarwaan/images/goa/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day4-1",
+    "width": 2048,
+    "height": 1536,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191290/qarwaan/images/bhutan/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day7-1",
+    "width": 3000,
+    "height": 2002,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191290/qarwaan/images/bhutan/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day6-1",
+    "width": 2048,
+    "height": 1366,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/goa/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day5-2",
+    "width": 1600,
+    "height": 1200,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day1-4.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/goa/daywise/day1-4.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day1-4",
+    "width": 1600,
+    "height": 974,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/goa/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day6-1",
+    "width": 2684,
+    "height": 1116,
+    "format": "jpg"
+  },
+  "/images/bhutan/bhutan-main.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/bhutan/bhutan-main.png",
+    "publicId": "qarwaan/images/bhutan/bhutan-main",
+    "width": 1774,
+    "height": 887,
+    "format": "png"
+  },
+  "/images/goa/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/goa/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day1-2",
+    "width": 1600,
+    "height": 1200,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191291/qarwaan/images/goa/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day7-2",
+    "width": 2000,
+    "height": 833,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191292/qarwaan/images/goa/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day3-2",
+    "width": 977,
+    "height": 555,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191292/qarwaan/images/nepal/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day1-1",
+    "width": 2048,
+    "height": 1366,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191292/qarwaan/images/bhutan/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day3-1",
+    "width": 1376,
+    "height": 768,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day2-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191292/qarwaan/images/goa/daywise/day2-3.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day2-3",
+    "width": 2600,
+    "height": 1732,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191292/qarwaan/images/nepal/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day2-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191293/qarwaan/images/nepal/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day3-2",
+    "width": 1200,
+    "height": 560,
+    "format": "jpg"
+  },
+  "/images/bhutan/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191293/qarwaan/images/bhutan/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/bhutan/daywise/day5-2",
+    "width": 1200,
+    "height": 896,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191293/qarwaan/images/goa/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day5-1",
+    "width": 1500,
+    "height": 1000,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191293/qarwaan/images/nepal/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day5-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day5-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191293/qarwaan/images/goa/daywise/day5-3.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day5-3",
+    "width": 2048,
+    "height": 1536,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191294/qarwaan/images/goa/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day1-1",
+    "width": 1200,
+    "height": 900,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day7-2.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191294/qarwaan/images/nepal/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day7-2",
+    "width": 1199,
+    "height": 800,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191294/qarwaan/images/goa/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day7-1",
+    "width": 1362,
+    "height": 990,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day6-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191294/qarwaan/images/nepal/daywise/day6-1.png",
+    "publicId": "qarwaan/images/nepal/daywise/day6-1",
+    "width": 1774,
+    "height": 887,
+    "format": "png"
+  },
+  "/images/nepal/Nepal Main Photo.avif": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191294/qarwaan/images/nepal/nepal-main-photo.avif",
+    "publicId": "qarwaan/images/nepal/nepal-main-photo",
+    "width": 1170,
+    "height": 780,
+    "format": "avif"
+  },
+  "/images/goa/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191295/qarwaan/images/goa/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day2-2",
+    "width": 948,
+    "height": 632,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day1-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191295/qarwaan/images/kerala/daywise/day1-3.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day1-3",
+    "width": 2000,
+    "height": 1128,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day8-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191295/qarwaan/images/nepal/daywise/day8-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day8-2",
+    "width": 1300,
+    "height": 731,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191295/qarwaan/images/nepal/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day3-1",
+    "width": 2048,
+    "height": 1366,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/goa/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day4-2",
+    "width": 1600,
+    "height": 1200,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/kerala/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day4-1",
+    "width": 1376,
+    "height": 768,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/nepal/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day2-1",
+    "width": 1920,
+    "height": 1280,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/kerala/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day2-2",
+    "width": 1129,
+    "height": 675,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/nepal/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day5-2",
+    "width": 1536,
+    "height": 1024,
+    "format": "jpg"
+  },
+  "/images/goa/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191296/qarwaan/images/goa/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/goa/daywise/day6-2",
+    "width": 1200,
+    "height": 900,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191297/qarwaan/images/kerala/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day6-2",
+    "width": 2500,
+    "height": 1875,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191297/qarwaan/images/nepal/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day4-2",
+    "width": 1440,
+    "height": 810,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191297/qarwaan/images/nepal/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day1-2",
+    "width": 1920,
+    "height": 960,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191297/qarwaan/images/kerala/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day5-1",
+    "width": 3355,
+    "height": 2397,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day8-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191297/qarwaan/images/nepal/daywise/day8-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day8-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191298/qarwaan/images/ladakh/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day1-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191298/qarwaan/images/nepal/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day7-1",
+    "width": 1000,
+    "height": 759,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191298/qarwaan/images/kerala/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day7-1",
+    "width": 1536,
+    "height": 1024,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191298/qarwaan/images/nepal/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day4-1",
+    "width": 1920,
+    "height": 1080,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191298/qarwaan/images/kerala/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day2-1",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191299/qarwaan/images/ladakh/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day3-1",
+    "width": 2635,
+    "height": 1137,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191299/qarwaan/images/kerala/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day1-2",
+    "width": 1024,
+    "height": 682,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191299/qarwaan/images/ladakh/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day2-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191300/qarwaan/images/ladakh/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day5-2",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191300/qarwaan/images/kerala/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day4-2",
+    "width": 4904,
+    "height": 3270,
+    "format": "jpg"
+  },
+  "/images/nepal/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191299/qarwaan/images/nepal/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/nepal/daywise/day6-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191300/qarwaan/images/kerala/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day3-2",
+    "width": 1000,
+    "height": 667,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191300/qarwaan/images/ladakh/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day4-1",
+    "width": 980,
+    "height": 653,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191300/qarwaan/images/rajasthan/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day1-1",
+    "width": 1024,
+    "height": 684,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day6-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/kerala/daywise/day6-3.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day6-3",
+    "width": 2048,
+    "height": 1463,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/ladakh/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day6-2",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/kerala/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day6-1",
+    "width": 1600,
+    "height": 1060,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/rajasthan/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day3-1",
+    "width": 800,
+    "height": 500,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/kerala/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day1-1",
+    "width": 5160,
+    "height": 3440,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191301/qarwaan/images/ladakh/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day1-2",
+    "width": 1920,
+    "height": 1080,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191302/qarwaan/images/rajasthan/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day2-1",
+    "width": 2048,
+    "height": 1366,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191302/qarwaan/images/rajasthan/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day5-2",
+    "width": 2121,
+    "height": 1414,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191302/qarwaan/images/kerala/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day3-1",
+    "width": 971,
+    "height": 546,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191302/qarwaan/images/ladakh/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day3-2",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191303/qarwaan/images/rajasthan/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day4-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/ladakh/ladakh-cover.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191303/qarwaan/images/ladakh/ladakh-cover.png",
+    "publicId": "qarwaan/images/ladakh/ladakh-cover",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rajasthan/daywise/day8-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191303/qarwaan/images/rajasthan/daywise/day8-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day8-1",
+    "width": 2048,
+    "height": 1360,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191303/qarwaan/images/kerala/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day5-2",
+    "width": 1280,
+    "height": 851,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191303/qarwaan/images/ladakh/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day6-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day2-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191304/qarwaan/images/ladakh/daywise/day2-3.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day2-3",
+    "width": 1000,
+    "height": 665,
+    "format": "jpg"
+  },
+  "/images/kerala/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191304/qarwaan/images/kerala/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/kerala/daywise/day7-2",
+    "width": 1200,
+    "height": 798,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191304/qarwaan/images/rajasthan/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day1-2",
+    "width": 1400,
+    "height": 933,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day10-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191304/qarwaan/images/rajasthan/daywise/day10-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day10-1",
+    "width": 2048,
+    "height": 1465,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191305/qarwaan/images/ladakh/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day5-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191304/qarwaan/images/rajasthan/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day6-2",
+    "width": 1400,
+    "height": 933,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191305/qarwaan/images/rajasthan/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day3-2",
+    "width": 1163,
+    "height": 768,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191305/qarwaan/images/ladakh/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day2-2",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191306/qarwaan/images/ladakh/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day7-2",
+    "width": 1600,
+    "height": 890,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191306/qarwaan/images/rajasthan/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day6-1",
+    "width": 1600,
+    "height": 1068,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191306/qarwaan/images/ladakh/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day4-2",
+    "width": 2048,
+    "height": 1360,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day2-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191306/qarwaan/images/rajasthan/daywise/day2-3.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day2-3",
+    "width": 2048,
+    "height": 1080,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day9-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191306/qarwaan/images/rajasthan/daywise/day9-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day9-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/ladakh/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191307/qarwaan/images/ladakh/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/ladakh/daywise/day7-1",
+    "width": 2048,
+    "height": 1153,
+    "format": "jpg"
+  },
+  "/images/jim-corbett/hero-image.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191307/qarwaan/images/jim-corbett/hero-image.png",
+    "publicId": "qarwaan/images/jim-corbett/hero-image",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rajasthan/daywise/day8-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191307/qarwaan/images/rajasthan/daywise/day8-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day8-2",
+    "width": 3000,
+    "height": 2000,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191307/qarwaan/images/rajasthan/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day5-1",
+    "width": 1200,
+    "height": 675,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day10-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191307/qarwaan/images/rajasthan/daywise/day10-3.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day10-3",
+    "width": 1920,
+    "height": 1280,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191308/qarwaan/images/rajasthan/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day2-2",
+    "width": 1000,
+    "height": 667,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day10-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191308/qarwaan/images/rajasthan/daywise/day10-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day10-2",
+    "width": 900,
+    "height": 575,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191308/qarwaan/images/rajasthan/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day7-2",
+    "width": 2048,
+    "height": 1371,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191309/qarwaan/images/rajasthan/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day4-2",
+    "width": 1840,
+    "height": 1160,
+    "format": "jpg"
+  },
+  "/images/jim-corbett/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191308/qarwaan/images/jim-corbett/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day1-2",
+    "width": 1200,
+    "height": 900,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day9-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191309/qarwaan/images/rajasthan/daywise/day9-3.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day9-3",
+    "width": 1376,
+    "height": 768,
+    "format": "jpg"
+  },
+  "/images/jim-corbett/daywise/day3-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191309/qarwaan/images/jim-corbett/daywise/day3-1.png",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day3-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rajasthan/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191309/qarwaan/images/rajasthan/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day7-1",
+    "width": 1488,
+    "height": 731,
+    "format": "jpg"
+  },
+  "/images/jim-corbett/daywise/day1-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191309/qarwaan/images/jim-corbett/daywise/day1-1.png",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day1-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rajasthan/daywise/day11-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191310/qarwaan/images/rajasthan/daywise/day11-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day11-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day9-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191310/qarwaan/images/rajasthan/daywise/day9-2.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day9-2",
+    "width": 1536,
+    "height": 1024,
+    "format": "jpg"
+  },
+  "/images/coorg/main.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191310/qarwaan/images/coorg/main.png",
+    "publicId": "qarwaan/images/coorg/main",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/jim-corbett/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191311/qarwaan/images/jim-corbett/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day3-2",
+    "width": 2048,
+    "height": 1367,
+    "format": "jpg"
+  },
+  "/images/rajasthan/daywise/day11-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191311/qarwaan/images/rajasthan/daywise/day11-1.jpg",
+    "publicId": "qarwaan/images/rajasthan/daywise/day11-1",
+    "width": 1080,
+    "height": 720,
+    "format": "jpg"
+  },
+  "/images/coorg/daywise/day3-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/coorg/daywise/day3-1.png",
+    "publicId": "qarwaan/images/coorg/daywise/day3-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/jim-corbett/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/jim-corbett/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day2-1",
+    "width": 1200,
+    "height": 629,
+    "format": "jpg"
+  },
+  "/images/jim-corbett/daywise/day2-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/jim-corbett/daywise/day2-2.png",
+    "publicId": "qarwaan/images/jim-corbett/daywise/day2-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/coorg/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/coorg/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/coorg/daywise/day2-2",
+    "width": 4032,
+    "height": 3012,
+    "format": "jpg"
+  },
+  "/images/coorg/daywise/day2-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/coorg/daywise/day2-1.png",
+    "publicId": "qarwaan/images/coorg/daywise/day2-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/hampi/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191312/qarwaan/images/hampi/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/hampi/daywise/day2-1",
+    "width": 2048,
+    "height": 1396,
+    "format": "jpg"
+  },
+  "/images/kasauli/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191314/qarwaan/images/kasauli/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/kasauli/daywise/day1-1",
+    "width": 2560,
+    "height": 1920,
+    "format": "jpg"
+  },
+  "/images/coorg/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191316/qarwaan/images/coorg/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/coorg/daywise/day1-2",
+    "width": 1248,
+    "height": 832,
+    "format": "jpg"
+  },
+  "/images/kasauli/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191315/qarwaan/images/kasauli/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/kasauli/daywise/day3-2",
+    "width": 1024,
+    "height": 572,
+    "format": "jpg"
+  },
+  "/images/hampi/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191315/qarwaan/images/hampi/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/hampi/daywise/day1-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/coorg/daywise/day1-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191316/qarwaan/images/coorg/daywise/day1-1.png",
+    "publicId": "qarwaan/images/coorg/daywise/day1-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rishikesh/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191321/qarwaan/images/rishikesh/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/rishikesh/daywise/day2-2",
+    "width": 2048,
+    "height": 1395,
+    "format": "jpg"
+  },
+  "/images/hampi/hero-image-hampi.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191325/qarwaan/images/hampi/hero-image-hampi.png",
+    "publicId": "qarwaan/images/hampi/hero-image-hampi",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/hampi/daywise/day1-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191326/qarwaan/images/hampi/daywise/day1-1.png",
+    "publicId": "qarwaan/images/hampi/daywise/day1-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/hampi/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191328/qarwaan/images/hampi/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/hampi/daywise/day3-1",
+    "width": 1536,
+    "height": 1024,
+    "format": "jpg"
+  },
+  "/images/ooty/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191331/qarwaan/images/ooty/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/ooty/daywise/day1-2",
+    "width": 3000,
+    "height": 2000,
+    "format": "jpg"
+  },
+  "/images/kasauli/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191332/qarwaan/images/kasauli/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/kasauli/daywise/day2-1",
+    "width": 2048,
+    "height": 1152,
+    "format": "jpg"
+  },
+  "/images/coorg/daywise/day3-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191333/qarwaan/images/coorg/daywise/day3-2.png",
+    "publicId": "qarwaan/images/coorg/daywise/day3-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/rishikesh/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191334/qarwaan/images/rishikesh/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/rishikesh/daywise/day1-1",
+    "width": 1357,
+    "height": 806,
+    "format": "jpg"
+  },
+  "/images/hampi/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191334/qarwaan/images/hampi/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/hampi/daywise/day2-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/kasauli/hero-image.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191336/qarwaan/images/kasauli/hero-image.png",
+    "publicId": "qarwaan/images/kasauli/hero-image",
+    "width": 1535,
+    "height": 1025,
+    "format": "png"
+  },
+  "/images/hampi/daywise/day3-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191336/qarwaan/images/hampi/daywise/day3-2.png",
+    "publicId": "qarwaan/images/hampi/daywise/day3-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/kasauli/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191337/qarwaan/images/kasauli/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/kasauli/daywise/day2-2",
+    "width": 1600,
+    "height": 1200,
+    "format": "jpg"
+  },
+  "/images/rishikesh/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191338/qarwaan/images/rishikesh/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/rishikesh/daywise/day1-2",
+    "width": 2048,
+    "height": 1363,
+    "format": "jpg"
+  },
+  "/images/rishikesh/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191339/qarwaan/images/rishikesh/daywise/day3-2.png",
+    "publicId": "qarwaan/images/rishikesh/daywise/day3-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/kasauli/daywise/day1-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191338/qarwaan/images/kasauli/daywise/day1-2.png",
+    "publicId": "qarwaan/images/kasauli/daywise/day1-2",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/rishikesh/hero-image.jpg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191340/qarwaan/images/rishikesh/hero-image.jpg",
+    "publicId": "qarwaan/images/rishikesh/hero-image",
+    "width": 1200,
+    "height": 800,
+    "format": "jpg"
+  },
+  "/images/kasauli/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191340/qarwaan/images/kasauli/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/kasauli/daywise/day3-1",
+    "width": 4570,
+    "height": 3264,
+    "format": "jpg"
+  },
+  "/images/darjeeling/main-image.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191340/qarwaan/images/darjeeling/main-image.png",
+    "publicId": "qarwaan/images/darjeeling/main-image",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/rishikesh/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191341/qarwaan/images/rishikesh/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/rishikesh/daywise/day3-1",
+    "width": 2048,
+    "height": 1152,
+    "format": "jpg"
+  },
+  "/images/ooty/daywise/day2-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191341/qarwaan/images/ooty/daywise/day2-2.png",
+    "publicId": "qarwaan/images/ooty/daywise/day2-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/ooty/main-image.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191341/qarwaan/images/ooty/main-image.png",
+    "publicId": "qarwaan/images/ooty/main-image",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/ooty/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191342/qarwaan/images/ooty/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/ooty/daywise/day3-1",
+    "width": 2048,
+    "height": 1536,
+    "format": "jpg"
+  },
+  "/images/rishikesh/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191342/qarwaan/images/rishikesh/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/rishikesh/daywise/day2-1",
+    "width": 1920,
+    "height": 1080,
+    "format": "jpg"
+  },
+  "/images/darjeeling/daywise/day1-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191343/qarwaan/images/darjeeling/daywise/day1-2.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day1-2",
+    "width": 1586,
+    "height": 992,
+    "format": "png"
+  },
+  "/images/ooty/daywise/day2-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191343/qarwaan/images/ooty/daywise/day2-1.png",
+    "publicId": "qarwaan/images/ooty/daywise/day2-1",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/ooty/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191343/qarwaan/images/ooty/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/ooty/daywise/day1-1",
+    "width": 2048,
+    "height": 1364,
+    "format": "jpg"
+  },
+  "/images/darjeeling/daywise/day2-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191343/qarwaan/images/darjeeling/daywise/day2-1.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day2-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/darjeeling/daywise/day3-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191343/qarwaan/images/darjeeling/daywise/day3-1.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day3-1",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/ooty/daywise/3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191344/qarwaan/images/ooty/daywise/3-2.jpg",
+    "publicId": "qarwaan/images/ooty/daywise/3-2",
+    "width": 1000,
+    "height": 600,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day1-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191344/qarwaan/images/spiti/daywise/day1-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day1-1",
+    "width": 2048,
+    "height": 1313,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day1-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191344/qarwaan/images/spiti/daywise/day1-3.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day1-3",
+    "width": 1300,
+    "height": 709,
+    "format": "jpg"
+  },
+  "/images/darjeeling/daywise/day1-1.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191345/qarwaan/images/darjeeling/daywise/day1-1.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day1-1",
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  "/images/spiti/spiti-cover.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191345/qarwaan/images/spiti/spiti-cover.png",
+    "publicId": "qarwaan/images/spiti/spiti-cover",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/spiti/daywise/day3-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191345/qarwaan/images/spiti/daywise/day3-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day3-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day4-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191346/qarwaan/images/spiti/daywise/day4-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day4-1",
+    "width": 2000,
+    "height": 1331,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day5-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191346/qarwaan/images/spiti/daywise/day5-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day5-2",
+    "width": 1200,
+    "height": 770,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day2-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191346/qarwaan/images/spiti/daywise/day2-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day2-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day6-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191346/qarwaan/images/spiti/daywise/day6-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day6-2",
+    "width": 1000,
+    "height": 667,
+    "format": "jpg"
+  },
+  "/images/darjeeling/daywise/day3-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191346/qarwaan/images/darjeeling/daywise/day3-2.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day3-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/spiti/daywise/day7-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191347/qarwaan/images/spiti/daywise/day7-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day7-2",
+    "width": 1200,
+    "height": 800,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day5-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191347/qarwaan/images/spiti/daywise/day5-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day5-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/darjeeling/daywise/day2-2.png": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191348/qarwaan/images/darjeeling/daywise/day2-2.png",
+    "publicId": "qarwaan/images/darjeeling/daywise/day2-2",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "/images/spiti/daywise/day2-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191347/qarwaan/images/spiti/daywise/day2-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day2-1",
+    "width": 1400,
+    "height": 1050,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day7-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191349/qarwaan/images/spiti/daywise/day7-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day7-1",
+    "width": 2048,
+    "height": 1364,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day1-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191349/qarwaan/images/spiti/daywise/day1-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day1-2",
+    "width": 2500,
+    "height": 1657,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day4-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191349/qarwaan/images/spiti/daywise/day4-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day4-2",
+    "width": 2500,
+    "height": 1667,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day3-2.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191350/qarwaan/images/spiti/daywise/day3-2.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day3-2",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day6-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191350/qarwaan/images/spiti/daywise/day6-3.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day6-3",
+    "width": 1040,
+    "height": 688,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day6-1.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191351/qarwaan/images/spiti/daywise/day6-1.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day6-1",
+    "width": 2048,
+    "height": 1365,
+    "format": "jpg"
+  },
+  "/images/spiti/daywise/day7-3.jpeg": {
+    "url": "https://res.cloudinary.com/dnnkpyi1h/image/upload/v1793191352/qarwaan/images/spiti/daywise/day7-3.jpg",
+    "publicId": "qarwaan/images/spiti/daywise/day7-3",
+    "width": 1200,
+    "height": 738,
+    "format": "jpg"
+  }
+}

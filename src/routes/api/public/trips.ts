@@ -1,249 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { API_BASE_URL } from "@/lib/api";
 import { QARWAAN_ITINERARIES } from "@/data/qarwaan-itineraries";
-
-
-type Trip = {
-  id: string;
-  name: string;
-  country: string;
-  cover: string;
-  durationDays: number;
-  cities: string[];
-  bestSeason: string;
-  startingPoint: string;
-  tripType: string;
-  budget: number;
-  idealFor: string;
-  popularity: number;
-};
-
-/** Retained only as historical fixture data; it is not exposed by the public API. */
-export const LEGACY_TRIPS: Trip[] = [
-  {
-    id: "t1",
-    name: "Maldives Overwater Escape",
-    country: "Maldives",
-    cover: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80",
-    durationDays: 6,
-    cities: ["Malé", "Baa Atoll"],
-    bestSeason: "Winter",
-    startingPoint: "Malé",
-    tripType: "Beach",
-    budget: 4200,
-    idealFor: "Couples",
-    popularity: 98,
-  },
-  {
-    id: "t2",
-    name: "Kyoto Cherry Blossom Trail",
-    country: "Japan",
-    cover: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
-    durationDays: 8,
-    cities: ["Tokyo", "Kyoto", "Nara"],
-    bestSeason: "Spring",
-    startingPoint: "Tokyo",
-    tripType: "Cultural",
-    budget: 3600,
-    idealFor: "Couples",
-    popularity: 92,
-  },
-  {
-    id: "t3",
-    name: "Patagonia Wilderness Trek",
-    country: "Chile",
-    cover: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80",
-    durationDays: 11,
-    cities: ["Santiago", "Puerto Natales", "Torres del Paine"],
-    bestSeason: "Summer",
-    startingPoint: "Santiago",
-    tripType: "Adventure",
-    budget: 5200,
-    idealFor: "Solo",
-    popularity: 81,
-  },
-  {
-    id: "t4",
-    name: "Moroccan Sahara Odyssey",
-    country: "Morocco",
-    cover: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80",
-    durationDays: 9,
-    cities: ["Marrakech", "Fes", "Merzouga"],
-    bestSeason: "Autumn",
-    startingPoint: "Marrakech",
-    tripType: "Cultural",
-    budget: 2900,
-    idealFor: "Friends",
-    popularity: 88,
-  },
-  {
-    id: "t5",
-    name: "Santorini & Cyclades Sail",
-    country: "Greece",
-    cover: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
-    durationDays: 7,
-    cities: ["Athens", "Mykonos", "Santorini"],
-    bestSeason: "Summer",
-    startingPoint: "Athens",
-    tripType: "Beach",
-    budget: 3800,
-    idealFor: "Couples",
-    popularity: 95,
-  },
-  {
-    id: "t6",
-    name: "Serengeti Migration Safari",
-    country: "Tanzania",
-    cover: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80",
-    durationDays: 10,
-    cities: ["Arusha", "Serengeti", "Ngorongoro"],
-    bestSeason: "Summer",
-    startingPoint: "Arusha",
-    tripType: "Wildlife",
-    budget: 6400,
-    idealFor: "Family",
-    popularity: 90,
-  },
-  {
-    id: "t7",
-    name: "Icelandic Aurora Expedition",
-    country: "Iceland",
-    cover: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80",
-    durationDays: 6,
-    cities: ["Reykjavík", "Vík", "Jökulsárlón"],
-    bestSeason: "Winter",
-    startingPoint: "Reykjavík",
-    tripType: "Adventure",
-    budget: 4100,
-    idealFor: "Couples",
-    popularity: 86,
-  },
-  {
-    id: "t8",
-    name: "Vietnam Coast to Highlands",
-    country: "Vietnam",
-    cover: "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
-    durationDays: 12,
-    cities: ["Hanoi", "Hoi An", "Ho Chi Minh"],
-    bestSeason: "Autumn",
-    startingPoint: "Hanoi",
-    tripType: "Cultural",
-    budget: 2400,
-    idealFor: "Friends",
-    popularity: 78,
-  },
-  {
-    id: "t9",
-    name: "Tuscany Wine Country Drive",
-    country: "Italy",
-    cover: "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1200&q=80",
-    durationDays: 7,
-    cities: ["Florence", "Siena", "Montalcino"],
-    bestSeason: "Autumn",
-    startingPoint: "Florence",
-    tripType: "Cultural",
-    budget: 4600,
-    idealFor: "Couples",
-    popularity: 89,
-  },
-  {
-    id: "t10",
-    name: "Bali Hidden Temples",
-    country: "Indonesia",
-    cover: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
-    durationDays: 9,
-    cities: ["Ubud", "Seminyak", "Nusa Penida"],
-    bestSeason: "Spring",
-    startingPoint: "Denpasar",
-    tripType: "Beach",
-    budget: 2700,
-    idealFor: "Solo",
-    popularity: 84,
-  },
-  {
-    id: "t11",
-    name: "Peru: Inca Trail to Machu Picchu",
-    country: "Peru",
-    cover: "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=1200&q=80",
-    durationDays: 10,
-    cities: ["Lima", "Cusco", "Aguas Calientes"],
-    bestSeason: "Winter",
-    startingPoint: "Lima",
-    tripType: "Adventure",
-    budget: 3300,
-    idealFor: "Friends",
-    popularity: 91,
-  },
-  {
-    id: "t12",
-    name: "Swiss Alps Grand Train",
-    country: "Switzerland",
-    cover: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=1200&q=80",
-    durationDays: 8,
-    cities: ["Zurich", "Lucerne", "Zermatt", "St. Moritz"],
-    bestSeason: "Summer",
-    startingPoint: "Zurich",
-    tripType: "Luxury",
-    budget: 7200,
-    idealFor: "Family",
-    popularity: 87,
-  },
-  {
-    id: "t13",
-    name: "Jordan Desert & Petra",
-    country: "Jordan",
-    cover: "https://images.unsplash.com/photo-1563177978-4c5cb6c4e1ee?w=1200&q=80",
-    durationDays: 7,
-    cities: ["Amman", "Petra", "Wadi Rum"],
-    bestSeason: "Spring",
-    startingPoint: "Amman",
-    tripType: "Cultural",
-    budget: 3100,
-    idealFor: "Couples",
-    popularity: 80,
-  },
-  {
-    id: "t14",
-    name: "New Zealand South Island",
-    country: "New Zealand",
-    cover: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80",
-    durationDays: 14,
-    cities: ["Christchurch", "Queenstown", "Milford Sound"],
-    bestSeason: "Autumn",
-    startingPoint: "Christchurch",
-    tripType: "Adventure",
-    budget: 5800,
-    idealFor: "Family",
-    popularity: 83,
-  },
-  {
-    id: "t15",
-    name: "Norwegian Fjords Cruise",
-    country: "Norway",
-    cover: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=1200&q=80",
-    durationDays: 8,
-    cities: ["Bergen", "Flåm", "Geiranger"],
-    bestSeason: "Summer",
-    startingPoint: "Bergen",
-    tripType: "Luxury",
-    budget: 5400,
-    idealFor: "Couples",
-    popularity: 79,
-  },
-  {
-    id: "t16",
-    name: "Thailand Islands Hopper",
-    country: "Thailand",
-    cover: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
-    durationDays: 10,
-    cities: ["Bangkok", "Phuket", "Krabi"],
-    bestSeason: "Winter",
-    startingPoint: "Bangkok",
-    tripType: "Beach",
-    budget: 2200,
-    idealFor: "Friends",
-    popularity: 85,
-  },
-];
+import { resolveImageUrl } from "@/lib/media";
 
 const WEEKEND_GETAWAY_SLUGS = new Set([
   "jim-corbett-wild-trails-and-forest-escape",
@@ -255,89 +13,124 @@ const WEEKEND_GETAWAY_SLUGS = new Set([
   "darjeeling-tea-trails-himalayan-views-toy-train-heritage",
 ]);
 
-/** Destination journeys supplied in the Qarwaan workbooks. */
-export const TRIPS: Trip[] = QARWAAN_ITINERARIES.filter(
-  (trip) => !WEEKEND_GETAWAY_SLUGS.has(trip.slug),
-).map((trip, index) => ({
-  id: trip.id,
-  name: trip.packageName,
-  country: trip.country,
-  cover: trip.coverImage,
-  durationDays: trip.durationDays,
-  cities: [...trip.citiesCovered],
-  bestSeason: trip.bestSeason[0] ?? "All year",
-  startingPoint: trip.startPoint,
-  tripType: trip.tripType,
-  budget: trip.budgetFrom,
-  idealFor: trip.idealFor[0] ?? "Travellers",
-  popularity: 100 - index,
-}));
-
-const MAX_PAGE_SIZE = 100;
-
-function boundedNumber(value: string | null, fallback: number, minimum: number, maximum: number) {
-  if (value === null || value.trim() === "") return fallback;
-  const number = Number(value);
-  return Number.isFinite(number) ? Math.min(maximum, Math.max(minimum, number)) : fallback;
-}
-
 export const Route = createFileRoute("/api/public/trips")({
   server: {
     handlers: {
       GET: async ({ request }) => {
         const url = new URL(request.url);
+        const backendUrl = `${API_BASE_URL}/api/trips?${url.searchParams.toString()}`;
+
+        try {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), 2000);
+          const res = await fetch(backendUrl, {
+            headers: { Accept: "application/json" },
+            signal: controller.signal,
+          });
+          clearTimeout(timer);
+          if (res.ok) {
+            const data = await res.json();
+            return new Response(JSON.stringify(data), {
+              headers: {
+                "Content-Type": "application/json",
+                "Cache-Control": "public, max-age=60, stale-while-revalidate=300",
+              },
+            });
+          }
+        } catch {
+          // Backend offline or unreachable; fall back gracefully to static cache
+        }
+
+        // Graceful fallback for offline build / server start
+        const category = url.searchParams.get("category") ?? "";
         const q = url.searchParams.get("q")?.toLowerCase().trim() ?? "";
         const country = url.searchParams.get("country") ?? "";
         const tripType = url.searchParams.get("tripType") ?? "";
         const duration = url.searchParams.get("duration") ?? "";
         const bestSeason = url.searchParams.get("bestSeason") ?? "";
         const idealFor = url.searchParams.get("idealFor") ?? "";
-        const minBudget = boundedNumber(url.searchParams.get("minBudget"), 0, 0, 10_000_000);
-        const maxBudget = boundedNumber(url.searchParams.get("maxBudget"), 100000, 0, 10_000_000);
         const sort = url.searchParams.get("sort") ?? "popular";
-        // Omitting pagination returns the complete filtered result set. Page and
-        // pageSize remain supported for a future infinite-scroll client.
-        const requestedPage = url.searchParams.get("page");
-        const requestedPageSize = url.searchParams.get("pageSize");
-        const page = requestedPage ? boundedNumber(requestedPage, 1, 1, 10_000) : 1;
-        const pageSize = requestedPageSize ? boundedNumber(requestedPageSize, 20, 1, MAX_PAGE_SIZE) : undefined;
 
-        let results = TRIPS.filter((t) => {
-          if (q) {
-            const hay = `${t.name} ${t.country} ${t.cities.join(" ")}`.toLowerCase();
-            if (!hay.includes(q)) return false;
-          }
-          if (country && t.country !== country) return false;
-          if (tripType && t.tripType !== tripType) return false;
-          if (bestSeason && t.bestSeason !== bestSeason) return false;
-          if (idealFor && t.idealFor !== idealFor) return false;
-          if (duration) {
-            if (duration === "short" && t.durationDays > 5) return false;
-            if (duration === "medium" && (t.durationDays < 6 || t.durationDays > 9)) return false;
-            if (duration === "long" && t.durationDays < 10) return false;
-          }
-          if (t.budget < minBudget || t.budget > maxBudget) return false;
-          return true;
+        let source = QARWAAN_ITINERARIES;
+        if (category === "weekend") {
+          source = source.filter((t) => WEEKEND_GETAWAY_SLUGS.has(t.slug));
+        } else if (category === "journey") {
+          source = source.filter((t) => !WEEKEND_GETAWAY_SLUGS.has(t.slug));
+        }
+
+        let filtered = source.map((t, idx) => {
+          const coverUrl = resolveImageUrl(t.coverImage);
+          const placeStr = t.destination || t.citiesCovered?.[0] || t.country;
+          const durationStr = t.duration || `${t.durationDays} Days / ${Math.max(t.durationDays - 1, 0)} Nights`;
+
+          return {
+            id: t.slug || t.id,
+            slug: t.slug || t.id,
+            name: t.packageName,
+            packageName: t.packageName,
+            title: t.packageName,
+            destination: placeStr,
+            place: placeStr,
+            country: t.country,
+            cover: coverUrl,
+            coverImage: coverUrl,
+            img: coverUrl,
+            duration: durationStr,
+            durationDays: t.durationDays,
+            nights: (t as any).nights ?? Math.max(t.durationDays - 1, 0),
+            cities: [...t.citiesCovered],
+            citiesCovered: [...t.citiesCovered],
+            bestSeason: Array.isArray(t.bestSeason) ? t.bestSeason[0] ?? "All year" : t.bestSeason,
+            startingPoint: t.startPoint,
+            startPoint: t.startPoint,
+            tripType: t.tripType,
+            budget: t.budgetFrom,
+            budgetFrom: t.budgetFrom,
+            startingPrice: t.budgetFrom,
+            idealFor: Array.isArray(t.idealFor) ? t.idealFor[0] ?? "Travellers" : t.idealFor,
+            popularity: 100 - idx,
+            category: WEEKEND_GETAWAY_SLUGS.has(t.slug) ? "weekend" : "journey",
+          };
         });
 
-        if (sort === "duration") results.sort((a, b) => a.durationDays - b.durationDays);
-        else if (sort === "price") results.sort((a, b) => a.budget - b.budget);
-        else results.sort((a, b) => b.popularity - a.popularity);
+        if (q) {
+          filtered = filtered.filter((t) =>
+            `${t.name} ${t.country} ${t.cities.join(" ")}`.toLowerCase().includes(q)
+          );
+        }
+        if (country) filtered = filtered.filter((t) => t.country === country);
+        if (tripType) filtered = filtered.filter((t) => t.tripType === tripType);
+        if (bestSeason) filtered = filtered.filter((t) => t.bestSeason === bestSeason);
+        if (idealFor) filtered = filtered.filter((t) => t.idealFor === idealFor);
+        if (duration === "short") filtered = filtered.filter((t) => t.durationDays <= 5);
+        else if (duration === "medium") filtered = filtered.filter((t) => t.durationDays >= 6 && t.durationDays <= 9);
+        else if (duration === "long") filtered = filtered.filter((t) => t.durationDays >= 10);
 
-        const total = results.length;
-        const start = pageSize ? (page - 1) * pageSize : 0;
-        const items = pageSize ? results.slice(start, start + pageSize) : results;
+        if (sort === "duration") filtered.sort((a, b) => a.durationDays - b.durationDays);
+        else if (sort === "price") filtered.sort((a, b) => a.budget - b.budget);
+        else filtered.sort((a, b) => b.popularity - a.popularity);
 
         const facets = {
-          countries: [...new Set(TRIPS.map((t) => t.country))].sort(),
-          tripTypes: [...new Set(TRIPS.map((t) => t.tripType))].sort(),
+          countries: [...new Set(filtered.map((t) => t.country))].sort(),
+          tripTypes: [...new Set(filtered.map((t) => t.tripType))].sort(),
           seasons: ["Spring", "Summer", "Autumn", "Winter"],
-          idealFor: [...new Set(TRIPS.map((t) => t.idealFor))].sort(),
+          idealFor: [...new Set(filtered.map((t) => t.idealFor))].sort(),
         };
 
         return new Response(
-          JSON.stringify({ items, total, page, pageSize, facets }),
-          { headers: { "Content-Type": "application/json" } },
+          JSON.stringify({
+            items: filtered,
+            total: filtered.length,
+            page: 1,
+            pageSize: filtered.length,
+            facets,
+          }),
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "Cache-Control": "public, max-age=60, stale-while-revalidate=300",
+            },
+          }
         );
       },
     },

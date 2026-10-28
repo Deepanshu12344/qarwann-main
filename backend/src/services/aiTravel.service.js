@@ -573,11 +573,13 @@ async function askProvider({ messages, preferences, catalogue }) {
     'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions';
 
   const candidateModels = [
-    process.env.AI_MODEL || 'gemini-3.5-flash-lite',
+    process.env.AI_MODEL || 'gemini-flash-lite-latest',
+    'gemini-flash-lite-latest',
+    'gemini-3.5-flash-lite',
     'gemini-3.1-flash-lite',
     'gemini-3.8-flash',
     'gemini-3.5-flash',
-  ];
+  ].filter((v, i, a) => Boolean(v) && a.indexOf(v) === i);
 
   const conversation = messages.map((message) => ({ role: message.role, content: cleanText(message.content, 4000) }));
   let responseData = null;

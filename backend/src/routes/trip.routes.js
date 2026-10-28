@@ -15,6 +15,7 @@ router
   .get(validate({ query: listQuerySchema }), ctrl.listTrips)
   .post(requireAdmin, requireCsrf, validate({ body: tripCreateSchema }), ctrl.createTrip);
 
+router.get('/destinations', ctrl.getDestinations);
 router.get('/slug/:slug', ctrl.getTripBySlug);
 
 router.get(
@@ -27,7 +28,8 @@ router
   .route('/:id')
   .get(validate({ params: idParamSchema }), ctrl.getTrip)
   .patch(
-    requireAdmin, requireCsrf,
+    requireAdmin,
+    requireCsrf,
     validate({ params: idParamSchema, body: tripUpdateSchema }),
     ctrl.updateTrip
   )

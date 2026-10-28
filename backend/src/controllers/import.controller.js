@@ -3,10 +3,61 @@ const slugify = require('slugify');
 const asyncHandler = require('express-async-handler');
 const Trip = require('../models/Trip');
 const JourneyDay = require('../models/JourneyDay');
+const { deriveDestination } = require('../utils/destination');
 
 const ABOUT_SHEET = 'ABOUT TRIP';
 const JOURNEY_SHEET = 'JOURNEY MASTER';
 const MAX_ROWS_PER_SHEET = 2_000;
+
+const KNOWN_STARTING_PRICES = {
+  'andaman-island-escape-beaches-blue-waters-island-stories': 39500,
+  'bali-island-of-gods-iconic-wonders-hidden-gems': 39999,
+  'bhutan-himalayan-serenity-cultural-discovery': 21999,
+  'goa-coastal-charm-cultural-escape': 13500,
+  'nepal-himalayan-heritage-lakes-jungle-escape': 24999,
+  'kerala-serenity-escape': 13500,
+  'ladakh-himalayan-expedition': 27999,
+  'rajasthan-royal-heritage-desert-odyssey': 40000,
+  'jim-corbett-wild-trails-and-forest-escape': 0,
+  'coorg-coffee-forests-kodava-culture': 0,
+  'hampi-heritage-weekend-escape': 0,
+  'kasauli-colonial-charm-pine-trails-slow-mountain-living': 0,
+  'rishikesh-reset-by-the-ganga-weekend-escape': 0,
+  'ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes': 0,
+  'darjeeling-tea-trails-himalayan-views-toy-train-heritage': 0,
+  'spiti-valley-expedition': 15999,
+};
+
+const WEEKEND_SLUGS = new Set([
+  'jim-corbett-wild-trails-and-forest-escape',
+  'rishikesh-reset-by-the-ganga-weekend-escape',
+  'coorg-coffee-forests-kodava-culture',
+  'hampi-heritage-weekend-escape',
+  'kasauli-colonial-charm-pine-trails-slow-mountain-living',
+  'ooty-coonoor-tea-trails-misty-hills-nilgiri-escapes',
+  'darjeeling-tea-trails-himalayan-views-toy-train-heritage',
+]);
+
+function detectCategory(slug, packageName = '') {
+  if (WEEKEND_SLUGS.has(slug)) return 'weekend';
+  const lower = `${slug} ${packageName}`.toLowerCase();
+  if (lower.includes('weekend') || lower.includes('getaway')) return 'weekend';
+  return 'journey';
+}
+
+function parseDuration(durationStr, fallbackDays = 1) {
+  let days = fallbackDays;
+  if (typeof durationStr === 'string') {
+    const daysMatch = durationStr.match(/(\d+)\s*days?/i);
+    if (daysMatch) days = parseInt(daysMatch[1], 10);
+  }
+  let nights = Math.max(days - 1, 0);
+  if (typeof durationStr === 'string') {
+    const nightsMatch = durationStr.match(/(\d+)\s*nights?/i);
+    if (nightsMatch) nights = parseInt(nightsMatch[1], 10);
+  }
+  return { durationDays: days, nights };
+}
 
 function isXlsxBuffer(buffer) {
   if (!Buffer.isBuffer(buffer) || buffer.length < 4) return false;
@@ -35,7 +86,6 @@ function worksheetRows(worksheet) {
 /*  Helpers                                                                    */
 /* -------------------------------------------------------------------------- */
 
-// Normalize header keys: trim, lowercase, collapse whitespace.
 const norm = (s) =>
   String(s ?? '')
     .replace(/\u00a0/g, ' ')
@@ -79,7 +129,6 @@ const toInt = (v) => {
   return Number.isFinite(n) ? Math.trunc(n) : null;
 };
 
-// Build a key map from a row keyed on raw headers -> normalized accessor.
 function rowAccessor(row) {
   const map = {};
   for (const k of Object.keys(row)) map[norm(k)] = row[k];
@@ -101,9 +150,27 @@ function mapTripRow(row) {
   const packageName = toStr(get('packageName', 'Package Name', 'package'));
   if (!packageName) return null;
 
+  const durationStr = toStr(get('duration', 'Duration'));
+  const parsedDur = parseDuration(durationStr, 1);
+  const explicitDays = toInt(get('durationDays', 'duration_days', 'days'));
+  const explicitNights = toInt(get('nights'));
+  const durationDays = explicitDays && explicitDays > 0 ? explicitDays : parsedDur.durationDays;
+  const nights = explicitNights !== null && explicitNights >= 0 ? explicitNights : parsedDur.nights;
+
+  const formattedDuration =
+    durationStr && !durationStr.trim().match(/^\d+$/)
+      ? durationStr
+      : `${nights} Nights / ${durationDays} Days`;
+
+  const parsedPrice = toInt(get('startingPrice', 'Starting Price', 'price', 'budgetFrom', 'budget'));
+
   return {
     packageName,
-    duration: toStr(get('duration', 'Duration')),
+    duration: formattedDuration,
+    durationDays,
+    nights,
+    startingPrice: parsedPrice !== null ? parsedPrice : undefined,
+    country: toStr(get('country', 'Country')) || 'India',
     citiesCovered: toList(get('citiesCovered', 'Cities Covered', 'cities')),
     startPoint: toStr(get('startPoint', 'Start Point', 'starting point')),
     endPoint: toStr(get('endPoint', 'End Point', 'ending point')),
@@ -119,15 +186,13 @@ function mapTripRow(row) {
 
 function mapJourneyRow(row) {
   const get = rowAccessor(row);
-  const day = toInt(get('day', 'Day', 'Day No'));
-  const packageName = toStr(
-    get('packageName', 'Package Name', 'Trip', 'Trip Name'),
-  );
-  if (!day || !packageName) return null;
+  const dayNumber = toInt(get('dayNumber', 'day', 'Day', 'Day No', 'Day Number'));
+  const packageName = toStr(get('packageName', 'Package Name', 'Trip', 'Trip Name'));
+  if (!dayNumber || !packageName) return null;
 
   return {
     _packageName: packageName, // resolved to tripId later
-    day,
+    dayNumber,
     route: toStr(get('route', 'Route')),
     location: toStr(get('location', 'Location')),
     phase: toStr(get('phase', 'Phase')),
@@ -180,7 +245,6 @@ const importExcel = asyncHandler(async (req, res) => {
     errors: [],
   };
 
-  // Find sheets case-insensitively
   const findSheet = (name) =>
     workbook.worksheets.find((sheet) => sheet.name.trim().toLowerCase() === name.toLowerCase());
 
@@ -205,11 +269,10 @@ const importExcel = asyncHandler(async (req, res) => {
 
   /* ---------- 1. Upsert trips ------------------------------------------- */
 
-  // Map: slug -> trip._id, used when linking journey days.
   const slugToId = new Map();
 
   for (let i = 0; i < aboutRows.length; i++) {
-    const rowNum = i + 2; // header row + 1-indexed
+    const rowNum = i + 2;
     try {
       const data = mapTripRow(aboutRows[i]);
       if (!data) {
@@ -217,14 +280,30 @@ const importExcel = asyncHandler(async (req, res) => {
         continue;
       }
       const slug = slugify(data.packageName, { lower: true, strict: true });
+      const destination = deriveDestination({ ...data, slug });
+      const category = detectCategory(slug, data.packageName);
+      const startingPrice =
+        data.startingPrice !== undefined
+          ? data.startingPrice
+          : KNOWN_STARTING_PRICES[slug] ?? 0;
+
+      const fullData = {
+        ...data,
+        slug,
+        destination,
+        category,
+        status: 'published',
+        startingPrice,
+      };
+
       const existing = await Trip.findOne({ slug });
 
       if (existing) {
-        await Trip.updateOne({ _id: existing._id }, { $set: { ...data, slug } });
+        await Trip.updateOne({ _id: existing._id }, { $set: fullData });
         slugToId.set(slug, existing._id);
         summary.tripsUpdated++;
       } else {
-        const created = await Trip.create({ ...data, slug });
+        const created = await Trip.create(fullData);
         slugToId.set(slug, created._id);
         summary.tripsAdded++;
       }
@@ -248,7 +327,6 @@ const importExcel = asyncHandler(async (req, res) => {
       const slug = slugify(data._packageName, { lower: true, strict: true });
       let tripId = slugToId.get(slug);
       if (!tripId) {
-        // Trip may exist from a previous import — try DB lookup.
         const trip = await Trip.findOne({ slug }).select('_id');
         if (!trip) {
           summary.errors.push({
@@ -264,9 +342,9 @@ const importExcel = asyncHandler(async (req, res) => {
 
       const { _packageName, ...payload } = data;
       const result = await JourneyDay.updateOne(
-        { tripId, day: payload.day },
+        { tripId, dayNumber: payload.dayNumber },
         { $set: { ...payload, tripId } },
-        { upsert: true },
+        { upsert: true }
       );
 
       if (result.upsertedCount > 0) summary.journeyDaysAdded++;
